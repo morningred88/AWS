@@ -40,6 +40,19 @@ You can see the same metric name under namespace RDS with dimension name DBInsta
 
 ![Dimension_DBInstanceIdentifier](\Monitor_Audit_SysOps\CloudWatch_CloudTrail_images\Dimension_DBInstanceIdentifier.png)
 
+
+
+### CloudWatch Metrics Hierarchy - 3 Level structure
+
+CloudWatch console > Metrics> All metrics
+
+*  **Namespace** level,  Such as  EC2
+  * **Dimensions level**, such as By AutoScaling group 
+    * **Metrics level**, such as NetworkOut
+
+
+
 ## CloudWatch Custom metrics
 
 CloudWatch **Unified agent** does use PutMetricData API call to push metric data to CloudWatch regularly. 
+
