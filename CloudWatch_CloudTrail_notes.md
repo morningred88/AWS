@@ -12,5 +12,7 @@ As Amazon CloudWatch is a regional service, Namespaces are unique within a Regio
 
 ![Metrics_Namespace](/Monitor_Audit_SysOps/CloudWatch_CloudTrail_images/Metrics_Namespace.png)
 
-### 
+### Metric name
+
+Names are unique within a Namespace, e.g., *CPUUtilization* is distinct from *DiskReadOps*
 
