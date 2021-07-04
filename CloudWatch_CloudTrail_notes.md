@@ -32,5 +32,11 @@ Then I open EC2>Per-Instance Metrics. I can see 15 metrics, for 15 different Ins
 
 Here the dimension name for metric CPUUtilization in namespace EC2 is InstaceID.
 
-![Metric_name_search](C:\Users\xldu\local-repository\AWS\Monitor_Audit_SysOps\CloudWatch_CloudTrail_images\Dimension_InstanceId.png)
+![Metric_name_search](\Monitor_Audit_SysOps\CloudWatch_CloudTrail_images\Dimension_InstanceId.png)
+
+**Dimension for CPUUtilization in RDS: DBInstanceIdentifier**
+
+You can see the same metric name under namespace RDS with dimension name DBInstanceIdentifier.
+
+![Dimension_DBInstanceIdentifier](\Monitor_Audit_SysOps\CloudWatch_CloudTrail_images\Dimension_DBInstanceIdentifier.png)
 
