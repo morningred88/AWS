@@ -40,3 +40,6 @@ You can see the same metric name under namespace RDS with dimension name DBInsta
 
 ![Dimension_DBInstanceIdentifier](\Monitor_Audit_SysOps\CloudWatch_CloudTrail_images\Dimension_DBInstanceIdentifier.png)
 
+## CloudWatch Custom metrics
+
+CloudWatch **Unified agent** does use PutMetricData API call to push metric data to CloudWatch regularly. 
