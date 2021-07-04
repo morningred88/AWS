@@ -24,5 +24,13 @@ The key to distinguishing between Metrics with the same Name are Dimensions
 
 ![Metric_name_search](\Monitor_Audit_SysOps\CloudWatch_CloudTrail_images\Metric_name_search.png)
 
-When I search a metric using name CPUUtilization,  it shows up in 10 different dimensions. 
+When I search a metric using name CPUUtilization,  it shows up in different dimensions under different namespaces. 
+
+**Dimension for CPUUtilization in EC2: InstanceId**
+
+Then I open EC2>Per-Instance Metrics. I can see 15 metrics, for 15 different InstanceID. 
+
+Here the dimension name for metric CPUUtilization in namespace EC2 is InstaceID.
+
+![Metric_name_search](C:\Users\xldu\local-repository\AWS\Monitor_Audit_SysOps\CloudWatch_CloudTrail_images\Dimension_InstanceId.png)
 
