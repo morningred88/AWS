@@ -22,7 +22,7 @@ The key to distinguishing between Metrics with the same Name are Dimensions
 
 *A dimension is a name/value pair that is part of the identity of a metric. You can assign up to 10 dimensions to a metric.*
 
-![Metric_name_search](\Monitor_Audit_SysOps\CloudWatch_CloudTrail_images\Metric_name_search.png)
+![Metric_name_search](/Monitor_Audit_SysOps/CloudWatch_CloudTrail_images/Metric_name_search.png)
 
 When I search a metric using name CPUUtilization,  it shows up in different dimensions under different namespaces. 
 
@@ -32,13 +32,13 @@ Then I open EC2>Per-Instance Metrics. I can see 15 metrics, for 15 different Ins
 
 Here the dimension name for metric CPUUtilization in namespace EC2 is InstaceID.
 
-![Metric_name_search](\Monitor_Audit_SysOps\CloudWatch_CloudTrail_images\Dimension_InstanceId.png)
+![Metric_name_search](/Monitor_Audit_SysOps/CloudWatch_CloudTrail_images/Dimension_InstanceId.png)
 
 **Dimension for CPUUtilization in RDS: DBInstanceIdentifier**
 
 You can see the same metric name under namespace RDS with dimension name DBInstanceIdentifier.
 
-![Dimension_DBInstanceIdentifier](\Monitor_Audit_SysOps\CloudWatch_CloudTrail_images\Dimension_DBInstanceIdentifier.png)
+![Dimension_DBInstanceIdentifier](/Monitor_Audit_SysOps/CloudWatch_CloudTrail_images/Dimension_DBInstanceIdentifier.png)
 
 
 
