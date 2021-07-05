@@ -65,3 +65,15 @@ CloudWatch **Unified agent** does use PutMetricData API call to push metric data
 Metric Filter: A custom metric for a filter in a log group.
 
 You can use metric filters to monitor events in a log group as they are sent to CloudWatch Logs. You can monitor and count specific terms or extract values from log events and associate the results with a metric.
+
+### Subscription filter
+
+Specify a filter and data in a log group will be streamed by one of the following AWS services:
+
+* Elastic searching with AWS managed lambda function
+* Kinesis firehose
+* Kinesis data stream
+* Lambda function
+
+You can create 2 subscription filters per log group. 
+
