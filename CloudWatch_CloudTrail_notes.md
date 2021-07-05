@@ -56,3 +56,12 @@ CloudWatch console > Metrics> All metrics
 
 CloudWatch **Unified agent** does use PutMetricData API call to push metric data to CloudWatch regularly. 
 
+## CloudWatch logs
+
+### Metric filter
+
+**Filter**: A pattern of regular expression that can be filtered in the log streams.
+
+Metric Filter: A custom metric for a filter in a log group.
+
+You can use metric filters to monitor events in a log group as they are sent to CloudWatch Logs. You can monitor and count specific terms or extract values from log events and associate the results with a metric.
