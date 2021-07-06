@@ -77,3 +77,15 @@ Specify a filter and data in a log group will be streamed by one of the followin
 
 You can create 2 subscription filters per log group. 
 
+## EventBridge 
+
+EventBridge is its own service. It builds upon and extends CloudWatch Events.
+
+You cannot create any rules in CloudWatch Events any more. You will be redirected to EventBridge. 
+
+
+
+
+
+
+
