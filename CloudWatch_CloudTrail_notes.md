@@ -83,7 +83,11 @@ EventBridge is its own service. It builds upon and extends CloudWatch Events.
 
 You cannot create any rules in CloudWatch Events any more. You will be redirected to EventBridge. 
 
+### Eventbus
 
+A Eventbus can have lots of rules. 
+
+You can use both default or custom event bus. I tried to created CodePipeline rule and put it both in default and my own event bus. Both works. The good things is you can also select third party service or your own application to create some events. 
 
 
 
