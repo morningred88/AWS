@@ -105,3 +105,8 @@ You can use both default or custom event bus. I tried to created CodePipeline ru
 * You cannot read the events directly from S3, you can download and unzip it, the event is written in json. 
 * But you can use Athena to analyze the CloudTrail events.
 
+### Export a trail to CloudWatch logs
+
+* If you don't have cloudtrail log group in CloudWatch, it will create a log group. The event in a CloudTrail is going to be written in one log stream. 
+
+* You can read the event directly
