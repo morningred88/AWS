@@ -99,7 +99,9 @@ You can use both default or custom event bus. I tried to created CodePipeline ru
 
 * Create a trail to export event to S3 or CloudWatch
 
+### Export a trail to S3: 
 
-
-
+* It will create a S3 bucket, and add a folder for each region. You need to go your region to find the events. 
+* You cannot read the events directly from S3, you can download and unzip it, the event is written in json. 
+* But you can use Athena to analyze the CloudTrail events.
 
