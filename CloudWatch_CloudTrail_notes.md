@@ -110,3 +110,9 @@ You can use both default or custom event bus. I tried to created CodePipeline ru
 * If you don't have cloudtrail log group in CloudWatch, it will create a log group. The event in a CloudTrail is going to be written in one log stream. 
 
 * You can read the event directly
+
+## AWS Config
+
+AWS config is not a part of free tier. The more resources you recorded, the more you have to pay.
+
+After the rescources have been discovered, you can go to AWS Config console> Resources menu> You can see **resource timeline** or **manage rescources**.
