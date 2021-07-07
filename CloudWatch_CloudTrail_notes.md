@@ -122,3 +122,9 @@ After the rescources have been discovered, you can go to AWS Config console> Res
 We can define rules to check the resources if you are complied to the rule. 
 
 For example, rule restricted-ssh, whether security groups that are in use disallow unrestricted incoming SSH traffic. If SSH inbound rule is opened to everyone 0.0.0.0/0, the security group is **Noncompliant**.
+
+#### AWS managed rule
+
+The rules are created by AWS.
+
+Rule restricted-ssh is AWS managed rule.
