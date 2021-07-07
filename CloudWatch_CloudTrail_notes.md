@@ -128,3 +128,8 @@ For example, rule restricted-ssh, whether security groups that are in use disall
 The rules are created by AWS.
 
 Rule restricted-ssh is AWS managed rule.
+
+#### Custom rule
+
+Create custom rules and add them to AWS Config. **Associate each custom rule with an AWS Lambda function**, which contains the logic that evaluates whether your AWS resources comply with the rule. 
+
