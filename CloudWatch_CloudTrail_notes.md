@@ -116,3 +116,9 @@ You can use both default or custom event bus. I tried to created CodePipeline ru
 AWS config is not a part of free tier. The more resources you recorded, the more you have to pay.
 
 After the rescources have been discovered, you can go to AWS Config console> Resources menu> You can see **resource timeline** or **manage rescources**.
+
+### AWS Config rule
+
+We can define rules to check the resources if you are complied to the rule. 
+
+For example, rule restricted-ssh, whether security groups that are in use disallow unrestricted incoming SSH traffic. If SSH inbound rule is opened to everyone 0.0.0.0/0, the security group is **Noncompliant**.
