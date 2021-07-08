@@ -133,3 +133,9 @@ Rule restricted-ssh is AWS managed rule.
 
 Create custom rules and add them to AWS Config. **Associate each custom rule with an AWS Lambda function**, which contains the logic that evaluates whether your AWS resources comply with the rule. 
 
+### Setup remediation action for noncompliant resources
+
+Resources menu> Select noncompliant resources> Rule applied > Select a rule that the compliance status is noncompliant> click Action> Select **manage remediation**:
+
+* **Automatic remediation**: The remediation action gets triggered automatically when the recources in scope become noncompliant. 
+* **Manual remediation**: You need to define a remediation action, either choose SSM automation document or create your own. 
