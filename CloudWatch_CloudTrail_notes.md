@@ -91,6 +91,7 @@ You can use both default or custom event bus. I tried to created CodePipeline ru
 
 ## CloudTrail
 
+* Track **who** made any changes to the AWS resources **with API calls**
 * You can add multiple accounts in your organization to one CloudTrail. So you can mange everything directly from CloudTrail severice. 
 * CloudTrail is not “real-time”
   * It might take up to 15 minutes for the events to appear in CloudTrail. 
