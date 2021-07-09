@@ -92,12 +92,18 @@ You can use both default or custom event bus. I tried to created CodePipeline ru
 ## CloudTrail
 
 * You can add multiple accounts in your organization to one CloudTrail. So you can mange everything directly from CloudTrail severice. 
-
 * CloudTrail is not “real-time”
   * It might take up to 15 minutes for the events to appear in CloudTrail. 
   * Delivers log files to an S3 bucket every 5 minutes
+* Create a trail to export events to S3 or CloudWatch
 
-* Create a trail to export event to S3 or CloudWatch
+### Create a trail
+
+You can create a trail for 3 different types of event
+
+* Management events
+* Data events
+* Insight events
 
 ### Export a trail to S3: 
 
