@@ -54,7 +54,11 @@ CloudWatch console > Metrics> All metrics
 
 ## CloudWatch Custom metrics
 
-CloudWatch **Unified agent** does use PutMetricData API call to push metric data to CloudWatch regularly. 
+CloudWatch **Unified agent** does use PutMetricData API call to push metric data to CloudWatch regularly. You can also create you own custom metrics, and push the value to metric using CLI or SDK from your application. 
+
+**Example:**
+
+**CloudWatch monitors EC2 instance memory usage** - Use Unified CloudWatch Agent to push memory usage as a custom metric to CloudWatch. 
 
 ## CloudWatch logs
 
