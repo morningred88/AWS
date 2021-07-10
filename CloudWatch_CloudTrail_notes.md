@@ -93,6 +93,14 @@ A Eventbus can have lots of rules.
 
 You can use both default or custom event bus. I tried to created CodePipeline rule and put it both in default and my own event bus. Both works. The good things is you can also select third party service or your own application to create some events. 
 
+## Service Quotas CloudWatch Alarms
+
+### Hands on - create a CloudWatch alarm in Service Quota console
+
+Service Quota console >**Dashboard** menu, choose a AWS Service, such as Lambda, click on it > Select a **Quota Name**,  such as **Concurrent execution**, click on it to open> You can **request quota increase**. At the bottom, you can **create CloudAlarm** by a alarm threshold. 
+
+
+
 ## CloudTrail
 
 * Track **who** made any changes to the AWS resources **with API calls**
