@@ -99,8 +99,6 @@ You can use both default or custom event bus. I tried to created CodePipeline ru
 
 Service Quota console >**Dashboard** menu, choose a AWS Service, such as Lambda, click on it > Select a **Quota Name**,  such as **Concurrent execution**, click on it to open> You can **request quota increase**. At the bottom, you can **create CloudAlarm** by a alarm threshold. 
 
-
-
 ## CloudTrail
 
 * Track **who** made any changes to the AWS resources **with API calls**
@@ -127,8 +125,17 @@ You can create a trail for 3 different types of event
 ### Export a trail to CloudWatch logs
 
 * If you don't have cloudtrail log group in CloudWatch, it will create a log group. The event in a CloudTrail is going to be written in one log stream. 
-
 * You can read the event directly
+
+## Log File Integrity validation
+
+Usage: To make sure the log files do not been modified/deleted after CloudTrail delivered it. 
+
+When you export CloudTrail logs to S3, it also contains Digest files. 
+
+Digest file: References the log files for the last hour and contains a hash for each.
+
+You compared the hash from log file and digest file. If they are the same, you are sure that the files have not been modified. 
 
 ## AWS Config
 
