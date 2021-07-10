@@ -14,5 +14,15 @@ You just need to got AWS Organization console > click on **Create Organization**
 
 It is best practice to leave the management account under the root OU. But if you want, you can also move it to any OUs under Root OU.
 
+### Organizational units
 
+**Create Organizational unit:**
+
+Login to your management account > **AWS Organization** console> check the **Root** OU> click on **Action** > Create new> Give **Organizational unit name** > **Create organization unit**.
+
+Use the process above you can add Dev, Test and Prod OUs
+
+You can create OUs with OU, such as you can create HR and Finance department under Prod.
+
+The reason we do it because we want to have service control policies (SCP)
 
