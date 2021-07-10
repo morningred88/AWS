@@ -124,9 +124,10 @@ You can create a trail for 3 different types of event
 
 ## AWS Config
 
-AWS config is not a part of free tier. The more resources you recorded, the more you have to pay.
+* Usage: AWS Config is used to evaluate the **compliance** of your resources' configurations **over time**. You can create a Config just for any select resource(s) or for all the resources in one region. 
+* AWS config is not a part of free tier. The more resources you recorded, the more you have to pay.
 
-After the rescources have been discovered, you can go to AWS Config console> Resources menu> You can see **resource timeline** or **manage rescources**.
+* After the rescources have been discovered, you can go to AWS Config console> Resources menu> You can see **resource timeline** or **manage rescources**.
 
 ### AWS Config rule
 
