@@ -26,3 +26,12 @@ You can create OUs with OU, such as you can create HR and Finance department und
 
 The reason we do it because we want to have service control policies (SCP)
 
+### SCP
+
+Similar with IAM policies in JSON.
+
+**Create SCP policy**:
+
+**AWS Organization** console> Policies > service control policies (SCP) > **Enable**, then you will have **AWSFullAccess** policy for your organization root OU. 
+
+You can create any SCP policy and attach it to the OU
