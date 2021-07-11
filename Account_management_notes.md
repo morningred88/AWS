@@ -35,3 +35,11 @@ Similar with IAM policies in JSON.
 **AWS Organization** console> Policies > service control policies (SCP) > **Enable**, then you will have **AWSFullAccess** policy for your organization root OU. 
 
 You can create any SCP policy and attach it to the OU
+
+## Control Tower
+
+It is best practice to set up multiple accounts using Control Power in your accounts. 
+
+It already adds compliances (Guardrails) and access control to the Control Tower from AWS. So you don't need to setup all from scratch like you do for AWS Organization. 
+
+When we create a landing zone in Control Tower, it automatically show up in AWS Organization console. We should not manage it in AWS Organization
