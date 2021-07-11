@@ -42,4 +42,9 @@ It is best practice to set up multiple accounts using Control Power in your acco
 
 It already adds compliances (Guardrails) and access control to the Control Tower from AWS. So you don't need to setup all from scratch like you do for AWS Organization. 
 
-When we create a landing zone in Control Tower, it automatically show up in AWS Organization console. We should not manage it in AWS Organization
+When we create a landing zone in Control Tower, it automatically show up in AWS Organization console. We should not manage it in AWS Organization.
+
+## AWS Service Catalog
+
+We allow users choose from the cloudFormation templates organized in portfolios, and launch them safely. Users does not any other AWS access at all except Service Catalog.
+
