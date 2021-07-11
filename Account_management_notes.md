@@ -48,3 +48,8 @@ When we create a landing zone in Control Tower, it automatically show up in AWS 
 
 We allow users choose from the cloudFormation templates organized in portfolios, and launch them safely. Users does not any other AWS access at all except Service Catalog.
 
+### Administration
+
+* Add products - using CloudFormation with all the defined configurations
+* Create portfolios - each portfolio is a collective products with access for specified users, groups or roles. For example, portfolio for Web developers, the administrator can add EC2 instances including security group, or any other AWS resources for web development.
+
