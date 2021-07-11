@@ -53,3 +53,8 @@ We allow users choose from the cloudFormation templates organized in portfolios,
 * Add products - using CloudFormation with all the defined configurations
 * Create portfolios - each portfolio is a collective products with access for specified users, groups or roles. For example, portfolio for Web developers, the administrator can add EC2 instances including security group, or any other AWS resources for web development.
 
+## AWS Billing Alarms
+
+You can set a billing threshold for a **specified time period**, such as 6 hours or 1 week. 
+
+In order to set AWS billing alarms, you need first to enable billing alert.
