@@ -74,3 +74,13 @@ CloudWatch console > Alarms > Billing > Create billing alarm > Select Billing na
 ## AWS Budget
 
 You set a **monthly** budget amount, either money, usage, saving plan or reservation base as threshold to create a alert. 
+
+### Four types of budgets
+
+* Cost budget: Money based, either for a specific service or total amount
+
+* Usage budget: Track the usage for a specific metric, such as EC2:EBS -Snapshot, how many GB per month
+
+* Saving plan budget: How much you utilize your saving plan
+
+* Reservation budget: For reserved instances, for EC2, ElastiCache, RDS, Redshift, Elasticsearch
