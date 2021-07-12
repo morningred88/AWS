@@ -70,3 +70,7 @@ You need to wait about 15 minute for your data collection to be active, the bill
 You need to go to us-east-1 region, billing metrics is only available at the region
 
 CloudWatch console > Alarms > Billing > Create billing alarm > Select Billing name space > you can choose the metric at **two levels**:  either for different AWS services, or total charge for all services in your account. The metric name is EstimatedCharges.
+
+## AWS Budget
+
+You set a **monthly** budget amount, either money, usage, saving plan or reservation base as threshold to create a alert. 
