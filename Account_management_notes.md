@@ -64,3 +64,9 @@ In order to set AWS billing alarms, you need first to enable billing alert.
 Account name > **Billing dashboard** > **Billing preferences** > Check **Receive Billing Alert**
 
 You need to wait about 15 minute for your data collection to be active, the billing metric will populate to CloudWatch metrics.
+
+### Create billing alarm
+
+You need to go to us-east-1 region, billing metrics is only available at the region
+
+CloudWatch console > Alarms > Billing > Create billing alarm > Select Billing name space > you can choose the metric at **two levels**:  either for different AWS services, or total charge for all services in your account. The metric name is EstimatedCharges.
