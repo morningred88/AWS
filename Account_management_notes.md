@@ -53,6 +53,10 @@ We allow users choose from the cloudFormation templates organized in portfolios,
 * Add products - using CloudFormation with all the defined configurations
 * Create portfolios - each portfolio is a collective products with access for specified users, groups or roles. For example, portfolio for Web developers, the administrator can add EC2 instances including security group, or any other AWS resources for web development.
 
+### TagOptions library
+
+A TagOption is a key-value pair managed in AWS Service Catalog. It is not an AWS tag, but serves as a template for creating an AWS tag based on the TagOption.
+
 ## AWS Billing Alarms
 
 You can set a billing threshold for a **specified time period**, such as 6 hours or 1 week. 
