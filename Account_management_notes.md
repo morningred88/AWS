@@ -57,6 +57,14 @@ We allow users choose from the cloudFormation templates organized in portfolios,
 
 A TagOption is a key-value pair managed in AWS Service Catalog. It is not an AWS tag, but serves as a template for creating an AWS tag based on the TagOption.
 
+#### Create TagOptions
+
+First go to TagOptions library, enable it. Then you can start to add key value pairs as TagOptions
+
+You can see that I created 3 TagOptions:
+
+![](/Account_Management_SysOps/Account_Management_images/Create_new_TagOption.png)
+
 ## AWS Billing Alarms
 
 You can set a billing threshold for a **specified time period**, such as 6 hours or 1 week. 
