@@ -65,6 +65,10 @@ You can see that I created 3 TagOptions:
 
 ![](/Account_Management_SysOps/Account_Management_images/Create_new_TagOption.png)
 
+#### How to use TagOptions
+
+Administrators can associate TagOptions with portfolios and products. During a product launch (provisioning), AWS Service Catalog aggregates the associated **portfolio** and **product** TagOptions, and applies them to the provisioned product, as shown in the following diagram.
+
 ## AWS Billing Alarms
 
 You can set a billing threshold for a **specified time period**, such as 6 hours or 1 week. 
