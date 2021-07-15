@@ -44,6 +44,8 @@ It already adds compliances (Guardrails) and access control to the Control Tower
 
 When we create a landing zone in Control Tower, it automatically show up in AWS Organization console. We should not manage it in AWS Organization.
 
+
+
 ## AWS Service Catalog
 
 We allow users choose from the cloudFormation templates organized in portfolios, and launch them safely. Users does not any other AWS access at all except Service Catalog.
@@ -63,11 +65,19 @@ First go to TagOptions library, enable it. Then you can start to add key value p
 
 You can see that I created 3 TagOptions:
 
-![](/Account_Management_SysOps/Account_Management_images/Create_new_TagOption.png)
+![Create_new_TagOption](/Account_Management_SysOps/Account_Management_images/Create_new_TagOption.png)
 
 #### How to use TagOptions
 
 Administrators can associate TagOptions with portfolios and products. During a product launch (provisioning), AWS Service Catalog aggregates the associated **portfolio** and **product** TagOptions, and applies them to the provisioned product, as shown in the following diagram.
+
+![TagOption-library](/Account_Management_SysOps/Account_Management_images/TagOption-library.png)
+
+**Reference:**
+
+https://docs.aws.amazon.com/servicecatalog/latest/adminguide/tagoptions.html
+
+
 
 ## AWS Billing Alarms
 
