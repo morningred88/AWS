@@ -36,6 +36,12 @@ Similar with IAM policies in JSON.
 
 You can create any SCP policy and attach it to the OU
 
+### Tag Policies
+
+You can use AWS Organization Tag Policies to standardize tags across resources in all AWS Accounts inside your AWS Organization. 
+
+
+
 ## Control Tower
 
 It is best practice to set up multiple accounts using Control Power in your accounts. 
