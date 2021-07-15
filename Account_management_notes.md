@@ -40,7 +40,11 @@ You can create any SCP policy and attach it to the OU
 
 You can use AWS Organization Tag Policies to standardize tags across resources in all AWS Accounts inside your AWS Organization. 
 
+### Reserved instance sharing
 
+You can **disable Reserved Instance Discount Sharing at the AWS account level** inside an Organization. Then all Reserved EC2 instances purchased by the account will not be shared with the other accounts in the Organization.
+
+Only Reserved Instance Discount Sharing turned on at **both Organization and Account level**, then the Reserved instance discount can be shard.
 
 ## Control Tower
 
