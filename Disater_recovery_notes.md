@@ -12,3 +12,11 @@
   * migrate to different region  
   * migrate the unencrypted EFS to encrypted DFS filesystem
 
+## AWS Backup
+
+* Create a backup plan to enable automatically backup
+* Assign the backup plan to different resources
+  *  To resources ID
+  *  To specified tag
+
+* Cross-region backups can be enabled
