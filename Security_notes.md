@@ -19,3 +19,10 @@
 * HSM: Hardware Security Module
 * Need to install software for CloudHSM to work. And the software is used to manage the user access control. IAM is used for CRUD of CMK keys
 * Customer can import **asymetric** keys to CloudHSM.
+
+## AWS Certificate Manager (ACM)
+
+* If you want to make your webpage have secured connection, you need to have a SSL certificate for IT. 
+
+* You can get both private and public SSL certificate from AWS ACM for your domain name. Public SSL is free. 
+* After you get the certificate, use Route 53 to manage the DNS name. 
