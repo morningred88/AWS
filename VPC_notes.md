@@ -23,3 +23,9 @@ All the instance launched in the subnet will be auto assigned a public IPv4 addr
 ### Internet gateway
 
 When you create a internet gateway, it is in **detached** state, you need to attach it to a VPC.
+
+### Route table
+
+#### Default route table
+
+When I create a VPC with subnets, and did not associate the subnets with a specific route table, default route table is associated with all the subnets
