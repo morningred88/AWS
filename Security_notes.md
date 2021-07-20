@@ -34,3 +34,8 @@
 * Go to Route 53,  you can create a CName record for the URL created by Beanstock, set the website DNS as the one you got SSL certificate. 
 *  Go to ALB HTTPS listener, you can the SSL certificate used, because SSL certificate from ACM integrated with ELB. It is also possible to change the certificate.
 
+### AWS services integrated with SSL/TLS certificate from ACM 
+
+* ELB
+* Api gateway
+* CloudFront
