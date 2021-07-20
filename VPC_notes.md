@@ -29,3 +29,9 @@ When you create a internet gateway, it is in **detached** state, you need to att
 #### Default route table
 
 When I create a VPC with subnets, and did not associate the subnets with a specific route table, default route table is associated with all the subnets
+
+#### Public route table
+
+* Create a route table
+* Associate it with planned public subnets
+* Add route to internet gateway
