@@ -23,7 +23,6 @@
 ## AWS Certificate Manager (ACM)
 
 * If you want to make your webpage have secured connection, you need to have a SSL certificate for IT. 
-
 * You can get both private and public SSL certificate from AWS ACM for your domain name. Public SSL is free. 
 * After you get the certificate, use Route 53 to manage the DNS name. 
 
@@ -31,6 +30,7 @@
 
 * Create a SSL certificate from ACM for you domain name
 
-* you use Beanstock to deploy an application with high availabilty. 
+* you use Beanstalk to deploy an application with high availabilty. 
 * Go to Route 53,  you can create a CName record for the URL created by Beanstock, set the website DNS as the one you got SSL certificate. 
-* You can also change the certificate by going to ALB HTTPS listener.
+*  Go to ALB HTTPS listener, you can the SSL certificate used, because SSL certificate from ACM integrated with ELB. It is also possible to change the certificate.
+
