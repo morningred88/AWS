@@ -35,3 +35,10 @@ When I create a VPC with subnets, and did not associate the subnets with a speci
 * Create a route table
 * Associate it with planned public subnets
 * Add route to internet gateway
+
+Second and third step order does not matter
+
+#### Private route table
+
+* Create a route table 
+* Associate it with planned private subnets
