@@ -17,3 +17,9 @@ You can add **multiple subnets for a VPC** from the console for once.
  vpc console> subnets menu> Select subnets >**Action**> **Edit subset setting**>check **Enable auto-assign public IPv4 address**> **save**
 
 All the instance launched in the subnet will be auto assigned a public IPv4 address.
+
+## Internet gateway & Route table
+
+### Internet gateway
+
+When you create a internet gateway, it is in **detached** state, you need to attach it to a VPC.
