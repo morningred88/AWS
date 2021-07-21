@@ -45,15 +45,26 @@ Second and third step order does not matter
 
 ## Bastion hosts hands on
 
-Step 1: create a keypair
+**Step 1: create a bastion host**
 
-Step 2: launch an EC2 instance in private subnet, create a security group and allow SSH from security group of the instance for SSH connect in public subnet.
+Launch  an instance in public subnet
 
-Step 3: Instance connect to bastion instance, ssh to the private instance 
+**Step 2: create a keypair**
 
-* Load Bestion-keypair.pem to the instance using nano, the key format does not correct, change to user vim
+**Step 3: launch an EC2 instance in private subnet **
 
-* vi Bestion-keypair.pem
+* using the created keypair
+
+* Create a security group and associate it with the private instance
+  * Inbound rule: allow SSH from security group of the bastion host.
+
+**Step 4: Copy the pem file from the keypair to bastion host**
+
+Instance connect to bastion instance
+
+* Load Bestion-keypair.pem to the instance using Nano editor, the key format does not correct, change to user vim editor
+
+* `vi Bestion-keypair.pem`
 
 * vim command in vim window
 
@@ -64,9 +75,12 @@ Step 3: Instance connect to bastion instance, ssh to the private instance
   :wq! to save the file
   ```
 
-* ls -- to check if the key file created
+* `ls` -- to check if the key file created
 
 * Change keypair permission: `chmod 0400 Bestion-keypair.pem`
 
-* `ssh ec2-user@10.0.0.93 -i Bestion-keypair.pem`
+
+**Step 5: SSH to private instance from Bastionhost**
+
+`ssh ec2-user@10.0.0.93 -i Bestion-keypair.pem`
 
