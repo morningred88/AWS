@@ -98,3 +98,15 @@ Instance connect to bastion instance
   * Use bastionhost to connect private instance,
 
   * `curl google.com` or `curl example.com`, you can you the HTML content. 
+
+## NACL & Security groups hands on
+
+### Prepare EC2 instance: Enable web server 
+
+```
+sudo yum install -y httpd
+sudo systemctl enable httpd
+sudo systemctl start httpd
+sudo su
+echo "hello world" > /war/www/html/index.html
+```
