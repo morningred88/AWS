@@ -84,3 +84,17 @@ Instance connect to bastion instance
 
 `ssh ec2-user@10.0.0.93 -i Bestion-keypair.pem`
 
+## Nat gateway hands on
+
+* Create Nat instance in the public subset but the same AZ with the private instance in private subnet. Set Connection as public
+
+* Update route table for private subnet, add a route to Nat gateway
+
+  * Destination: 0.0.0.0/0
+  * Target: Nat gateway
+
+* Test
+
+  * Use bastionhost to connect private instance,
+
+  * `curl google.com` or `curl example.com`, you can you the HTML content. 
