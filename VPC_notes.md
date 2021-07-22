@@ -110,3 +110,13 @@ sudo systemctl start httpd
 sudo su
 echo "hello world" > /war/www/html/index.html
 ```
+
+
+
+## VPC Peering hands on
+
+**Steps**
+
+1. **Create a VPC peering connection** between 2 VPCs
+2. **Accept the request** from the requester VPC in accepter VPC
+3. **Update both VPC's public route tables**: Add a route to the destination of the CIDR of other VPC, through peering connecting 
