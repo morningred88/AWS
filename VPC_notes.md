@@ -130,3 +130,14 @@ echo "hello world" > /war/www/html/index.html
 EC2 console >Instances menu > select the instance > Action >Security > Modify IAM role> Add a role for S3 read only - EC2-S3-read-only role
 
 **New**: AWS has now has both gateway endpoint and interface endpoints for S3.
+
+## VPC clean up
+
+### Delete elastic IP address
+
+Elastic IP address menu in both EC2 and VPC console. But you can only delete elastic IP address in EC2 console.
+
+1. Go to the EC2 console.
+2. Under the Network & Security tab, choose Elastic IPs.
+3. Select the IP address you wish to remove.
+4. Click on actions and choose Release Address 
