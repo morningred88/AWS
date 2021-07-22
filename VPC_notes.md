@@ -120,3 +120,13 @@ echo "hello world" > /war/www/html/index.html
 1. **Create a VPC peering connection** between 2 VPCs
 2. **Accept the request** from the requester VPC in accepter VPC
 3. **Update both VPC's public route tables**: Add a route to the destination of the CIDR of other VPC, through peering connecting 
+
+## VPC endpoint hands on 
+
+### Create VPC endpoint for S3
+
+#### Give private instance in VPC to access S3
+
+EC2 console >Instances menu > select the instance > Action >Security > Modify IAM role> Add a role for S3 read only - EC2-S3-read-only role
+
+**New**: AWS has now has both gateway endpoint and interface endpoints for S3.
