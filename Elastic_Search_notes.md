@@ -10,3 +10,10 @@ You can send data in the form of JSON documents to Elasticsearch using the API o
 
 https://aws.amazon.com/opensearch-service/the-elk-stack/what-is-elasticsearch/
 
+## Kibana
+
+Many enterprise customers who want to use these capabilities find it challenging to secure access to Kibana. Kibana users have direct access to data stored in Amazon ES—so it’s important that only authorized users have access to Kibana.
+
+**Reference:**
+
+https://aws.amazon.com/blogs/security/how-to-enable-secure-access-to-kibana-using-aws-single-sign-on/
