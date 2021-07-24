@@ -6,6 +6,16 @@ AWS Organization is a **global service**, because Organization group the multipl
 
 You can **invite an existing account** to the Organization or **create new account** directly from there. 
 
+## Multi account strategies
+
+#### Multi account vs one account multi VPC
+
+You may want the users of an account just have access to certain VPC, but not all of them. You'd better to have multiple accounts. 
+
+#### Establish cross account roles for admin purpose
+
+Management account of an organization can assume the admin account for any members account.
+
 ### Management account
 
 Management account is the account you use it to create an Organization. 
