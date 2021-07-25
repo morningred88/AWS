@@ -16,14 +16,6 @@ You may want the users of an account just have access to certain VPC, but not al
 
 Management account of an organization can assume the admin account for any members account.
 
-### Service control policy (SCP)
-
-Service control policy apply to OU and member account, but not apply to the **management account**.
-
-For example, SCP for Root OU is FullAWSAccess, management account has SCP DenyDynamoDBAccess. Result: Management account can access DynamoDB,  because SCP does not apply to management account.
-
-
-
 ### Management account
 
 Management account is the account you use it to create an Organization. 
@@ -44,7 +36,7 @@ You can create OUs with OU, such as you can create HR and Finance department und
 
 The reason we do it because we want to have service control policies (SCP)
 
-### SCP
+### Service control policy (SCP)
 
 Similar with IAM policies in JSON.
 
@@ -52,7 +44,11 @@ Similar with IAM policies in JSON.
 
 **AWS Organization** console> Policies > service control policies (SCP) > **Enable**, then you will have **AWSFullAccess** policy for your organization root OU. 
 
-You can create any SCP policy and attach it to the OU
+#### SCP does not apply to management account
+
+You can create any SCP policy and attach it to the OU and member accounts. But Service control policy does not apply to the **management account**.
+
+For example, SCP for Root OU is FullAWSAccess, management account has SCP DenyDynamoDBAccess. Result: Management account can access DynamoDB,  because SCP does not apply to management account.
 
 ### Tag Policies
 
@@ -71,8 +67,6 @@ It is best practice to set up multiple accounts using Control Power in your acco
 It already adds compliances (Guardrails) and access control to the Control Tower from AWS. So you don't need to setup all from scratch like you do for AWS Organization. 
 
 When we create a landing zone in Control Tower, it automatically show up in AWS Organization console. We should not manage it in AWS Organization.
-
-
 
 ## AWS Service Catalog
 
