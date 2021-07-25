@@ -16,6 +16,14 @@ You may want the users of an account just have access to certain VPC, but not al
 
 Management account of an organization can assume the admin account for any members account.
 
+### Service control policy (SCP)
+
+Service control policy apply to OU and member account, but not apply to the **management account**.
+
+For example, SCP for Root OU is FullAWSAccess, management account has SCP DenyDynamoDBAccess. Result: Management account can access DynamoDB,  because SCP does not apply to management account.
+
+
+
 ### Management account
 
 Management account is the account you use it to create an Organization. 
