@@ -135,5 +135,15 @@ You set a **monthly** budget amount, either money, usage, saving plan or reserva
 
 ## Cost allocation Tag
 
-After you activate cost allocation tags, AWS uses the cost allocation tags to organize your resource costs on your cost allocation report, to make it easier for you to categorize and track your AWS costs. AWS provides two types of cost allocation tags, an **AWS generated tags** and **user-defined tags**.
+AWS provides two types of cost allocation tags, an **AWS generated tags** and **user-defined tags**.
+
+You must activate both types of tags separately before they can appear in **Cost Explorer report** or on a **cost allocation report**, or  **cost and usage report**.                                
+
+### Cost Explorer report vs cost allocation report vs cost and usage report:                              
+
+**Cost Explorer report**: visual dashboard, Monthly, hourly, resource level granularity.
+
+**Cost allocation report**: The cost allocation report includes all of your AWS costs for each billing period.  It is in table format.
+
+**Cost and usage report**: At least once per day, to S3, analyze use Athena.
 
