@@ -132,3 +132,8 @@ You set a **monthly** budget amount, either money, usage, saving plan or reserva
 * Saving plan budget: How much you utilize your saving plan
 
 * Reservation budget: For reserved instances, for EC2, ElastiCache, RDS, Redshift, Elasticsearch
+
+## Cost allocation Tag
+
+After you activate cost allocation tags, AWS uses the cost allocation tags to organize your resource costs on your cost allocation report, to make it easier for you to categorize and track your AWS costs. AWS provides two types of cost allocation tags, an **AWS generated tags** and **user-defined tags**.
+
