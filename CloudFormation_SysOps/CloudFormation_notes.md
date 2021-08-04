@@ -13,3 +13,13 @@ When you use AWS CloudFormation, you work with *templates* and *stacks*.
 
   
 
+### Process to create a cloudFormation stack
+
+If you upload the cloud formation template into S3, it will create a bucket and upload the template right away, even you cancel to create a stack.
+
+You see after I click upload a template file and uploaded the file, the template source change to Amazon S3 url and show the url of S3 bucket
+
+![create stack](/CloudFormation_images/create_stack.jpg)
+
+
+
