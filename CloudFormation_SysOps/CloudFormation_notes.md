@@ -75,5 +75,11 @@ https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-reso
 
 AWS  parameters is called **Pseudo parameters**. You can reference them directly.
 
+## 91 CloudFormation Mapping
 
+**Parameter vs mapping**
+
+* Parameter is user specific, you don't know the value in advance
+
+* Mapping: You know all the values in advance, all the values in map need to be explicitly written out in CloudFormation template.
 
