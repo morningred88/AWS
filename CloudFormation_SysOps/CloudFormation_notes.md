@@ -43,9 +43,13 @@ You can see 2 designer and two yaml files in the same bucket. As long as the sta
 
 ![update stack](/CloudFormation_images/s3_bucket_for_cf_template.png)
 
+**Note for stack update: **
+
+-	Parameter value is added at the time when you create/update a template
+-	**Change set preview**: before you submit the update for the stack, you have a chance to review the change set, which is CloudFormation figure out what are the differences between the original template and new template, and what needs to change.
+-	When I updated the stack, second template was uploaded, all resources in the first template will be deleted. The resources for the second template will be newly created. This does not apply to all the update. **If the Replacement is True in Change set preview, then the resource will be replaced**. 
+
 **Delete a stack**
 
 When you want to delete AWS resources created from CloudFormation, you go to the stack and delete it. Then all the resources provisioned by the stack is removed. 
-
-
 
