@@ -23,7 +23,7 @@ You see after I click upload a template file and uploaded the file, the template
 
 
 
-## CloudFormation Update and Delete stack
+## 87 CloudFormation Update and Delete stack
 
 **Update a stack**
 
@@ -42,4 +42,10 @@ You see after I click upload a template file and uploaded the file, the template
 You can see 2 designer and two yaml files in the same bucket. As long as the stack name is the same, all the template files related to it were uploaded in the same bucket
 
 ![update stack](/CloudFormation_images/s3_bucket_for_cf_template.png)
+
+**Delete a stack**
+
+When you want to delete AWS resources created from CloudFormation, you go to the stack and delete it. Then all the resources provisioned by the stack is removed. 
+
+
 
