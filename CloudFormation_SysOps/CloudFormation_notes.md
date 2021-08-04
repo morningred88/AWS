@@ -23,3 +23,15 @@ You see after I click upload a template file and uploaded the file, the template
 
 
 
+## CloudFormation Update and Delete stack
+
+**Update a stack**
+
+1 way is **Edit template in designer**
+
+![update stack](/CloudFormation_images/update_stack1.png)
+
+2 way: select **replace current template**. After I selected the file from my computer, the file was uploaded to the same bucket as before, but a new template file
+
+![update stack](/CloudFormation_images/update_stack2.png)
+
