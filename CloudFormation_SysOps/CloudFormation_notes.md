@@ -69,3 +69,11 @@ The following link contains reference information for all AWS resource and prope
 
 https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html
 
+## 90 CloudFormation Parameters
+
+**NoEcho** (boolean value): If you pass a secret as a parameter, set NoEcho to True.
+
+AWS  parameters is called **Pseudo parameters**. You can reference them directly.
+
+
+
