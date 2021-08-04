@@ -35,3 +35,11 @@ You see after I click upload a template file and uploaded the file, the template
 
 ![update stack](/CloudFormation_images/update_stack2.png)
 
+
+
+**CloudFormation templates from one stack in S3**
+
+You can see 2 designer and two yaml files in the same bucket. As long as the stack name is the same, all the template files related to it were uploaded in the same bucket
+
+![update stack](/CloudFormation_images/s3_bucket_for_cf_template.png)
+
