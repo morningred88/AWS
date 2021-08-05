@@ -222,7 +222,9 @@ Resources:
     Type: AWS::CloudFormation::Stack
 ```
 
+### Create a stack with nested stack in the template
 
+You will see 2 stacks are created in CloudFormation, one the parent stack and the other one is the nested stack.
 
-
+Open the nested stack, you can see this stack is marked as **nested** in the description.
 
