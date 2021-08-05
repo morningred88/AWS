@@ -83,3 +83,55 @@ AWS  parameters is called **Pseudo parameters**. You can reference them directly
 
 * Mapping: You know all the values in advance, all the values in map need to be explicitly written out in CloudFormation template.
 
+## 94 CloudFormation Intrinsic Functions
+
+In the exam, only the yaml will be tested, not Json
+
+### Fn::GetAtt
+
+I use EC2 instance as a example. 
+
+You can find which attributes you can get from EC2 instance,
+
+\-      Go to cloudFormation Template Reference, https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-reference.html
+
+\-     Go to the first one, Resource and Property reference, then select EC2, then select AWS::EC2::Instance, click returned values from the right hand side. You can see what is the **return value** if you use Ref and Fn:GetAtt function from EC2 instance
+
+#### Return values for EC2 instance
+
+##### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the instance ID. For example: `i-1234567890abcdef0`.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html).
+
+##### Fn::GetAtt
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type. The following are the available attributes and sample return values.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html).
+
+* **AvailabilityZone**
+
+The Availability Zone where the specified instance is launched. For example: `us-east-1b`.
+
+You can retrieve a list of all Availability Zones for a Region by using the [Fn::GetAZs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getavailabilityzones.html) intrinsic function.
+
+* **PrivateDnsName**
+
+The private DNS name of the specified instance. For example: `ip-10-24-34-0.ec2.internal`.
+
+* **PrivateIp**
+
+The private IP address of the specified instance. For example: `10.24.34.0`.
+
+* **PublicDnsName**
+
+The public DNS name of the specified instance. For example: `ec2-107-20-50-45.compute-1.amazonaws.com`.
+
+* **PublicIp**
+
+The public IP address of the specified instance. For example: `192.0.2.0`
+
+ 
+
