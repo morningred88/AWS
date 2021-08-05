@@ -210,7 +210,13 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 
 ## 101 CloudFormation nested stacks
 
-Take the CloudFormation template file 7-nestedstacks.yaml as example:
+### Basic concept for nested stacks
+
+**Nested stack**: A stack is a part of other stacks
+
+**Parent stack/Root stack**: A stack contains other stacks.
+
+Take the CloudFormation template file 7-nestedstacks.yaml as example, to see how to add nested stack in parent stack. What is the special for create, update and delete parent stacks. 
 
 ### Define nested stack in resources
 
@@ -230,7 +236,7 @@ Open the nested stack, you can see this stack is marked as **nested** in the des
 
 ### Delete/update a parent stack with nested stack inside
 
-For deletion, you just need to delete the parent stack, the nested stack will get deleted.
+For deletion, you just need to delete the parent stack, the nested stack will get deleted automatically.
 
 For update, never touch the nested stack, just do update in the parent stack. 
 
