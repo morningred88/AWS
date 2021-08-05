@@ -133,5 +133,25 @@ The public DNS name of the specified instance. For example: `ec2-107-20-50-45.co
 
 The public IP address of the specified instance. For example: `192.0.2.0`
 
- 
+### Fn::Sub 
+
+#### Fn::Sub yaml example with a mapping
+
+```
+Name: !Sub
+  - www.${Domain}
+  - { Domain: !Ref RootDomainName }
+```
+
+#### Fn::Sub yaml example without a mapping
+
+The following example uses Fn::Sub with the `AWS::Region` and `AWS::AccountId` pseudo parameters and the `vpc` resource logical ID to create an Amazon Resource Name (ARN) for a VPC.
+
+```
+!Sub 'arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:vpc/${vpc}'
+```
+
+**Reference:**
+
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html
 
