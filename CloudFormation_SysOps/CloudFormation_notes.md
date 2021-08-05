@@ -207,3 +207,22 @@ Complete!
 Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
 + echo 'Hello World from user data'
 ```
+
+## 101 CloudFormation nested stacks
+
+Take the CloudFormation template file 7-nestedstacks.yaml as example:
+
+### Define nested stack in resources
+
+If you see a rescoure with **Type: AWS::CloudFormation::Stack**, it is a nested stack.
+
+```
+Resources:
+  myStack:
+    Type: AWS::CloudFormation::Stack
+```
+
+
+
+
+
