@@ -171,3 +171,39 @@ Go to **Resources** tab under the stack to confirm that both EC2 instance and se
 
 ![update stack](/CloudFormation_images/EC2_with_user_data.png)
 
+### Check user data logs in EC2 instance
+
+* **SSH to EC2 instance using the keypair above from parameter value**
+
+```
+[ec2-user@ip-172-31-14-10 ~]$ ssh -i Devkeypair.pem ec2-user@44.195.81.63
+
+Result:
+The authenticity of host '44.195.81.63 (44.195.81.63)' can't be established.
+ED25519 key fingerprint is SHA256:MDVkUEIOrZ7bil0likwVr56TrQgkQ9XvQSKzbnO9VEY.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '44.195.81.63' (ED25519) to the list of known hosts.
+   __|  __|_  )
+   _|  (     /   Amazon Linux 2 AMI
+  ___|\___|___|
+```
+
+* **Check user data script log is in /var/log/cloud-init-output.log**
+
+```
+[ec2-user@ip-172-31-14-10 ~]$ sudo cat /var/log/cloud-init-output.log
+
+Result: 
+...
++ yum update -y
+...
+Complete!
++ yum install -y httpd
+...
+Complete!
++ systemctl start httpd
++ systemctl enable httpd
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
++ echo 'Hello World from user data'
+```
