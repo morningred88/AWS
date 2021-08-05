@@ -155,3 +155,19 @@ The following example uses Fn::Sub with the `AWS::Region` and `AWS::AccountId` p
 
 https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html
 
+## CloudFormation user data
+
+We pass the entire user data script to function **Fn::Base64**, that will convert the script to a Base64 string.
+
+### Create a stack in CloudFormation console
+
+Using CloudFormation template 3-user-data.yaml
+
+* Upload the template file 
+* SSH key pair name as parameter
+* Create the stack
+
+Go to **Resources** tab under the stack to confirm that both EC2 instance and security group have been created. 
+
+![update stack](/CloudFormation_images/EC2_with_user_data.png)
+
