@@ -366,6 +366,8 @@ When creating the stack, EC2 instance will be created after MySQL database has b
 
 When deleting stack, it will first delete EC2 instance then MySQL database. 
 
+If we don't add Dependson, both EC2 instance and MySQL database starts creating and deletion at the same time.
+
 ## CloudFormation - Stack Policies
 
 We use **stack policy to prevent updates to stack rescources by mistakes**. 
