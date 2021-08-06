@@ -325,5 +325,9 @@ Since the desired capacity for ASG is 3 and ASG should receive 3 cfn-signal, so 
 
 If we need to update the ASG LaunchConfig, we also need to add **UpdatePolicy** in resource ASG. Otherwise LaunchConfig will be updated, but the instances in ASG will not be updated to use the new LaunchConfig. 
 
+### Actions of UpdatePolicy
 
+1. **AutoScalingRollingUpdate**: Rolling Update, replace part of the instances in ASG. So the instances will be created and terminated in the same ASG.
+2. **AutoScalingReplacingUpdate**: Create a entire new Autoscaling group. When the Autoscaling group has passed the CreationPolicy, then terminate the old Autoscaling group. It is more like an Immutable update. 
+3. **AutoScalingScheduledAction
 
