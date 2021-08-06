@@ -240,3 +240,16 @@ For deletion, you just need to delete the parent stack, the nested stack will ge
 
 For update, never touch the nested stack, just do update in the parent stack. 
 
+## CloudFormation Drift
+
+**How to detect a drift for a stack?**
+
+Select a stack> **Stack action** dropdown> Select **Detect drift**
+
+Then go back to **Stack action** dropdown > select **View drift results**
+
+In **Drifts** page, you can also access Drift menu under Stacks:
+
+If a stack is drifted, **Stack drift status** appears as **DRIFTED** 
+
+You can see what rescource is drifted in **Resource drift status**. Select one resource, click **View drift details**.
