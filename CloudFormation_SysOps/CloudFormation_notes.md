@@ -253,3 +253,33 @@ In **Drifts** page, you can also access Drift menu under Stacks:
 If a stack is drifted, **Stack drift status** appears as **DRIFTED** 
 
 You can see what rescource is drifted in **Resource drift status**. Select one resource, click **View drift details**.
+
+## CloudFormation Deletion Policy
+
+Deletion policy is added to resources in CloudFormation template, take a yaml CloudFormation file below as an example: 
+
+```
+Resources:
+  MySG:
+    Type: AWS::EC2::SecurityGroup
+    DeletionPolicy: Retain
+    Properties:
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+      - CidrIp: 0.0.0.0/0
+        FromPort: 22
+        IpProtocol: tcp
+        ToPort: 22
+
+  MyEBS:
+    Type: AWS::EC2::Volume
+    DeletionPolicy: Snapshot
+    Properties:
+      AvailabilityZone: us-east-1a
+      Size: 1
+      VolumeType: gp2
+```
+
+**Result:** 
+
+After the deletion process completed for the stack, the stack is disappear from CloudFormation console. But the security group has been kept and a snap shot was created for the EBS volume.
