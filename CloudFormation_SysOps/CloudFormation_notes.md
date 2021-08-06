@@ -365,3 +365,17 @@ Resources:
 When creating the stack, EC2 instance will be created after MySQL database has been created.
 
 When deleting stack, it will first delete EC2 instance then MySQL database. 
+
+## CloudFormation - Stack Policies
+
+We use **stack policy to prevent updates to stack rescources by mistakes**. 
+
+Stack policies allow or deny actions for updating different resources. It is written in json,  looks and works like IAM policy. 
+
+In AWS CloudFormation console, stack policy is under **Advanced options** when you create a stack. You could  **Enter stack policy** in Json, or you can **Upload a file in json**. 
+
+But if we really need to update the resources that is denied in stack policy, we need to modify the stack policy at updating time to performed the required updates.
+
+**References:**
+
+[Prevent updates to stack resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/protect-stack-resources.html)
