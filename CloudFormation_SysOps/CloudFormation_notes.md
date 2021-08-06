@@ -320,3 +320,10 @@ Resources:
 ```
 
 Since the desired capacity for ASG is 3 and ASG should receive 3 cfn-signal, so **Count** is 3 under **CreationPolicy**.
+
+## ASG - CloudFormation UpdatePolicy
+
+If we need to update the ASG LaunchConfig, we also need to add **UpdatePolicy** in resource ASG. Otherwise LaunchConfig will be updated, but the instances in ASG will not be updated to use the new LaunchConfig. 
+
+
+
