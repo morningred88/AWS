@@ -283,3 +283,40 @@ Resources:
 **Result:** 
 
 After the deletion process completed for the stack, the stack is disappear from CloudFormation console. But the security group has been kept and a snap shot was created for the EBS volume.
+
+## ASG - CloudFormation CreationPolicy
+
+If you want to make the instances are properly configured and provisioned for ASG, you need to add **CreationPolicy** for ASG resource to receive the **cfn-signal** from the instances defined in LaunchConfig. 
+
+```
+Resources: 
+  AutoScalingGroup:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      AvailabilityZones: 
+        Fn::GetAZs: 
+          Ref: "AWS::Region"
+      LaunchConfigurationName:
+        Ref: LaunchConfig
+      DesiredCapacity: '3'
+      MinSize: '1'
+      MaxSize: '4'
+    CreationPolicy:
+      ResourceSignal:
+        Count: '3'
+        Timeout: PT15M
+
+  LaunchConfig:
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties:
+      ImageId: !Ref LatestLinuxAmiId
+      InstanceType: t2.micro
+      UserData:
+        "Fn::Base64":
+          !Sub |
+            #!/bin/bash -xe
+            yum update -y aws-cfn-bootstrap
+            /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource AutoScalingGroup --region ${AWS::Region}
+```
+
+Since the desired capacity for ASG is 3 and ASG should receive 3 cfn-signal, so **Count** is 3 under **CreationPolicy**.
