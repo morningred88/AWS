@@ -381,3 +381,4 @@ But if we really need to update the resources that is denied in stack policy, we
 **References:**
 
 [Prevent updates to stack resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/protect-stack-resources.html)
+
