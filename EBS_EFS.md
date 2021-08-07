@@ -34,5 +34,11 @@ When you create volume from a snapshot, you are able to: *
 * also select AZ 
 * Encryption
 
+### Lifecycle policy/Lifecycle manager
 
+#### Policy types
+
+* EBS snapshot policy
+* EBS-backed AMI policy
+* Cross-account copy event policy
 
