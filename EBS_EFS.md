@@ -19,5 +19,8 @@ Only gp2 supports bursting, up to 3,000 iops. gp3 has baseline of 3,000 iops.
 
 
 
- 
+ ## EBS Operation: Volume resizing
+
+* Go to **Volume** menu in EC2 console, select a EBS volume, right click then select Modify volume, you can not only change the volume size, but also change the volume type, for example, change from st1 to gp2. 
+* As soon as the volume status changes to "Optimization", you can start repartItion the EBS volume to make the new added volume available to OS.
 
