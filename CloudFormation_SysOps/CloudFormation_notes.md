@@ -329,5 +329,39 @@ If we need to update the ASG LaunchConfig, we also need to add **UpdatePolicy** 
 
 1. **AutoScalingRollingUpdate**: Rolling Update, replace part of the instances in ASG. So the instances will be created and terminated in the same ASG.
 2. **AutoScalingReplacingUpdate**: Create a entire new Autoscaling group. When the Autoscaling group has passed the CreationPolicy, then terminate the old Autoscaling group. It is more like an Immutable update. 
-3. **AutoScalingScheduledAction
+3. **AutoScalingScheduledAction**
 
+## CloudFormation - DependsOn
+
+**DependOn** tells CloudFormation which resource should happen first.
+
+**DependOn example in CloudFormation template:**
+
+```
+Resources:
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !FindInMap [AWSRegionArch2AMI, !Ref 'AWS::Region', HVM64]
+    DependsOn: MyDB
+
+  MyDB:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      AllocatedStorage: '5'
+      DBInstanceClass: db.t2.micro
+      Engine: MySQL
+      EngineVersion: "5.7.22"
+      MasterUsername: MyName
+      MasterUserPassword: MyPassword
+    # Readme - note: Added a DeletionPolicy (not shown in the video)
+    # This ensures that the RDS DBInstance does not create a snapshot when it's deleted
+    # Otherwise, you would be billed for the snapshot :)
+    DeletionPolicy: Delete
+```
+
+**Notes:**
+
+When creating the stack, EC2 instance will be created after MySQL database has been created.
+
+When deleting stack, it will first delete EC2 instance then MySQL database. 
