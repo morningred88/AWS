@@ -42,3 +42,12 @@ When you create volume from a snapshot, you are able to: *
 * EBS-backed AMI policy
 * Cross-account copy event policy
 
+### Fast snapshot restore (FSR)
+
+FSR is a useful but expensive service. It will be billed per minutes per snapshot. 
+
+The **real world use case** is: create a snapshot from EBS volume > Enable FSR > Restore snapshot to EBS volume > disable FSR
+
+
+
+ 
