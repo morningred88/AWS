@@ -26,15 +26,28 @@ Only gp2 supports bursting, up to 3,000 iops. gp3 has baseline of 3,000 iops.
 
 ## EBS Operation: Snapshot
 
+## Snapshot options
+
+* Create volume from snapshot
+* Create Image from snapshot
+* Copy Snapshot
+* Manage fast snapshot restore
+
+![snapshot options](/EBS_EFS_images/snapshot.png)
+
+
+
+C:\Users\xldu\local-repository\AWS\EC2_Storage_SysOps\EBS_EFS_images
+
 ## Create a volume from snapshot
 
-When you create volume from a snapshot, you are able to: *
+When you create volume from a snapshot, you are able to: 
 
-* change volume type and size as well, 
+* change volume type and size as well
 * also select AZ 
 * Encryption
 
-### Lifecycle policy/Lifecycle manager
+### Snapshot lifecycle policy from a EBS volume
 
 #### Policy types
 
