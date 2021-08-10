@@ -65,6 +65,10 @@ The **real world use case** is: create a snapshot from EBS volume > Enable FSR >
 
 EFS is expensive than EBS, 3 x gp2. But you pay EFS per use. So if you don't have so much data and you manage the data very well, it will not be so expensive.
 
-EBS: You need to provision the EBS volume. You pay how much volume you provisioned. 
+EBS: You need to provision the EBS volume in advance. You pay for provisioned capacity, not the used capacity. 
 
- 
+### AZ comparison between EBS and EFS
+
+EBS is network volume, attach to only one instance,  is AZ specific.
+
+EFS is network file systems to be mounted across multiple instances across AZs.
