@@ -59,6 +59,12 @@ FSR is a useful but expensive service. It will be billed per minutes per snapsho
 
 The **real world use case** is: create a snapshot from EBS volume > Enable FSR > Restore snapshot to EBS volume > disable FSR
 
+## EFS Overview
+
+### Cost comparison between EBS and EFS
+
+EFS is expensive than EBS, 3 x gp2. But you pay EFS per use. So if you don't have so much data and you manage the data very well, it will not be so expensive.
+
 
 
  
