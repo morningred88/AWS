@@ -26,7 +26,7 @@ Only gp2 supports bursting, up to 3,000 iops. gp3 has baseline of 3,000 iops.
 
 ## EBS Operation: Snapshot
 
-## Snapshot options
+### Snapshot options
 
 * Create volume from snapshot
 * Create Image from snapshot
@@ -35,7 +35,7 @@ Only gp2 supports bursting, up to 3,000 iops. gp3 has baseline of 3,000 iops.
 
 ![snapshot options](/EBS_EFS_images/snapshot.png)
 
-## Create a volume from snapshot
+### Create a volume from snapshot
 
 When you create volume from a snapshot, you are able to: 
 
@@ -45,7 +45,17 @@ When you create volume from a snapshot, you are able to:
 
 ![snapshot options](/EBS_EFS_images/snapshot_create_volume.png)
 
-### Snapshot lifecycle policy from a EBS volume
+### Data lifecycle policy from a EBS volume
+
+Automate the creation, retention, and deletion of **EBS snapshots** and **EBS-backed AMIs**
+
+### Does an instance need to create a snapshot before creating AMI?
+
+No. EC2 instance does not need to create snapshot, you can create image (AMI) directly from Instance ID. 
+
+But AMI can be managed the same way as snapshot in AWS.
+
+EBS volume> Create snapshot
 
 #### Policy types
 
@@ -72,3 +82,4 @@ EBS: You need to provision the EBS volume in advance. You pay for provisioned ca
 EBS is network volume, attach to only one instance,  is AZ specific.
 
 EFS is network file systems to be mounted across multiple instances across AZs.
+
