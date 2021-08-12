@@ -34,5 +34,10 @@ Then type **permanently delete** to delete the whole project
 
 * The bucket default encryption can be overwritten when you upload an project to the bucket.
 
+### Encrypting objects - 4 methods
 
+* SSE-S3: encrypts S3 objects using keys handled & managed by AWS
+* SSE-KMS: leverage AWS Key Management Service to manage encryption keys
+* SSE-C: when you want to manage your own encryption keys
+* Client Side Encryption
 
