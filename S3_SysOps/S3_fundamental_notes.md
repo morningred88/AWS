@@ -22,7 +22,7 @@ If you need to delete an object that is versioning enabled, you need to select a
 
 Then type **permanently delete** to delete the whole project
 
-![Versioning_delete1](/S3_images/Versioning_delete2.png)
+![Versioning_delete2](/S3_images/Versioning_delete2.png)
 
 ## S3 - encryption
 
@@ -45,5 +45,10 @@ Then type **permanently delete** to delete the whole project
 
 During uploading a object, select properties> Server-side encryption settings> Specify an encryption key >Amazon S3 key (SSE-S3) 
 
-![Versioning_delete1](/S3_images/SSE-S3.png)
+![SSE-S3](/S3_images/SSE-S3.png)
 
+### SSE-KMS
+
+During uploading a object, select properties> Server-side encryption settings> Specify an encryption key >Amazon Key Management Service Key (SSE-KMS) 
+
+![SSE_KMS_s3_key](/S3_images/SSE_KMS_s3_key.png)
