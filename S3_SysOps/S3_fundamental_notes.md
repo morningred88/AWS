@@ -41,3 +41,9 @@ Then type **permanently delete** to delete the whole project
 * SSE-C: when you want to manage your own encryption keys
 * Client Side Encryption
 
+### SSE-S3
+
+During uploading a object, select properties> Server-side encryption settings> Specify an encryption key >Amazon S3 key (SSE-S3) 
+
+![Versioning_delete1](/S3_images/SSE-S3.png)
+
