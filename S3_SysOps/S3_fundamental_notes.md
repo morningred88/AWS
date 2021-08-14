@@ -63,6 +63,16 @@ After the file is uploaded, click on the version, you can see the version detail
 
 ![SSE-KMS_uploaded](/S3_images/SSE-KMS_uploaded.png)
 
+#### AWS KMS key options
+
+There are 3 options for selecting keys when you use SSE-KMS encryption, see the image above for the encryption setting during uploading a file.
+
+* AWS managed key (AWS/S3)
+* Choose from your AWS KMS keys
+* Enter KMS key ARN
+
+The second and third option are the same, just the key how to get the key from KMS service. You need to create a CMK (Customer master key) in KMS in advance. 
+
 ### SSE-C
 
 SSE-C can only be done through AWS CLI, because the customer need to upload data key which cannot be done through the AWS S3 console.
