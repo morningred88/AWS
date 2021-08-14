@@ -62,3 +62,8 @@ During uploading a object, select properties> Server-side encryption settings> S
 After the file is uploaded, click on the version, you can see the version details, under Server-side encryption settings, you can see Sever-side encryption as Amazon Key Management Service key (SSE-KMS).
 
 ![SSE-KMS_uploaded](/S3_images/SSE-KMS_uploaded.png)
+
+### SSE-C
+
+SSE-C can only be done through AWS CLI, because the customer need to upload data key which cannot be done through the AWS S3 console.
+
