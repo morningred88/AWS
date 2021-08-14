@@ -58,3 +58,7 @@ After the file is uploaded, click on the version, you can see the version detail
 During uploading a object, select properties> Server-side encryption settings> Specify an encryption key >Amazon Key Management Service Key (SSE-KMS) 
 
 ![SSE_KMS_s3_key](/S3_images/SSE_KMS_s3_key.png)
+
+After the file is uploaded, click on the version, you can see the version details, under Server-side encryption settings, you can see Sever-side encryption as Amazon Key Management Service key (SSE-KMS).
+
+![SSE-KMS_uploaded](/S3_images/SSE-KMS_uploaded.png)
