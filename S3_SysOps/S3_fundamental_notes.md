@@ -43,9 +43,15 @@ Then type **permanently delete** to delete the whole project
 
 ### SSE-S3
 
-During uploading a object, select properties> Server-side encryption settings> Specify an encryption key >Amazon S3 key (SSE-S3) 
+During uploading a file to the bucket, select properties> Server-side encryption settings> Specify an encryption key >Amazon S3 key (SSE-S3) 
 
 ![SSE-S3](/S3_images/SSE-S3.png)
+
+
+
+After the file is uploaded, click on the version, you can see the version details, under Server-side encryption settings, you can see Sever-side encryption as Amazon S3 master-key (SSE-S3).
+
+![SSE-S3-uploaded](/S3_images/SSE-S3-uploaded.png)
 
 ### SSE-KMS
 
