@@ -77,3 +77,11 @@ The second and third option are the same, just the key how to get the key from K
 
 SSE-C can only be done through AWS CLI, because the customer need to upload data key which cannot be done through the AWS S3 console.
 
+## S3 bucket policies hands on
+
+We want to add a bucket policy to block all file upload if it is not encrypted with SSE-S3.
+
+S3 console> Select bucket versioning1218> Permissions tab> Bucket policy> Edit > Policy generator:
+
+Service: S3
+
