@@ -138,3 +138,10 @@ Paste the policy Json file
     }
   ]
 }
+```
+
+**Test the bucket Policy:**
+
+Upload a file without encryption, the upload failed and got **Access Denied** error.
+
+![Bucket_policy4](/S3_images/Bucket_policy4.png)
