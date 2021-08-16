@@ -85,3 +85,17 @@ S3 console> Select bucket versioning1218> Permissions tab> Bucket policy> Edit >
 
 Service: S3
 
+**Add two statements with conditions**
+
+Add first statement:
+
+![Bucket_policy1](/S3_images/Bucket_policy1.png)
+
+Add second statement:
+
+![Bucket_policy2](/S3_images/Bucket_policy2.png)
+
+Then create the policy
+
+![Bucket_policy3](/S3_images/Bucket_policy3.png)
+
