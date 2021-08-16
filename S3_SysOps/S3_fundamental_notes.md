@@ -99,3 +99,42 @@ Then create the policy
 
 ![Bucket_policy3](/S3_images/Bucket_policy3.png)
 
+**Below is the created bucket policy file in Json:**
+
+Paste the policy Json file
+
+```
+{
+  "Id": "Policy1638032199615",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1638031752283",
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Effect": "Deny",
+      "Resource": "arn:aws:s3:::versioning1218/*",
+      "Condition": {
+        "Null": {
+          "s3:x-amz-server-side-encryption": "true"
+        }
+      },
+      "Principal": "*"
+    },
+    {
+      "Sid": "Stmt1638032131826",
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Effect": "Deny",
+      "Resource": "arn:aws:s3:::versioning1218/*",
+      "Condition": {
+        "StringNotEquals": {
+          "s3:x-amz-server-side-encryption": "AES256"
+        }
+      },
+      "Principal": "*"
+    }
+  ]
+}
