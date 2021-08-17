@@ -145,3 +145,25 @@ Paste the policy Json file
 Upload a file without encryption, the upload failed and got **Access Denied** error.
 
 ![Bucket_policy4](/S3_images/Bucket_policy4.png)
+
+Then I tried to upload a file encrypted with SSE-S3. The upload is successful. 
+
+## S3 website
+
+I used the same bucket versioning1218 above.
+
+**Enable static website hosting**
+
+* Delete the bucket policy for blocking the unencrypted uploading.
+
+* Upload the files from static website folder:
+  * index.html 
+  * error.html 
+  * coffee.jpg
+
+* Properties >Static website hosting:
+  * static website hosting: enable
+  * Hosting type: Host a static website
+  * Index document: index.html
+  * Error document: error.html 
+
