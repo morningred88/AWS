@@ -1,0 +1,13 @@
+# S3 Storage and Data Management
+
+## S3 MFA delete
+
+* Need MFA for **permanently delete an object version** or **suspend the versioning for a bucket**. If you just add a delete marker, you don't need MFA-Delete.
+* MFA Delete **requires a versioned bucket**, because if a bucket isn't versioned, you can permanently "delete" any object (that is, you can obliterate its contents) simply by overwriting the object, which is done by creating a new object with the same key -- so requiring MFA for deletions in that case would accomplish no real purpose since it would be trivial to override or work around, whether accidentally or on purpose.
+* Only **root account** can enable/disable MFA-Delete. If you have Administrator permission, you cannot enable/disable it. 
+* You can **enabled/disable and use MFA-Delete using AWS CLI or API** , not in AWS console. 
+
+
+
+
+
