@@ -16,13 +16,13 @@ To delete versioned objects **permanently**, you must use **DELETE Object versio
 
 If you need to delete an object that is versioning enabled, you need to select all the versions of the object, then select delete.
 
-![Versioning_delete1](/S3_images/Versioning_delete1.png)
+![Versioning_delete1](/S3_SysOps/S3_images/Versioning_delete1.png)
 
 
 
 Then type **permanently delete** to delete the whole project
 
-![Versioning_delete2](/S3_images/Versioning_delete2.png)
+![Versioning_delete2](/S3_SysOps/S3_images/Versioning_delete2.png)
 
 ## S3 - encryption
 
@@ -45,23 +45,23 @@ Then type **permanently delete** to delete the whole project
 
 During uploading a file to the bucket, select properties> Server-side encryption settings> Specify an encryption key >Amazon S3 key (SSE-S3) 
 
-![SSE-S3](/S3_images/SSE-S3.png)
+![SSE-S3](/S3_SysOps/S3_images/SSE-S3.png)
 
 
 
 After the file is uploaded, click on the version, you can see the version details, under Server-side encryption settings, you can see Sever-side encryption as Amazon S3 master-key (SSE-S3).
 
-![SSE-S3-uploaded](/S3_images/SSE-S3-uploaded.png)
+![SSE-S3-uploaded](/S3_SysOps/S3_images/SSE-S3-uploaded.png)
 
 ### SSE-KMS
 
 During uploading a object, select properties> Server-side encryption settings> Specify an encryption key >Amazon Key Management Service Key (SSE-KMS) 
 
-![SSE_KMS_s3_key](/S3_images/SSE_KMS_s3_key.png)
+![SSE_KMS_s3_key](/S3_SysOps/S3_images/SSE_KMS_s3_key.png)
 
 After the file is uploaded, click on the version, you can see the version details, under Server-side encryption settings, you can see Sever-side encryption as Amazon Key Management Service key (SSE-KMS).
 
-![SSE-KMS_uploaded](/S3_images/SSE-KMS_uploaded.png)
+![SSE-KMS_uploaded](/S3_SysOps/S3_images/SSE-KMS_uploaded.png)
 
 #### AWS KMS key options
 
@@ -93,11 +93,11 @@ Add first statement:
 
 Add second statement:
 
-![Bucket_policy2](/S3_images/Bucket_policy2.png)
+![Bucket_policy2](/S3_SysOps/S3_images/Bucket_policy2.png)
 
 Then create the policy
 
-![Bucket_policy3](/S3_images/Bucket_policy3.png)
+![Bucket_policy3](/S3_SysOps/S3_images/Bucket_policy3.png)
 
 **Below is the created bucket policy file in Json:**
 
@@ -144,7 +144,7 @@ Paste the policy Json file
 
 Upload a file without encryption, the upload failed and got **Access Denied** error.
 
-![Bucket_policy4](/S3_images/Bucket_policy4.png)
+![Bucket_policy4](/S3_SysOps/S3_images/Bucket_policy4.png)
 
 Then I tried to upload a file encrypted with SSE-S3. The upload is successful. 
 
