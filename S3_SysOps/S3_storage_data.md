@@ -13,3 +13,8 @@
 
 If you want to **make sure every file in the bucket is encrypted**, regardless what encryption mechanism is used, then set a default encryption for the bucket. 
 
+### Default encryption vs bucket policies
+
+Default encryption does not apply the same encryption to all files. When you upload a file, you can overwrite the default encryption mechanism. 
+
+But if you wan to enforce SSE-S3 encryption for all files, you need to use bucket policy. 
