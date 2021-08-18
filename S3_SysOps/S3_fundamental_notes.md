@@ -89,7 +89,7 @@ Service: S3
 
 Add first statement:
 
-![Bucket_policy1](/S3_images/Bucket_policy1.png)
+![Bucket_policy1](/S3_SysOps/S3_images/Bucket_policy1.png)
 
 Add second statement:
 
