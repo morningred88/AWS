@@ -9,5 +9,7 @@
 
 
 
+## S3 default encryption
 
+If you want to **make sure every file in the bucket is encrypted**, regardless what encryption mechanism is used, then set a default encryption for the bucket. 
 
