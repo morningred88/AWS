@@ -167,3 +167,10 @@ I used the same bucket versioning1218 above.
   * Index document: index.html
   * Error document: error.html 
 
+**Testing:**
+
+After creating the website, website url is shown as below:
+
+http://versioning1218.s3-website-us-east-1.amazonaws.com/
+
+I got the 403 forbidden error
