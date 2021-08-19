@@ -18,3 +18,11 @@ If you want to **make sure every file in the bucket is encrypted**, regardless w
 Default encryption does not apply the same encryption to all files. When you upload a file, you can overwrite the default encryption mechanism. 
 
 But if you wan to enforce SSE-S3 encryption for all files, you need to use bucket policy. 
+
+## S3 replication
+
+* Go to origin bucket > Management > Replication rule> Create new replication rules
+* You can select Create new role, AWS will automatically add new role for us.  
+* Replication rule: Permanent deletion of a version will not be replicated. 
+* By default, Delete marker replication is disabled. But you can enable it. 
+
