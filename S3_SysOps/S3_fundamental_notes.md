@@ -174,3 +174,26 @@ After creating the website, website url is shown as below:
 http://versioning1218.s3-website-us-east-1.amazonaws.com/
 
 I got the 403 forbidden error
+
+**Update permissions for a static web site in S3: 2 steps**
+
+* Uncheck Block all public access setting (bucket settings)
+* Add bucket access policy - grant the read-only permission to an anonymous user
+
+```
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1638039918138",
+    "Statement": [
+        {
+            "Sid": "Stmt1638039910538",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::versioning1218/*"
+        }
+    ]
+}
+```
+
+Then I tested the website url, the web page is working. 
