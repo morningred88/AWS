@@ -21,6 +21,8 @@ But if you wan to enforce SSE-S3 encryption for all files, you need to use bucke
 
 ## S3 replication
 
+Including **CRR** (Cross Region Replication) and **SRR** (Same Region Replication).
+
 * Go to origin bucket > Management > Replication rule> Create new replication rules
 * You can select Create new role, AWS will automatically add new role for us.  
 * Replication rule: Permanent deletion of a version will not be replicated. 
