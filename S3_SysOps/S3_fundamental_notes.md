@@ -201,3 +201,27 @@ Then I tested the website url, the web page is working.
 ## S3 CORS
 
 CORS header has to be defined at cross origin, not the first origin. 
+
+### Add CORS configuration in cross origin bucket
+
+* Create a second bucket and make it a static website.
+
+* Permission>Cross-origin resource sharing (cors), add json CORS config file:
+
+```
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "<url of first bucket with http://...without slash at the end>"
+        ],
+        "ExposeHeaders": [],
+        "MaxAgeSeconds": 3000
+    }
+]
+```
