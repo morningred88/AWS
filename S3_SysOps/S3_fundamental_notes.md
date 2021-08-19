@@ -197,3 +197,7 @@ I got the 403 forbidden error
 ```
 
 Then I tested the website url, the web page is working. 
+
+## S3 CORS
+
+CORS header has to be defined at cross origin, not the first origin. 
