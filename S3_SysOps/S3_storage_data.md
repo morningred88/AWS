@@ -28,3 +28,13 @@ Including **CRR** (Cross Region Replication) and **SRR** (Same Region Replicatio
 * Replication rule: Permanent deletion of a version will not be replicated. 
 * By default, Delete marker replication is disabled. But you can enable it. 
 
+## S3 Performance
+
+**Improve uploading performance:**
+
+* Multi part upload
+* Transfer Accelerator
+
+**Improve downloading performance:**
+
+* S3 Byte-range Fetches
