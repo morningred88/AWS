@@ -225,3 +225,8 @@ CORS header has to be defined at cross origin, not the first origin.
     }
 ]
 ```
+
+**Summary for CORS**:
+
+If website 1 need to access the resource from website 2 through a web browse. Then website 2 needs to have CORS setting to allow the request to be done. Otherwise, the web browse is going to block it. 
+
