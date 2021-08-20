@@ -52,3 +52,13 @@ S3 All object create event includes:
 * Post - s3:ObjectCreated:post
 * Copy - s3:ObjectCreated:Copy
 * Multipart upload completed: s3:ObjectCreated:CompletMultiPart
+
+## S3 Glacier
+
+### Glacier equivalent to S3 bucket
+
+* Vault - S3 bucket
+* Archive - S3 object
+
+
+
