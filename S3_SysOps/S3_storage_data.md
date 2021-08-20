@@ -43,3 +43,12 @@ Including **CRR** (Cross Region Replication) and **SRR** (Same Region Replicatio
 
 * **Filter** rows and columns using **simple** SQL statement. Note that the sql statement is simple select, you cannot do aggregations.
 * For complex querying, that will be serverless in S3, Amazon Athena. 
+
+## S3 Event notifications - Hands on
+
+S3 All object create event includes:
+
+* Put - s3:ObjectCreated:put
+* Post - s3:ObjectCreated:post
+* Copy - s3:ObjectCreated:Copy
+* Multipart upload completed: s3:ObjectCreated:CompletMultiPart
