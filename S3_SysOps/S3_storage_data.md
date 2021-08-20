@@ -60,5 +60,9 @@ S3 All object create event includes:
 * Vault - S3 bucket
 * Archive - S3 object
 
+### Edit an object storage class:  Change from Standard to Glacier 
 
+Select an object in a bucket > Actions> Edit storage class > choose either Glacier or Glacier deep archive
+
+You can see the storage class for the object has changed to Glacier. You can click **Initiate restore** directly from console.
 
