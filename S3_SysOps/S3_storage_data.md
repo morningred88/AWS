@@ -38,3 +38,8 @@ Including **CRR** (Cross Region Replication) and **SRR** (Same Region Replicatio
 **Improve downloading performance:**
 
 * S3 Byte-range Fetches
+
+## S3 Select & Glacier select
+
+* **Filter** rows and columns using **simple** SQL statement. Note that the sql statement is simple select, you cannot do aggregations.
+* For complex querying, that will be serverless in S3, Amazon Athena. 
