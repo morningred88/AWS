@@ -89,3 +89,6 @@ But AWS also has **S3 Glacier console**, you can:
 
 You **cannot directly upload files to Glacier in S3 glacier console**. You need to do it from CLI or SDK.
 
+## Athena
+
+We are able to query data in S3, do some complex query directly without setup any servers, without transforming the data. We just need specify the right data format and the location of the data.  
