@@ -74,3 +74,18 @@ When you initiate a restore from S3 console, you can create a S3 event notificat
 
 * Restore initiated - s3.ObjectRestore:Post
 * Restore completed - s3.ObjectRestore:Completed
+
+## Glacier vault lock
+
+From above, we know that you can set an object storage class as glacier, and you can initiate restore and set restore event notification from S3 bucket. 
+
+But AWS also has **S3 Glacier console**, you can:
+
+* Create vaults
+* Set data retrieval policies
+* Set event notifications
+
+**Notes:**
+
+You **cannot directly upload files to Glacier in S3 glacier console**. You need to do it from CLI or SDK.
+
