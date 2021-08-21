@@ -66,3 +66,6 @@ Select an object in a bucket > Actions> Edit storage class > choose either Glaci
 
 You can see the storage class for the object has changed to Glacier. You can click **Initiate restore** directly from console.
 
+## S3 Event notification for restore object events
+
+When you initiate a restore from S3 console, you can create a S3 event notification in the bucket.
