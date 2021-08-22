@@ -101,3 +101,22 @@ We will encrypt some of object in bucket versioning1218 and put them into a new 
 
 I will create a batch operation and put the operation report into a new bucket. 
 
+### Process to implement the encryption
+
+Step 1: create a bucket batch-report-1218 at us-east-1
+
+step 2: create a batch operation to encrypt the files
+
+* create a csv file as manifest and upload it to bucket versioning1218
+
+  * encrypt 3 objects: coffee.jpg, index.html, error.html
+  * Encrypted file target location:
+  * Batch operation report location:
+
+* Create a new role S3-batch-operation-role by creating a new policy
+
+  Policy name: s3-batch-operation-policy, created by using the policy template provided by batch operation. 
+
+Step 3: Run the batch operation
+
+Step 4: Check the report and encrypted files in the buckets respectively
