@@ -120,3 +120,43 @@ step 2: create a batch operation to encrypt the files
 Step 3: Run the batch operation
 
 Step 4: Check the report and encrypted files in the buckets respectively
+
+### Policy for role used in batch operation
+
+Policy name: s3-batch-operation-policy
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "s3:*"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:s3:::versioning1218/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": [
+                "arn:aws:s3:::versioning1218/s3batch.csv"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": [
+                "arn:aws:s3:::batch-report-1218/reporting/*"
+            ]
+        }
+    ]
+}
+```
