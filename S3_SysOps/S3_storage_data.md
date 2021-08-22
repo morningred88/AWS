@@ -92,3 +92,12 @@ You **cannot directly upload files to Glacier in S3 glacier console**. You need 
 ## Athena
 
 We are able to query data in S3, do some complex query directly without setup any servers, without transforming the data. We just need specify the right data format and the location of the data.  
+
+## Batch operation
+
+### Goal
+
+We will encrypt some of object in bucket versioning1218 and put them into a new folder called encrypted. 
+
+I will create a batch operation and put the operation report into a new bucket. 
+
