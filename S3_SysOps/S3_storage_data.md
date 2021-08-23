@@ -121,6 +121,15 @@ Step 3: Run the batch operation
 
 Step 4: Check the report and encrypted files in the buckets respectively
 
+```
+versioning1218	error.html		succeeded	200		Successful
+versioning1218	coffee.jpg		succeeded	200		Successful
+versioning1218	index.html		succeeded	200		Successful
+```
+You can see the job running successful with Status code 200.
+
+I also checked the bucket versioning1218 that all 3 files are encrypted with SSE-S3 and put into encrypted folder.
+
 ### Policy for role used in batch operation
 
 Policy name: s3-batch-operation-policy
