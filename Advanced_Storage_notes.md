@@ -28,3 +28,4 @@ There are 4 kinds of gateways
   * Newly added.
   * Local data center can access Amazon FSx directly. FSx file gateway is just a proxy. But **the main advantage of FSx file gateway is the local cache** for frequently accessed data, which makes file access more efficiently. 
   * It is also helpful for group file share and home directories on corporate data center, to be back up by AWS FSx at the back end.
+
