@@ -71,3 +71,9 @@ To restrict access to content that you serve from Amazon S3 buckets, follow thes
   I uploaded coffee.jpg file to the S3 bucket.
 
   Then give CloudFront url: https://d12l3kjhqdv0x4.cloudfront.net/coffee.jpg. I can see the image. 
+
+## CloudFront Reports, Logs and Troubleshooting
+
+### How to turn on Access logs
+
+CloudFront console > distribution > Select a distribution> Setting> Edit > Standard logging: ON, then give a S3 bucket for storing the logs. 
