@@ -78,10 +78,19 @@ To restrict access to content that you serve from Amazon S3 buckets, follow thes
 
 CloudFront console > distribution > Select a distribution> Setting> Edit > Standard logging: ON, then give a S3 bucket for storing the logs. 
 
-### CloudFront reports
+### CloudFront reports 
+
+CloudFront console > **CloudFront report and analytics** menu on the left hand side> Then select a distribution.
+
+**5 types of CloudFront reports:**
 
 * Cache Statistics Report: percentage of cache hit
 * Popular Objects Report: total request for a objects, percentage of cache hit
 * Top Referrers Report: From which page get the most requests
 * Usage Reports: How much data transferred from CloudFront to Client, how much data transferred from CloudFront to Client
 * Viewers Report: What type of viewer (Desktop mobil), view location (country)
+
+**Note:**
+
+CloudFront reports are based on the data from the Access Logs. But you don't need to turn on the access logs to get the reports. 
+
