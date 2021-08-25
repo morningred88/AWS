@@ -94,3 +94,11 @@ CloudFront console > **CloudFront report and analytics** menu on the left hand s
 
 CloudFront reports are based on the data from the Access Logs. But you don't need to turn on the access logs to get the reports. 
 
+### CloudFront monitoring
+
+* Request (sum)
+* Data transfer
+* Error rate (as a percentage of total requests)
+* 4xx error rate breakdown 
+* 5xx rate breakdown
+* Cache hit rate
