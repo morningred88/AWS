@@ -103,6 +103,16 @@ CloudFront reports are based on the data from the Access Logs. But you don't nee
 * 5xx rate breakdown
 * Cache hit rate
 
+## CloudFront caching
+
+### How does CloudFront cache work?
+
+Caching content based on:
+
+* HTTP Headers
+* Session Cookies
+* Query String Parameters
+
 ##  Geographic restriction
 
 **How to set geographic restriction?**
