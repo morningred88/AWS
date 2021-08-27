@@ -113,6 +113,20 @@ Caching content based on:
 * Session Cookies
 * Query String Parameters
 
+### Caching content based on cookies - example
+
+For example, suppose that requests for `locations.html` contain a `country` cookie that has a value of either `uk` or `fr`. When you configure CloudFront to cache your objects based on the value of the `country` cookie, CloudFront forwards requests for `locations.html` to the origin and includes the `country` cookie and its value. Your origin returns `locations.html`, and CloudFront caches the object once for requests in which the value of the `country` cookie is `uk` and once for requests in which the value is `fr`.
+
+**Reference:**
+
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html
+
+### CloudFront caching principle
+
+Like the example above, caching content based on HTTP headers and cookie works the same way. **The less forwarding to origin, the better caching performance**. 
+
+Therefore, we need to separate the static web site from Dynamic website in different CloudFront distributions, because we don't need to forward cookies, HTTP headers or QueryStrings for static content.
+
 ##  Geographic restriction
 
 **How to set geographic restriction?**
@@ -121,10 +135,3 @@ Right click distribution ID, then select Geographic restriction pane### Origin A
 
 ![](/CloudFront_SysOps/CloudFront_images/Geo_restriction.png)
 
-### Caching content based on cookies - example
-
-For example, suppose that requests for `locations.html` contain a `country` cookie that has a value of either `uk` or `fr`. When you configure CloudFront to cache your objects based on the value of the `country` cookie, CloudFront forwards requests for `locations.html` to the origin and includes the `country` cookie and its value. Your origin returns `locations.html`, and CloudFront caches the object once for requests in which the value of the `country` cookie is `uk` and once for requests in which the value is `fr`.
-
-**Reference:**
-
-https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html
