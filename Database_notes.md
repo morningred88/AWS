@@ -89,3 +89,9 @@ Insert into R_Releases (Release_ID, Release_Name) values (1, 'Window 10 upgrade'
   * KMS CMK alias or ARN
 
 * Encryption has to be defined at launch time
+
+## RDS Backups and snapshots
+
+Backups cannot be shared
+
+snapshots can be shared.
