@@ -40,3 +40,39 @@ Protocol: TCP
 Port: 3306
 
 Source: My IP address
+
+### Connect to database using Sqlectron
+
+#### Download sqlectron
+
+sqlectron is sql client for access any type of relational database. 
+
+https://sqlectron.github.io/
+
+Download GUI
+
+I download the zip file for the latest version: [sqlectron-1.37.1-win.7z](https://github.com/sqlectron/sqlectron-gui/releases/download/v1.37.1/sqlectron-1.37.1-win.7z), then unzip it> open sqlectron.exe to use it. 
+
+#### Add database connection to sqlectron
+
+Click Add > Enter server Information:
+
+* Name: can be any name
+* Database type: MySQL
+* Server address: endpoint address of my created databse
+* Initial database: Enter the db instance name I gave when I created the database
+
+Test connection, success. Then click save. 
+
+#### Test to create a table and add record in database instance
+
+Connect to my db instance, then try to create a table and add a row of value. 
+
+```
+CREATE TABLE R_Releases(
+       Release_ID int NOT NULL,
+       Release_Name varchar(255) NOT NULL
+)
+
+Insert into R_Releases (Release_ID, Release_Name) values (1, 'Window 10 upgrade')
+```
