@@ -76,3 +76,16 @@ CREATE TABLE R_Releases(
 
 Insert into R_Releases (Release_ID, Release_Name) values (1, 'Window 10 upgrade')
 ```
+
+## RDS encryption and security
+
+### Encryption
+
+* Encrypt the master & read replicas with **AWS KMS** 
+
+  AWS KMS key options
+
+  * Default KMS/RDS
+  * KMS CMK alias or ARN
+
+* Encryption has to be defined at launch time
