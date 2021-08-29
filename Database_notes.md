@@ -29,3 +29,14 @@ But when I selected T2.micro, I could not see **Enable encryption** option. Acco
 
 I choose Yes for public access, because I need to connect and test the database, and let AWS create a security group for MySQL RDS. This means my database will be in public subnet. 
 
+#### Security group details
+
+**Inbound rule**
+
+Type: MySQL/Aurora
+
+Protocol: TCP
+
+Port: 3306
+
+Source: My IP address
