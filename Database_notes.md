@@ -106,3 +106,7 @@ Have ability to restore any point in time (from oldest backup to 5 minutes ago)
 When you create/modify a database, you can choose to export logs to CloudWatch logs.
 
 Then filter the metric of the CloudWatch logs, to create a cloudwatch alarm.
+
+## Auroa Overview
+
+Writer endpoint: Is a DNS name. Even the master fail over, your client still talk to the writer endpoint, and is automatically redirected to the right instance. 
