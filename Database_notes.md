@@ -93,3 +93,10 @@ Database backup is an automatic process, you can enable/disable during create th
 * Transaction logs are backed-up by RDS every 5 minutes
 
 Have ability to restore any point in time (from oldest backup to 5 minutes ago)
+
+### Take snapshot manually
+
+2 ways
+
+1. RDS console> Databases menu > select you database> Actions> select take snapshot> enter snapshot name> click Take snapshot button
+2. RDS console> Snapshot menu > Select your database> enter snapshot name> click Take snapshot button
