@@ -100,3 +100,9 @@ Have ability to restore any point in time (from oldest backup to 5 minutes ago)
 
 1. RDS console> Databases menu > select you database> Actions> select take snapshot> enter snapshot name> click Take snapshot button
 2. RDS console> Snapshot menu > Select your database> enter snapshot name> click Take snapshot button
+
+### CloudWatch alarm for RDS
+
+When you create/modify a database, you can choose to export logs to CloudWatch logs.
+
+Then filter the metric of the CloudWatch logs, to create a cloudwatch alarm.
