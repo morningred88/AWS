@@ -127,3 +127,15 @@ Then filter the metric of the CloudWatch logs, to create a cloudwatch alarm.
 
 Writer endpoint: Is a DNS name. Even the master fail over, your client still talk to the writer endpoint, and is automatically redirected to the right instance. 
 
+###  Replication features
+
+**Single-master**
+
+Supports multiple reader instances connected to the same storage volume as a single writer instance. This is a good general-purpose option for most workloads.
+
+**Multi-master**
+
+Supports multiple writer instances connected to the same storage volume. This is a good option for when continuous writer availability is required.
+
+
+
