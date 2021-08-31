@@ -79,6 +79,22 @@ Insert into R_Releases (Release_ID, Release_Name) values (1, 'Window 10 upgrade'
 
 * Encryption has to be defined at launch time
 
+### Transparent Data Encryption (TDE)
+
+**Transparent Data Encryption (TDE)** was developed with SQL Server 2008, and it is also available in Oracle database management systems. It is an encryption method that protects the core data in the database.
+
+The encryption method protects the data in the database by encrypting the underlying files of the database, and not the data itself. This prevents the data from being hacked and copied to another server; in order to open the files you have to have the original encryption certificate and a master key.
+
+The actual encryption of the database is done at the **page** level. In the context of the actual database, a **page** refers to the unit of data storage in the server (not a web page). A **page** in SQL server is small (8KB in size); therefore **Transparent Data Encryption (TDE)** operates at the structural level of the database.
+
+Because TDE protects/encrypts the structure of the database, it is considered an **at rest** encryption method.
+
+The keyword in the method is **Transparent**. This means that the encryption method is transparent to authorized users of the database.
+
+**Reference:**
+
+https://study.com/academy/lesson/what-is-transparent-data-encryption-tde.html
+
 ## RDS Backups and snapshots
 
 Backups cannot be shared
@@ -107,6 +123,7 @@ When you create/modify a database, you can choose to export logs to CloudWatch l
 
 Then filter the metric of the CloudWatch logs, to create a cloudwatch alarm.
 
-## Auroa Overview
+## Aurora Overview
 
 Writer endpoint: Is a DNS name. Even the master fail over, your client still talk to the writer endpoint, and is automatically redirected to the right instance. 
+
