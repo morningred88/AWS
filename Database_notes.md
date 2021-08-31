@@ -137,7 +137,7 @@ Supports multiple reader instances connected to the same storage volume as a sin
 
 Supports multiple writer instances connected to the same storage volume. This is a good option for when continuous writer availability is required.
 
-### Writer and reader endpoint
+### Writer and reader endpoint for Aurora cluster
 
 Since you can create multiple writers and readers for Aurora cluster. Therefore, there is writer endpoint for all writers and reader endpoint for all readers. There is elastic loader balancer before the writers and readers to balance the connections. 
 
