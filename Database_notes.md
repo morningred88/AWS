@@ -66,6 +66,10 @@ CREATE TABLE R_Releases(
 Insert into R_Releases (Release_ID, Release_Name) values (1, 'Window 10 upgrade')
 ```
 
+### Create read replica
+
+
+
 ## RDS encryption and security
 
 ### Encryption
@@ -136,6 +140,10 @@ Supports multiple reader instances connected to the same storage volume as a sin
 **Multi-master**
 
 Supports multiple writer instances connected to the same storage volume. This is a good option for when continuous writer availability is required.
+
+**Note:**
+
+This is **not** multi AZ deployment for disaster recovery. 
 
 ### Writer and reader endpoint for Aurora cluster
 
