@@ -151,3 +151,6 @@ Since you can create multiple writers and readers for Aurora cluster. Therefore,
 
 But for each writer and reader instance, there is dedicated endpoint url to connect. 
 
+### Delete Aurora cluster
+
+In order to delete Aurora cluster, you need to delete all reader and writer instance first, then you are able to delete Aurora cluster. 
