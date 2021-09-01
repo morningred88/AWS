@@ -76,8 +76,6 @@ Insert into R_Releases (Release_ID, Release_Name) values (1, 'Window 10 upgrade'
 
 
 
-
-
 ## RDS encryption and security
 
 ### Encryption
@@ -153,7 +151,7 @@ Supports multiple writer instances connected to the same storage volume. This is
 
 This is **not** multi AZ deployment for disaster recovery. 
 
-Like other types of RDS database engine, multi AZ deployment is under **Availability & Durability** - create an Aurora Replica or Reader node in a different AZ fast failover and high availability.
+Like other types of RDS database engine, multi AZ deployment is under **Availability & Durability** - create an **stand-by** Aurora Replica or Reader node in a different AZ fast failover and high availability.
 
 ### Writer and reader endpoint for Aurora cluster
 
