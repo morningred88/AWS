@@ -72,7 +72,11 @@ CREATE TABLE R_Releases(
 Insert into R_Releases (Release_ID, Release_Name) values (1, 'Window 10 upgrade')
 ```
 
-### Create read replica
+### Read replica
+
+#### Working with read replica
+
+When you create a read replica, you first specify an existing DB instance as the source. Then Amazon RDS takes a snapshot of the source instance and creates a read-only instance from the snapshot. Amazon RDS then uses the asynchronous replication method for the DB engine to update the read replica whenever there is a change to the primary DB instance. The read replica operates as a DB instance that allows only read-only connections.
 
 
 
