@@ -86,6 +86,20 @@ I create 2 read replicas for primary database database-1, you can see the differ
 
 ![](/Database_SysOps/Database_images/Read_replica.png)
 
+#### DB instance endpoints: 
+
+Each DB instance has its own endpoint, no matter it is a primary db instance or read replica. 
+
+**Applications must update the connection string to leverage read replicas**
+
+**Primary endpoint**: database-1.cxtd7dqoesdf.us-east-1.rds.amazonaws.com
+
+**Replica 1 Endpoint**: mydb.cxtd7dqoesdf.us-east-1.rds.amazonaws.com
+
+**Replica 2 Endpoint**: mydb.cxtd7dqoesdf.us-east-1.rds.amazonaws.com
+
+The first part of the endpoint url is **DB identifier**, such as database-1 for primary
+
 ## RDS encryption and security
 
 ### Encryption
