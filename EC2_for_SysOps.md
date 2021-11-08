@@ -57,3 +57,9 @@ If you want to configure your agent, you can configure it by using SSM parameter
 
 [AWS documentation: Hibernation prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html#hibernation-prereqs-supported-instance-families)
 
+### Stop a instance with/without hibernating
+
+If you decide that you no longer need an instance, you can terminate it. As soon as the state of an instance changes to `shutting-down` or `terminated`, we stop charging for that instance. 
+
+You're not charged for instance usage for a hibernated instance when it is in the `stopped` state. However, you are charged for instance usage while the instance is in the `stopping` state, while the contents of the RAM are transferred to the EBS root volume. (This is different from when you stop an instance above without hibernating it.)
+
