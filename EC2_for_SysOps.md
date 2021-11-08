@@ -1,5 +1,15 @@
 # EC2 for SysOps
 
+## EC2 shutdown behavior & Termination protection
+
+* Shutdown behavior: decide only the shutdown behavior using the **OS**. 
+
+  If the shutdown behavior is set as Terminate and you shut down the instance from console, the instance will be shut down but not terminated. 
+
+* Termination protection: decide only the termination protection from **Console or CLI**. 
+
+  If the termination protection is enabled, you can still terminate the instance using OS. 
+
 ## EC2 launch trouble shooting
 
 ### Instance volume limits
