@@ -1,5 +1,23 @@
 # EC2 for SysOps
 
+## EC2 launch trouble shooting
+
+### Instance volume limits
+
+The maximum number of volumes that your instance can have depends on the operating system and instance type. When considering how many volumes to add to your instance, you should consider whether you need increased I/O bandwidth or increased storage capacity.
+
+#### Nitro System volume limits
+
+Most of these instances support a maximum of 28 attachments. For example, if you have no additional network interface attachments on an EBS-only instance, you can attach up to 27 EBS volumes to it. If you have one additional network interface on an instance with 2 NVMe instance store volumes, you can attach 24 EBS volumes to it.
+
+#### Linux-specific volume limits
+
+Attaching more than 40 volumes can cause boot failures. This number includes the root volume, plus any attached instance store volumes and EBS volumes. If you experience boot problems on an instance with a large number of volumes, stop the instance, detach any volumes that are not essential to the boot process, and then reattach the volumes after the instance is running.
+
+**Reference:**
+
+[AWS documentation> Amazon EC2>Instance volume limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/volume_limits.html)
+
 ## CloudWatch Matrics for EC2
 
 ### Aws Provided metrics
