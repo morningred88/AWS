@@ -26,3 +26,16 @@ If you want to collect additional system-level metrics for RAM, the only way it 
 
 If you want to configure your agent, you can configure it by using SSM parameter store and storing the configuration in a central place, or you can specify a configuration file alternatively. 
 
+
+
+## EC2 Hibernate 
+
+### Supported instance families
+
+- Xen: C3, C4, I3, M3, M4, R3, R4, T2
+- Nitro: C5, C5d, M5, M5a, M5ad, M5d, R5, R5a, R5ad, R5d, T3, T3a
+
+**Reference:**
+
+[AWS documentation: Hibernation prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html#hibernation-prereqs-supported-instance-families)
+
