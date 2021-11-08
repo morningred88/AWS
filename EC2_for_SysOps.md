@@ -20,7 +20,7 @@ If the instance is attached a EBS volume, the Disk metrics are all zero
 
 ## CloudWatch - Unified CloudWatch agent
 
-### Overview
+EC2 can send both the logs and custom metrics to CloudWatch by installing unified CloudWatch agent.
 
 If you want to collect additional system-level metrics for RAM, the only way it to use CloudWatch unified agent.
 
