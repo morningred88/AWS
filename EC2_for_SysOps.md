@@ -18,3 +18,11 @@ If the instance is attached a EBS volume, the Disk metrics are all zero
 
 
 
+## CloudWatch - Unified CloudWatch agent
+
+### Overview
+
+If you want to collect additional system-level metrics for RAM, the only way it to use CloudWatch unified agent.
+
+If you want to configure your agent, you can configure it by using SSM parameter store and storing the configuration in a central place, or you can specify a configuration file alternatively. 
+
