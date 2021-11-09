@@ -73,6 +73,12 @@ If you decide that you no longer need an instance, you can terminate it. As soon
 
 You're not charged for instance usage for a hibernated instance when it is in the `stopped` state. However, you are charged for instance usage while the instance is in the `stopping` state, while the contents of the RAM are transferred to the EBS root volume. (This is different from when you stop an instance above without hibernating it.)
 
+## EC2 instance connect
+
+You don't need to provide or create new key pair when you launch a new instance. 
+
+EC2> Instances >Check the selected instance> Connect tab > EC2 instance connect > User name: ec2-user, you will ssh to the instance. 
+
 
 
 
