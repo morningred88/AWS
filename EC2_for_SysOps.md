@@ -77,7 +77,7 @@ You're not charged for instance usage for a hibernated instance when it is in th
 
 You don't need to provide or create new key pair when you launch a new instance. 
 
-EC2> Instances >Check the selected instance> Connect tab > EC2 instance connect > User name: ec2-user, you will ssh to the instance. 
+EC2> Instances >Check the selected instance> Connect tab > EC2 instance connect > User name: **ec2-user**, you will ssh to the instance. 
 
 
 

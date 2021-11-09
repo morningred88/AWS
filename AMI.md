@@ -71,5 +71,17 @@ EC2 image builder is free, you just need to pay the underlying resources.
 
 The image creation process has gone through 4 states: Pending>Building>testing>Distributing. It takes quite a while > 10 minutes. 
 
+### Testing the build AMI
+
+```
+aws --version
+Result: aws-cli/2.3.7
+
+java -version
+Result: Openjdk version "11.0.13"
+```
+
+
+
 
 
