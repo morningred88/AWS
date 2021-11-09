@@ -1,5 +1,13 @@
 # AMI - Amazon Machine Image
 
+## AMI is region locked
+
+AMI are built for a specific region and can be copied across regions.
+
+**When you copy the AMI to another region, new AMI ID will be created for the second region**. The same AMI ID **cannot** be used across regions. 
+
+I create an AMI in us-east-1 with AMI ID ami-029f5b13220869932. Then I copy the AMI to us-west-1, the AMI ID changed to ami-0e04474846dba4b6d.
+
 ## EC2 instance migration using AMIs
 
 ### EC2 instance migration between AZ
@@ -85,8 +93,6 @@ Result: aws-cli/2.3.7
 java -version
 Result: Openjdk version "11.0.13"
 ```
-
-
 
 
 
