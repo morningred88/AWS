@@ -25,3 +25,15 @@ If you set you image as Private, you can **Add Permission** to the specific AWS 
 
 If you add **create volume** permission, the account that you share with is allowed to make the own copy of the shared image.
 
+## Delete the created AMI 
+
+**Step1: Deregister the AMI**
+
+**Step2: Delete snapshot created during AMI creation process**
+
+When you deregister an Amazon EBS-backed AMI, it doesn't affect the snapshot(s) that were created for the volume(s) of the instance during the AMI creation process. You'll continue to incur storage costs for the snapshots. Therefore, if you are finished with the snapshots, you should delete them.
+
+Reference:
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/deregister-ami.html#clean-up-ebs-ami
+
