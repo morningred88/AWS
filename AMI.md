@@ -73,6 +73,11 @@ The image creation process has gone through 4 states: Pending>Building>testing>D
 
 ### Testing the build AMI
 
+* Launch a EC2 instance using the build AMI
+
+* EC2 instance connect to the EC2 instance
+* Testing commands for the 2 components:
+
 ```
 aws --version
 Result: aws-cli/2.3.7
