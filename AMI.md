@@ -2,9 +2,24 @@
 
 ## EC2 instance migration using AMIs
 
-### Share the image with other AWS Account
+### EC2 instance migration between AZ
 
-You can share the image with other AWS account by selecting **Modify Image Permission**: 
+EC2> Instances> right click the instance ID or  select Action tab on the top>**Create AMI**, then launch instance, select the expect AZ
+
+### Cross-region instance migration
+
+EC2>AMI> right click AMI ID or select Action tab on the top> **copy AMI** option, you can define:
+
+* Destination region
+* Name
+* Description
+* Encryption: Encrypt target EBS snapshot
+
+### Cross-Account AMI Sharing
+
+Sharing an AMI does **not affect the ownership**, which means you still own the AMI. 
+
+You can share the image with other AWS account by selecting **Modify Image Permission**. 
 
 If you set you image as Private, you can **Add Permission** to the specific AWS Account Number. 
 
