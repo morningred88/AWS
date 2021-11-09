@@ -59,7 +59,17 @@ When you deregister an Amazon EBS-backed AMI, it doesn't affect the snapshot(s) 
    2. Select a snapshot to delete (look for the AMI ID from the prior step in the **Description** column).
    3. Choose **Actions**, and then choose **Delete**. When prompted for confirmation, choose **Yes, Delete**.
 
-Reference:
+**Reference:**
 
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/deregister-ami.html#clean-up-ebs-ami
+
+## EC2 image builder
+
+You can build both AMI or docker image by allocating the components by using EC2 image builder.
+
+EC2 image builder is free, you just need to pay the underlying resources. 
+
+The image creation process has gone through 4 states: Pending>Building>testing>Distributing. It takes quite a while > 10 minutes. 
+
+
 
