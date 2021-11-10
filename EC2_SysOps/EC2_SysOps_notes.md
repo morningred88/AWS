@@ -28,6 +28,14 @@ Attaching more than 40 volumes can cause boot failures. This number includes the
 
 [AWS documentation> Amazon EC2>Instance volume limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/volume_limits.html)
 
+## 18. EC2 Instance Type deep dive
+**How to accumulate CPU Credit for T2 and T3 instances?**
+CPU credit can be earned per hour. The big the instance is, the more credits can be earn per hour. 
+For example:
+T2.micro – 6 CPU credits eared per hour
+T2.large – 36
+T2.2xlarge – 81
+
 ## 19. Burstable instances
 
 **AWS News Blog**
