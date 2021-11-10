@@ -29,12 +29,22 @@ Attaching more than 40 volumes can cause boot failures. This number includes the
 [AWS documentation> Amazon EC2>Instance volume limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/volume_limits.html)
 
 ## 18. EC2 Instance Type deep dive
-**How to accumulate CPU Credit for T2 and T3 instances?**
+**How to accumulate CPU Credit for burstable T2 and T3 instances?**
+
+T type instance are burstable instance. Burst means a boost of power. If the machine burst, it utilize "burst credit". The burst credit can be monitored in CloudWatch:
+
+- `CPUCreditUsage` – The number of CPU credits spent during the measurement period.
+- `CPUCreditBalance` – The number of CPU credits that an instance has accrued. This balance is depleted when the CPU bursts and CPU credits are spent more quickly than they are earned.
+
 CPU credit can be earned per hour. The big the instance is, the more credits can be earn per hour. 
 For example:
 T2.micro – 6 CPU credits eared per hour
 T2.large – 36
 T2.2xlarge – 81
+
+**Reference:**
+
+[Monitor your CPU credits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-monitoring-cpu-credits.html)
 
 ## 19. Burstable instances
 
