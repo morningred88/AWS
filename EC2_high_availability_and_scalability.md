@@ -37,7 +37,7 @@ Ping path: /
 **Advanced Details:**
 
 ```
-Response Timeout: 5 second
+Response Timeout: 4 second
 
 Interval: 5 second
 
@@ -51,7 +51,7 @@ Healtht threshold: 3
 * **Ping path:** We need to give the correct path. If you give the input as */random*, but you check the path and  the page cannot be found, you will get unhealthy status.
 * **Response Timeout:** The amount of the time to wait to receive a response from the health check. in seconds.
 
-* **Interval:** the interval the CLB wait for doing another health check of an individual instance, in seconds. Interval time cannot be less than response timeout.
+* **Interval:** the interval the CLB wait for doing another health check of an individual instance, in seconds. Interval time must be greater than response timeout.
 
 * **Unhealthy threshold:** How many failed healthy checks in a row to decide the unhealthy status 
 * **Healthy threshold:** How many successful healthy checks in a row to decide the healthy status 
