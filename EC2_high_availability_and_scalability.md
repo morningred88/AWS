@@ -18,5 +18,45 @@ Run instance for the same application across multi AZ.
 
 This is for Auto Scaling Group that has multi AZ enabled and Load Balancer that has multi AZ enabled as well. 
 
+## Elastic load balancing (ELB) 
 
+### Why use a load balancer?
+
+Provide SSL termination for your websites - means that  you have HTTPS encrypted traffic for your website.
+
+### Configure health check for CLB
+
+```
+Ping Protocol: HTTP
+
+Ping port: 80
+
+Ping path: /  
+```
+
+**Advanced Details:**
+
+```
+Response Timeout: 5 second
+
+Interval: 5 second
+
+Unhealthy threshold: 2
+
+Healtht threshold: 3
+```
+
+**Explanation of the matrix:**
+
+* **Ping path:** We need to give the correct path. If you give the input as */random*, but you check the path and  the page cannot be found, you will get unhealthy status.
+* **Response Timeout:** The amount of the time to wait to receive a response from the health check. in seconds.
+
+* **Interval:** the interval the CLB wait for doing another health check of an individual instance, in seconds. Interval time cannot be less than response timeout.
+
+* **Unhealthy threshold:** How many failed healthy checks in a row to decide the unhealthy status 
+* **Healthy threshold:** How many successful healthy checks in a row to decide the healthy status 
+
+**Reference:**
+
+[Configure health checks for your Classic Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html)
 
