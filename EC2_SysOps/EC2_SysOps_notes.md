@@ -10,7 +10,7 @@
 
   If the termination protection is enabled, you can still terminate the instance using OS. 
 
-## EC2 launch trouble shooting
+## 13. EC2 launch trouble shooting
 
 ### Instance volume limits
 
@@ -28,7 +28,21 @@ Attaching more than 40 volumes can cause boot failures. This number includes the
 
 [AWS documentation> Amazon EC2>Instance volume limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/volume_limits.html)
 
-## CloudWatch Matrics for EC2
+## 19. Burstable instances
+
+**AWS News Blog**
+
+T2 Unlimited – Going Beyond the Burst with High Performance
+
+https://aws.amazon.com/blogs/aws/new-t2-unlimited-going-beyond-the-burst-with-high-performance/
+
+The blog explains the pictures.
+
+**CPUSurplusCreditBalance**: T2 Unlimited instances have the ability to borrow an entire day’s worth of future credits, allowing them to perform additional bursting. This borrowing is tracked by the new **CPUSurplusCreditBalance** CloudWatch metric.  If there’s nothing more to borrow from the future, and any further CPU usage is charged at the end of the hour
+
+
+
+## 21. CloudWatch Matrics for EC2
 
 ### Aws Provided metrics
 
