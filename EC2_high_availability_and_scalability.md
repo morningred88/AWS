@@ -60,3 +60,13 @@ Healtht threshold: 3
 
 [Configure health checks for your Classic Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html)
 
+## 59/60 Application load balancer (ALB)
+
+### Network mapping
+
+The load balancer routes traffic to targets in the selected subnets, and in accordance with your IP address settings.
+
+Select at least two Availability Zones and one subnet per zone. The load balancer routes traffic to target in these Availability Zones only. 
+
+
+
