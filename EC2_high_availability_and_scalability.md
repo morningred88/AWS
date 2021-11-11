@@ -68,5 +68,20 @@ The load balancer routes traffic to targets in the selected subnets, and in acco
 
 Select at least two Availability Zones and one subnet per zone. The load balancer routes traffic to target in these Availability Zones only. 
 
+### Target group
+
+ALB forward traffic to **different target groups** instead of instances directly like in CLB.
+
+**Target type of Target group** 
+
+* private IP addresses
+* ECS tasks
+* EC2 instances 
+* Lambda functions. 
+
+If you choose a target type as Instances, then all the registered target in the target group must be EC2 instances.
+
+You can **Register Targets** or **Deregister Target** to manage the number of targets.
+
 
 
