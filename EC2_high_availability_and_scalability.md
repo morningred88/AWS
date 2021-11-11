@@ -95,5 +95,23 @@ If you choose a target type as Instances, then all the registered target in the 
 
 You can **Register Targets** or **Deregister Target** to manage the number of targets.
 
+### CLB vs ALB
+**CLB**
 
+* can only forward traffic to EC2 instances
+
+* Can only forward traffic to one application
+
+* There is no network mapping for CLB
+* Health checks are set at CLB level
+  
+
+**ALB**
+
+* Forward traffic to different target groups, the type of target group can be EC2 instances, but also include other types, such as Lambda function, private IP address, ECS etc
+
+* Can forward traffic to multiple applications
+
+* Network mapping for CLB
+* Health checks are set at target group level
 
