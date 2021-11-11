@@ -80,6 +80,16 @@ When you check the health status in the target group, the increase for us-est-1c
 
 **Target is in an Availability Zone that is not enabled for the load balancer**.
 
+### Security group editing inbound rule error
+
+In AWS EC2, I start a Application Load Balancer in front of a target group containing EC2 instances . I want to change the inbound rule of Security Group of EC2 instance . A security group for Classical Load Balancer (it's name is **elb-sg**) was also started. when i am changing source of an inbound rule of security group for EC2 instances to the **elb-sg**, following error is prompted:
+
+**You may not specify a referenced group id for an existing IPv4 CIDR rule.**
+
+**Solution:**
+
+I solved this from deleting the existing rule and creating a new rule.
+
 ### Target group
 
 ALB forward traffic to **different target groups** instead of instances directly like in CLB.
