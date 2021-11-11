@@ -68,6 +68,18 @@ The load balancer routes traffic to targets in the selected subnets, and in acco
 
 Select at least two Availability Zones and one subnet per zone. The load balancer routes traffic to target in these Availability Zones only. 
 
+**Test:**
+
+I launched 3 instances in us-est-1a,  us-est-1b,  us-est-1c, respectively. 
+
+I created an ALB with networking mapping only for us-est-1a and us-est-1b,  but not for us-est-1c.
+
+I create a target group for the ALB and added all 3 instances into the target group.
+
+When you check the health status in the target group, the increase for us-est-1c grayed out, its Health Status is Unused, detailed message is: 
+
+**Target is in an Availability Zone that is not enabled for the load balancer**.
+
 ### Target group
 
 ALB forward traffic to **different target groups** instead of instances directly like in CLB.
