@@ -171,3 +171,12 @@ When you create an internet-facing load balancer, you can optionally specify one
 
 - An HTTP/HTTPS load balancer.
 - At least one healthy instance in each Availability Zone.
+
+### Duration-based stickiness
+
+Duration-based stickiness routes requests to the same target in a target group using a load balancer generated cookie (`AWSALB`). The cookie is used to map the session to the target.
+
+When a load balancer first receives a request from a client, it routes the request to a target (based on the chosen algorithm), and generates a cookie named `AWSALB`. It encodes information about the selected target, encrypts the cookie, and includes the cookie in the response to the client.
+
+In subsequent requests, the client should include the `AWSALB` cookie. When the load balancer receives a request from a client that contains the cookie, it detects it and routes the request to the same target. If the cookie is present but cannot be decoded, or if it refers to a target that was deregistered or is unhealthy, the load balancer selects a new target and updates the cookie with information about the new target.
+
