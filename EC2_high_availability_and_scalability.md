@@ -159,8 +159,15 @@ When you create an internet-facing load balancer, you can optionally specify one
 
 ## Sticky sessions for your Application Load Balancer
 
+### General information about stickyness
+
 * Application Load Balancers support both duration-based cookies and application-based cookies.
 * Sticky sessions are enabled at the target group level.
 * You can use a combination of duration-based stickiness, application-based stickiness, and no stickiness across all of your target groups.
 * For both stickiness types, the Application Load Balancer resets the expiry of the cookies it generates after every request.
 * If a cookie expires, the session is no longer sticky and the client should remove the cookie from its cookie store.
+
+### Requirements
+
+- An HTTP/HTTPS load balancer.
+- At least one healthy instance in each Availability Zone.
