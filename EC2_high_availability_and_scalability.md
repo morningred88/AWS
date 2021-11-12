@@ -125,3 +125,15 @@ You can **Register Targets** or **Deregister Target** to manage the number of ta
 * Network mapping for CLB
 * Health checks are set at target group level
 
+## NLB
+
+### Static IP address per subnet
+
+When you create an internet-facing load balancer, you can optionally specify one Elastic IP address **per subnet**. If you do not choose one of your own Elastic IP addresses, Elastic Load Balancing provides one Elastic IP address per subnet for you. These Elastic IP addresses provide your load balancer with **static IP addresses** that will not change during the life of the load balancer. You cannot change these Elastic IP addresses after you create the load balancer.
+
+**Reference:**
+
+[Network Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html)
+
+
+
