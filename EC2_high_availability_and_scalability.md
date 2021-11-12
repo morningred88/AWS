@@ -135,5 +135,15 @@ When you create an internet-facing load balancer, you can optionally specify one
 
 [Network Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html)
 
+### Target group for NLB
 
+* EC2 instances
+
+* Private IP addresses
+
+  Scenario: If you need NLB to forward traffic to your server on premise. You can allocate a static IP address for your local server, then connect it with NLB in the upstream. 
+
+* ALB
+
+  **Scenario:** If you need a static IP address in the front, but you still need ALB to manage the application servers, such as using the features of listener rules. 
 
