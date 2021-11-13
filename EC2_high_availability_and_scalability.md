@@ -127,34 +127,6 @@ When you create an internet-facing load balancer, you can optionally specify one
 
   **Scenario:** If you need a static IP address in the front, but you still need ALB to manage the application servers, such as using the features of listener rules. 
 
-## CLB vs ALB vs NLB
-
-**CLB**
-
-* can **only forward traffic to EC2 instances**
-* Can only forward traffic to **single application**
-* There is **no network mapping** for CLB
-* **Health checks** are set at CLB level
-* **Security group** for downstream instances:  HTTP source is the security of CLB
-
-**ALB**
-
-* **Forward traffic to different target groups**, the type of target group can be EC2 instances, but also include other types, such as Lambda function, private IP address, ECS etc
-* Can forward traffic to **multiple applications**, or to multiple target group, each target group is an application. 
-* **Network mapping** for ALB
-* **Health checks** are set at target group level
-* **Security group** for instances in target group:  HTTP source is the security of ALB
-* **Protocol to target group:** HTTP. You can check the protocol and port from ELB in target group. 
-
-**NLB**
-
-* **Forward traffic to different target groups**, the type of target group can be EC2 instances, but also include other types,  private IP address or ALB.
-* Can **forward traffic** to single application/single target group, or first forward traffic to ALB then multiple applications.
-* **Network mapping** for NLB
-* **Health checks** are set at target group level
-* **Security group** for instances in target group:  HTTP source anywhere, because **NLB does not have security group**, it forward the external TCP traffic directly to target group. 
-* **Protocol to target group:** TCP
-
 
 
 ## Sticky sessions for your Application Load Balancer
@@ -209,4 +181,35 @@ A **listener** is a process that checks for connection requests, using the proto
 * Choose a certificate from ACM
 * Choose a certificate from IAM
 * Import manually
+
+## CLB vs ALB vs NLB
+
+**CLB**
+
+* can **only forward traffic to EC2 instances**
+* Can only forward traffic to **single application**
+* There is **no network mapping** for CLB
+* **Health checks** are set at CLB level
+* **Security group** for downstream instances:  HTTP source is the security of CLB
+* Support only **one SSL certificate**. Must use multiple CLB for multiple hostname with multiple SSL certificates
+
+**ALB**
+
+* **Forward traffic to different target groups**, the type of target group can be EC2 instances, but also include other types, such as Lambda function, private IP address, ECS etc
+* Can forward traffic to **multiple applications**, or to multiple target group, each target group is an application. 
+* **Network mapping** for ALB
+* **Health checks** are set at target group level
+* **Security group** for instances in target group:  HTTP source is the security of ALB
+* **Protocol to target group:** HTTP. You can check the protocol and port from ELB in target group.
+*  Supports multiple listeners with **multiple SSL certificates**. Uses Server Name Indication (SNI) to make it work
+
+**NLB**
+
+* **Forward traffic to different target groups**, the type of target group can be EC2 instances, but also include other types,  private IP address or ALB.
+* Can **forward traffic** to single application/single target group, or first forward traffic to ALB then multiple applications.
+* **Network mapping** for NLB
+* **Health checks** are set at target group level
+* **Security group** for instances in target group:  HTTP source anywhere, because **NLB does not have security group**, it forward the external TCP traffic directly to target group. 
+* **Protocol to target group:** TCP
+*  Supports multiple listeners with **multiple SSL certificates**. Uses Server Name Indication (SNI) to make it work
 
