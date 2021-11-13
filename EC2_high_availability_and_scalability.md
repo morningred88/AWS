@@ -168,7 +168,7 @@ In subsequent requests, clients have to **send back both cookies** to maintain s
 
 ## 66 ELB SSL certificates
 
-**SSL termination: **The external traffic talks to the load balancer using HTTPS. ELB can do SSL termination, so ELB can talk to the backend EC2 instance using HTTP. But the traffic goes over the VPC, which is private network, it is secure even without HTTPS. 
+**SSL termination: **ELB can terminate TLS traffic. The external traffic talks to the load balancer using HTTPS. ELB can do SSL termination, so ELB can talk to the backend EC2 instance using HTTP. But the traffic goes over the VPC, which is private network, it is secure even without HTTPS. 
 
 You can also load your own certificate to ACM if you want to. 
 
@@ -197,7 +197,8 @@ A **listener** is a process that checks for connection requests, using the proto
 
 **ALB**
 
-* Network layer 7 only, support HTTPS, HTTP and websocket
+* Network layer 7 only, support HTTPS, HTTP and websocket (HTTP/2)
+* **Distribute requests based on** multiple variables, from the **network layer to the application layer**. It is **context-aware**
 * HTTP headers for source IP, port and protocol
 
 * **Forward traffic to different target groups**, the type of target group can be EC2 instances, but also include other types, such as Lambda function, private IP address, ECS etc
@@ -213,6 +214,7 @@ A **listener** is a process that checks for connection requests, using the proto
 **NLB**
 
 * NLB works at **layer 4** only and can handle both TCP and UDP, as well as TCP connections encrypted with TLS.
+* **Distribute traffic based on network variables, such as IP address and destination ports.** It is not designed to take into consideration anything at the application layer such as content type, cookie data, custom headers, user location, or the application behavior. It is **context-less**, caring only about the network-layer information
 * NLB natively **preserves the source IP address** in TCP/UDP packets
 
 * **Forward traffic to different target groups**, the type of target group can be EC2 instances, but also include other types,  private IP address or ALB.
@@ -225,5 +227,6 @@ A **listener** is a process that checks for connection requests, using the proto
 
 **Reference:**
 
-[ELB vs. ALB vs. NLB: Choosing the Best AWS Load Balancer for Your Needs](https://iamondemand.com/blog/elb-vs-alb-vs-nlb-choosing-the-best-aws-load-balancer-for-your-needs/)
+1. [ELB vs. ALB vs. NLB: Choosing the Best AWS Load Balancer for Your Needs](https://iamondemand.com/blog/elb-vs-alb-vs-nlb-choosing-the-best-aws-load-balancer-for-your-needs/)
+2. [AWS — Difference between Application load balancer (ALB) and Network load balancer (NLB)](https://medium.com/awesome-cloud/aws-difference-between-application-load-balancer-and-network-load-balancer-cb8b6cd296a4)
 
