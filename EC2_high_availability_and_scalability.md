@@ -193,3 +193,16 @@ In subsequent requests, clients have to **send back both cookies** to maintain s
 **Reference:**
 
 [Sticky sessions for your Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/sticky-sessions.html)
+
+## 66 ELB SSL certificate
+
+**SSL termination: **The external traffic talks to the load balancer using HTTPS. ELB can do SSL termination, so ELB can talk to the backend EC2 instance using HTTP. But the traffic goes over the VPC, which is private network, it is secure even without HTTPS. 
+
+You can also load your own certificate to ACM if you want to. 
+
+A **listener** is a process that checks for connection requests, using the protocol and port that you configure.
+
+**SNI:** Using SNI, you are able to have multiple target groups for different web sites for using different SSL certificate. 
+
+
+
