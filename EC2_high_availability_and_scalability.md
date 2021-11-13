@@ -186,6 +186,9 @@ A **listener** is a process that checks for connection requests, using the proto
 
 **CLB**
 
+* CLB works at Network both layer 4 (TCP, secure TCP) and 7 (HTTP and HTTPS)
+* HTTP headers for source IP, port and protocol
+
 * can **only forward traffic to EC2 instances**
 * There is **no network mapping** for CLB
 * **Health checks** are set at CLB level
@@ -193,6 +196,9 @@ A **listener** is a process that checks for connection requests, using the proto
 * Support only **one SSL certificate**, so serve **only one domain name**. Must use multiple CLB for multiple hostname with multiple SSL certificates
 
 **ALB**
+
+* Network layer 7 only, support HTTPS, HTTP and websocket
+* HTTP headers for source IP, port and protocol
 
 * **Forward traffic to different target groups**, the type of target group can be EC2 instances, but also include other types, such as Lambda function, private IP address, ECS etc
 * Can forward traffic to **multiple applications**, or to multiple target group, each target group is an application. 
@@ -205,6 +211,9 @@ A **listener** is a process that checks for connection requests, using the proto
 * **Use case:** ALBs are typically used for web applications. If you have a microservices architecture, ALB can be used as an internal load balancer in front of EC2 instances or Docker containers that implement a given service. You can also use them in front of an application implementing a REST API, although [AWS API Gateway](https://aws.amazon.com/api-gateway/) would generally be a better choice here.
 
 **NLB**
+
+* NLB works at **layer 4** only and can handle both TCP and UDP, as well as TCP connections encrypted with TLS.
+* NLB natively **preserves the source IP address** in TCP/UDP packets
 
 * **Forward traffic to different target groups**, the type of target group can be EC2 instances, but also include other types,  private IP address or ALB.
 * **Network mapping** for NLB
