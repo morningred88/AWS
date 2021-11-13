@@ -187,11 +187,10 @@ A **listener** is a process that checks for connection requests, using the proto
 **CLB**
 
 * can **only forward traffic to EC2 instances**
-* Can only forward traffic to **single application**
 * There is **no network mapping** for CLB
 * **Health checks** are set at CLB level
 * **Security group** for downstream instances:  HTTP source is the security of CLB
-* Support only **one SSL certificate**. Must use multiple CLB for multiple hostname with multiple SSL certificates
+* Support only **one SSL certificate**, so serve **only one domain name**. Must use multiple CLB for multiple hostname with multiple SSL certificates
 
 **ALB**
 
@@ -202,14 +201,16 @@ A **listener** is a process that checks for connection requests, using the proto
 * **Security group** for instances in target group:  HTTP source is the security of ALB
 * **Protocol to target group:** HTTP. You can check the protocol and port from ELB in target group.
 *  Supports multiple listeners with **multiple SSL certificates**. Uses Server Name Indication (SNI) to make it work
+* ALB supports **Server Name Indication (SNI)**, which allows it to serve **many domain names** with different SSL certificate for each. There is a limit, however, to the number of certificates you can attach to an ALB, [namely 25 certificates](https://aws.amazon.com/blogs/aws/new-application-load-balancer-sni/) plus the default certificate.
+* **Use case:** ALBs are typically used for web applications. If you have a microservices architecture, ALB can be used as an internal load balancer in front of EC2 instances or Docker containers that implement a given service. You can also use them in front of an application implementing a REST API, although [AWS API Gateway](https://aws.amazon.com/api-gateway/) would generally be a better choice here.
 
 **NLB**
 
 * **Forward traffic to different target groups**, the type of target group can be EC2 instances, but also include other types,  private IP address or ALB.
-* Can **forward traffic** to single application/single target group, or first forward traffic to ALB then multiple applications.
 * **Network mapping** for NLB
 * **Health checks** are set at target group level
 * **Security group** for instances in target group:  HTTP source anywhere, because **NLB does not have security group**, it forward the external TCP traffic directly to target group. 
 * **Protocol to target group:** TCP
-*  Supports multiple listeners with **multiple SSL certificates**. Uses Server Name Indication (SNI) to make it work
+*  Supports **multiple SSL certificates**. Uses Server Name Indication (SNI) to make it work
+* **Use case:** NLBs would be used for anything that ALBs don’t cover. A typical use case would be a near real-time data streaming service (video, stock quotes, etc.) Another typical case is that you would need to use an NLB if your application uses non-HTTP protocols.
 
