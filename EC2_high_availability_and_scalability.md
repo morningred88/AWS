@@ -223,3 +223,7 @@ A **listener** is a process that checks for connection requests, using the proto
 *  Supports **multiple SSL certificates**. Uses Server Name Indication (SNI) to make it work
 * **Use case:** NLBs would be used for anything that ALBs don’t cover. A typical use case would be a near real-time data streaming service (video, stock quotes, etc.) Another typical case is that you would need to use an NLB if your application uses non-HTTP protocols.
 
+**Reference:**
+
+[ELB vs. ALB vs. NLB: Choosing the Best AWS Load Balancer for Your Needs](https://iamondemand.com/blog/elb-vs-alb-vs-nlb-choosing-the-best-aws-load-balancer-for-your-needs/)
+
