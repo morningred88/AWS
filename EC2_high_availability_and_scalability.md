@@ -230,3 +230,25 @@ A **listener** is a process that checks for connection requests, using the proto
 1. [ELB vs. ALB vs. NLB: Choosing the Best AWS Load Balancer for Your Needs](https://iamondemand.com/blog/elb-vs-alb-vs-nlb-choosing-the-best-aws-load-balancer-for-your-needs/)
 2. [AWS — Difference between Application load balancer (ALB) and Network load balancer (NLB)](https://medium.com/awesome-cloud/aws-difference-between-application-load-balancer-and-network-load-balancer-cb8b6cd296a4)
 
+## 69 ELB monitoring and trouble shooting
+
+### Error code
+
+* 5xx: The error on server side, it could be error on load balancer or backend EC2 instances
+
+* 503: EC2 instance is not available to send back the response to load balancer. It is an important code to know. 
+
+**BackendConnectionError:** to monitor if EC2 instance is erroring out. 
+
+Latency: How long it takes for client to get the response after a request is sent. 
+
+RequestCount: Request count overall
+
+RequestCountPerTarget: Request received per instance on average. A good metric to monitor for scaling EC2 instance. 
+
+
+
+
+
+
+
