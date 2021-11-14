@@ -238,6 +238,8 @@ A **listener** is a process that checks for connection requests, using the proto
 
 * 503: EC2 instance is not available to send back the response to load balancer. It is an important code to know. 
 
+### CloudWatch metrics
+
 **BackendConnectionError:** to monitor if EC2 instance is erroring out. 
 
 Latency: How long it takes for client to get the response after a request is sent. 
@@ -246,9 +248,25 @@ RequestCount: Request count overall
 
 RequestCountPerTarget: Request received per instance on average. A good metric to monitor for scaling EC2 instance. 
 
+### Connection idle timeout
 
+For each request that a client makes through a load balancer, the load balancer maintains two connections. 
 
+* The front-end connection is between a client and the load balancer. 
+* The backend connection is between the load balancer and a target. 
 
+The load balancer has a configured **idle timeout period** that applies to its connections. If no data has been sent or received by the time that the idle timeout period elapses, the load balancer closes the connection. 
+
+For backend connections, in order to avoid to get 504 error: 
+
+* You enable the HTTP keep-alive option for your EC2 instances. You can enable HTTP keep-alive in the web server settings for your EC2 instances. If you enable HTTP keep-alive, the load balancer can reuse backend connections until the keep-alive timeout expires. 
+* We also recommend that you configure the idle timeout of your application to be larger than the idle timeout configured for the load balancer.
+
+By default, Elastic Load Balancing sets the idle timeout value for your load balancer to 60 seconds.
+
+**Reference:**
+
+[Connection idle timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#connection-idle-timeout)
 
 
 
