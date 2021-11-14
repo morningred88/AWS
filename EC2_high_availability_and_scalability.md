@@ -288,3 +288,23 @@ A way for load balance to send traffic **gradually** to a target.
 * **Round robin:** Choose the target one after another, regardless how many outstanding requests the target has. This request algorithm is used for ALB and CLB.
 * **Flow hash:** Each TCP/UDP connection is going to routed to the single target for the life of the connection, which is sort of equivalent to the sticky sessions. Whenever a use make a request to EC2 instance, all the information will be hashed through **flow hash algorithm**. Thanks to the hash number, the same request from the same user to the same EC2 instance as long as TCP connection is open. Flow hash is **specific for NLB**.
 
+## ALB - Listener rules
+
+* Process in order: Default rule is going to be the last one to be processed
+
+* Supported actions:
+
+  * Forward: to another target group
+  * Redirect: to other URL
+  * Fixed-response
+
+* Rule conditions:
+
+  * Host-header
+  * Http-request-method: get, put, post ...
+  * path-pattern: /example1, /example2
+  * Source-IP: where is the request coming from
+  * HTTP-header
+  * Query-string
+
+  
