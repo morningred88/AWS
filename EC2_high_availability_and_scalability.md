@@ -282,3 +282,7 @@ A way for load balance to send traffic **gradually** to a target.
 
 [Application Load Balancer Announces Slow Start Support for its Load Balancing Algorithm](https://aws.amazon.com/about-aws/whats-new/2018/05/application-load-balancer-announces-slow-start-support/)
 
+### Request routing algorithms
+
+**Flow hash:** Each TCP/UDP connection is going to routed to the single target for the life of the connection, which is sort of equivalent to the sticky sessions. Whenever a use make a request to EC2 instance, all the information will be hashed through **flow hash algorithm**. Thanks to the hash number, the same request from the same user to the same EC2 instance as long as TCP connection is open. Flow hash is **specific for NLB**.
+
