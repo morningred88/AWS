@@ -268,5 +268,17 @@ By default, Elastic Load Balancing sets the idle timeout value for your load bal
 
 [Connection idle timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#connection-idle-timeout)
 
+## Target group attribute
 
+### Slow start mode
+
+A way for load balance to send traffic **gradually** to a target. 
+
+* Using slow start mode gives targets **time to warm up** before the load balancer sends them a full share of requests.
+* After you enable slow start for a target group, its targets enter slow start mode when they are **considered healthy** by the target group.
+* Slow start is very useful for applications that depend on cache and need a warm-up period before being able to respond to requests with optimal performance.
+
+**Reference:**
+
+[Application Load Balancer Announces Slow Start Support for its Load Balancing Algorithm](https://aws.amazon.com/about-aws/whats-new/2018/05/application-load-balancer-announces-slow-start-support/)
 
