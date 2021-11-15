@@ -308,3 +308,22 @@ A way for load balance to send traffic **gradually** to a target.
   * Query-string
 
   
+
+  ## 72/73 Auto Scaling Groups (ASG)
+
+  If an instance is marked unhealthy by ELB, ASG **does not restart or stop** the instance, but **terminate** the instance
+
+  ### Auto scaling alarms
+
+  An alarm monitors a metric. 
+
+  **Note:**
+
+  **Metric are computed for the overall ASG instances** - Metric value does not from the minimum or the maximum but from the average.
+
+  
+
+  
+
+  
+
