@@ -330,6 +330,9 @@ A way for load balance to send traffic **gradually** to a target.
 ### Policy types
 
 * **Dynamic scaling policies**: Scaling based on cloud watch alarms, which in turn based on the metrics
+  * **Target tracking scaling**: We just need to give the metric, AWS create a CloudWatch alarm for us. This one is the simplest. 
+  * **Simple scaling**: We need to create a alarm before hand based on a metric. 
+  * **Step scaling**: We need to create a alarm before hand based on a metric. Step scaling is similar with simple scaling. The difference is that step scaling has more than 1 steps. The step is set using the alarm value. 
 * **Predictive scaling policies**: Analyze the previous usage for a selected metric for a period of time, using machine learning algorithm to analyze the usage pattern. Then scaling ahead of the time according to the pattern. 
 * **Scheduled action**: Base on time
 
