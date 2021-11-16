@@ -321,9 +321,10 @@ A way for load balance to send traffic **gradually** to a target.
 
   **Metric are computed for the overall ASG instances** - Metric value does not from the minimum or the maximum but from the average.
 
-  
+  ### Bound ASG with ELB
+
+  **Automatically Register new instances to a load balancer:** If you bound an ASG with ELB, the instances from ASG are going to be automatically registered to the target group of the ELB.  
 
   
 
-  
-
+  ## 
