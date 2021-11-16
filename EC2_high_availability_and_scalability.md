@@ -336,3 +336,8 @@ A way for load balance to send traffic **gradually** to a target.
 * **Predictive scaling policies**: Analyze the previous usage for a selected metric for a period of time, using machine learning algorithm to analyze the usage pattern. Then scaling ahead of the time according to the pattern. 
 * **Scheduled action**: Base on time
 
+### Good metrics to scale on
+
+* The **RequestCountPerTarget** metric value indicates the average number of requests received by each target in a target group associated with an Application Load Balancer during a specified time period.
+* **Average network in/out:** If you application needs a lot of upload and download, the network will be the bottleneck for your EC2 instance, you may scale based on average network in/out to make sure to set the threshold for ASG to scale in and out. 
+
