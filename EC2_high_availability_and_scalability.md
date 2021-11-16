@@ -345,10 +345,22 @@ A way for load balance to send traffic **gradually** to a target.
 
 ### ASG Health Checks
 
-* EC2 status checks: enabled by default, you cannot disable it.
+* **EC2 status checks**: enabled by default, you cannot disable it.
 
-* ELB health check: If the ASG is bound to ELB, target group will do health check to EC2 instance. You need to enable this one. 
+* **ELB health checks**: If the ASG is bound to ELB, target group will do health check to EC2 instance. You need to enable this one. 
 
-* Custom Health check: using cli or AWS SDK
+* **Custom Health checks**: using cli or AWS SDK
+
+  **CLI used for custom health check:**
+
+  ```
+  set-instance-health
+  terminate-instance-in-auto-scaling-group
+  ```
 
   
+
+  
+
+  
+
