@@ -325,6 +325,11 @@ A way for load balance to send traffic **gradually** to a target.
 
   **Automatically Register new instances to a load balancer:** If you bound an ASG with ELB, the instances from ASG are going to be automatically registered to the target group of the ELB.  
 
-  
+## 74/75 Auto scaling policies
 
-  ## 
+### Policy types
+
+* **Dynamic scaling policies**: Scaling based on cloud watch alarms, which in turn based on the metrics
+* **Predictive scaling policies**: Analyze the previous usage for a selected metric for a period of time, using machine learning algorithm to analyze the usage pattern. Then scaling ahead of the time according to the pattern. 
+* **Scheduled action**: Base on time
+
