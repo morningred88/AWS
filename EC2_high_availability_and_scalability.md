@@ -341,3 +341,14 @@ A way for load balance to send traffic **gradually** to a target.
 * The **RequestCountPerTarget** metric value indicates the average number of requests received by each target in a target group associated with an Application Load Balancer during a specified time period.
 * **Average network in/out:** If you application needs a lot of upload and download, the network will be the bottleneck for your EC2 instance, you may scale based on average network in/out to make sure to set the threshold for ASG to scale in and out. 
 
+## ASG for SysOps
+
+### ASG Health Checks
+
+* EC2 status checks: enabled by default, you cannot disable it.
+
+* ELB health check: If the ASG is bound to ELB, target group will do health check to EC2 instance. You need to enable this one. 
+
+* Custom Health check: using cli or AWS SDK
+
+  
