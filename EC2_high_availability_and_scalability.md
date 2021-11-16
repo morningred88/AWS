@@ -358,9 +358,15 @@ A way for load balance to send traffic **gradually** to a target.
   terminate-instance-in-auto-scaling-group
   ```
 
-  
+### Troubleshooting ASG issues
 
-  
+**<number of instances> instance(s) are already running. Launching EC2  instance failed.**
+
+* The Auto Scaling group has reached the limit set by the MaximumCapacity
+  parameter. Update your Auto Scaling group by providing a new value for the
+  maximum capacity.
+
+* The account reach the maximum capacity for the AZ
 
   
 
