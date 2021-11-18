@@ -21,6 +21,10 @@ We launch T2 micro and T3 micro instance both using Amazon Linux 2 AMI.
 
   If the termination protection is enabled, you can still terminate the instance using OS. 
 
+## Spot instances  
+
+If you want to terminate the spot instance and not have them relaunch, you need first cancel a spot request, then terminate the spot instances. 
+
 ## EC2 launch trouble shooting
 
 ### Instance volume limits
@@ -39,7 +43,7 @@ Attaching more than 40 volumes can cause boot failures. This number includes the
 
 [AWS documentation> Amazon EC2>Instance volume limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/volume_limits.html)
 
-## 18. EC2 Instance Type deep dive
+## EC2 Instance Type deep dive
 **How to accumulate CPU Credit for burstable T2 and T3 instances?**
 
 T type instance are burstable instance. Burst means a boost of power. If the machine burst, it utilize "burst credit". The burst credit can be monitored in CloudWatch:
@@ -57,7 +61,7 @@ T2.2xlarge – 81
 
 [Monitor your CPU credits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-monitoring-cpu-credits.html)
 
-## 19. Burstable instances
+## Burstable instances
 
 **AWS News Blog**
 
