@@ -126,7 +126,14 @@ You don't need to provide or create new key pair when you launch a new instance.
 
 EC2> Instances >Check the selected instance> Connect tab > EC2 instance connect > User name: **ec2-user**, you will ssh to the instance. 
 
+## EC2 status checks
 
+### System status checks
 
+* Loss of network connectivity
+* Loss of system power
+* Software issue on the physical host
+* Hardware issue on the physical host that impact network reachbility
 
+### 
 
