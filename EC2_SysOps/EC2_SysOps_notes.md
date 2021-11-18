@@ -135,5 +135,7 @@ EC2> Instances >Check the selected instance> Connect tab > EC2 instance connect 
 * Software issue on the physical host
 * Hardware issue on the physical host that impact network reachbility
 
-### 
+**Solution:**
+
+Either wait for AWS to fix the host or move EC2 instance to a new host by stopping and starting the instance
 
