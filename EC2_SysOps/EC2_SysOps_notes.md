@@ -1,5 +1,16 @@
 # EC2 for SysOps
 
+## Enhanced networking
+
+ENA is enabled in Amazon Linux 2. 
+
+We launch T2 micro and T3 micro instance both using Amazon Linux 2 AMI.
+
+*  T2 micro does not use ENA
+* T3 uses ENA
+
+**To leverage the enhanced networking, you need to use newer generation of EC2 instance**, such as T3 micro.
+
 ## EC2 shutdown behavior & Termination protection
 
 * Shutdown behavior: decide only the shutdown behavior using the **OS**. 
@@ -10,7 +21,7 @@
 
   If the termination protection is enabled, you can still terminate the instance using OS. 
 
-## 13. EC2 launch trouble shooting
+## EC2 launch trouble shooting
 
 ### Instance volume limits
 
