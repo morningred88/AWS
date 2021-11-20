@@ -161,3 +161,17 @@ Requires user's involvement to fix
 * Restart the EC2 instance
 * Or change the configuration of EC2 instance
 
+### Status check metrics
+
+The `AWS/EC2` namespace includes the following status check metrics. **By default, status check metrics are available at a 1-minute frequency at no charge.** For a newly-launched instance, status check metric data is only available after the instance has completed the initialization state (within a few minutes of the instance entering the running state).
+
+| Metric                       | Description                                                  |
+| :--------------------------- | :----------------------------------------------------------- |
+| `StatusCheckFailed`          | Reports whether the instance has passed **both the instance status check and the system status check** in the last minute.This metric can be either 0 (passed) or 1 (failed).By default, this metric is available at a 1-minute frequency at no charge.Units: Count |
+| `StatusCheckFailed_Instance` | Reports whether the instance has passed the instance status check in the last minute.This metric can be either 0 (passed) or 1 (failed).By default, this metric is available at a 1-minute frequency at no charge.Units: Count |
+| `StatusCheckFailed_System`   | Reports whether the instance has passed the system status check in the last minute.This metric can be either 0 (passed) or 1 (failed).By default, this metric is available at a 1-minute frequency at no charge.Units: Count |
+
+Reference:
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html
+
