@@ -192,3 +192,14 @@ A systems administrator is configuring Amazon EC2 status check alarm to publish 
 
 Then you can check both `StatusCheckFailed_Instance` and `StatusCheckFailed_System` to gain more information which one is failed. 
 
+ ## EC2 - Hibernate
+
+Hibernate **does not support for bare metal instances**. 
+
+**What are bare metal instances?**
+
+A bare-metal server is a physical computer server that is used by one consumer, or tenant, only. Each server offered for rental is a distinct physical piece of hardware that is a functional server on its own. They are not virtual servers running in multiple pieces of shared hardware.
+
+**Reference:**
+
+https://en.wikipedia.org/wiki/Bare-metal_server
