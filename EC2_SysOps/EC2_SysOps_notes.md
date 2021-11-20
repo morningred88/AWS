@@ -130,6 +130,10 @@ EC2> Instances >Check the selected instance> Connect tab > EC2 instance connect 
 
 ### System status checks
 
+System status checks monitor AWS systems on which your instance runs.
+
+Examples of the problem with the underlying host: 
+
 * Loss of network connectivity
 * Loss of system power
 * Software issue on the physical host
@@ -138,4 +142,15 @@ EC2> Instances >Check the selected instance> Connect tab > EC2 instance connect 
 **Solution:**
 
 Either wait for AWS to fix the host or move EC2 instance to a new host by stopping and starting the instance
+
+### Instance status checks
+
+Instance status checks monitor the software and network configuration of your individual instance.
+
+Example of issues:
+
+* Incorrect networking or startup configuration
+* Exhausted memory
+* Corrupted file system
+* Incompatible kernel
 
