@@ -44,7 +44,16 @@ Attaching more than 40 volumes can cause boot failures. This number includes the
 [AWS documentation> Amazon EC2>Instance volume limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/volume_limits.html)
 
 ## EC2 Instance Type deep dive
-**How to accumulate CPU Credit for burstable T2 and T3 instances?**
+
+### Main instance type
+
+* R: For RAM - Good for in-memory cache
+* C: For CPU or computer - compute/databases
+* M: think Middle or middle - general/web app
+* I: For I/O (instance storage) - databases
+* G: For GPU - video rendering/machine learning
+
+### How to accumulate CPU Credit for burstable T2 and T3 instances?
 
 T type instance are burstable instance. Burst means a boost of power. If the machine burst, it utilize "burst credit". The burst credit can be monitored in CloudWatch:
 
@@ -75,7 +84,7 @@ The blog explains the pictures.
 
 
 
-## 21. CloudWatch Matrics for EC2
+## CloudWatch Matrics for EC2
 
 ### Aws Provided metrics
 
