@@ -175,3 +175,11 @@ Reference:
 
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html
 
+### Status check example of checking CloudWatch metrics
+
+A systems administrator is configuring Amazon EC2 status check alarm to publish a notification to an SNS topic when the instance fails either the instance check or system status check. Which CloudWatch metric is the right choice for this configuration?
+
+**StatusCheckFailed.** This metric check if both system and instance status check pass. If one of them failed, StatusCheckFailed is 1. 
+
+Then you can check both `StatusCheckFailed_Instance` and `StatusCheckFailed_System` to gain more information which one is failed. 
+
