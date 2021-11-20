@@ -154,3 +154,10 @@ Example of issues:
 * Corrupted file system
 * Incompatible kernel
 
+**Solution:**
+
+Requires user's involvement to fix
+
+* Restart the EC2 instance
+* Or change the configuration of EC2 instance
+
