@@ -18,3 +18,6 @@ There are 4 kinds of gateways
   * Give you a way to expand NFS on premises by leveraging S3 in the back end. 
   * Integration between file gateway and active directory to provide authentication at file gateway level. 
 
+* **Volume gateway: 2 types**
+  * **Stored Volumes**: gateway creates AWS EBS snapshot for application server. Then the snapshot can be stored in S3. It is block storage in Amazon S3. 
+  * **Cached volumes**: Low-latency access to your most recently used data.
