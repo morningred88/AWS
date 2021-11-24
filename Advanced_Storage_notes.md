@@ -11,3 +11,10 @@
 
 There are 4 kinds of gateways
 
+* **File gateway** 
+
+  * **Store files as objects in Amazon S3, with a local cache for low-latency access to most recently used data**
+
+  * Give you a way to expand NFS on premises by leveraging S3 in the back end. 
+  * Integration between file gateway and active directory to provide authentication at file gateway level. 
+
