@@ -7,3 +7,7 @@
 * **Edge location**: Anywhere does not have internet or far away from cloud
 * **OpsHub**: Software you download and install in your computer/laptop. Once OpsHub is installed, it gives you graphical interface to connect your snow devices to configure and use them. 
 
+## Storage gateway
+
+There are 4 kinds of gateways
+
