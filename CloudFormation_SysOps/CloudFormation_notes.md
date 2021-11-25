@@ -53,3 +53,19 @@ You can see 2 designer and two yaml files in the same bucket. As long as the sta
 
 When you want to delete AWS resources created from CloudFormation, you go to the stack and delete it. Then all the resources provisioned by the stack is removed. 
 
+## 89 CloudFormation Resources
+
+When you create a resources, must have **Type** and **Properties**
+
+AWS Resources documentation:
+
+**Resource type** identifiers always take the following form:
+
+```
+service-provider::service-name::data-type-name
+```
+
+The following link contains reference information for all AWS resource and property types that are supported by AWS CloudFormation:
+
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html
+
