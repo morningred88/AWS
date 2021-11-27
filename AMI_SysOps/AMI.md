@@ -12,7 +12,15 @@ I create an AMI in us-east-1 with AMI ID ami-029f5b13220869932. Then I copy the 
 
 ### EC2 instance migration between AZ
 
-EC2> Instances> right click the instance ID or  select Action tab on the top>**Create AMI**, then launch instance, select the expect AZ
+**Step 1: Create AMI from the EC2 instance**
+
+EC2> Instances> right click the instance ID or  select Action tab on the top>**Create AMI**
+
+![create_AMI](/AMI_images/EC2_create_AMI.PNG)
+
+ **Step 2: Launch EC2 instance using created AMI**
+
+Then go to AMI menu at EC2 console, select AMI, click launch instance, select the expect AZ
 
 ### Cross-region instance migration
 
