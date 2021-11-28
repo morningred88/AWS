@@ -180,3 +180,8 @@ Policy name: s3-batch-operation-policy
     ]
 }
 ```
+
+## Multi part upload
+
+* You can uploading large files to an S3 bucket or to Glacier using Multi-part Upload
+* Multi part uploading using AWS CLI or AWS SDK
