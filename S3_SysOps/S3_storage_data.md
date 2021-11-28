@@ -109,10 +109,19 @@ step 2: create a batch operation to encrypt the files
 
 * create a csv file as manifest and upload it to bucket versioning1218
 
-  * encrypt 3 objects: coffee.jpg, index.html, error.html
-  * Encrypted file target location:
-  * Batch operation report location:
+  encrypt 3 objects: coffee.jpg, index.html, error.html
 
+  | versioning1218 | coffee.jpg |
+  | -------------- | ---------- |
+  | versioning1218 | index.html |
+  | versioning1218 | error.html |
+
+* Define file locations
+
+  * Encrypted file target location: versioning1218/encrypted
+  
+  * Batch operation report location: batch-report-1218/reporting
+  
 * Create a new role S3-batch-operation-role by creating a new policy
 
   Policy name: s3-batch-operation-policy, created by using the policy template provided by batch operation. 
@@ -120,6 +129,8 @@ step 2: create a batch operation to encrypt the files
 Step 3: Run the batch operation
 
 Step 4: Check the report and encrypted files in the buckets respectively
+
+The batch operation result is in batch-report-1218/reporting
 
 ```
 versioning1218	error.html		succeeded	200		Successful
