@@ -23,3 +23,8 @@ There are 4 kinds of gateways
   * **Cached volumes**: Low-latency access to your most recently used data.
 
 * **Tape gateway**: physical tape equivalent. Back up your data to Amazon S3 and archive in Amazon S3 Glacier using your existing tape-based processes.
+
+* **FSx file gateway**: 
+  * Newly added.
+  * Local data center can access Amazon FSx directly. FSx file gateway is just a proxy. But **the main advantage of FSx file gateway is the local cache** for frequently accessed data, which makes file access more efficiently. 
+  * It is also helpful for group file share and home directories on corporate data center, to be back up by AWS FSx at the back end.
