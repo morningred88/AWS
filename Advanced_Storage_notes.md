@@ -21,3 +21,5 @@ There are 4 kinds of gateways
 * **Volume gateway: 2 types**
   * **Stored Volumes**: gateway creates AWS EBS snapshot for application server. Then the snapshot can be stored in S3. It is block storage in Amazon S3. 
   * **Cached volumes**: Low-latency access to your most recently used data.
+
+* **Tape gateway**: physical tape equivalent. Back up your data to Amazon S3 and archive in Amazon S3 Glacier using your existing tape-based processes.
