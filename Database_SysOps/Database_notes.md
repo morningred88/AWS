@@ -150,6 +150,18 @@ Database backup is an automatic process, you can enable/disable during create th
 
 Have ability to restore any point in time (from oldest backup to 5 minutes ago)
 
+### Automatic backups vs Manuel snapshots vs System snapshots
+
+**One Automatic backup can create many System snapshots.**
+
+You can access the system snapshots either from backup menu > Open a backup>  all system snapshots
+
+Or Snapshots menu > System > all system snapshots
+
+System snapshots also can be called automatic snapshots
+
+ Users has to trigger **Manual Snapshot**, details see below **Take snapshot manually**
+
 ### Take snapshot manually
 
 2 ways
