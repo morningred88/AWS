@@ -106,6 +106,12 @@ Each DB instance has its own endpoint, no matter it is a primary db instance or 
 
 The first part of the endpoint url is **DB identifier**, such as database-1 for primary
 
+#### Delete read replicas
+
+When you delete the primary db instance, all the replica will be **NOT** deleted automatically. 
+
+You have to delete single replica you created.
+
 ## RDS encryption and security
 
 ### Encryption
