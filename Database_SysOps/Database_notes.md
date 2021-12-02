@@ -201,6 +201,12 @@ This is **not** multi AZ deployment for disaster recovery.
 
 Like other types of RDS database engine, multi AZ deployment is under **Availability & Durability** - create an **stand-by** Aurora Replica or Reader node in a different AZ fast failover and high availability.
 
+### Backup setting for Aurora cluster
+
+There is **no option** to disable Aurora DB cluster Automatic Backups. 
+
+The shortest retention period is 1 day. 
+
 ### Writer and reader endpoint for Aurora cluster
 
 Since you can create multiple writers and readers for Aurora cluster. Therefore, there is writer endpoint for all writers and reader endpoint for all readers. There is elastic loader balancer before the writers and readers to balance the connections. 
