@@ -21,3 +21,9 @@ Principle of identity federation: Trade a token retrieved from 3. party, such as
 * Identity broken: Also for enterprise user if the company does not use SAML. Identity broker needs to be programed.
 * Cognito: For web application user
 
+## AWS Single Sign on
+
+### SSO vs AssumeRoleWithSAML
+
+* If you want to connect to multiple account in AWS or mulitiple applications, SSO is the better choice. AssumeRoleWithSAML, you can only connect to one account or one application
+* SSO does not need IDP (such as SAML), it can connect to Identity store (such as LDAP) directly. 
