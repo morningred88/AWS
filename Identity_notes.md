@@ -11,7 +11,9 @@
 
 What AWS services user can take a action, depends on the defined role.
 
+## Identity federation with SAML & Cognito
 
+Principle of identity federation: Trade a token retrieved from 3. party, such as from Active Directory (SAML) and Cognito (Cognito user pools, Facebook) with AWS temporary credentials by AssumeRole API call to STS. 
 
 
 
