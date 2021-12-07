@@ -41,7 +41,7 @@ When you create volume from a snapshot, you are able to:
 
 * change volume type and size as well
 * also select AZ 
-* Encryption
+* **Encryption** (new!)
 
 ![snapshot options](/EBS_EFS_images/snapshot_create_volume.png)
 
