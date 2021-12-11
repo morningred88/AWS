@@ -115,3 +115,7 @@ Inside MyCodeDeploy application create a deployment group: MyDevelopmentInstance
 * IAM role: CodeDeployRole 
 
 Inside MyDevelopmentInstances deployment group create a Deployment. 
+
+### Deployment groups discussion
+
+You can have multiple deployment group under one application, such as development, qa and production. You can have multiple instances in one deployment group. The deployment groups can be separated by the tags of the instances. 
