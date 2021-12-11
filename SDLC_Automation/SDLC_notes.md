@@ -105,3 +105,13 @@ Option 1: You can also use SSM to install CodeDeploy agent when you create Deplo
 
 Option 2: For single instance, you can also add user data to automatically install CodeDeploy agent. 
 
+### Application, Deployment groups
+
+Create a CodeDeploy application: MyCodeDeploy
+
+Inside MyCodeDeploy application create a deployment group: MyDevelopmentInstances
+
+* Use tag to select instance/a group of instances
+* IAM role: CodeDeployRole 
+
+Inside MyDevelopmentInstances deployment group create a Deployment. 
