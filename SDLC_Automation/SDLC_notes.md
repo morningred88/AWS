@@ -77,3 +77,29 @@ It looks to be S3 Bucket access issue. You need to check below things to make th
 
 https://stackoverflow.com/questions/57900770/aws-codebuild-upload-artifacts-client-error-error-uploading-artifacts-access
 
+## CodeDeploy
+
+### EC2 Setup
+
+**EC2 provision:**
+
+CodeDeploy does not provision AWS service, so we need to launch an EC2 instance. 
+
+**IAM role**
+
+EC2 instance need an IAM role to fetch the code and artifact from S3. 
+
+Role name: EC2RoleForCodeDeploy
+
+Permission: S3 read only permission
+
+**CodeDeploy agent**
+
+AWS documentation: Install the CodeDeploy agent for Amazon Linux 
+
+https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-linux.html
+
+
+
+
+
