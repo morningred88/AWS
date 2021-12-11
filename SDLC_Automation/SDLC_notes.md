@@ -51,9 +51,29 @@ https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify-lambda.htm
 
   CodeBuild> Build projects > CodeBuild project name (MyWebAppCodeBuildMaster)> Edit drop down > Select Environment > Additional configuration > Environment variables 
 
-  
 
+### Artifact and S3
 
+Build ID: In a code build project, you will get a new build id every time when you run a build. 
 
+When I update the CodeBuild project and try to upload the artifact to S3, I got the following error message:
 
+```
+Error in UPLOAD_ARTIFACTS phase: AccessDenied: No AWSAccessKey was presented.
+    status code: 403, request id: EWJVCNHW386KXWP4, host id: scOqv0WG4j8sRnjvpAUmfGnaIFXCH9NABUQRK1fPmWPapJmGRCvrQQm6OE+1E5bQYEoRgqErwkU=
+```
+
+I added IAM permission to the CodeBuild service role. 
+
+Then I got the solution from Stack Overflow.
+
+It looks to be S3 Bucket access issue. You need to check below things to make this working :
+
+1. Your bucket is in the same region where your codebuild is running.
+2. Your bucket has a policy which allows codebuild to upload the objects.
+3. Your CodeCommit, CodeBuild has IAM role (Policy) attached to it which has access to S3 bucket.
+
+**Reference:**
+
+https://stackoverflow.com/questions/57900770/aws-codebuild-upload-artifacts-client-error-error-uploading-artifacts-access
 
