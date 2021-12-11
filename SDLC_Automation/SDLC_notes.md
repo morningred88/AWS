@@ -99,7 +99,9 @@ AWS documentation: Install the CodeDeploy agent for Amazon Linux
 
 https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-linux.html
 
+**Automate the installation of  CodeDeploy agent**
 
+Option 1: You can also use SSM to install CodeDeploy agent when you create Deployment group. It would be convenient if you have multiple instances in a deployment group. But you need to first install SSM agent into all instances. 
 
-
+Option 2: For single instance, you can also add user data to automatically install CodeDeploy agent. 
 
