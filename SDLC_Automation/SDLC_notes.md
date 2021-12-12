@@ -120,7 +120,15 @@ Inside MyDevelopmentInstances deployment group create a Deployment.
 
 You can have multiple deployment group under one application, such as development, qa and production. You can have multiple instances in one deployment group. The deployment groups can be separated by the tags of the instances. 
 
+### Deployment configuration
+
 #### Deployment Type
 
 * In place: Don't need to create new EC2 instances
 * Blue/green: Need to create new EC2 instances. This is perfect for auto scaling group. It is painful if manually provision instances, which is not good option for Devops, we want the thing automated. For blue/green, we also need to enable load balancer as well. 
+
+#### Deployment configuration/setting
+
+Deployment configuration defines the strategy how an application deployed to  EC2 instances, such as all at once, one at a time or half at a time. You can also customize the deployment configuration by percentage or instance numbers. 
+
+It is selected when you create a deployment group. You can override a deployment configuration when you create a deployment. 
