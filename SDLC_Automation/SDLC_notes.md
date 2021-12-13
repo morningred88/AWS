@@ -166,3 +166,85 @@ https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-on-premises.ht
   This way is the most secure way. But it is more painful to do.  So we choose to do hands on using IAM user to register an on-premises instance
 
 https://docs.aws.amazon.com/codedeploy/latest/userguide/on-premises-instances-register.html
+
+#### Use the register-on-premises-instance command (IAM user ARN) to register an on-premises instance
+
+Launch an EC2 instance as premise instance. Do not give it any IAM role, because it should work as on-premise VM and has nothing AWS on it. 
+
+Then following the steps
+
+https://docs.aws.amazon.com/codedeploy/latest/userguide/register-on-premises-instance-iam-user-arn.html
+
+##### Step 1-3: Create an IAM user for the on-premises instance
+
+* We need to give IAM user programmatically access (IAM user credentials), for step 4, 5
+* Assign Permission to the IAM user: S3 read only 
+
+##### Step 4: Add a configuration file to the on-premises instance
+
+```
+ssh -i Devkeypair.pem ec2-user@ec2-44-202-14-234.compute-1.amazonaws.com
+
+sudo mkdir -p /etc/codedeploy-agent/conf
+
+sudo nano /etc/codedeploy-agent/conf/codedeploy.onpremises.yml
+```
+
+**Note**: If  you restart the instance, public IP v4 address and DNS will change. 
+
+**Content of codedeploy.onpremises.yml :**
+
+```
+---
+aws_access_key_id: secret-key-id
+aws_secret_access_key: secret-access-key
+iam_user_arn: iam-user-arn
+region: supported-region
+```
+
+##### Step 5: Install and configure the AWS CLI in the on-premises instance
+
+We user AWS Linux 2, AWS Cli already pre-installed with Linux 2. But we need to configure it, using the same credentials as in step 4.
+
+Configure  the AWS CLI in the on-premises instance using `aws configure`, like we do it with the local computer.
+
+```
+$ aws configure
+AWS Access Key ID [None]: secret-key-id
+AWS Secret Access Key [None]: secret-access-key
+Default region name [None]: us-east-1
+Default output format [None]: json
+```
+
+##### Step 6: Set the AWS_REGION environment variable (not required, can skip this step)
+
+##### Step 7: Install the CodeDeploy agent to the on-premises instance
+
+In my-webpage, CODEDEPLOY.md file
+
+```
+sudo yum update -y
+sudo yum install -y ruby wget
+wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+sudo service codedeploy-agent status
+```
+
+ We don't need to run one command after another , can paste all the command once.
+
+##### Step 8: Register the on-premises instance with CodeDeploy using AWS CLI
+
+The command dose not run from on-prem instance. But from the CLI of the local computer or AWS CLI. 
+
+```
+aws deploy register-on-premises-instance --instance-name AssetTag12010298EX --iam-user-arn arn:aws:iam::745361488260:user/CodeDeployUser-OnPrem
+```
+
+Just need to change the IAM user ARN from the instruction.
+
+--instance-name: The name of instance is the name appear in CodeDeploy on-premises instances. You should give a specific name for you to recognize in the future. 
+
+##### Step 9: Tag the on-premises instance
+
+Go to AWS console > CodeDeploy > On-premises instances, you can see the instance with the name of AssetTag12010298EX
