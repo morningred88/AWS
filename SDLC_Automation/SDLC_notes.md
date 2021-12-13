@@ -148,3 +148,21 @@ You can send messages using SNS topic through Triggers directly  in CodeDeply.
   Tagging on-premise instance is only available for CodeDeploy
 
 - **Step 2** – Deploy application revisions to the on-premises instance.
+
+https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-on-premises.html
+
+#### Register an on-premises instance with CodeDeploy
+
+* Use an IAM user ARN to authenticate requests.
+
+  - Suitable for registering a small number of on-premises instances
+
+  - Need to create an IAM user for each on-premise instance
+
+* Use an IAM role ARN to authenticate requests.
+
+  Best for registering a large number of on-premises instances. 
+
+  This way is the most secure way. But it is more painful to do.  So we choose to do hands on using IAM user to register an on-premises instance
+
+https://docs.aws.amazon.com/codedeploy/latest/userguide/on-premises-instances-register.html
