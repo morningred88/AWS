@@ -267,3 +267,20 @@ The AWS CodeDeploy agent is running as PID 3517
 ```
 
 But the deployment was still failed. 
+
+#### Deregister on-premises instance from CodeDeploy
+
+Then I launched a new EC2 instance, repeat all the steps. 
+An error occurred (IamUserArnAlreadyRegisteredException) when calling the RegisterOnPremisesInstance operation: The on-premises instance could not be registered because the request included an IAM user ARN that has already been used to register an instance. Include either a different IAM user ARN or IAM session ARN in the request, and then try again.
+
+Then I have to deregister the previous on-premises instance from CodeDeploy. 
+
+```
+aws deploy deregister-on-premises-instance --instance-name AssetTag12010298EX
+```
+
+It is working. 
+
+**Note:**
+* You can give any instance name for on-premises instances, don't need to be AssetTag12010298EX.
+* One IAM user can only be used for one on-premises instance
