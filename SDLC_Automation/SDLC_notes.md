@@ -139,3 +139,12 @@ You can integrate CodeDeploy through CloudWatch event with many other services, 
 
 You can send messages using SNS topic through Triggers directly  in CodeDeply.
 
+### On-premises instance setup
+
+#### Working with on-premises instances for CodeDeploy
+
+- **Step 1** – Configure each on-premises instance, register it with CodeDeploy, and then tag it.
+
+  Tagging on-premise instance is only available for CodeDeploy
+
+- **Step 2** – Deploy application revisions to the on-premises instance.
