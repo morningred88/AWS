@@ -132,3 +132,10 @@ You can have multiple deployment group under one application, such as developmen
 Deployment configuration defines the strategy how an application deployed to  EC2 instances, such as all at once, one at a time or half at a time. You can also customize the deployment configuration by percentage or instance numbers. 
 
 It is selected when you create a deployment group. You can override a deployment configuration when you create a deployment. 
+
+### CloudWatch event vs Trigger
+
+You can integrate CodeDeploy through CloudWatch event with many other services, such as SMS, SNS, Lambda, Kinesis stream, etc.
+
+You can send messages using SNS topic through Triggers directly  in CodeDeply.
+
