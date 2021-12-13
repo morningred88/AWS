@@ -248,3 +248,22 @@ Just need to change the IAM user ARN from the instruction.
 ##### Step 9: Tag the on-premises instance
 
 Go to AWS console > CodeDeploy > On-premises instances, you can see the instance with the name of AssetTag12010298EX
+
+## Trouble shooting of registering on-premises instance to CodeDeploy
+
+#### Uninstall the CodeDeploy agent from Amazon Linux
+
+I installed CodeDeploy agent from wrong region, so I need to uninstall the current one.
+
+```
+sudo yum erase codedeploy-agent
+```
+
+Then I reinstall the CodeDeploy agent from correct region, using the following command to check CodeDeploy agent status:
+
+```
+$ sudo service codedeploy-agent status
+The AWS CodeDeploy agent is running as PID 3517
+```
+
+But the deployment was still failed. 
