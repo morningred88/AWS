@@ -290,4 +290,3 @@ It is working.
 **Note:**
 * You can give any instance name for on-premises instances, don't need to be AssetTag12010298EX.
 * One IAM user can only be used for one on-premises instance
-
