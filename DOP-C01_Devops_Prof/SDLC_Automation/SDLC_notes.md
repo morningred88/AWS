@@ -107,14 +107,14 @@ Option 2: For single instance, you can also add user data to automatically insta
 
 ### Application, Deployment groups
 
-Create a CodeDeploy application: MyCodeDeploy
+**Create a CodeDeploy application**: MyCodeDeploy
 
-Inside MyCodeDeploy application create a deployment group: MyDevelopmentInstances
+Inside MyCodeDeploy application **create a deployment group**: MyDevelopmentInstances. Deployment group is to define where the application will be deployed, such as EC2 instance, ECS or Lambda. 
 
 * Use tag to select instance/a group of instances
 * IAM role: CodeDeployRole 
 
-Inside MyDevelopmentInstances deployment group create a Deployment. 
+Inside MyDevelopmentInstances deployment group **create a Deployment**.  Deployment will define the revision location,  actual application code stored in S3. 
 
 #### Compute platform for CodeDeploy
 
@@ -290,3 +290,4 @@ It is working.
 **Note:**
 * You can give any instance name for on-premises instances, don't need to be AssetTag12010298EX.
 * One IAM user can only be used for one on-premises instance
+
