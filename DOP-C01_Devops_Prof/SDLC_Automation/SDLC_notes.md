@@ -44,6 +44,43 @@ https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify-lambda.htm
 * CodeBuild is AWS managed service
 * Serverless, leverage the docker container
 
+### First build 
+
+#### Create a build project
+
+In the AWS console > CodeBuild> Create project> Configure:
+
+* Source provider
+  - Amazon S3
+  - AWS CodeCommit
+  - GitHub
+  - Bitbucket
+  - GitHub Enterprise
+* Reference for CodeCommit:
+  - Branch
+  - Git tag: Different versions of an application
+  - Commit ID: The single commit
+
+* Environment: Choose either **Managed image** or **Custom image**
+
+  - **Managed image:** Use an image managed by AWS CodeBuild
+
+  - **Custom image:** specify our own docker image if we need specific software installed in the image to perform the build
+
+* Additional configuration
+
+  - Time out: Time out is between 5 minutes and 8 hours, which is much better than Lambda to run the tests. Lambda has time out for 15 minutes.  You cannot do many things in Lambda. 
+  - Computer: computer capacity (memory, vCPUs) for CodeBuild docker container.
+
+* Buildspec
+
+* Artifact: What artifact we want to push in the end
+* Logs: send logs to CloudWatch and/or S3. The reason we want to send logs to CloudWatch or S3 is because we don't want to lose logs after the docker container is gone. We need to keep the logs for debugging purpose. 
+
+**Note:** 
+
+We have to create single CodeBuild project for each branch, or git tag, or commit ID.
+
 ### Environment variables and parameter store
 
 **How to add environment variables?**
