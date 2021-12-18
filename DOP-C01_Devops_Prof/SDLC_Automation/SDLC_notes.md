@@ -81,6 +81,10 @@ In the AWS console > CodeBuild> Create project> Configure:
 
 We have to create single CodeBuild project for each branch, or git tag, or commit ID.
 
+#### Build history
+
+After building the project, you can see if the build is success or failed in Build history, also the duration. Such as my build is 51 seconds, that is how much we have billed for the build. The docker container is gone after the build, then we will not pay it any more. 
+
 ### Environment variables and parameter store
 
 **How to add environment variables?**
