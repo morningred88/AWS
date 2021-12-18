@@ -39,6 +39,11 @@ https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-notify-lambda.htm
 
 ## CodeBuild
 
+### Overview
+
+* CodeBuild is AWS managed service
+* Serverless, leverage the docker container
+
 ### Environment variables and parameter store
 
 **How to add environment variables?**
