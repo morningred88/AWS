@@ -337,3 +337,8 @@ It is working.
 * You can give any instance name for on-premises instances, don't need to be AssetTag12010298EX.
 * One IAM user can only be used for one on-premises instance
 
+## CodePipeline - CodeCommint & CodeDeploy
+
+One CodePipeline for each branch in our CodeCommit repository
+
+We can use CodePipeline in one region, but use CodeDeploy in another region. 
