@@ -99,6 +99,12 @@ After building the project, you can see if the build is success or failed in Bui
 
 ### Artifact and S3 - Upload an artifact from CodeBuild to S3
 
+#### What is artifact? 
+
+When you build a project, we will generate new files out of it. For example, if we build a java project, we will generate a jar file. This build output is an artifact.
+
+The artifact need to be uploaded somewhere, such as S3, in order to be consumed by other programs and then deploy to whatever you want. 
+
 #### IAM permission update for CodeBuild service role
 
 IAM permission will be needed, to allow CodeBuild to write into S3
