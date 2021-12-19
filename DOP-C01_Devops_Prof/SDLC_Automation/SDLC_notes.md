@@ -97,10 +97,13 @@ After building the project, you can see if the build is success or failed in Bui
 
   CodeBuild> Build projects > CodeBuild project name (MyWebAppCodeBuildMaster)> Edit drop down > Select Environment > Additional configuration > Environment variables 
 
+### Artifact and S3 - Upload an artifact from CodeBuild to S3
 
-### Artifact and S3
+#### Build ID
 
 Build ID: In a code build project, you will get a new build id every time when you run a build. 
+
+#### Debugging of CodeBuild error
 
 When I update the CodeBuild project and try to upload the artifact to S3, I got the following error message:
 
@@ -109,7 +112,7 @@ Error in UPLOAD_ARTIFACTS phase: AccessDenied: No AWSAccessKey was presented.
     status code: 403, request id: EWJVCNHW386KXWP4, host id: scOqv0WG4j8sRnjvpAUmfGnaIFXCH9NABUQRK1fPmWPapJmGRCvrQQm6OE+1E5bQYEoRgqErwkU=
 ```
 
-I added IAM permission to the CodeBuild service role. 
+But I had added IAM permission to the CodeBuild service role. 
 
 Then I got the solution from Stack Overflow.
 
@@ -118,6 +121,8 @@ It looks to be S3 Bucket access issue. You need to check below things to make th
 1. Your bucket is in the same region where your codebuild is running.
 2. Your bucket has a policy which allows codebuild to upload the objects.
 3. Your CodeCommit, CodeBuild has IAM role (Policy) attached to it which has access to S3 bucket.
+
+I checked my bucket is in a different region as CodeBuild.
 
 **Reference:**
 
@@ -342,3 +347,6 @@ It is working.
 One CodePipeline for each branch in our CodeCommit repository
 
 We can use CodePipeline in one region, but use CodeDeploy in another region. 
+
+
+
