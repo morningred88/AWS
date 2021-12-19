@@ -99,6 +99,10 @@ After building the project, you can see if the build is success or failed in Bui
 
 ### Artifact and S3 - Upload an artifact from CodeBuild to S3
 
+#### IAM permission update for CodeBuild service role
+
+IAM permission will be needed, to allow CodeBuild to write into S3
+
 #### Build ID
 
 Build ID: In a code build project, you will get a new build id every time when you run a build. 
