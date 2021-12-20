@@ -391,3 +391,24 @@ We can use CodePipeline in one region, but use CodeDeploy in another region.
 We can use one CodePipeline to trigger many code deploys into multiple regions.
 
 As soon as we created pipeline, the source get triggered.  
+
+#### CloudWatch event rule for triggering CodePipeline
+
+Below is the event rule created for triggering the CodPipeline, you can get it from CloudWatch.
+
+Rule name: codepipeline-mywebp-main-833110-rule
+
+Pattern:
+
+```
+{
+  "source": ["aws.codecommit"],
+  "detail-type": ["CodeCommit Repository State Change"],
+  "resources": ["arn:aws:codecommit:us-east-1:745361488260:my-webpage"],
+  "detail": {
+    "event": ["referenceCreated", "referenceUpdated"],
+    "referenceType": ["branch"],
+    "referenceName": ["main"]
+  }
+}
+```
