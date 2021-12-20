@@ -354,10 +354,6 @@ It is working.
 
 ## CodePipeline - CodeCommint & CodeDeploy
 
-One CodePipeline for each branch in our CodeCommit repository
-
-We can use CodePipeline in one region, but use CodeDeploy in another region. 
-
 ### Create a CodePipeline
 
 #### Artifact store
@@ -366,5 +362,19 @@ We can use CodePipeline in one region, but use CodeDeploy in another region.
 
 **Customer location:** Customer defined S3 bucket. It is best practise to centralize all the CodePipeline in a centralized location. 
 
-If you start to create many many CodePipeline, and keep choosing default location, then you will create many many S3 buckets. You may run into the limit. If you want to centralize all the CodePipelines, then you can choose a customer location. I will use my S3 bucker aws-devops-lily1234
+If you start to create many many CodePipeline, and keep choosing default location, then you will create many many S3 buckets. You may run into the limit. If you want to centralize all the CodePipelines, then you can choose a customer location. I will use my S3 bucker aws-devops-lily1234.
 
+#### Add source stage
+
+**Source provider:**
+
+* AWS CodeCommit
+* Amazon ECR
+* Amazon S3
+* GitHub
+* Bitbucket
+* GitHub Enterprise
+
+Here we have Amazon ECR compared to CodeBuild.
+
+One CodePipeline for each branch in our CodeCommit repository.
