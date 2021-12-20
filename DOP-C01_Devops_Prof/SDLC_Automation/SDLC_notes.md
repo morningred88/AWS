@@ -378,3 +378,8 @@ If you start to create many many CodePipeline, and keep choosing default locatio
 Here we have Amazon ECR compared to CodeBuild.
 
 One CodePipeline for each branch in our CodeCommit repository.
+
+**Detection option**
+
+* Amazon CloudWatch Events: It is recommended way. When we push a commit into CodeCommit, a CloudEvent rule will trigger the pipeline. 
+* AWS CodePipeline:  CodePipeline checks the changes periodically. If CodePipleline check every 30 seconds, then we might have 30 seconds delay when the code get pushed and pipeline get triggered. That could be an issue. 
