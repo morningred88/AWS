@@ -383,3 +383,11 @@ One CodePipeline for each branch in our CodeCommit repository.
 
 * Amazon CloudWatch Events: It is recommended way. When we push a commit into CodeCommit, a CloudEvent rule will trigger the pipeline. 
 * AWS CodePipeline:  CodePipeline checks the changes periodically. If CodePipleline check every 30 seconds, then we might have 30 seconds delay when the code get pushed and pipeline get triggered. That could be an issue. 
+
+#### Add deploy stage
+
+We can use CodePipeline in one region, but use CodeDeploy in another region.
+
+We can use one CodePipeline to trigger many code deploys into multiple regions.
+
+As soon as we created pipeline, the source get triggered.  
