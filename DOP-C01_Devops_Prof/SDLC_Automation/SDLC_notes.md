@@ -423,7 +423,13 @@ CodePipeline name: CodePipeline-Lily
 * Test: test using CodeBuild from previous lab, update IAM policy to give access to S3 bucket aws-devops-lily1234
 * Deploy: CodeDeploy from previous lab
 
+### CodePipeline - Artifacts, encryption and S3
 
+#### Artifacts
+
+Artifacts is the way for the stages in the CodePipeline to communicate one another. Artifacts are passed around between each stages. 
+
+Artifacts produced from Pipeline will be stored in S3 bucket you specified when you create the pipleline. So S3 is the backbone of CodePipeline. CodePipeline interacts with S3 many times to store and retrieve the artifacts. 
 
 
 
