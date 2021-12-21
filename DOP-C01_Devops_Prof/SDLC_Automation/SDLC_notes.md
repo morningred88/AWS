@@ -443,5 +443,9 @@ The folder name SourceArti from pipeline stage name Source, all artifacts are st
 
 The folder name TestResult from pipeline stage name Test, all artifacts are stored in this folder after the Test stage was run successfully
 
+#### CodePipeline flow through the stages
 
+* CodePipeline pulls the code from CodeCommit and stored in S3 SourceArti folder. 
+* TestResultThen CodeBuild will pull that file from S3, test it and put the file into S3 TestResult folder. 
+* CodeDeploy will pull that file from S3 and deploy it to EC2 instance. 
 
