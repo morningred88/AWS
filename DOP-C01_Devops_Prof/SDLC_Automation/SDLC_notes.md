@@ -431,7 +431,17 @@ Artifacts is the way for the stages in the CodePipeline to communicate one anoth
 
 Artifacts produced from Pipeline will be stored in S3 bucket you specified when you create the pipleline. So S3 is the backbone of CodePipeline. CodePipeline interacts with S3 many times to store and retrieve the artifacts. 
 
+#### Artifact stored pattern  in S3
 
+Open the bucket,  where the artifacts of created CodePipeline have been stored a folder named the same as the CodePipeline. There are 2 folders inside:
+
+AWS S3 > buckets> aws-devops-lily1234 > CodePipeline-Lily>SourceArti/
+
+AWS S3 > buckets> aws-devops-lily1234 > CodePipeline-Lily>TestResult/
+
+The folder name SourceArti from pipeline stage name Source, all artifacts are stored in this folder after the Source stage was run successfully
+
+The folder name TestResult from pipeline stage name Test, all artifacts are stored in this folder after the Test stage was run successfully
 
 
 
