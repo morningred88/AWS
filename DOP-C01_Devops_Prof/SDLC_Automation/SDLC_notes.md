@@ -352,7 +352,7 @@ It is working.
 * You can give any instance name for on-premises instances, don't need to be AssetTag12010298EX.
 * One IAM user can only be used for one on-premises instance
 
-## CodePipeline - CodeCommint & CodeDeploy
+## CodePipeline - CodeCommit, CodeBuild & CodeDeploy
 
 ### Create a CodePipeline
 
@@ -362,7 +362,7 @@ It is working.
 
 **Customer location:** Customer defined S3 bucket. It is best practise to centralize all the CodePipeline in a centralized location. 
 
-If you start to create many many CodePipeline, and keep choosing default location, then you will create many many S3 buckets. You may run into the limit. If you want to centralize all the CodePipelines, then you can choose a customer location. I will use my S3 bucker aws-devops-lily1234.
+If you start to create many many CodePipeline, and keep choosing default location, then you will create many many S3 buckets. You may run into the limit. If you want to centralize all the CodePipelines, then you can choose a customer location. I will use my S3 bucket aws-devops-lily1234.
 
 #### Add source stage
 
@@ -412,3 +412,20 @@ Pattern:
   }
 }
 ```
+
+#### Summary of the created CodePipeline
+
+CodePipeline name: CodePipeline-Lily
+
+3 stages: 
+
+* Source: from CodeCommit, myweb, main branch
+* Test: test using CodeBuild from previous lab, update IAM policy to give access to S3 bucket aws-devops-lily1234
+* Deploy: CodeDeploy from previous lab
+
+
+
+
+
+
+
