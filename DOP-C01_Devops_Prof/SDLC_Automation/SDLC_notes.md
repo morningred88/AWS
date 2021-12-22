@@ -459,7 +459,7 @@ In buildspec.yaml file, we let my-webpage app to store an artifact into s3 bucke
 
 #### CodePipeline event types 
 
-* **Stage Execution State Change**
+* **Pipeline execution state change**
 
   Event pattern
 
@@ -472,3 +472,23 @@ In buildspec.yaml file, we let my-webpage app to store an artifact into s3 bucke
     }
   }
   ```
+
+* **Stage execution state change**
+
+  Event pattern
+
+  ```
+  {
+    "source": ["aws.codepipeline"],
+    "detail-type": ["CodePipeline Stage Execution State Change"],
+    "detail": {
+      "state": ["FAILED"]
+    }
+  }
+  ```
+
+  
+
+```
+
+```
