@@ -454,3 +454,21 @@ The folder name TestResult from pipeline stage name Test, all artifacts are stor
 Artifact in CodeBuild and CodePipeline are different. 
 
 In buildspec.yaml file, we let my-webpage app to store an artifact into s3 bucket cicd-lilyma-devops.  Even it is in the buildspec.yaml file, Codepipeline does not store the artifact into the bucket cicd-lilyma-devops, but the bucket aws-devops-lily1234.
+
+### CodePipeline - CloudWatch event integration
+
+#### CodePipeline event types 
+
+* **Stage Execution State Change**
+
+  Event pattern
+
+  ```
+  {
+    "source": ["aws.codepipeline"],
+    "detail-type": ["CodePipeline Pipeline Execution State Change"],
+    "detail": {
+      "state": ["SUCCEEDED"]
+    }
+  }
+  ```
