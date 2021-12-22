@@ -489,6 +489,19 @@ In buildspec.yaml file, we let my-webpage app to store an artifact into s3 bucke
 
   
 
-```
+* **Action execution state change**
 
-```
+  Event pattern 
+
+  ```
+  {
+    "source": ["aws.codepipeline"],
+    "detail-type": ["CodePipeline Action Execution State Change"],
+    "detail": {
+      "state": ["FAILED"]
+    }
+  }
+  ```
+
+  
+
