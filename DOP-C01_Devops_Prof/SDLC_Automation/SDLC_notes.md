@@ -449,3 +449,8 @@ The folder name TestResult from pipeline stage name Test, all artifacts are stor
 * TestResultThen CodeBuild will pull that file from S3, test it and put the file into S3 TestResult folder. 
 * CodeDeploy will pull that file from S3 and deploy it to EC2 instance. 
 
+#### Difference of artifact in CodeBuild and CodePipeline
+
+Artifact in CodeBuild and CodePipeline are different. 
+
+In buildspec.yaml file, we let my-webpage app to store an artifact into s3 bucket cicd-lilyma-devops.  Even it is in the buildspec.yaml file, Codepipeline does not store the artifact into the bucket cicd-lilyma-devops, but the bucket aws-devops-lily1234.
