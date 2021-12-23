@@ -531,9 +531,13 @@ Sample event shows what information can be retrieved from the event, so can be p
 
 ### CodePipeline - Stage actions
 
-#### Parallel and sequential actions
+#### Action group, parallel and sequential actions
 
-Parallel actions are in the same action groups. Sequential action are in different action groups. 
+In the console, you can specify a serial sequence for an action by choosing **Add action group** at the level in the stage where you want it to run, or you can specify a parallel sequence by choosing **Add action**. *Action group* refers to a run order of one or more actions at the same level.
+
+Parallel actions are in the same action groups. 
+
+Sequential action are in different action groups. 
 
 Only all the parallel action completed, then CodePipeline will start to start the next action groups. 
 
