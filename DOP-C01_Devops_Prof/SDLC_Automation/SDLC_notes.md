@@ -541,3 +541,14 @@ Sequential action are in different action groups.
 
 Only all the parallel action completed, then CodePipeline will start to start the next action groups. 
 
+#### Runorder
+
+If you manually create or edit a JSON file to create a pipeline or update a pipeline from the AWS CLI,  uer `Runorder` to define the action execution order. 
+
+The default `runOrder` value for an action is 1. The value must be a positive integer (natural number). You cannot use fractions, decimals, negative numbers, or zero. To specify a serial sequence of actions, use the smallest number for the first action and larger numbers for each of the rest of the actions in sequence. To specify parallel actions, use the same integer for each action you want to run in parallel. 
+
+For example, if you want three actions to run in sequence in a stage, you would give the first action the `runOrder` value of 1, the second action the `runOrder` value of 2, and the third the `runOrder` value of 3. However, if you want the second and third actions to run in parallel, you would give the first action the `runOrder` value of 1 and both the second and third actions the `runOrder` value of 2.
+
+**Reference:**
+
+https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html
