@@ -529,5 +529,11 @@ Sample event shows what information can be retrieved from the event, so can be p
 }
 ```
 
+### CodePipeline - Stage actions
 
+#### Parallel and sequential actions
+
+Parallel actions are in the same action groups. Sequential action are in different action groups. 
+
+Only all the parallel action completed, then CodePipeline will start to start the next action groups. 
 
