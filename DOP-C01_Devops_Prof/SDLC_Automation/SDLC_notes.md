@@ -505,3 +505,29 @@ In buildspec.yaml file, we let my-webpage app to store an artifact into s3 bucke
 
   
 
+#### Sample event for CodePipeline
+
+Sample event shows what information can be retrieved from the event, so can be passed to the target, such as a Lambda function. 
+
+```
+{
+  "version": "0",
+  "id": "CWE-event-id",
+  "detail-type": "CodePipeline Stage Execution State Change",
+  "source": "aws.codepipeline",
+  "account": "123456789012",
+  "time": "2017-04-22T03:31:47Z",
+  "region": "us-east-1",
+  "resources": ["arn:aws:codepipeline:us-east-1:123456789012:pipeline:myPipeline"],
+  "detail": {
+    "pipeline": "myPipeline",
+    "version": "1",
+    "execution-id": "01234567-0123-0123-0123-012345678901",
+    "stage": "Prod",
+    "state": "STARTED"
+  }
+}
+```
+
+
+
