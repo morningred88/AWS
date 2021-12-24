@@ -585,3 +585,11 @@ Here are some ways Lambda functions can be used in pipelines:
 - To deploy to Amazon ECS Docker instances.
 - To back up resources before building or deploying by creating an AMI snapshot.
 - To add integration with third-party products to your pipeline, such as posting messages to an IRC client.
+
+#### Lab: Creating a basic Lambda function to use with CodePipeline
+
+Create a Lambda function that makes an HTTP request and checks for a line of text on a webpage. If the text exists, then call `PutJobSuccessResult` API of CodePipleline, so CodePipeline marked the lambda test action as Succeeded, otherwise call `PutJobFailureResult`, the Lambda test action will show as Failed. 
+
+**Reference:**
+
+https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-invoke-lambda-function.html
