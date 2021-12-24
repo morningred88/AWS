@@ -572,5 +572,16 @@ https://docs.aws.amazon.com/codepipeline/latest/userguide/integrations-action-ty
 
 https://docs.aws.amazon.com/codepipeline/latest/userguide/best-practices.html
 
+### CodePipeline - Custom action jobs with AWS Lambda
 
+We can add Lambda in any stages, which makes us do anything we want. 
 
+#### Use cases
+
+Here are some ways Lambda functions can be used in pipelines:
+
+- To create resources on demand in one stage of a pipeline using AWS CloudFormation and delete them in another stage.
+- To deploy application versions with zero downtime in AWS Elastic Beanstalk with a Lambda function that swaps CNAME values.
+- To deploy to Amazon ECS Docker instances.
+- To back up resources before building or deploying by creating an AMI snapshot.
+- To add integration with third-party products to your pipeline, such as posting messages to an IRC client.
