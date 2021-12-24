@@ -552,3 +552,22 @@ For example, if you want three actions to run in sequence in a stage, you would 
 **Reference:**
 
 https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html
+
+### Integrations with CodePipeline action types
+
+**CodePipeline action type:**
+
+- Source action integrations
+- Build action integrations
+- Test action integrations
+- Deploy action integrations
+- Approval action integrations
+- Invoke action integrations
+
+**CodePipeline use cases**
+
+https://docs.aws.amazon.com/codepipeline/latest/userguide/best-practices.html
+
+**Reference:**
+
+https://docs.aws.amazon.com/codepipeline/latest/userguide/integrations-action-type.html
