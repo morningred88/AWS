@@ -555,7 +555,7 @@ https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-str
 
 ### Integrations with CodePipeline action types
 
-**CodePipeline action type:**
+#### CodePipeline action type:
 
 - Source action integrations
 - Build action integrations
@@ -564,10 +564,13 @@ https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-str
 - Approval action integrations
 - Invoke action integrations
 
-**CodePipeline use cases**
-
-https://docs.aws.amazon.com/codepipeline/latest/userguide/best-practices.html
-
 **Reference:**
 
 https://docs.aws.amazon.com/codepipeline/latest/userguide/integrations-action-type.html
+
+#### CodePipeline use cases
+
+https://docs.aws.amazon.com/codepipeline/latest/userguide/best-practices.html
+
+
+
