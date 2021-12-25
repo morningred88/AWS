@@ -593,3 +593,23 @@ Create a Lambda function that makes an HTTP request and checks for a line of tex
 **Reference:**
 
 https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-invoke-lambda-function.html
+
+### CodePipeline - CloudFormation
+
+#### CloudFormation integration with CodePipeline
+
+There are 2 ways how CloudFormation integrate with CodePipleline
+
+* CloudFormation as an action in a CodePipeline
+
+* Use CloudFormation to create a CodePipeline
+
+  * Tutorial from AWS docs 
+
+    https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-cloudformation.html
+
+  * Real world production example: It is from Devops perspective how to use CloudFormation for CodePipeline
+
+    Project in AWS github repository:
+
+    https://github.com/aws-samples/codepipeline-nested-cfn
