@@ -626,3 +626,6 @@ The main advantage is reuse. For example, we need to create a CodePipeline for e
 
 Working in the way of master and workers. Master and slave can be in a server. But when more jobs, such as code build, request to Jenkins, then it is better to have more workers in other instances. 
 
+### Jenkins-Set up on EC2
+
+Jen can do build, test, deployments in AWS, but you need to manage it. If you want fully serverless managed alternative, then CodeBuild, CodeDeploy and CodePipeline is probably going to be a better choice.
