@@ -613,3 +613,11 @@ There are 2 ways how CloudFormation integrate with CodePipleline
     Project in AWS github repository:
 
     https://github.com/aws-samples/codepipeline-nested-cfn
+
+#### Advantage of using CloudFormation to create CodePipeline
+
+The main advantage is reuse. For example, we need to create a CodePipeline for each branch of our CodeCommit repository. We can
+
+* Clone the pipleline, and then change the source, which is a lot of manual work and cannot scale so well. 
+
+* Using cloudFormation template and change the source to different branch. 
