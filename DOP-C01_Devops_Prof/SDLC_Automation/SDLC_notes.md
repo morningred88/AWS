@@ -621,3 +621,8 @@ The main advantage is reuse. For example, we need to create a CodePipeline for e
 * Clone the pipleline, and then change the source, which is a lot of manual work and cannot scale so well. 
 
 * Using cloudFormation template and change the source to different branch. 
+
+## Jenkins
+
+Working in the way of master and workers. Master and slave can be in a server. But when more jobs, such as code build, request to Jenkins, then it is better to have more workers in other instances. 
+
