@@ -629,3 +629,11 @@ Working in the way of master and workers. Master and slave can be in a server. B
 ### Jenkins-Set up on EC2
 
 Jen can do build, test, deployments in AWS, but you need to manage it. If you want fully serverless managed alternative, then CodeBuild, CodeDeploy and CodePipeline is probably going to be a better choice.
+
+### Jenkins - AWS plugins
+
+* Amazon EC2, elastic way to create Jenkin agents (workers). With the help of Amazon EC2, Jenkins can request EC2 instances when excess jobs are detected. Jenkin will manage a whole fleet of Jenkin agents for us. When the load goes down, excess EC2 instances will be terminated. But 2 other alternatives can be done instead of mange EC2 instance.
+* AWS ECS: Workers in container
+* AWS CodeBuild: If more build are detect, can directly send the build job to CodeBuild. 
+* AWS CodePipeline: If we want to use Jenkins in our CodePipeline, we need to add this plugin
+* Artifact manger on S3: Allow Jenkins to keep artifact in S3
