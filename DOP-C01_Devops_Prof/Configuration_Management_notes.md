@@ -34,5 +34,15 @@ cfn-signal are also is run in UserData
 
 When you create a stack in the console, you can set **Stack creation option** as enabled or disabled in the **Advanced options**. The default setting is enabled. But if we need to debug the stack creation failure, then we need to change the setting as disabled. 
 
+### CloudFormation - nested stack
 
+```
+Resources:
+  myStack:
+    Type: AWS::CloudFormation::Stack
+```
+
+**Note:**
+
+Never make change in the nested stack, but in root stack. 
 
