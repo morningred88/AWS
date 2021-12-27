@@ -16,7 +16,7 @@ Second stack: To reference the output from the first stack, using function **fn:
 
 ### cfn-init
 
-* cfn-init  (AWS::CloudFormation::Init) must be in the Metadata of a resource 
+* cfn-init  (**AWS::CloudFormation::Init**) must be in the Metadata of a resource 
 
 * cfn-init script is run in UserData
 
@@ -29,3 +29,10 @@ Second stack: To reference the output from the first stack, using function **fn:
 cfn-signal are also is run in UserData
 
 **Wait condition** is a resource. When the wait condition receives the success signal, it will complete the creation. Then the stack goes to the completion stage.
+
+### CloudFormation rollbacks
+
+When you create a stack in the console, you can set **Stack creation option** as enabled or disabled in the **Advanced options**. The default setting is enabled. But if we need to debug the stack creation failure, then we need to change the setting as disabled. 
+
+
+
