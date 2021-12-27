@@ -23,3 +23,9 @@ Second stack: To reference the output from the first stack, using function **fn:
 * UserData logs go to /var/log/cfn-init.log. 
   * If UserData is defined in cfn-init file, you can get UserData output in log  /var/log/cloud-init-output.log file. 
   * If UserData has been defined in cfn-init file, you can find UserData output in log /var/log/cfn-init.log file. cloud-init-output.log still exists, but UserData output is not in it. 
+
+### cfn-signal and wait conditions
+
+cfn-signal are also is run in UserData
+
+**Wait condition** is a resource. When the wait condition receives the success signal, it will complete the creation. Then the stack goes to the completion stage.
