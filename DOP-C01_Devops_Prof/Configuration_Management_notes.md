@@ -46,3 +46,11 @@ Resources:
 
 Never make change in the nested stack, but in root stack. 
 
+### CloudFormation Change sets
+
+#### How to create change sets
+
+We can create change sets in 2 ways in AWS console:
+
+* Change sets tab on the left hand side> Click Create change sets button 
+* Stack> select the stack you want to create change sets>Action> Create change sets for current stack
