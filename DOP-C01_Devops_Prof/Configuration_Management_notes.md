@@ -68,7 +68,7 @@ When you update a stack and before you finish the update process, you can view t
 
 ### CloudFormation - Deploying Lambda functions
 
-#### Lambda Code - in line
+#### Lambda Code in the CloudFormation - in line
 
 Lambda code is directly in the CloudFormation template
 
@@ -79,3 +79,12 @@ Restrictions:
 * Maximum 4,000 character
 
 * Cannot have dependencies
+
+#### Lambda Code in the CloudFormation - zipped in S3
+
+Lambda code is not in the CloudFormation template, but zipped and stored in S3. The  S3 location url is in the CloudFormation template. 
+
+Advantage:
+
+* Good for big piece of Lambda code
+* Can have dependencies
