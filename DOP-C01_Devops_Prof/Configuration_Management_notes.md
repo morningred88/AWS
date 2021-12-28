@@ -54,3 +54,10 @@ We can create change sets in 2 ways in AWS console:
 
 * Change sets tab on the left hand side> Click Create change sets button 
 * Stack> select the stack you want to create change sets>Action> Create change sets for current stack
+
+####  Change sets outcomes
+
+After you reviewed the change sets, you can choose
+
+* Delete - delete all the updates to the CloudFormation template
+* Execute - Update the current CloudFormation template, then the stack
