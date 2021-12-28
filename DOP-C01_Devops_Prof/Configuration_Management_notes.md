@@ -65,3 +65,17 @@ After you reviewed the change sets, you can choose
 #### Change sets in a stack update
 
 When you update a stack and before you finish the update process, you can view the change sets. 
+
+### CloudFormation - Deploying Lambda functions
+
+#### Lambda Code - in line
+
+Lambda code is directly in the CloudFormation template
+
+Good for small piece of code.
+
+Restrictions:
+
+* Maximum 4,000 character
+
+* Cannot have dependencies
