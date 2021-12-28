@@ -61,3 +61,7 @@ After you reviewed the change sets, you can choose
 
 * Delete - delete all the updates to the CloudFormation template
 * Execute - Update the current CloudFormation template, then the stack
+
+#### Change sets in a stack update
+
+When you update a stack and before you finish the update process, you can view the change sets. 
