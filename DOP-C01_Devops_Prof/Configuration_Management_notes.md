@@ -88,3 +88,17 @@ Advantage:
 
 * Good for big piece of Lambda code
 * Can have dependencies
+
+#### Issue of Lambda function not updated (code zipped in S3) 
+
+**Description:**
+
+A Lambda function code is stored in S3 bucket as my-bucket/my-lambda.zip, we use CloudFormation to deploy the Lambda function. The code has been updated and reload to S3, then run CloudFormation to deploy the Lambda. But the Lambda function was not updated. 
+
+**Solution:**
+
+The issue is that CloudFormation does not detect a new file has been uploaded to S3 unless one of these parameters change: 
+
+* S3Bucket
+* S3Key
+* S3ObjectVersion
