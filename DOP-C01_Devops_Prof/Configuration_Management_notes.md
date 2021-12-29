@@ -102,3 +102,14 @@ The issue is that CloudFormation does not detect a new file has been uploaded to
 * S3Bucket
 * S3Key
 * S3ObjectVersion
+
+### CloudFormation -Customer resources
+
+#### Type and use cases
+
+The type of customer resource starts with **Cutomer**::xxxx. You can use customer resources to do anything. But it can mainly be used for the 4 use cases:
+
+- An AWS resource is yet not covered in CloudFormation (new service for example)
+- An On-Premise resource
+- Emptying an S3 bucket before being deleted
+- Fetch an AMI id
