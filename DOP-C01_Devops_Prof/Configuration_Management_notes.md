@@ -113,3 +113,20 @@ The type of customer resource starts with **Cutomer**::xxxx. You can use custome
 - An On-Premise resource
 - Emptying an S3 bucket before being deleted
 - Fetch an AMI id
+
+#### Customer resource example - empty S3 bucket 
+
+```
+Resources:
+  myBucketResource:
+    Type: AWS::S3::Bucket
+
+  LambdaUsedToCleanUp:
+    Type: Custom::cleanupbucket
+    Properties:
+      ServiceToken: !ImportValue EmptyS3BucketLambda
+      BucketName: !Ref myBucketResource
+```
+
+ServiceToken is the Lamba ARN,  imported value from another stack, the Export name is EmptyS3BucketLambda in that stack.
+
