@@ -139,3 +139,12 @@ Need to familiar all status code, most important one is update_rollback_failed
 #### UPDATE_ROLLBACK_FAILED state
 
 A stack’s state is set to UPDATE_ROLLBACK_FAILED when CloudFormation cannot roll back all changes during an update.
+
+##### Troubleshoting the failure
+
+* Failed to receive the required number of signals: Use the [signal-resource](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/signal-resource.html) command to manually send the required number of successful signals to the resource that's waiting for them
+* Changes to a resource were made outside of AWS CloudFormation: Manually sync resources so that they match the original stack's template
+* Insufficient permissions: grant permission
+* Invalid security token
+* Limitation error: Delete resources that you don't need or request a quota increase
+* Resource didn't stabilize: A resource didn't respond because the operation might have exceeded the AWS CloudFormation timeout period or an AWS service might have been interrupted. No change is required.
