@@ -97,6 +97,8 @@ A Lambda function code is stored in S3 bucket as my-bucket/my-lambda.zip, we use
 
 **Solution:**
 
+When you upload the file with same name to S3, it will overwrite the existing file. 
+
 The issue is that CloudFormation does not detect a new file has been uploaded to S3 unless one of these parameters change: 
 
 * S3Bucket
@@ -129,4 +131,10 @@ Resources:
 ```
 
 ServiceToken is the Lamba ARN,  imported value from another stack, the Export name is EmptyS3BucketLambda in that stack.
+
+### CloudFormation status code
+
+Need to familiar all status code, most important one is update_rollback_failed
+
+
 
