@@ -136,5 +136,6 @@ ServiceToken is the Lamba ARN,  imported value from another stack, the Export na
 
 Need to familiar all status code, most important one is update_rollback_failed
 
+#### UPDATE_ROLLBACK_FAILED state
 
-
+A stack’s state is set to UPDATE_ROLLBACK_FAILED when CloudFormation cannot roll back all changes during an update.
