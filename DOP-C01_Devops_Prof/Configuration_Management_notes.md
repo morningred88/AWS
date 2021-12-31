@@ -200,3 +200,11 @@ Some stack templates might include resources that can affect permissions in your
 - If you have IAM resources, you can specify either capability.
 - If you have IAM resources with custom names, you *must* specify `CAPABILITY_NAMED_IAM`.
 - If you don't specify either of these capabilities, AWS CloudFormation returns an `InsufficientCapabilities` error.
+
+### cfn-hup
+
+We can use cfn-hup to update EC2 metadata.
+
+If EC2 metadata change, cfn-hup ensure all the changes will be applied to EC2. 
+
+We can change EC2 instance directly from CloudFormtion without replacing EC2 instance
