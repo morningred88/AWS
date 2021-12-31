@@ -188,3 +188,7 @@ If you want to skip FAILED resources during rollback, complete the following:
 https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-update-rollback-failed/
 
 https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed
+
+### CloudFormation - InsufficientCapabilitiesException
+
+This except can be thrown if CloudFormation need to create IAM resources but no assigned capabilities, CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM.
