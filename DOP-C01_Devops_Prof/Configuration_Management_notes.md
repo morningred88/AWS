@@ -192,3 +192,11 @@ https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.h
 ### CloudFormation - InsufficientCapabilitiesException
 
 This except can be thrown if CloudFormation need to create IAM resources but no assigned capabilities, CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM.
+
+#### CAPABILITY_IAM and CAPABILITY_NAMED_IAM
+
+Some stack templates might include resources that can affect permissions in your AWS account; for example, by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this by specifying one of these capabilities.
+
+- If you have IAM resources, you can specify either capability.
+- If you have IAM resources with custom names, you *must* specify `CAPABILITY_NAMED_IAM`.
+- If you don't specify either of these capabilities, AWS CloudFormation returns an `InsufficientCapabilities` error.
