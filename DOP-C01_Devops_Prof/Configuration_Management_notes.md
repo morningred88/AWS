@@ -156,3 +156,35 @@ After a stack was in the UPDATE_ROLLBACK_FAILED state, you had only **two option
 AWS CloudFormation now offers a **third option: continue update rollback**, which you can initiate from the AWS CloudFormation console or with the **[continue-update-rollback](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/continue-update-rollback.html)** command in the AWS Command Line Interface (CLI). This functionality is enabled for all the stacks in the UPDATE_ROLLBACK_FAILED state.
 
 Depending on the cause of the failure (See **Troubleshooting the failure** above), you can manually fix the error and continue the rollback. By continuing the rollback, you can return your stack to a working state (the `UPDATE_ROLLBACK_COMPLETE` state), and then try to update the stack again. 
+
+##### continue update rollback in CloudFormation console
+
+1. Open the [CloudFormation console](https://console.aws.amazon.com/cloudformation/).
+
+2. From the navigation pane, choose **Stacks**.
+
+3. From the **Stack name** column, select the stack that's stuck in UPDATE_ROLLBACK_FAILED status.
+
+4. If you don't want to skip resources, choose **Stack** **Actions**, and then choose **Continue update rollback**.
+
+-or-
+
+If you want to skip FAILED resources during rollback, complete the following:
+
+1. From the **Stack name** column, select the stack that's stuck in UPDATE_ROLLBACK_FAILED status.
+
+2. Choose **Stack Actions**, and then choose **Continue update rollback**.
+
+3. In the **Continue update rollback** dialog box, expand **Advanced troubleshooting**.
+
+4. In the **Resources to skip - optional** section, select the resources that you want to skip.
+
+5. Choose **Continue update rollback**.
+
+**Reference:**
+
+[Continue Rolling Back an Update for AWS CloudFormation stacks in the UPDATE_ROLLBACK_FAILED state](https://aws.amazon.com/blogs/devops/continue-rolling-back-an-update-for-aws-cloudformation-stacks-in-the-update_rollback_failed-state/)
+
+https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-update-rollback-failed/
+
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed
