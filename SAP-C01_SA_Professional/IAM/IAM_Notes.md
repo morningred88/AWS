@@ -1,6 +1,6 @@
-# IAM
+## IAM
 
-## Access Advisor vs Access Analyzer
+### Access Advisor vs Access Analyzer
 
 **Access Advisor**: in under an user or a role, shows permission granted and when last accessed.
 
@@ -14,9 +14,9 @@
 
 
 
-## IAM policy
+### IAM policy
 
-### Power user policy: less privileged than administrator
+#### Power user policy: less privileged than administrator
 
 ![Power_User_Policy](\IAM_images\Power_User_Policy.png)
 
@@ -24,3 +24,8 @@
 
 - If we use deny for the first policy, then the second allow policy will never in effect, because explicit deny takes the precedence. 
 - If we want to allow some of the actions but deny the rest, we can use "NotAction"
+
+### IAM Permission Boundary
+
+Permission boundary is  an IAM policy, which defines the maximum permission for a user or role. 
+
