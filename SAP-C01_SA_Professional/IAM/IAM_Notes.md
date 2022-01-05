@@ -29,3 +29,6 @@
 
 Permission boundary is  an IAM policy, which defines the maximum permission for a user or role. 
 
+#### Use a scenario to explain the permission boundary
+
+Background: A lambda developer need the permission to create role to do some EC2 and S3 work, like stop and start EC2 instance, retrieve files from S3. 
