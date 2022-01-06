@@ -63,3 +63,5 @@ DeveloperPolicy
     ]
 }
 ```
+
+**Drawback of the DeveloperPolicy above**: Developer can give a Lambda function the Admin permission,  the Lambda can execute the Admin permission not only to EC2 and S3, but to any of AWS service, such as databases, etc.
