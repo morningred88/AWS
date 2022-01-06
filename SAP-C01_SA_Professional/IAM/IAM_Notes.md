@@ -96,3 +96,13 @@ BoundaryPolicy
     ]
 }
 ```
+
+**Step 2: Update DeveloperPolicy with permission boundary**
+
+* Take the 2 actions for IAM service out of DeveloperPolicy: `"iam:CreateRole"` and  `"iam:AttachRolePolicy"`. Then add these 2 action to a newly added IAM service again, but with condition by clicking **Add condition**. 
+
+![Add_permission_boundary_step1](\IAM_images\Add_permission_boundary_step1.png)
+
+* Add created BoundaryPolicy as a condition, note that value is the ARN of BoundaryPolicy.
+
+![Add_permission_boundary_step2](\IAM_images\Add_permission_boundary_step2.png)
