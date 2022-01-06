@@ -65,3 +65,34 @@ DeveloperPolicy
 ```
 
 **Drawback of the DeveloperPolicy above**: Developer can give a Lambda function the Admin permission,  the Lambda can execute the Admin permission not only to EC2 and S3, but to any of AWS service, such as databases, etc.
+
+##### Attach policy with permission boundary to an user
+
+**Step1: Create boundary policy in IAM**
+
+Creating boundary policy is the same procedure as you create any IAM policy. 
+
+AWS Console>IAM> Policy>Create policy
+
+The following is the json format of the created boundary policy. We will add it as conditional for DeveloperPolicy
+
+BoundaryPolicy
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:List*",
+                "ec2:Get*",
+                "ec2:Describe*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
