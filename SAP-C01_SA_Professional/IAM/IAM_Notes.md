@@ -106,3 +106,42 @@ BoundaryPolicy
 * Add created BoundaryPolicy as a condition, note that value is the ARN of BoundaryPolicy.
 
 ![Add_permission_boundary_step2](\IAM_images\Add_permission_boundary_step2.png)
+
+The following the json format of updated DeveloperPolicy with permission boundary:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:AttachRolePolicy"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:PermissionsBoundary": "arn:aws:iam::745361488260:policy/BoundaryPolicy"
+                }
+            }
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreatePolicy",
+                "iam:PassRole",
+                "iam:Get*",
+                "iam:List*",
+                "lambda:*",
+                "iam:UpdateRole"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+The user only allows to create roles when user attach the boundary policy. 
