@@ -33,7 +33,7 @@ Permission boundary is  an IAM policy, which defines the maximum permission for 
 
 Background: A lambda developer need the permission to create role to do some EC2 and S3 work, like stop and start EC2 instance, retrieve files from S3. 
 
-#### Attach policy without permission boundary to an user
+##### Attach policy without permission boundary to an user
 
 Admin creates an DeveloperPolicy that gives the developer the permission to do all the work related to Lambda service, also to create roles used by Lambda service. Then attach the DeveloperPolicy to the Lambda developer (IAM user).
 
@@ -145,3 +145,13 @@ The following the json format of updated DeveloperPolicy with permission boundar
 ```
 
 The user only allows to create roles when user attach the boundary policy. 
+
+##### Create roles by the user with permission boundary
+
+* Whenever user create a role, a permission boundary requires to be added, by click set permissions boundary below:
+
+![Create_role_with_permission_boundary1](\IAM_images\Create_role_with_permission_boundary1.png)
+
+* Then choose the created BoundaryPolicy above
+
+![Create_role_with_permission_boundary2](\IAM_images\Create_role_with_permission_boundary2.png)
