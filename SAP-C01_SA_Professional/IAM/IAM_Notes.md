@@ -155,3 +155,9 @@ The user only allows to create roles when user attach the boundary policy.
 * Then choose the created BoundaryPolicy above
 
 ![Create_role_with_permission_boundary2](\IAM_images\Create_role_with_permission_boundary2.png)
+
+**Reference:**
+
+IAM Permissions Boundary - Full Configuration
+
+https://www.youtube.com/watch?v=gLQwzsqpSFA
