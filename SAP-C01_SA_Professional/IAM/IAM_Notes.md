@@ -184,3 +184,13 @@ Difference between SAML 2.0 Federation – AWS Console Access and ADFS:
 
 * Identity provider: ADFS
 * Identity store: Active Directory
+
+#### Custom Identity Broker Application
+
+Difference between SAML 2.0 Federation and Custom Identity Broker:
+
+Custom Identity Broker has Admin power, can directly get temporary security credential from STS by:
+
+* The Identity Broker must determine the appropriate IAM Role
+* Uses the STS API AssumeRole or GetFederationToken, back to Custom Identity Broker itself
+* Then Custom Identity Broker passes user the token or URL
