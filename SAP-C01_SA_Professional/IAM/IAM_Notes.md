@@ -171,3 +171,9 @@ https://www.youtube.com/watch?v=gLQwzsqpSFA
 * **AssumeRoleWithSAML** API
 * User get temporary security credentials for AWS API access
 
+#### SAML 2.0 Federation – AWS Console Access
+
+Difference between SAML 2.0 Federation – AWS API Access and AWS Console Access:
+
+* **AWS Sign-in Endpoint for SAML** (https://signin.aws.amazon.com/saml) instead of AssumeRoleWithSAML API call
+* User gets sign-in url for AWS console
