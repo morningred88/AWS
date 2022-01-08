@@ -161,3 +161,13 @@ The user only allows to create roles when user attach the boundary policy.
 IAM Permissions Boundary - Full Configuration
 
 https://www.youtube.com/watch?v=gLQwzsqpSFA
+
+### Identity federation
+
+#### SAML 2.0 Federation – AWS API Access
+
+* Identity provider: SMAL 2.0 IdP
+* Identity store: LDAP-based Identity Store
+* **AssumeRoleWithSAML** API
+* User get temporary security credentials for AWS API access
+
