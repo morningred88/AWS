@@ -177,3 +177,10 @@ Difference between SAML 2.0 Federation – AWS API Access and AWS Console Access
 
 * **AWS Sign-in Endpoint for SAML** (https://signin.aws.amazon.com/saml) instead of AssumeRoleWithSAML API call
 * User gets sign-in url for AWS console
+
+#### SAML 2.0 Federation –Active Directory FS (ADFS)
+
+Difference between SAML 2.0 Federation – AWS Console Access and ADFS:
+
+* Identity provider: ADFS
+* Identity store: Active Directory
