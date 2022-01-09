@@ -199,3 +199,6 @@ Custom Identity Broker has Admin power, can directly get temporary security cred
 
 Allow user identified by third party Idp, such as Google, Amazon or Facebook
 
+#### Without Cognito
+
+The old way to treat the third party identity token with temporary security credentials from STS by **AssumeRoleWithWebIdentity** API
