@@ -202,3 +202,7 @@ Allow user identified by third party Idp, such as Google, Amazon or Facebook
 #### Without Cognito
 
 The old way to treat the third party identity token with temporary security credentials from STS by **AssumeRoleWithWebIdentity** API
+
+#### With Cognito
+
+Not directly treat he third party identity token with temporary security credentials from STS, but treat with **Cognito token** instead. This way, Web Identity Federation can consume the advantage of Amazon Cognito, such as MFA. 
