@@ -194,3 +194,8 @@ Custom Identity Broker has Admin power, can directly get temporary security cred
 * The Identity Broker must determine the appropriate IAM Role
 * Uses the STS API AssumeRole or GetFederationToken, back to Custom Identity Broker itself
 * Then Custom Identity Broker passes user the token or URL
+
+### Web Identity Federation
+
+Allow user identified by third party Idp, such as Google, Amazon or Facebook
+
