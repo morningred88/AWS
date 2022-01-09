@@ -206,3 +206,11 @@ The old way to treat the third party identity token with temporary security cred
 #### With Cognito
 
 Not directly treat he third party identity token with temporary security credentials from STS, but treat with **Cognito token** instead. This way, Web Identity Federation can consume the advantage of Amazon Cognito, such as MFA. 
+
+### AWS Directory Service
+
+#### AWS Managed Microsoft AD
+
+* Deploy Microsoft AD in your AWS VPC
+
+* Two places where user are defined - on premises and in the cloud, and there is trust between the two.
