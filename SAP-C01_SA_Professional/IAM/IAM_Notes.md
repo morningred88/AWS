@@ -218,3 +218,7 @@ Not directly treat he third party identity token with temporary security credent
 #### AD Connector
 
 Users are solely managed by on-premises Microsoft AD, no possibility of setting up a trust
+
+#### Simple AD
+
+AWS AD product, not from Microsoft AD, users only can be managed in AWS.
