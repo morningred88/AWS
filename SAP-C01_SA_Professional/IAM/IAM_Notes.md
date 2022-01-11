@@ -214,3 +214,7 @@ Not directly treat he third party identity token with temporary security credent
 * Deploy Microsoft AD in your AWS VPC
 
 * Two places where user are defined - on premises and in the cloud, and there is trust between the two.
+
+#### AD Connector
+
+Users are solely managed by on-premises Microsoft AD, no possibility of setting up a trust
