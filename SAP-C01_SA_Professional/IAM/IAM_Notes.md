@@ -222,3 +222,8 @@ Users are solely managed by on-premises Microsoft AD, no possibility of setting 
 #### Simple AD
 
 AWS AD product, not from Microsoft AD, users only can be managed in AWS.
+
+## AWS Organizations
+
+Management account: Account used to create an organization
+
