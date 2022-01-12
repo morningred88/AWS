@@ -243,16 +243,9 @@ We have **2 options to add a member account**  in an AWS Organization:
 
 ## Session policies
 
-**Session policies** are advanced policies that you pass as a parameter when you programmatically create a temporary session for a role or federated user. 
+**Session policies** are advanced policies that you pass as a **parameter** when you programmatically (AWS CLI or AWS API) create a temporary session for a role or federated user. 
 
-You can create role session and pass session policies programmatically using the `AssumeRole`, `AssumeRoleWithSAML`, or `AssumeRoleWithWebIdentity` API operations.
+* You can create role session and pass session policies programmatically using the `AssumeRole`, `AssumeRoleWithSAML`,  `AssumeRoleWithWebIdentity` or `GetFederationToken` API operations.
 
-When you create a federated user session, you use an IAM user's access keys to programmatically call the `GetFederationToken` API operation. You must also pass session policies.
-
-Reference:
-
-https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_sessionCreate
-
-fine-grained session permissions using IAM managed policies
-
-https://aws.amazon.com/blogs/security/create-fine-grained-session-permissions-using-iam-managed-policies/
+* Session policies **limit permissions** for a created session, **but do not grant permissions**. The maximum permissions that a session can have are the permissions that are allowed by the role’s identity-based policies. 
+* You can pass an inline session policy and ARNs of up to 10 managed policies in the same role session. 
