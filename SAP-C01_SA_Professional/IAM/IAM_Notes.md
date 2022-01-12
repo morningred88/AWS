@@ -225,5 +225,34 @@ AWS AD product, not from Microsoft AD, users only can be managed in AWS.
 
 ## AWS Organizations
 
-Management account: Account used to create an organization
+Management account: Account used to create an organization. It is best practice to leave the management account under root. 
 
+### OrganizationAccountAccessRole
+
+We have **2 options to add a member account**  in an AWS Organization:
+
+* **Create an AWS account**
+
+  You can see OrganizationAccountAccessRole is **automatically** created in the member account creating process, see below. Management account assume this role in the member account to manage all the member accounts.  
+
+* **Invite an existing account**
+
+  OrganizationAccountAccessRole needs to be **manually** added in order to allow Organization to management the member account. 
+
+![Create_Member_Account_In_Organization](\IAM_images\Create_Member_Account_In_Organization.png)
+
+## Session policies
+
+**Session policies** are advanced policies that you pass as a parameter when you programmatically create a temporary session for a role or federated user. 
+
+You can create role session and pass session policies programmatically using the `AssumeRole`, `AssumeRoleWithSAML`, or `AssumeRoleWithWebIdentity` API operations.
+
+When you create a federated user session, you use an IAM user's access keys to programmatically call the `GetFederationToken` API operation. You must also pass session policies.
+
+Reference:
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_sessionCreate
+
+fine-grained session permissions using IAM managed policies
+
+https://aws.amazon.com/blogs/security/create-fine-grained-session-permissions-using-iam-managed-policies/
