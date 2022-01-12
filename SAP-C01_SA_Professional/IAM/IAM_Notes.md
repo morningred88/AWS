@@ -249,3 +249,9 @@ We have **2 options to add a member account**  in an AWS Organization:
 
 * Session policies **limit permissions** for a created session, **but do not grant permissions**. The maximum permissions that a session can have are the permissions that are allowed by the role’s identity-based policies. 
 * You can pass an inline session policy and ARNs of up to 10 managed policies in the same role session. 
+
+#### Inline session policy 
+
+####  Passing a session policy with AssumeRole API to restrict session permissions
+
+ You can pass a single inline session policy programmatically by using the **policy** parameter with the [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html), [AssumeRoleWithSAML](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html), [AssumeRoleWithWebIdentity](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html), and [GetFederationToken](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetFederationToken.html) API operations.
