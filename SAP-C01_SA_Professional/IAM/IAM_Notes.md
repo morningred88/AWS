@@ -255,3 +255,12 @@ We have **2 options to add a member account**  in an AWS Organization:
 ####  Passing a session policy with AssumeRole API to restrict session permissions
 
  You can pass a single inline session policy programmatically by using the **policy** parameter with the [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html), [AssumeRoleWithSAML](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html), [AssumeRoleWithWebIdentity](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html), and [GetFederationToken](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetFederationToken.html) API operations.
+
+**Example - Passing inline session policy using the AWS CLI:**
+
+```
+aws sts assume-role 
+--role-arn "arn:aws:iam::111122223333:role/SecurityAdminAccess" 
+--role-session-name "s3-session" 
+--policy file://policy.json 
+```
