@@ -277,3 +277,9 @@ aws sts assume-role
 --role-session-name “-session” 
 --policy-arns arn=”arn:aws:iam::*444455556666*:policy/DevCalifornia”
 ```
+
+**Reference:**
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session
+
+Create fine-grained session permissions using IAM managed policies, https://aws.amazon.com/blogs/security/create-fine-grained-session-permissions-using-iam-managed-policies/
