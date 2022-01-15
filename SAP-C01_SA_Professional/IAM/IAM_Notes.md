@@ -264,3 +264,7 @@ aws sts assume-role
 --role-session-name "s3-session" 
 --policy file://policy.json 
 ```
+
+#### Using IAM managed policies as session policies
+
+You can now pass up to 10 IAM managed policies as session policies. This gives you the ability to further restrict session permissions. The managed policy you pass can be AWS managed or customer managed. To pass managed policies as session policies, you need to specify the [Amazon Resource Name](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) (ARN) of the IAM policies using the **policy-arns** parameter in the `AssumeRole`, `AssumeRoleWithSAML`, `AssumeRoleWithWebIdentity`, or `GetFederationToken` API operations.
