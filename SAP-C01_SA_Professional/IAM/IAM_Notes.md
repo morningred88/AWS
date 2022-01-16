@@ -1,6 +1,6 @@
-## IAM
+## Identity and Federation
 
-### Access Advisor vs Access Analyzer
+## Access Advisor vs Access Analyzer
 
 **Access Advisor**: in under an user or a role, shows permission granted and when last accessed.
 
@@ -14,9 +14,9 @@
 
 
 
-### IAM policy
+## IAM policy
 
-#### Power user policy: less privileged than administrator
+### Power user policy: less privileged than administrator
 
 ![Power_User_Policy](\IAM_images\Power_User_Policy.png)
 
@@ -25,15 +25,15 @@
 - If we use deny for the first policy, then the second allow policy will never in effect, because explicit deny takes the precedence. 
 - If we want to allow some of the actions but deny the rest, we can use "NotAction"
 
-### IAM Permission Boundary
+## IAM Permission Boundary
 
 Permission boundary is  an IAM policy, which defines the maximum permission for a user or role. 
 
-#### Use a scenario to explain the permission boundary
+### Use a scenario to explain the permission boundary
 
 Background: A lambda developer need the permission to create role to do some EC2 and S3 work, like stop and start EC2 instance, retrieve files from S3. 
 
-##### Attach policy without permission boundary to an user
+#### Attach policy without permission boundary to an user
 
 Admin creates an DeveloperPolicy that gives the developer the permission to do all the work related to Lambda service, also to create roles used by Lambda service. Then attach the DeveloperPolicy to the Lambda developer (IAM user).
 
@@ -66,7 +66,7 @@ DeveloperPolicy
 
 **Drawback of the DeveloperPolicy above**: Developer can give a Lambda function the Admin permission,  the Lambda can execute the Admin permission not only to EC2 and S3, but to any of AWS service, such as databases, etc.
 
-##### Attach policy with permission boundary to an user
+#### Attach policy with permission boundary to an user
 
 **Step1: Create boundary policy in IAM**
 
@@ -146,7 +146,7 @@ The following the json format of updated DeveloperPolicy with permission boundar
 
 The user only allows to create roles when user attach the boundary policy. 
 
-##### Create roles by the user with permission boundary
+#### Create roles by the user with permission boundary
 
 * Whenever user create a role, a permission boundary requires to be added, by click set permissions boundary below:
 
@@ -162,30 +162,30 @@ IAM Permissions Boundary - Full Configuration
 
 https://www.youtube.com/watch?v=gLQwzsqpSFA
 
-### Identity federation
+## Identity federation
 
-#### SAML 2.0 Federation – AWS API Access
+### SAML 2.0 Federation – AWS API Access
 
 * Identity provider: SMAL 2.0 IdP
 * Identity store: LDAP-based Identity Store
 * **AssumeRoleWithSAML** API
 * User get temporary security credentials for AWS API access
 
-#### SAML 2.0 Federation – AWS Console Access
+### SAML 2.0 Federation – AWS Console Access
 
 Difference between SAML 2.0 Federation – AWS API Access and AWS Console Access:
 
 * **AWS Sign-in Endpoint for SAML** (https://signin.aws.amazon.com/saml) instead of AssumeRoleWithSAML API call
 * User gets sign-in url for AWS console
 
-#### SAML 2.0 Federation –Active Directory FS (ADFS)
+### SAML 2.0 Federation –Active Directory FS (ADFS)
 
 Difference between SAML 2.0 Federation – AWS Console Access and ADFS:
 
 * Identity provider: ADFS
 * Identity store: Active Directory
 
-#### Custom Identity Broker Application
+### Custom Identity Broker Application
 
 Difference between SAML 2.0 Federation and Custom Identity Broker:
 
@@ -207,19 +207,19 @@ The old way to treat the third party identity token with temporary security cred
 
 Not directly treat he third party identity token with temporary security credentials from STS, but treat with **Cognito token** instead. This way, Web Identity Federation can consume the advantage of Amazon Cognito, such as MFA. 
 
-### AWS Directory Service
+## AWS Directory Service
 
-#### AWS Managed Microsoft AD
+### AWS Managed Microsoft AD
 
 * Deploy Microsoft AD in your AWS VPC
 
 * Two places where user are defined - on premises and in the cloud, and there is trust between the two.
 
-#### AD Connector
+### AD Connector
 
 Users are solely managed by on-premises Microsoft AD, no possibility of setting up a trust
 
-#### Simple AD
+### Simple AD
 
 AWS AD product, not from Microsoft AD, users only can be managed in AWS.
 
@@ -250,9 +250,7 @@ We have **2 options to add a member account**  in an AWS Organization:
 * Session policies **limit permissions** for a created session, **but do not grant permissions**. The maximum permissions that a session can have are the permissions that are allowed by the role’s identity-based policies. 
 * You can pass an inline session policy and ARNs of up to 10 managed policies in the same role session. 
 
-#### Inline session policy 
-
-####  Passing a session policy with AssumeRole API to restrict session permissions
+### Inline session policy 
 
  You can pass a single inline session policy programmatically by using the **policy** parameter with the [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html), [AssumeRoleWithSAML](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html), [AssumeRoleWithWebIdentity](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html), and [GetFederationToken](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetFederationToken.html) API operations.
 
@@ -265,7 +263,7 @@ aws sts assume-role
 --policy file://policy.json 
 ```
 
-#### Using IAM managed policies as session policies
+### Using IAM managed policies as session policies
 
 You can now pass up to 10 IAM managed policies as session policies. This gives you the ability to further restrict session permissions. The managed policy you pass can be AWS managed or customer managed. To pass managed policies as session policies, you need to specify the [Amazon Resource Name](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) (ARN) of the IAM policies using the **policy-arns** parameter in the `AssumeRole`, `AssumeRoleWithSAML`, `AssumeRoleWithWebIdentity`, or `GetFederationToken` API operations.
 
