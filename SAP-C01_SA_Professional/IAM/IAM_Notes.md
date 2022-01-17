@@ -286,3 +286,10 @@ Create fine-grained session permissions using IAM managed policies, https://aws.
 
 SSO is acting your own identity provider, and SSO will perform the heavy lifting as well of talking to STS service. It is much easier to set up.
 
+## AWS Control Tower
+
+Create landing Zone in Control tower
+
+It takes around one hour to create landing zone in control tower. After landing zone is created, you can check in in AWS Organization. And you also continue to manage the AWS Organization in Control tower, instead of managing it in AWS Organization directly.  
+
+![Creating Landing Zone](\IAM_images\Creating_Landing_Zone.png)
