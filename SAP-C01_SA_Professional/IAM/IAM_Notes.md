@@ -281,3 +281,8 @@ aws sts assume-role
 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session
 
 Create fine-grained session permissions using IAM managed policies, https://aws.amazon.com/blogs/security/create-fine-grained-session-permissions-using-iam-managed-policies/
+
+## AWS Single Sign-On (SSO)
+
+SSO is acting your own identity provider, and SSO will perform the heavy lifting as well of talking to STS service. It is much easier to set up.
+
