@@ -298,3 +298,9 @@ It takes around one hour to create landing zone in control tower. When we create
   ![Creating Landing Zone](\IAM_images\Creating_Landing_Zone.png)
 
 After landing zone is created, you can check in in AWS Organization. And you also continue to manage the AWS Organization in Control tower, instead of managing it in AWS Organization directly.
+
+### Account Factory
+
+The AWS Control Tower enables automate the account provisioning workflow using an account factory. 
+
+![Account_Factory](\IAM_images\Account_Factory.png)
