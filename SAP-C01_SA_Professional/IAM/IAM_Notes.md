@@ -304,3 +304,10 @@ After landing zone is created, you can check in in AWS Organization. And you als
 The AWS Control Tower enables automate the account provisioning workflow using an account factory. 
 
 ![Account_Factory](\IAM_images\Account_Factory.png)
+
+
+
+### User Access in a Landing Zone
+
+![](\IAM_images\Landing_Zone_SSO.png)
+
