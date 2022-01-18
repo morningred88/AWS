@@ -288,8 +288,13 @@ SSO is acting your own identity provider, and SSO will perform the heavy lifting
 
 ## AWS Control Tower
 
-Create landing Zone in Control tower
+AWS Control Tower provides the easiest way to set up and govern a secure, multi-account AWS environment, called a **landing zone**. It creates your landing zone **using AWS Organizations**.
 
-It takes around one hour to create landing zone in control tower. After landing zone is created, you can check in in AWS Organization. And you also continue to manage the AWS Organization in Control tower, instead of managing it in AWS Organization directly.  
+### Create landing Zone in Control tower
 
-![Creating Landing Zone](\IAM_images\Creating_Landing_Zone.png)
+It takes around one hour to create landing zone in control tower. When we created a Landing Zone, you can see 2 OUs, 3 shared accounts, SSO access and 20 preventive guardrails are created.
+
+
+  ![Creating Landing Zone](\IAM_images\Creating_Landing_Zone.png)
+
+After landing zone is created, you can check in in AWS Organization. And you also continue to manage the AWS Organization in Control tower, instead of managing it in AWS Organization directly.
