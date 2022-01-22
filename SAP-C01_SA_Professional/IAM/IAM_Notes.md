@@ -313,3 +313,6 @@ Control tower uses SSO to manage all the users to the accounts. You can see the 
 
 ![](\IAM_images\Landing_Zone_SSO.png)
 
+The way to handle user identity management is AWS SSO directory. 
+
+![LandingZone_SSO_Directory](\IAM_images\LandingZone_SSO_Directory.png)
