@@ -309,5 +309,7 @@ The AWS Control Tower enables automate the account provisioning workflow using a
 
 ### User Access in a Landing Zone
 
+Control tower uses SSO to manage all the users to the accounts. You can see the portal URL for users to sign in.
+
 ![](\IAM_images\Landing_Zone_SSO.png)
 
