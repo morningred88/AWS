@@ -288,11 +288,13 @@ Create fine-grained session permissions using IAM managed policies, https://aws.
 
 SSO is acting your own identity provider, and SSO will perform the heavy lifting as well of talking to STS service. It is much easier to set up.
 
+**AWS SSO is preferred way to for identity federation than SAML2.0. **
+
 ## AWS Control Tower
 
-AWS Control Tower provides the easiest way to set up and govern a secure, multi-account AWS environment, called a **landing zone**. It creates your landing zone **using AWS Organizations**.
+AWS Control Tower provides the easiest way to set up and govern a **secure, multi-account** AWS environment, called a **landing zone**. It creates your landing zone **using AWS Organizations**. 
 
-Control Tower is a free service. But user needs to pay AWS accounts and services created in AWS Control Tower.
+**Control Tower is a free service**. But user needs to pay AWS accounts and services created in AWS Control Tower.
 
 ### Create landing Zone in Control tower
 
