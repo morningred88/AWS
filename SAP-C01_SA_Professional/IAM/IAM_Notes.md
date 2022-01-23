@@ -207,7 +207,7 @@ The old way to treat the third party identity token with temporary security cred
 
 #### With Cognito
 
-Not directly treat he third party identity token with temporary security credentials from STS, but treat with **Cognito token** instead. This way, Web Identity Federation can consume the advantage of Amazon Cognito, such as MFA. 
+Not directly treat he third party identity token with temporary security credentials from STS, but treat with **Cognito token** instead. This way, Web Identity Federation can consume the advantage of Amazon Cognito, such as MFA and anonymous mode. 
 
 ## AWS Directory Service
 
