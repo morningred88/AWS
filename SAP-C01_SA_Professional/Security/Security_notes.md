@@ -42,3 +42,10 @@ Parameter Store, a capability of AWS Systems Manager, is integrated with Secrets
 
 https://docs.aws.amazon.com/systems-manager/latest/userguide/integration-ps-secretsmanager.html
 
+#### Referencing parameters directly from AWS
+
+```
+/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+```
+
+For example, this one above allows you to retrieve the latest AMI ID of Amazon Linux 2 from AWS.
