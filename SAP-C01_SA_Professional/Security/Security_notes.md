@@ -49,3 +49,18 @@ https://docs.aws.amazon.com/systems-manager/latest/userguide/integration-ps-secr
 ```
 
 For example, this one above allows you to retrieve the latest AMI ID of Amazon Linux 2 from AWS.
+
+## AWS Secrets Manager
+
+### Automatic rotation
+
+Automate generation of secrets on rotation by using the build-in Lambda function to update the secrets for RDS, DocumentDB and Redshift. 
+
+For all other rotation, you need to create a Lambda function to enable the rotation. 
+
+**Note:**
+
+SSM Parameter Store has
+
+- no secret rotation, but you can setup CloudEvent to trigger a Lambda function
+- no database integration
