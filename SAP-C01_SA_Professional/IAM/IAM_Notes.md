@@ -4,13 +4,13 @@
 
 **Access Advisor**: in under an user or a role, shows permission granted and when last accessed.
 
-![Access Advisor](/IAM_images/Access_Advisory.png)
+![Access Advisor](IAM_images/Access_Advisory.png)
 
 
 
 **Access Analyzer**: For a AWS account or an organization, finds the resources can be accessed by external entity.
 
-![Access_Analyzer](\IAM_images\Access_Analyzer.png)
+![Access_Analyzer](IAM_images/Access_Analyzer.png)
 
 
 
@@ -18,7 +18,7 @@
 
 ### Power user policy: less privileged than administrator
 
-![Power_User_Policy](\IAM_images\Power_User_Policy.png)
+![Power_User_Policy](IAM_images/Power_User_Policy.png)
 
 **Note: Use "NotAction" instead of "Deny"**
 
@@ -101,11 +101,11 @@ BoundaryPolicy
 
 * Take the 2 actions for IAM service out of DeveloperPolicy: `"iam:CreateRole"` and  `"iam:AttachRolePolicy"`. Then add these 2 action to a newly added IAM service again, but with condition by clicking **Add condition**. 
 
-![Add_permission_boundary_step1](\IAM_images\Add_permission_boundary_step1.png)
+![Add_permission_boundary_step1](IAM_images/Add_permission_boundary_step1.png)
 
 * Add created BoundaryPolicy as a condition, note that value is the ARN of BoundaryPolicy.
 
-![Add_permission_boundary_step2](\IAM_images\Add_permission_boundary_step2.png)
+![Add_permission_boundary_step2](IAM_images/Add_permission_boundary_step2.png)
 
 The following the json format of updated DeveloperPolicy with permission boundary:
 
@@ -150,11 +150,11 @@ The user only allows to create roles when user attach the boundary policy.
 
 * Whenever user create a role, a permission boundary requires to be added, by click set permissions boundary below:
 
-![Create_role_with_permission_boundary1](\IAM_images\Create_role_with_permission_boundary1.png)
+![Create_role_with_permission_boundary1](IAM_images/Create_role_with_permission_boundary1.png)
 
 * Then choose the created BoundaryPolicy above
 
-![Create_role_with_permission_boundary2](\IAM_images\Create_role_with_permission_boundary2.png)
+![Create_role_with_permission_boundary2](IAM_images/Create_role_with_permission_boundary2.png)
 
 **Reference:**
 
@@ -241,7 +241,7 @@ We have **2 options to add a member account**  in an AWS Organization:
 
   OrganizationAccountAccessRole needs to be **manually** added in order to allow Organization to management the member account. 
 
-![Create_Member_Account_In_Organization](\IAM_images\Create_Member_Account_In_Organization.png)
+![Create_Member_Account_In_Organization](IAM_images/Create_Member_Account_In_Organization.png)
 
 ## Session policies
 
@@ -301,7 +301,7 @@ AWS Control Tower provides the easiest way to set up and govern a **secure, mult
 It takes around one hour to create landing zone in control tower. When we created a Landing Zone, you can see 2 OUs, 3 shared accounts, SSO access and 20 preventive guardrails are created.
 
 
-  ![Creating Landing Zone](\IAM_images\Creating_Landing_Zone.png)
+  ![Creating Landing Zone](IAM_images/Creating_Landing_Zone.png)
 
 After landing zone is created, you can check in in AWS Organization. And you also continue to manage the AWS Organization in Control tower, instead of managing it in AWS Organization directly.
 
@@ -309,7 +309,7 @@ After landing zone is created, you can check in in AWS Organization. And you als
 
 The AWS Control Tower enables automate the account provisioning workflow using an account factory. 
 
-![Account_Factory](\IAM_images\Account_Factory.png)
+![Account_Factory](IAM_images/Account_Factory.png)
 
 
 
@@ -317,8 +317,8 @@ The AWS Control Tower enables automate the account provisioning workflow using a
 
 Control tower uses SSO to manage all the users to the accounts. You can see the portal URL for users to sign in.
 
-![](\IAM_images\Landing_Zone_SSO.png)
+![Landing_Zone_SSO](IAM_images/Landing_Zone_SSO.png)
 
 The way to handle user identity management is AWS SSO directory. 
 
-![LandingZone_SSO_Directory](\IAM_images\LandingZone_SSO_Directory.png)
+![LandingZone_SSO_Directory](IAM_images/LandingZone_SSO_Directory.png)
