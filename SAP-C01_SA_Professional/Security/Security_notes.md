@@ -88,3 +88,11 @@ Here is the scenario, I want to connect to google, and I want all the communicat
 **Step 4: Browse creates symmetric key and encrypted with web server's public key.** My browse create one symmetric key, or a shared secret. It keeps one and gives a copy to the web server. However my browse does not want to send the shared secret in plain text. Therefore, it uses the web server's public key to encrypt the secret and then sends it to the web server. 
 
 **Step 5: Web server decrypts the symmetric key using its own private key.** When the web server gets the encrypted symmetric key, it uses its private key to decrypt it. Now the web server gets the browser's shared key. From now on, all traffic between the client and the web server with be encrypted and decrypted with the same key. 
+
+### Asymmetric and symmetric cryptography
+
+In this example, we actually demonstrate how asymmetric key algorithm and symmetric key algorithm work together. 
+
+Asymmetric key algorithm (public key & private key) is used to verify the identity of the owner and its public key so that trust is built. 
+
+Once the connection is established, symmetric key algorithm (shared key) is used to encrypt and decrypt tll traffic between them. 
