@@ -64,3 +64,10 @@ SSM Parameter Store has
 
 - no secret rotation, but you can setup CloudEvent to trigger a Lambda function
 - no database integration
+
+## SSL/TLS
+
+### HTTPs
+
+HTTPs is the secure version of HTTP, a protocol used between the browse and web server. Technically, HTTPs refers to HTTP over Secure Socket Layer (SSL). HTTPS means all communications between your browse and a web server are encrypted. Behind HTTPs, SSL certificate plays an important role in building trust between a web browse and a web server. By definition, A SSL certificate is a web server's digital certificate, issued by a third party, and verifies the identity of the web server and its public key. 
+
