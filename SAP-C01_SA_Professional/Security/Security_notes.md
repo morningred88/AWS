@@ -96,3 +96,9 @@ In this example, we actually demonstrate how asymmetric key algorithm and symmet
 Asymmetric key algorithm (public key & private key) is used to verify the identity of the owner and its public key so that trust is built. 
 
 Once the connection is established, symmetric key algorithm (shared key) is used to encrypt and decrypt tll traffic between them. 
+
+**Reference:**
+
+https://www.youtube.com/watch?v=33VYnE7Bzpk&t=308s
+
+https://www.tutorialsteacher.com/https/how-ssl-works
