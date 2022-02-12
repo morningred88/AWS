@@ -208,3 +208,9 @@ We can use cfn-hup to update EC2 metadata.
 If EC2 metadata change, cfn-hup ensure all the changes will be applied to EC2. 
 
 We can change EC2 instance directly from CloudFormtion without replacing EC2 instance
+
+### CloudFormation - Stack policies
+
+#### What is stack policy
+
+Stack policy defines the resources that you want to protect from unintentional updates during a stack update. It is a json document that  defines the allow/deney update action to the resources. 
