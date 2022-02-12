@@ -214,3 +214,13 @@ We can change EC2 instance directly from CloudFormtion without replacing EC2 ins
 #### What is stack policy
 
 Stack policy defines the resources that you want to protect from unintentional updates during a stack update. It is a json document that  defines the allow/deney update action to the resources. 
+
+#### Stack policy features
+
+* After you set a stack policy, all of the resources in the stack are protected by default. To allow updates on specific resources, you specify an explicit `Allow` statement for those resources in your stack policy. 
+* You can define only one stack policy per stack, but, you can protect multiple resources within a single policy.
+
+* It is similar with IAM policy. A stack policy applies only during stack updates. It doesn't provide access controls like an AWS Identity and Access Management (IAM) policy.
+
+* It is in Advanced options in AWS console under CloudFormation.  
+* After you apply a stack policy, you can't remove it from the stack, but you can use the AWS CLI to modify it.
