@@ -258,3 +258,9 @@ Stack policy defines the resources that you want to protect from unintentional u
 ```
 
 CriticalSecurityGroup and any DBInstance are not allowed to be changed. 
+
+#### Modifying a stack policy
+
+We need to update the resources if it is not allowed to be updated in stack policy by modifying the stack policy. 
+
+We can perform the modification of stack policy at update time. This will temporarily change the stack policy to allow update the rescource. CloudFormation is going to revert the stack policy as it was after the update. 
