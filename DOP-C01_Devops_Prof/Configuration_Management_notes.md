@@ -224,3 +224,37 @@ Stack policy defines the resources that you want to protect from unintentional u
 
 * It is in Advanced options in AWS console under CloudFormation.  
 * After you apply a stack policy, you can't remove it from the stack, but you can use the AWS CLI to modify it.
+
+#### Stack policy example
+
+```
+{
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "Update:*",
+            "Principal": "*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": "Update:*",
+            "Principal": "*",
+            "Resource": "LogicalResourceId/CriticalSecurityGroup"
+        },
+        {
+            "Effect" : "Deny",
+            "Action" : "Update:*",
+            "Principal": "*",
+            "Resource" : "*",
+            "Condition" : {
+              "StringEquals" : {
+                "ResourceType" : ["AWS::RDS::DBInstance"]
+              }
+            }
+        }
+    ]
+}
+```
+
+CriticalSecurityGroup and any DBInstance are not allowed to be changed. 
