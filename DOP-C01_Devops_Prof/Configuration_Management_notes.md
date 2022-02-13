@@ -264,3 +264,59 @@ CriticalSecurityGroup and any DBInstance are not allowed to be changed.
 We need to update the resources if it is not allowed to be updated in stack policy by modifying the stack policy. 
 
 We can perform the modification of stack policy at update time. This will temporarily change the stack policy to allow update the rescource. CloudFormation is going to revert the stack policy as it was after the update. 
+
+## Elastic Beanstalk
+
+### EB CLI
+
+#### EB CLI manual installation
+
+* Open git bash
+
+* Verify that Python and `pip` are both installed correctly by using the following commands.
+
+  ```
+  xldu@DESKTOP-HJA61V6 MINGW64 ~
+  $ python --version
+  Python 3.9.6
+  
+  xldu@DESKTOP-HJA61V6 MINGW64 ~
+  $ pip --version
+  pip 22.0.4 from c:\users\xldu\appdata\local\programs\python\python39\lib\site-packages\pip (python 3.9)
+  ```
+
+* Install the EB CLI using `pip`.
+
+  ```
+  xldu@DESKTOP-HJA61V6 MINGW64 ~
+  $ pip install awsebcli --upgrade --user
+  ```
+
+* Add the executable path
+
+  To modify your `PATH` variable (Windows):
+
+  1. Press the Windows key, and then enter `environment variables`.
+  2. Choose **Edit environment variables for your account**.
+  3. Choose **PATH**, and then choose **Edit**.
+  4. Add paths to the **Variable value** `C:\users\xldu\AppData\Roaming\Python\Python39\Scripts\`
+
+* Restart a new git bash window
+
+* Verify that the EB CLI is installed correctly.
+
+  ```
+  xldu@DESKTOP-HJA61V6 MINGW64 ~
+  $ eb --version
+  EB CLI 3.20.3 (Python 3.9.6)
+  
+  ```
+
+**Reference:**
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install-windows.html
+
+
+
+
+
