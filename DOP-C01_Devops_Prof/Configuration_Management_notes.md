@@ -355,3 +355,29 @@ Platform branch: latest version as default, PHP 8.0 running on 64bit Amazon Linu
 
 SSH Keypair: Yes, Devkeypair
 
+**elasticbeanstalk and config.yml**:
+
+Now, a `.elasticbeanstalk` folder has created under directory HelloWorld, and `config.yml` has been created in `.elasticbeanstalk` folder.
+
+**Below are content of config.yml file:**
+
+```
+branch-defaults:
+  default:
+    environment: dev-env
+    group_suffix: null
+global:
+  application_name: HelloWorld
+  branch: null
+  default_ec2_keyname: Devkeypair
+  default_platform: PHP 8.0 running on 64bit Amazon Linux 2
+  default_region: us-east-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  repository: null
+  sc: null
+  workspace_type: Application
+```
