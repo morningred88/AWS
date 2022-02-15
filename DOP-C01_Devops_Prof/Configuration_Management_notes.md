@@ -441,3 +441,26 @@ When you go to Elastic Beanstalk console, you can see the application.
 xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-/Configuration_Management/HelloWorld (main)
 $ eb open
 ```
+
+#### Important EB commands
+
+##### eb status
+
+`eb status`: Show the status of the application, HelloWorld application status is ready, health is green.
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb status
+Environment details for: dev-env
+  Application name: HelloWorld
+  Region: us-east-1
+  Deployed Version: app-220407_135501069544
+  Environment ID: e-thmbbrreia
+  Platform: arn:aws:elasticbeanstalk:us-east-1::platform/PHP 8.0 running on 64bit Amazon Linux 2/3.3.12
+  Tier: WebServer-Standard-1.0
+  CNAME: dev-env.eba-3iycvrr3.us-east-1.elasticbeanstalk.com
+  Updated: 2022-04-07 18:57:45.097000+00:00
+  Status: Ready
+  Health: Green
+```
+
