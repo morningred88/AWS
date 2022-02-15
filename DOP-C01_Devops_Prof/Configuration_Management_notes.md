@@ -381,3 +381,55 @@ global:
   sc: null
   workspace_type: Application
 ```
+
+##### Step 2: Add index.html and deploy the application to EB
+
+**EB command used in this step:**
+
+```
+echo "Hello World" > index.html
+eb create dev-env
+```
+
+**EB CLI:**
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ echo "Hello World" > index.html
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb create dev-env
+Creating application version archive "app-220407_135501069544".
+Uploading HelloWorld/app-220407_135501069544.zip to S3. This may take a while.
+Upload Complete.
+Environment details for: dev-env
+  Application name: HelloWorld
+  Region: us-east-1
+  Deployed Version: app-220407_135501069544
+  Environment ID: e-thmbbrreia
+  Platform: arn:aws:elasticbeanstalk:us-east-1::platform/PHP 8.0 running on 64bit Amazon Linux 2/3.3.12
+  Tier: WebServer-Standard-1.0
+  CNAME: UNKNOWN
+  Updated: 2022-04-07 18:55:05.410000+00:00
+Printing Status:
+2022-04-07 18:55:03    INFO    createEnvironment is starting.
+2022-04-07 18:55:05    INFO    Using elasticbeanstalk-us-east-1-745361488260 as Amazon S3 storage bucket for environment data.
+2022-04-07 18:55:32    INFO    Created security group named: sg-08c92983fa5978356
+2022-04-07 18:55:47    INFO    Created load balancer named: awseb-e-t-AWSEBLoa-1BL95F1FUNMH1
+2022-04-07 18:55:47    INFO    Created security group named: awseb-e-thmbbrreia-stack-AWSEBSecurityGroup-1IBUPFC3J2RWG
+2022-04-07 18:56:04    INFO    Created Auto Scaling launch configuration named: awseb-e-thmbbrreia-stack-AWSEBAutoScalingLaunchConfiguration-hPdnFoTdNszA
+2022-04-07 18:56:51    INFO    Created Auto Scaling group named: awseb-e-thmbbrreia-stack-AWSEBAutoScalingGroup-U53NS9NCV57I
+2022-04-07 18:56:51    INFO    Waiting for EC2 instances to launch. This may take a few minutes.
+2022-04-07 18:57:06    INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:745361488260:scalingPolicy:b033b3a3-504e-487e-af44-3e0a037f911b:autoScalingGroupName/awseb-e-thmbbrreia-stack-AWSEBAutoScalingGroup-U53NS9NCV57I:policyName/awseb-e-thmbbrreia-stack-AWSEBAutoScalingScaleUpPolicy-ADCU8B52CZFB
+2022-04-07 18:57:06    INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:745361488260:scalingPolicy:aea6d1b6-828a-4513-963e-c4ea9410bd56:autoScalingGroupName/awseb-e-thmbbrreia-stack-AWSEBAutoScalingGroup-U53NS9NCV57I:policyName/awseb-e-thmbbrreia-stack-AWSEBAutoScalingScaleDownPolicy-14KH58NEHDS7R
+2022-04-07 18:57:06    INFO    Created CloudWatch alarm named: awseb-e-thmbbrreia-stack-AWSEBCloudwatchAlarmHigh-23B0M2NGD32K
+2022-04-07 18:57:06    INFO    Created CloudWatch alarm named: awseb-e-thmbbrreia-stack-AWSEBCloudwatchAlarmLow-1HBZEFBF8JHJK
+2022-04-07 18:57:10    INFO    Instance deployment: You didn't include a 'composer.json' file in your source bundle. The deployment didn't install Composer dependencies.
+2022-04-07 18:57:13    INFO    Instance deployment completed successfully.
+2022-04-07 18:57:44    INFO    Application available at dev-env.eba-3iycvrr3.us-east-1.elasticbeanstalk.com.
+2022-04-07 18:57:45    INFO    Successfully launched environment: dev-env
+```
+
+As soon as I entered `eb create dev-env`, it is going to zipup the content in my directory and upload to Elastic Beanstalk, and create dev environment. 
+
+When you go to Elastic Beanstalk console, you can see the application.
+
