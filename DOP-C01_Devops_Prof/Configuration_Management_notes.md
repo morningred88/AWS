@@ -464,3 +464,37 @@ Environment details for: dev-env
   Health: Green
 ```
 
+##### eb health
+
+`eb health` and `eb health --refresh` : Show the overall health of all the instances. 
+
+`eb health --refresh`  refreshes the result every 10 seconds. It is equivalent to the **Health** tab under dev-env in AWS console.
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb health
+
+ dev-env                         Ok                         2022-04-07 14:47:02
+WebServer                        PHP 8.0 running on 64bit Amazon Linux 2/3.3.12
+  total      ok    warning  degraded  severe    info   pending  unknown
+    1        1        0        0        0        0        0        0
+
+  instance-id           status     cause                               health
+    Overall             Ok
+  i-03e7bd7b36f2ea4eb   Ok
+
+  instance-id           r/sec    %2xx   %3xx   %4xx   %5xx      p99      p90
+    Overall             0.0         -      -      -      -         -        -       -       -       -
+  i-03e7bd7b36f2ea4eb   0.0         -      -      -      -         -        -       -       -       -
+
+  instance-id           type       az   running     load 1  load 5      user %
+  i-03e7bd7b36f2ea4eb   t2.micro   1b   51 mins        0.0     0.0         0.0     0.0       0.0   100.0        0.0
+
+  instance-id           status     id   version                   ago
+  i-03e7bd7b36f2ea4eb   Deployed   1    app-220407_135501069544   49 mins
+
+
+
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb health --refresh
+```
