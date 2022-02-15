@@ -433,3 +433,11 @@ As soon as I entered `eb create dev-env`, it is going to zipup the content in my
 
 When you go to Elastic Beanstalk console, you can see the application.
 
+##### Step 3: test the application
+
+`eb open` to access the web application 
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-/Configuration_Management/HelloWorld (main)
+$ eb open
+```
