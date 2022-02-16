@@ -502,3 +502,27 @@ $ eb health --refresh
 ##### eb logs
 
 `eb logs`: shows all the logs of the application. It is really helpful to debug the application, without doing ssh to it. It is equivalent to the **Logs** tab under dev-env in AWS console. 
+
+##### eb deploy
+
+`eb deploy`: deploy new version of the application
+
+I change Hello World to Hello world v2 in index.html and redeploy to EB.
+
+It will create a new application archive and will upload it to S3, then update the environment. 
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb deploy
+Creating application version archive "app-220407_150126188796".
+Uploading HelloWorld/app-220407_150126188796.zip to S3. This may take a while.
+Upload Complete.
+2022-04-07 20:01:27    INFO    Environment update is starting.
+2022-04-07 20:01:32    INFO    Deploying new version to instance(s).
+2022-04-07 20:01:35    INFO    Instance deployment: You didn't include a 'composer.json' file in your source bundle. The deployment didn't install Composer dependencies.
+2022-04-07 20:01:43    INFO    Instance deployment completed successfully.
+2022-04-07 20:01:50    INFO    New application version was deployed to running EC2 instances.
+2022-04-07 20:01:50    INFO    Environment update completed successfully.
+```
+
+You can see now 2 application versions are available under Application. 
