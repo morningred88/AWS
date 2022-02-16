@@ -498,3 +498,7 @@ WebServer                        PHP 8.0 running on 64bit Amazon Linux 2/3.3.12
 xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
 $ eb health --refresh
 ```
+
+##### eb logs
+
+`eb logs`: shows all the logs of the application. It is really helpful to debug the application, without doing ssh to it. It is equivalent to the **Logs** tab under dev-env in AWS console. 
