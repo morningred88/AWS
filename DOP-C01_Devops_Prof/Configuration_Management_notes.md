@@ -533,5 +533,12 @@ You can see now 2 application versions are available under Application.
 
 `eb terminate`: Will delete the environment. 
 
+### Elastic Beanstalk - saved configuration
 
+#### Saved configuration
+
+In AWS console, there is concept called Saved configuration, a tab on the left hand side under an application:
+
+* Application version
+* Saved configuration
 
