@@ -526,3 +526,7 @@ Upload Complete.
 ```
 
 You can see now 2 application versions are available under Application. 
+
+#####  eb terminate
+
+`eb terminate`: Will delete the environment. 
