@@ -549,3 +549,19 @@ We can quickly use saved configuration to create new environment, or even reconf
 We like to save the application configuration in Elastic Beanstalk, for backup and also to reproduce the configuration in another account or another region. So we love to save the configuration as code. 
 
 We can do it by going to CloudFormation and get the CloudFormation template created by Elastic Beanstalk. But it is not native to Elastic Beanstalk. We can create saved configuration using EB CLI.
+
+#### Create, update saved configuration and apply it to EB using EB CLI
+
+**Tasks to practice**:
+
+Step 1: Create a saved configuration: initial-configuration
+
+Step 2: Update the current configuration by adding an environment variable
+
+Step 3: Create a saved configuration for the updated configuration: prod
+
+Step 4: Update the current configuration by adding auto scaling rules
+
+Step 5: Update the saved configuration prod
+
+Step 6: Apply the updated saved configuration prod to the environment
