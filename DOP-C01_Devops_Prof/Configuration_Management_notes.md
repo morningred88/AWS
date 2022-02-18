@@ -542,3 +542,10 @@ In AWS console, there is concept called Saved configuration, a tab on the left h
 * Application version
 * Saved configuration
 
+#### Advantage of saved configuration
+
+We can quickly use saved configuration to create new environment, or even reconfigure them directly using code. 
+
+We like to save the application configuration in Elastic Beanstalk, for backup and also to reproduce the configuration in another account or another region. So we love to save the configuration as code. 
+
+We can do it by going to CloudFormation and get the CloudFormation template created by Elastic Beanstalk. But it is not native to Elastic Beanstalk. We can create saved configuration using EB CLI.
