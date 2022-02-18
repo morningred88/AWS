@@ -579,3 +579,21 @@ Configuration saved at: C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\C
 
 * Only save the non-default settings of the configuration
 * Initial-configuration also appears in AWS console under Saved configuration tab. 
+
+##### Step 2- Create an environment variable 
+
+Create a new environment variable ENABLE_COOL_NEW_FEATURE, set its value as true. 
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb setenv ENABLE_COOL_NEW_FEATURE=true
+2022-04-08 00:27:09    INFO    Environment update is starting.
+2022-04-08 00:27:17    INFO    Updating environment dev-env's configuration settings.
+2022-04-08 00:27:54    INFO    Instance deployment: You didn't include a 'composer.json' file in your source bundle. The deployment didn't install Composer dependencies.
+2022-04-08 00:28:02    INFO    Instance deployment completed successfully.
+2022-04-08 00:28:37    INFO    Successfully deployed new configuration to environment.
+```
+
+You can the environment variable in configuraton under environment in AWS console.
+
+![](/Configuration_Management/Configuraton_Management_imges/Configuration_add_env_variable.png)
