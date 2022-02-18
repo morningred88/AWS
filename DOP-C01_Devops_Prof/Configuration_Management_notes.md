@@ -565,3 +565,17 @@ Step 4: Update the current configuration by adding auto scaling rules
 Step 5: Update the saved configuration prod
 
 Step 6: Apply the updated saved configuration prod to the environment
+
+##### Step 1- Backs up the current dev environment configuration as initial-configuration
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb config save dev-env --cfg initial-configuration
+
+Configuration saved at: C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\Configuration_Management\HelloWorld\.elasticbeanstalk\saved_configs\initial-configuration.cfg.yml
+```
+
+**Notes:**
+
+* Only save the non-default settings of the configuration
+* Initial-configuration also appears in AWS console under Saved configuration tab. 
