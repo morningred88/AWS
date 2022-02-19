@@ -527,7 +527,7 @@ Upload Complete.
 
 You can see now 2 application versions are available under Application. 
 
-![](/Configuration_Management/Configuraton_Management_imges/Application_versions.png)
+![Application_version](/Configuration_Management/Configuration_Management_images/Application_versions.png)
 
 #####  eb terminate
 
@@ -596,4 +596,4 @@ $ eb setenv ENABLE_COOL_NEW_FEATURE=true
 
 You can the environment variable in configuraton under environment in AWS console.
 
-![](/Configuration_Management/Configuraton_Management_imges/Configuration_add_env_variable.png)
+![Configuration_add_env_variable](/Configuration_Management/Configuration_Management_images/Configuration_add_env_variable.png)
