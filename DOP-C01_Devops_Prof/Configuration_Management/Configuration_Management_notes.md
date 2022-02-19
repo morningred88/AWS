@@ -316,7 +316,37 @@ We can perform the modification of stack policy at update time. This will tempor
 
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install-windows.html
 
+##### Step 3 - save our config from the current state of our environment as prod
 
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb config save dev-env --cfg prod
 
+Configuration saved at: C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\Configuration_Management\HelloWorld\.elasticbeanstalk\saved_configs\prod.cfg.yml
 
+```
+
+A new saved configuration is created. Now we have 2 saved configuration files in saved_configs folder inside .elasticbeanstalk folder. You can confirm this in AWS console.
+
+##### Step 4 - Add auto scaling rules to prod config
+
+Using text editor to add the auto scaling rule to prod.cfg.yml file
+
+```
+AWSEBAutoScalingScaleUpPolicy.aws:autoscaling:trigger:
+    UpperBreachScaleIncrement: '2'
+  AWSEBCloudwatchAlarmLow.aws:autoscaling:trigger:
+    LowerThreshold: '20'
+    MeasureName: CPUUtilization
+    Unit: Percent
+  AWSEBCloudwatchAlarmHigh.aws:autoscaling:trigger:
+    UpperThreshold: '50'
+```
+
+##### Step 5 - Update saved configuration prod to EB
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb config put pr
+```
 
