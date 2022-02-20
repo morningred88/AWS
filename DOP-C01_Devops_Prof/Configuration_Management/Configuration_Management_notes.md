@@ -611,7 +611,15 @@ Configuration saved at: C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\C
 
 A new saved configuration is created. Now we have 2 saved configuration files in saved_configs folder inside .elasticbeanstalk folder. You can confirm this in AWS console.
 
-![saved_configs](Configuration_Management\Configuration_Management_images\saved_configs.png)
+![saved_configs1](/Configuration_Management/Configuration_Management_images/saved_configs.png)
+
+![saved_configs2](Configuration_Management/Configuration_Management_images/saved_configs.png)
+
+![saved_configs3](/Configuration_Management_images/saved_configs.png)
+
+![saved_configs4](Configuration_Management_images/saved_configs.png)
+
+
 
 ##### Step 4 - Add auto scaling rules to prod config
 
@@ -632,10 +640,8 @@ AWSEBAutoScalingScaleUpPolicy.aws:autoscaling:trigger:
 
 ```
 xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
-$ eb config put pr
+$ eb config put prod
 ```
-
-![saved_configs](/Configuration_Management/Configuration_Management_images/saved_configs.png)
 
 ##### Step 6 - Apply  the updated saved configuration prod to dev_env 
 
