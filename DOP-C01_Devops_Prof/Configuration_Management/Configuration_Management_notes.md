@@ -153,7 +153,7 @@ A stack’s state is set to UPDATE_ROLLBACK_FAILED when CloudFormation cannot ro
 
 After a stack was in the UPDATE_ROLLBACK_FAILED state, you had only **two options**: Delete the stack or contact AWS Support to return the stack to a working state. In many cases (for example, if it is running production workloads), deleting the stack is not an acceptable option.
 
-AWS CloudFormation now offers a **third option: continue update rollback**, which you can initiate from the AWS CloudFormation console or with the **[continue-update-rollback](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/continue-update-rollback.html)** command in the AWS Command Line Interface (CLI). This functionality is enabled for all the stacks in the UPDATE_ROLLBACK_FAILED state.
+AWS CloudFormation now offers a **third option: continue update rollback**, which you can initiate from the AWS CloudFormation console or with the **continue-update-rollback** command in the AWS Command Line Interface (CLI). This functionality is enabled for all the stacks in the UPDATE_ROLLBACK_FAILED state.
 
 Depending on the cause of the failure (See **Troubleshooting the failure** above), you can manually fix the error and continue the rollback. By continuing the rollback, you can return your stack to a working state (the `UPDATE_ROLLBACK_COMPLETE` state), and then try to update the stack again. 
 
@@ -316,6 +316,290 @@ We can perform the modification of stack policy at update time. This will tempor
 
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install-windows.html
 
+#### Create HelloWorld  and deploy it to Elastic Beanstalk using EB CLI
+
+EB CLI in Gitbash: 
+
+##### Step1: Create a project folder, initiate Elastic Beanstalk
+
+**EB command used in this step:**
+
+```
+mkdir HelloWorld
+cd HelloWorld
+eb init
+```
+
+**EB CLI:**
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management (main)
+$ mkdir HelloWorld
+
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management (main)
+$ cd HelloWorld
+
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb init
+```
+
+**Make selections for eb init:**
+
+Region: us-east-1
+
+Application name: default, the same as directory name, enter
+
+Platform: PHP
+
+Platform branch: latest version as default, PHP 8.0 running on 64bit Amazon Linux 2x, enter
+
+SSH Keypair: Yes, Devkeypair
+
+**elasticbeanstalk and config.yml**:
+
+Now, a `.elasticbeanstalk` folder has created under directory HelloWorld, and `config.yml` has been created in `.elasticbeanstalk` folder.
+
+**Below are content of config.yml file:**
+
+```
+branch-defaults:
+  default:
+    environment: dev-env
+    group_suffix: null
+global:
+  application_name: HelloWorld
+  branch: null
+  default_ec2_keyname: Devkeypair
+  default_platform: PHP 8.0 running on 64bit Amazon Linux 2
+  default_region: us-east-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  repository: null
+  sc: null
+  workspace_type: Application
+```
+
+##### Step 2: Add index.html and deploy the application to EB
+
+**EB command used in this step:**
+
+```
+echo "Hello World" > index.html
+eb create dev-env
+```
+
+**EB CLI:**
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ echo "Hello World" > index.html
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb create dev-env
+Creating application version archive "app-220407_135501069544".
+Uploading HelloWorld/app-220407_135501069544.zip to S3. This may take a while.
+Upload Complete.
+Environment details for: dev-env
+  Application name: HelloWorld
+  Region: us-east-1
+  Deployed Version: app-220407_135501069544
+  Environment ID: e-thmbbrreia
+  Platform: arn:aws:elasticbeanstalk:us-east-1::platform/PHP 8.0 running on 64bit Amazon Linux 2/3.3.12
+  Tier: WebServer-Standard-1.0
+  CNAME: UNKNOWN
+  Updated: 2022-04-07 18:55:05.410000+00:00
+Printing Status:
+2022-04-07 18:55:03    INFO    createEnvironment is starting.
+2022-04-07 18:55:05    INFO    Using elasticbeanstalk-us-east-1-745361488260 as Amazon S3 storage bucket for environment data.
+2022-04-07 18:55:32    INFO    Created security group named: sg-08c92983fa5978356
+2022-04-07 18:55:47    INFO    Created load balancer named: awseb-e-t-AWSEBLoa-1BL95F1FUNMH1
+2022-04-07 18:55:47    INFO    Created security group named: awseb-e-thmbbrreia-stack-AWSEBSecurityGroup-1IBUPFC3J2RWG
+2022-04-07 18:56:04    INFO    Created Auto Scaling launch configuration named: awseb-e-thmbbrreia-stack-AWSEBAutoScalingLaunchConfiguration-hPdnFoTdNszA
+2022-04-07 18:56:51    INFO    Created Auto Scaling group named: awseb-e-thmbbrreia-stack-AWSEBAutoScalingGroup-U53NS9NCV57I
+2022-04-07 18:56:51    INFO    Waiting for EC2 instances to launch. This may take a few minutes.
+2022-04-07 18:57:06    INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:745361488260:scalingPolicy:b033b3a3-504e-487e-af44-3e0a037f911b:autoScalingGroupName/awseb-e-thmbbrreia-stack-AWSEBAutoScalingGroup-U53NS9NCV57I:policyName/awseb-e-thmbbrreia-stack-AWSEBAutoScalingScaleUpPolicy-ADCU8B52CZFB
+2022-04-07 18:57:06    INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:745361488260:scalingPolicy:aea6d1b6-828a-4513-963e-c4ea9410bd56:autoScalingGroupName/awseb-e-thmbbrreia-stack-AWSEBAutoScalingGroup-U53NS9NCV57I:policyName/awseb-e-thmbbrreia-stack-AWSEBAutoScalingScaleDownPolicy-14KH58NEHDS7R
+2022-04-07 18:57:06    INFO    Created CloudWatch alarm named: awseb-e-thmbbrreia-stack-AWSEBCloudwatchAlarmHigh-23B0M2NGD32K
+2022-04-07 18:57:06    INFO    Created CloudWatch alarm named: awseb-e-thmbbrreia-stack-AWSEBCloudwatchAlarmLow-1HBZEFBF8JHJK
+2022-04-07 18:57:10    INFO    Instance deployment: You didn't include a 'composer.json' file in your source bundle. The deployment didn't install Composer dependencies.
+2022-04-07 18:57:13    INFO    Instance deployment completed successfully.
+2022-04-07 18:57:44    INFO    Application available at dev-env.eba-3iycvrr3.us-east-1.elasticbeanstalk.com.
+2022-04-07 18:57:45    INFO    Successfully launched environment: dev-env
+```
+
+As soon as I entered `eb create dev-env`, it is going to zipup the content in my directory and upload to Elastic Beanstalk, and create dev environment. 
+
+When you go to Elastic Beanstalk console, you can see the application.
+
+##### Step 3: test the application
+
+`eb open` to access the web application 
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-/Configuration_Management/HelloWorld (main)
+$ eb open
+```
+
+#### Important EB commands
+
+##### eb status
+
+`eb status`: Show the status of the application, HelloWorld application status is ready, health is green.
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb status
+Environment details for: dev-env
+  Application name: HelloWorld
+  Region: us-east-1
+  Deployed Version: app-220407_135501069544
+  Environment ID: e-thmbbrreia
+  Platform: arn:aws:elasticbeanstalk:us-east-1::platform/PHP 8.0 running on 64bit Amazon Linux 2/3.3.12
+  Tier: WebServer-Standard-1.0
+  CNAME: dev-env.eba-3iycvrr3.us-east-1.elasticbeanstalk.com
+  Updated: 2022-04-07 18:57:45.097000+00:00
+  Status: Ready
+  Health: Green
+```
+
+##### eb health
+
+`eb health` and `eb health --refresh` : Show the overall health of all the instances. 
+
+`eb health --refresh`  refreshes the result every 10 seconds. It is equivalent to the **Health** tab under dev-env in AWS console.
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb health
+
+ dev-env                         Ok                         2022-04-07 14:47:02
+WebServer                        PHP 8.0 running on 64bit Amazon Linux 2/3.3.12
+  total      ok    warning  degraded  severe    info   pending  unknown
+    1        1        0        0        0        0        0        0
+
+  instance-id           status     cause                               health
+    Overall             Ok
+  i-03e7bd7b36f2ea4eb   Ok
+
+  instance-id           r/sec    %2xx   %3xx   %4xx   %5xx      p99      p90
+    Overall             0.0         -      -      -      -         -        -       -       -       -
+  i-03e7bd7b36f2ea4eb   0.0         -      -      -      -         -        -       -       -       -
+
+  instance-id           type       az   running     load 1  load 5      user %
+  i-03e7bd7b36f2ea4eb   t2.micro   1b   51 mins        0.0     0.0         0.0     0.0       0.0   100.0        0.0
+
+  instance-id           status     id   version                   ago
+  i-03e7bd7b36f2ea4eb   Deployed   1    app-220407_135501069544   49 mins
+
+
+
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb health --refresh
+```
+
+##### eb logs
+
+`eb logs`: shows all the logs of the application. It is really helpful to debug the application, without doing ssh to it. It is equivalent to the **Logs** tab under dev-env in AWS console. 
+
+##### eb deploy
+
+`eb deploy`: deploy new version of the application
+
+I change Hello World to Hello world v2 in index.html and redeploy to EB.
+
+It will create a new application archive and will upload it to S3, then update the environment. 
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb deploy
+Creating application version archive "app-220407_150126188796".
+Uploading HelloWorld/app-220407_150126188796.zip to S3. This may take a while.
+Upload Complete.
+2022-04-07 20:01:27    INFO    Environment update is starting.
+2022-04-07 20:01:32    INFO    Deploying new version to instance(s).
+2022-04-07 20:01:35    INFO    Instance deployment: You didn't include a 'composer.json' file in your source bundle. The deployment didn't install Composer dependencies.
+2022-04-07 20:01:43    INFO    Instance deployment completed successfully.
+2022-04-07 20:01:50    INFO    New application version was deployed to running EC2 instances.
+2022-04-07 20:01:50    INFO    Environment update completed successfully.
+```
+
+You can see now 2 application versions are available under Application. 
+
+![Application_version](/Configuration_Management/Configuration_Management_images/Application_versions.png)
+
+#####  eb terminate
+
+`eb terminate`: Will delete the environment. 
+
+### Elastic Beanstalk - saved configuration
+
+#### Saved configuration
+
+In AWS console, there is concept called Saved configuration, a tab on the left hand side under an application:
+
+* Application version
+* Saved configuration
+
+#### Advantage of saved configuration
+
+We can quickly use saved configuration to create new environment, or even reconfigure them directly using code. 
+
+We like to save the application configuration in Elastic Beanstalk, for backup and also to reproduce the configuration in another account or another region. So we love to save the configuration as code. 
+
+We can do it by going to CloudFormation and get the CloudFormation template created by Elastic Beanstalk. But it is not native to Elastic Beanstalk. We can create saved configuration using EB CLI.
+
+#### Create, update saved configuration and apply it to EB using EB CLI
+
+**Tasks to practice**:
+
+Step 1: Create a saved configuration: initial-configuration
+
+Step 2: Update the current configuration by adding an environment variable
+
+Step 3: Create a saved configuration for the updated configuration: prod
+
+Step 4: Update the current configuration by adding auto scaling rules
+
+Step 5: Update the saved configuration prod
+
+Step 6: Apply the updated saved configuration prod to the environment
+
+##### Step 1- Backs up the current dev environment configuration as initial-configuration
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb config save dev-env --cfg initial-configuration
+
+Configuration saved at: C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\Configuration_Management\HelloWorld\.elasticbeanstalk\saved_configs\initial-configuration.cfg.yml
+```
+
+**Notes:**
+
+* Only save the non-default settings of the configuration
+* Initial-configuration also appears in AWS console under Saved configuration tab. 
+
+##### Step 2- Create an environment variable 
+
+Create a new environment variable ENABLE_COOL_NEW_FEATURE, set its value as true. 
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb setenv ENABLE_COOL_NEW_FEATURE=true
+2022-04-08 00:27:09    INFO    Environment update is starting.
+2022-04-08 00:27:17    INFO    Updating environment dev-env's configuration settings.
+2022-04-08 00:27:54    INFO    Instance deployment: You didn't include a 'composer.json' file in your source bundle. The deployment didn't install Composer dependencies.
+2022-04-08 00:28:02    INFO    Instance deployment completed successfully.
+2022-04-08 00:28:37    INFO    Successfully deployed new configuration to environment.
+```
+
+You can the environment variable in configuraton under environment in AWS console.
+
+![Configuration_add_env_variable](/Configuration_Management/Configuration_Management_images/Configuration_add_env_variable.png)
+
+
+
 ##### Step 3 - save our config from the current state of our environment as prod
 
 ```
@@ -349,7 +633,7 @@ xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configur
 $ eb config put pr
 ```
 
-![saved_configs](Configuration_Management/Configuration_Management_images/saved_configs.png)
+![saved_configs](C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\Configuration_Management\Configuration_Management\Configuration_Management_images\saved_configs.png)
 
 ##### Step 6 - Apply  the updated saved configuration prod to dev_env 
 
@@ -361,5 +645,7 @@ Printing Status:
 2022-04-08 01:08:42    INFO    Updating environment dev-env's configuration settings.
 2022-04-08 01:09:50    INFO    Successfully deployed new configuration to environment.
 ```
+
 You can see the auto scaling rule is added in the configuration in AWS console.
-![Configuration_updated_auto_scaling](Configuration_Management\Configuration_Management_images\Configuration_updated_auto_scaling.png)
+
+![Configuration_updated_auto_scaling](/Configuration_Management_images/Configuration_updated_auto_scaling.png)
