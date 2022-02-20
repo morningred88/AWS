@@ -552,7 +552,7 @@ We can do it by going to CloudFormation and get the CloudFormation template crea
 
 #### Create, update saved configuration and apply it to EB using EB CLI
 
-**Tasks to practice**:
+##### Tasks to practice:
 
 Step 1: Create a saved configuration: initial-configuration
 
@@ -597,3 +597,52 @@ $ eb setenv ENABLE_COOL_NEW_FEATURE=true
 You can the environment variable in configuraton under environment in AWS console.
 
 ![Configuration_add_env_variable](/Configuration_Management/Configuration_Management_images/Configuration_add_env_variable.png)
+
+##### Step 3 - save our config from the current state of our environment as prod
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb config save dev-env --cfg prod
+
+Configuration saved at: C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\Configuration_Management\HelloWorld\.elasticbeanstalk\saved_configs\prod.cfg.yml
+```
+
+A new saved configuration is created. Now we have 2 saved configuration files in saved_configs folder inside .elasticbeanstalk folder. You can confirm this in AWS console.
+
+##### Step 4 - Add auto scaling rules to prod config
+
+Using text editor to add the auto scaling rule to prod.cfg.yml file
+
+```
+AWSEBAutoScalingScaleUpPolicy.aws:autoscaling:trigger:
+    UpperBreachScaleIncrement: '2'
+  AWSEBCloudwatchAlarmLow.aws:autoscaling:trigger:
+    LowerThreshold: '20'
+    MeasureName: CPUUtilization
+    Unit: Percent
+  AWSEBCloudwatchAlarmHigh.aws:autoscaling:trigger:
+    UpperThreshold: '50'
+```
+
+##### Step 5 - Update saved configuration prod to EB
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb config put pr
+```
+
+![saved_configs](C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\Configuration_Management\Configuration_Management\Configuration_Management_images\saved_configs.png)
+
+##### Step 6 - Apply  the updated saved configuration prod to dev_env 
+
+```
+xldu@DESKTOP-HJA61V6 MINGW64 ~/local-repository/AWS/DOP-C01_Devops_Prof/Configuration_Management/HelloWorld (main)
+$ eb config dev-env --cfg prod
+Printing Status:
+2022-04-08 01:08:34    INFO    Environment update is starting.
+2022-04-08 01:08:42    INFO    Updating environment dev-env's configuration settings.
+2022-04-08 01:09:50    INFO    Successfully deployed new configuration to environment.
+```
+
+You can see the auto scaling rule is added in the configuration in AWS console.
+![Configuration_updated_auto_scaling](Configuration_Management/Configuration_Management_images/Configuration_updated_auto_scaling.png)
