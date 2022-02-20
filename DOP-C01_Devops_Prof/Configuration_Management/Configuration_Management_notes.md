@@ -527,7 +527,7 @@ Upload Complete.
 
 You can see now 2 application versions are available under Application. 
 
-![Application_version](/Configuration_Management/Configuration_Management_images/Application_versions.png)
+![Application_version](Configuration_Management_images/Application_versions.png)
 
 #####  eb terminate
 
@@ -596,7 +596,7 @@ $ eb setenv ENABLE_COOL_NEW_FEATURE=true
 
 You can the environment variable in configuraton under environment in AWS console.
 
-![Configuration_add_env_variable](/Configuration_Management/Configuration_Management_images/Configuration_add_env_variable.png)
+![Configuration_add_env_variable](Configuration_Management_images/Configuration_add_env_variable.png)
 
 
 
@@ -610,12 +610,6 @@ Configuration saved at: C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\C
 ```
 
 A new saved configuration is created. Now we have 2 saved configuration files in saved_configs folder inside .elasticbeanstalk folder. You can confirm this in AWS console.
-
-![saved_configs1](/Configuration_Management/Configuration_Management_images/saved_configs.png)
-
-![saved_configs2](Configuration_Management/Configuration_Management_images/saved_configs.png)
-
-![saved_configs3](/Configuration_Management_images/saved_configs.png)
 
 ![saved_configs4](Configuration_Management_images/saved_configs.png)
 
@@ -656,4 +650,4 @@ Printing Status:
 
 You can see the auto scaling rule is added in the configuration in AWS console.
 
-![Configuration_updated_auto_scaling](/Configuration_Management/Configuration_Management_images/Configuration_updated_auto_scaling.png)
+![Configuration_updated_auto_scaling](Configuration_Management_images/Configuration_updated_auto_scaling.png)
