@@ -665,3 +665,16 @@ You can use the `option_settings` key to modify the Elastic Beanstalk configurat
 https://docs.amazonaws.cn/en_us/elasticbeanstalk/latest/dg/command-options.html
 
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/ebextensions-optionsettings.html
+
+#### Precedence for configuration
+
+During environment creation, configuration options are applied from multiple sources with the following precedence, from highest to lowest:
+
+- Settings applied directly to the environment
+- Saved Configurations
+- Configuration Files (.ebextensions)
+- Default Values
+
+**Reference:**
+
+https://docs.amazonaws.cn/en_us/elasticbeanstalk/latest/dg/command-options.html
