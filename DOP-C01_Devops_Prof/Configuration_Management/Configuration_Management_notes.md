@@ -651,3 +651,17 @@ Printing Status:
 You can see the auto scaling rule is added in the configuration in AWS console.
 
 ![Configuration_updated_auto_scaling](Configuration_Management_images/Configuration_updated_auto_scaling.png)
+
+### .ebextensions for configs
+
+#### Option settings
+
+Elastic Beanstalk defines a large number of configuration options that you can use to configure your environment's behavior and the resources that it contains. Configuration options are organized into namespaces like `aws:autoscaling:asg`, which defines options for an environment's Auto Scaling group.
+
+You can use the `option_settings` key to modify the Elastic Beanstalk configuration and define variables that can be retrieved from your application using environment variables. 
+
+**Reference:**
+
+https://docs.amazonaws.cn/en_us/elasticbeanstalk/latest/dg/command-options.html
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/ebextensions-optionsettings.html
