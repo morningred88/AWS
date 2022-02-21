@@ -678,3 +678,9 @@ During environment creation, configuration options are applied from multiple sou
 **Reference:**
 
 https://docs.amazonaws.cn/en_us/elasticbeanstalk/latest/dg/command-options.html
+
+### .ebextensions for resources
+
+We can use .config file to add resources, if it does not exist at the EB creation time. For example, to create a DynamoDB table or SNS topic. 
+
+You can not see the resources created in EB, but you can see it in CloudFormation resources. 
