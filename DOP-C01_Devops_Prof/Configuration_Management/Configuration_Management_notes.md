@@ -684,3 +684,7 @@ https://docs.amazonaws.cn/en_us/elasticbeanstalk/latest/dg/command-options.html
 We can use .config file to add resources, if it does not exist at the EB creation time. For example, to create a DynamoDB table or SNS topic. 
 
 You can not see the resources created in EB, but you can see it in CloudFormation resources. 
+
+### RDS in or out of environment?
+
+Any resources defined in .ebextensions are tight with environment. If the environment was deleted, then all the resources will be deleted. If you want to keep the data in RDS or DynomoDB, then you need to create the database externally, direct in RDS and DynamoDB, then using environment variable to reference them. 
