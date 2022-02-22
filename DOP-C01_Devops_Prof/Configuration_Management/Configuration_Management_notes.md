@@ -704,3 +704,9 @@ create_hello_world_file:
     command: touch hello-world.txt
     cwd: /home/ec2-user
 ```
+
+#### Container commands 
+
+You can use the container_commands key to execute commands that affect your application source code. Container commands run after the application and web server have been set up and the application version archive has been extracted, but before the application version is deployed.
+
+The way Elastic Beanstalk works is- When you deploy a new version, it goes to staging directory. Here you can run your container commands. After the container commands run, then the application files will be moved from staging directory to production directory. So container commands can be run to modify the application files at run time. 
