@@ -696,3 +696,11 @@ Any resources defined in .ebextensions are tight with environment. If the enviro
 Commands is for your EC2 instance to run as part of Elastic Beanstalk deployment. 
 
 You can use the commands key to execute commands on the EC2 instance. The commands run before the application and web server are set up and the application version file is extracted.
+
+##### Command example
+
+```
+create_hello_world_file:
+    command: touch hello-world.txt
+    cwd: /home/ec2-user
+```
