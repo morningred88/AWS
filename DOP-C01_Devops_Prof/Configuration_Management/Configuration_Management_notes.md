@@ -734,3 +734,13 @@ When you create a new web server environment for an application, you can choose 
 
 * low cost (free eligible): single instance, good for development
 * High availability: ELB + ASG, good for production
+
+#### Application version lifecycle
+
+##### Application version quota
+
+Every time when we deploy an application, a new version will be created. 
+
+The application version quota is 1,000,  applies across all applications in a region.
+
+If you have several applications, configure each application with a **lifecycle policy** appropriate to avoid reaching the quota
