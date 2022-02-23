@@ -743,4 +743,20 @@ Every time when we deploy an application, a new version will be created.
 
 The application version quota is 1,000,  applies across all applications in a region.
 
-If you have several applications, configure each application with a **lifecycle policy** appropriate to avoid reaching the quota
+If you have several applications, configure each application with a **lifecycle policy** appropriate to avoid reaching the quota.
+
+##### Application version lifecycle settings
+
+AWS EB console> Application, select the application you specified > Application version > Setting button, then you can see the lifecycle setting 
+
+![](Configuration_Management_images\Application_verion_life_cycle_setting.png)
+
+On the settings page, you can do the following.
+
+- Configure lifecycle settings based on the total count of application versions or the age of application versions.
+- Specify whether to delete the source bundle from S3 when the application version is deleted.
+- Specify the service role under which the application version is deleted. To include all permissions required for version deletion, choose the default Elastic Beanstalk service role, named `aws-elasticbeanstalk-service-role`, or another service role using the Elastic Beanstalk managed service policies.
+
+**Reference:**
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/applications-lifecycle.html
