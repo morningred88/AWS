@@ -725,3 +725,12 @@ container_commands:
 ```
 
 leader_only just run once, only one instance run it. It only exist for container commands
+
+### Elastic Beanstalk - Good feature to know
+
+#### Configuration preset for a web server environment
+
+When you create a new web server environment for an application, you can choose from 2 configuration preset:
+
+* low cost (free eligible): single instance, good for development
+* High availability: ELB + ASG, good for production
