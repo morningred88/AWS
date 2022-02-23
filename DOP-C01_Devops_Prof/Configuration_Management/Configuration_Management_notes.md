@@ -710,3 +710,18 @@ create_hello_world_file:
 You can use the container_commands key to execute commands that affect your application source code. Container commands run after the application and web server have been set up and the application version archive has been extracted, but before the application version is deployed.
 
 The way Elastic Beanstalk works is- When you deploy a new version, it goes to staging directory. Here you can run your container commands. After the container commands run, then the application files will be moved from staging directory to production directory. So container commands can be run to modify the application files at run time. 
+
+##### Container command example:
+
+```
+container_commands:
+  modify_index_html:
+    command: 'echo " - modified content" >> index.html'
+
+  database_migration:
+    command: 'echo "do a database migration"'
+    # You can use leader_only to only run the command on a single instance
+    leader_only: true
+```
+
+leader_only just run once, only one instance run it. It only exist for container commands
