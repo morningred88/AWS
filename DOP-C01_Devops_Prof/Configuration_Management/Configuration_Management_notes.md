@@ -774,3 +774,9 @@ An AWS Elastic Beanstalk environment is **a collection of AWS resources running 
 * Worker environment
 
   Run a worker application that processes long-running workloads on demand or performs tasks on a schedule. There are sqs queue in the resources.
+
+##### Create a new environment 
+
+For HelloWorld app, I have dev_env. I am going to create a prod_env environment
+
+AWS EB console> Application, elect the application you specified> On the application overview page, choose **Create a new environment**.> Choose environment tier,  platform, application code. Application code can be current application code or any code in your local computer or S3. 
