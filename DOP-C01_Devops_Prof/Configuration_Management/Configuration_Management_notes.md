@@ -786,3 +786,14 @@ AWS EB console> Application, elect the application you specified> On the applica
 * Terminate environment
 * clone environment
 * Rebuild environment
+
+### Elastic Beanstalk - Update Strategy
+
+#### Beanstalk application deployment options
+
+All of the following deployment option are happened in the same environment.
+
+* All at once
+* Rolling
+* Rolling with additional batches
+* Immutable
