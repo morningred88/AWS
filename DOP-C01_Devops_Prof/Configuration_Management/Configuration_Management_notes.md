@@ -764,3 +764,13 @@ https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/applications-lifecycle.ht
 #### AWS Elastic Beanstalk environment
 
 An AWS Elastic Beanstalk environment is **a collection of AWS resources running an application version**. You can deploy multiple environments when you need to run multiple versions of an application. For example, you might have development, integration, and production environments.
+
+##### Environment tier
+
+* Web server environment
+
+  Run a website, web application, or web API that serves HTTP requests.
+
+* Worker environment
+
+  Run a worker application that processes long-running workloads on demand or performs tasks on a schedule. There are sqs queue in the resources.
