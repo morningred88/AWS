@@ -760,3 +760,7 @@ On the settings page, you can do the following.
 **Reference:**
 
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/applications-lifecycle.html
+
+#### AWS Elastic Beanstalk environment
+
+An AWS Elastic Beanstalk environment is **a collection of AWS resources running an application version**. You can deploy multiple environments when you need to run multiple versions of an application. For example, you might have development, integration, and production environments.
