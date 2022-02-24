@@ -797,3 +797,9 @@ All of the following deployment option are happened in the same environment.
 * Rolling
 * Rolling with additional batches
 * Immutable
+
+#### Blue green deployment
+
+Create an additional staging environment (green), deploy the new version there, using route 53 to route traffic to the new environment. After testing and the version works, then swap url.
+
+It is not direct feature from EB, very manual to do it. 
