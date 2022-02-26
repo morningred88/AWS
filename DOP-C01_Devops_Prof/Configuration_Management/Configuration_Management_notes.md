@@ -810,3 +810,11 @@ AWS EB console > Environment, select the environment you specified > Configurati
 
 * Application deployment policy: this is the deployment options described above. We select **Immuitable**.
 * Configuration update: This define how to replace the instances, similar options like in application deployment options, we choose **rolling based on health**.
+
+**Application new version deployment process:**
+
+* A temporary ASG created, one new instance inside
+* New ASG connect to the load balancer
+* Health check for the new instance: Success
+* Attach the new instance to the current ASG for the app
+* Stop the current instance, deregister the temporary ASG
