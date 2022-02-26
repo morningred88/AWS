@@ -818,3 +818,11 @@ AWS EB console > Environment, select the environment you specified > Configurati
 * Health check for the new instance: Success
 * Attach the new instance to the current ASG for the app
 * Stop the current instance, deregister the temporary ASG
+
+### Swap url (Blue/green)
+
+Swap url is a feature in EB environment. 
+
+AWS console > Go to action > Add the both environments for swapping.
+
+After we swapped url for the blue green deployment, some user may still see the older version based on TTL. 
