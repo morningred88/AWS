@@ -826,3 +826,7 @@ Swap url is a feature in EB environment.
 AWS console > Go to action > Add the both environments for swapping.
 
 After we swapped url for the blue green deployment, some user may still see the older version based on TTL. 
+
+### Worker environment
+
+Application can perform  the long running process on worker tier.  
