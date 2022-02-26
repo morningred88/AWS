@@ -803,3 +803,10 @@ All of the following deployment option are happened in the same environment.
 Create an additional staging environment (green), deploy the new version there, using route 53 to route traffic to the new environment. After testing and the version works, then swap url.
 
 It is not direct feature from EB, very manual to do it. 
+
+#### Application new version deployment example
+
+AWS EB console > Environment, select the environment you specified > Configuration tab > Rolling updates and deployments, click Edit button> In Modify rolling updates and deployment window:
+
+* Application deployment policy: this is the deployment options described above. We select **Immuitable**.
+* Configuration update: This define how to replace the instances, similar options like in application deployment options, we choose **rolling based on health**.
