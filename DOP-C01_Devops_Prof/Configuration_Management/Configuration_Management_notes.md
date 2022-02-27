@@ -830,3 +830,10 @@ After we swapped url for the blue green deployment, some user may still see the 
 ### Worker environment
 
 Application can perform  the long running process on worker tier.  
+
+#### How worker tier works?
+
+2 ways
+
+* The way worker environment working is to pull the job from sqs queue. If the job does not work, then put it to DeadLetterQueue. 
+* Cron job, the schedule can be configured in cron.yaml file in worker tier. 
