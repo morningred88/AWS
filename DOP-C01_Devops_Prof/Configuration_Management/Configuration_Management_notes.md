@@ -845,3 +845,7 @@ Application can perform  the long running process on worker tier.
 * WorkerQueue is used to decouple between the web tier and worker Tier. 
 
 * WorkerQueue can be created in the environment, or an external sqs queue, the same principle as database to EB.
+
+### Elastic beanstalk - docker integration
+
+By using Docker with Elastic Beanstalk, you have an infrastructure that handles all the details of capacity provisioning, load balancing, scaling, and application health monitoring. 
