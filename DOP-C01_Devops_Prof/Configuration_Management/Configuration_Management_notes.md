@@ -837,3 +837,11 @@ Application can perform  the long running process on worker tier.
 
 * The way worker environment working is to pull the job from sqs queue. If the job does not work, then put it to DeadLetterQueue. 
 * Cron job, the schedule can be configured in cron.yaml file in worker tier. 
+
+#### WorkerQueue
+
+* When you create a worker environment, WorkerQueue and WorkerDDeadLetterQueue will be created.
+
+* WorkerQueue is used to decouple between the web tier and worker Tier. 
+
+* WorkerQueue can be created in the environment, or an external sqs queue, the same principle as database to EB.
