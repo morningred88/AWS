@@ -849,3 +849,11 @@ Application can perform  the long running process on worker tier.
 ### Elastic beanstalk - docker integration
 
 By using Docker with Elastic Beanstalk, you have an infrastructure that handles all the details of capacity provisioning, load balancing, scaling, and application health monitoring. 
+
+#### Multi docker integration
+
+When you create an environment, you can choose Docker or multi-container Docker. Multi-container docker will created multiple containers in a single EC2 instance. 
+
+Docker is run on EB. It will create ECS cluster for us. 
+
+A `Dockerrun.aws.json` file is an Elastic Beanstalk–specific JSON file that describes how to deploy a set of Docker containers as an Elastic Beanstalk application.
