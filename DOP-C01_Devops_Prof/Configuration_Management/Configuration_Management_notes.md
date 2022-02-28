@@ -894,3 +894,9 @@ React DynamoDB stream
 * Using AWS SDK, you are able to retrieve the secrets from SSM Parameter store or Secret Manager. 
 
 Either way, you need to grant Lambda the permission to the services. 
+
+### Lambda version, alias
+
+You can choose one version for an alias.
+
+But you can select 2 versions based on weight,  except for version Latest. It is blue green deployment. 
