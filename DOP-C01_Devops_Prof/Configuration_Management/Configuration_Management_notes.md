@@ -857,3 +857,32 @@ When you create an environment, you can choose Docker or multi-container Docker.
 Docker is run on EB. It will create ECS cluster for us. 
 
 A `Dockerrun.aws.json` file is an Elastic Beanstalk–specific JSON file that describes how to deploy a set of Docker containers as an Elastic Beanstalk application.
+
+2/28 -1
+
+## Lambda
+
+### Lambda - sources and use cases
+
+#### API Gateway and Application Load Balancer
+
+We can use either Api Gateway or Application Load Balancer in front of of Lambda function, they both give Lambda function HTTP/HTTPS interface,  but API Gateway can add more functionality like authentication, rate controls and security. 
+
+#### CloudWatch event
+
+CloudWatch event is going to be the glue of all the devops operation we do. CloudWatch allows us to react any events of our infrastructure, then create a event and assign a Lambda function to it. CloudWatch event can also create a cron schedule to invoke Lambda function. 
+
+#### CloudWatch Logs
+
+Using CloudWatch log subscription, the log will be analyzed at the real time. If the log matches the subscription filter, then invoke the Lambda function. 
+
+#### CodeCommit
+
+React to the state changes of CodeCommit.  For example, if someone commit code, we can invoke Lambda function to check if credentials are in the code. If yes, then send a SNS topic. 
+
+#### DynamoDb
+
+React DynamoDB stream
+
+#### Kinesis, S3, SNS, SQS
+
