@@ -900,3 +900,9 @@ Either way, you need to grant Lambda the permission to the services.
 You can choose one version for an alias.
 
 But you can select 2 versions based on weight,  except for version Latest. It is blue green deployment. 
+
+#### CodeDeploy Lambda deployment: 
+
+Linear: gradually
+
+Canary: 2 steps
