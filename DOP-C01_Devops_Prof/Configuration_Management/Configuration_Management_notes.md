@@ -886,3 +886,11 @@ React DynamoDB stream
 
 #### Kinesis, S3, SNS, SQS
 
+### Lambda - Security
+
+#### Environment variable
+
+* Create directly in Lambda function, can be encrypted, but you need to have a KMS CMK to encrypt and decrypt it. 
+* Using AWS SDK, you are able to retrieve the secrets from SSM Parameter store or Secret Manager. 
+
+Either way, you need to grant Lambda the permission to the services. 
