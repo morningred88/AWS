@@ -906,3 +906,9 @@ But you can select 2 versions based on weight,  except for version Latest. It is
 Linear: gradually
 
 Canary: 2 steps
+
+### SAM framework
+
+#### SAM
+
+Serverless application model(SAM) is simplified version of CloudFormation template specific for Lambda function. We can use SAM CLI to build, test and deploy a Lambda function. 
