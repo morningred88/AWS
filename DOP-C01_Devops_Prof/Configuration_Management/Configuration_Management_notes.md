@@ -912,3 +912,11 @@ Canary: 2 steps
 #### SAM
 
 Serverless application model(SAM) is simplified version of CloudFormation template specific for Lambda function. We can use SAM CLI to build, test and deploy a Lambda function. 
+
+#### Installing SAM CLI
+
+Installing the AWS SAM CLI on Windows, follow the link below to install SAM
+
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-windows.html
+
+After installation, I cannot open SAM using git but I can open it with Windows CMD or Powershell.
