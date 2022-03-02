@@ -923,7 +923,50 @@ After installation, I cannot open SAM using git but I can open it with Windows C
 
 #### Create, build, test, package to S3 and deploy a Lambda function using SAM
 
+##### Whole working precedure for a SAM sample application
+
+Step 1 - Download a sample application
+
+```
+sam init --runtime python3.7
+
+#Select 1/1/enter/1
+```
+
+Step 2 - Build your application
+
+```
+cd sam-app
+sam build
+```
+
+Step 3 - Test the function
+
+```
+sam local invoke "HelloWorldFunction" -e events/event.json
+sam local start-api
+curl http://127.0.0.1:3000/hello 
+```
+
+Step 4 - Package your application
+
+```
+sam package --output-template-file packaged.yaml --s3-bucket bucket-name --region us-east-1
+```
+
+Step 5 - Deploy your application
+
+```
+sam deploy --template-file packaged.yaml --capabilities CAPABILITY_IAM --stack-name aws-sam-getting-started --region us-east-1
+```
+
+**Reference:**
+
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html
+
 The most import part in a SAM framework is template.yaml. The syntax is similar with CloudFormation, but much simplified. 
+
+##### template.yaml
 
 **A example to template.yaml**
 
@@ -984,3 +1027,6 @@ Outputs:
   * Resource to be created is a Lambda function.
   * HelloWorldFunction: Lambda function needs to be deployed into AWS
   * Type `Type: AWS::Serverless::Function` is SAM specific, different from CloudFormation. Lambda function type in CloudFormation is ` AWS::Lambda::Function`
+
+
+
