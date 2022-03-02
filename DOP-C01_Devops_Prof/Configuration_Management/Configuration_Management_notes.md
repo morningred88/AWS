@@ -921,6 +921,10 @@ https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/s
 
 After installation, I cannot open SAM using git but I can open it with Windows CMD or Powershell.
 
+#### Create, build, test, package to S3 and deploy a Lambda function using SAM
+
+The most import part in a SAM framework is template.yaml. The syntax is similar with CloudFormation, but much simplified. 
+
 **A example to template.yaml**
 
 ```
@@ -969,3 +973,14 @@ Outputs:
     Description: "Implicit IAM Role created for Hello World function"
     Value: !GetAtt HelloWorldFunctionRole.Arn
 ```
+
+**Explanation to template.yaml:**
+
+* `Transform: AWS::Serverless-2016-10-31` - Will transform this template to CloudFormation template.
+
+* `Resources:
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function `
+  * Resource to be created is a Lambda function.
+  * HelloWorldFunction: Lambda function needs to be deployed into AWS
+  * Type `Type: AWS::Serverless::Function` is SAM specific, different from CloudFormation. Lambda function type in CloudFormation is ` AWS::Lambda::Function`
