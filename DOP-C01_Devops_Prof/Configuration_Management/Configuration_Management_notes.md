@@ -1036,7 +1036,11 @@ It is easy to debug, because you can visually see which step is failed.
 
 If one step is success, it will turns green. 
 
+### Monitoring Step function with CloudWatch 
 
+Cloudwatch event can check the event execution, so we can create event rule in Eventbridge. If any step  failed, we can invoke either SNS topic or  a Lambda function to send a message to our Slack channel. 
+
+![Stepfunction_rule](Configuration_Management_images\Stepfunction_rule.png)
 
 
 
