@@ -1042,5 +1042,20 @@ Cloudwatch event can check the event execution, so we can create event rule in E
 
 ![Stepfunction_rule](Configuration_Management_images\Stepfunction_rule.png)
 
+## API Gateway
 
+### API Gateway
 
+#### Endpoint type for Rest API
+
+* Regional
+
+* Edge optimized
+
+* Private - API Gateway in VPC, so the services in the VPC can use  to connect to Lambda or other endpoint in  VPC.
+
+  ![](C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\Configuration_Management\Configuration_Management_images\private-endpoint.png)
+
+**Reference:**
+
+https://aws.amazon.com/blogs/compute/introducing-amazon-api-gateway-private-endpoints/
