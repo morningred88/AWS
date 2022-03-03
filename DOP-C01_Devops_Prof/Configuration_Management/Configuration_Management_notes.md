@@ -1028,5 +1028,15 @@ Outputs:
   * HelloWorldFunction: Lambda function needs to be deployed into AWS
   * Type `Type: AWS::Serverless::Function` is SAM specific, different from CloudFormation. Lambda function type in CloudFormation is ` AWS::Lambda::Function`
 
+## Step function
+
+It is state machine to orchestrate very complex workflow. It can run up to one year. 
+
+It is easy to debug, because you can visually see which step is failed.
+
+If one step is success, it will turns green. 
+
+
+
 
 
