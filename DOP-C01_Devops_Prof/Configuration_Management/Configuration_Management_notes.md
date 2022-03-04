@@ -1059,3 +1059,11 @@ Cloudwatch event can check the event execution, so we can create event rule in E
 **Reference:**
 
 https://aws.amazon.com/blogs/compute/introducing-amazon-api-gateway-private-endpoints/
+
+#### API gateway integration
+
+* Lambda function
+* HTTP: Endpoint in EC2 or any public accessible HTTP endpoint
+* AWS serveic
+* Mock
+* VPC link
