@@ -1054,11 +1054,29 @@ Cloudwatch event can check the event execution, so we can create event rule in E
 
 * Private - API Gateway in VPC, so the services in the VPC can use  to connect to Lambda or other endpoint in  VPC.
 
-  ![](Configuration_Management_images\private-endpoint.png)
+  ![private-endpoint](Configuration_Management_images\private-endpoint.png)
 
 **Reference:**
 
 https://aws.amazon.com/blogs/compute/introducing-amazon-api-gateway-private-endpoints/
+
+#### Create API Gateway integrated with Lambda function
+
+API name: API-Lily
+
+Endpoint type: regional
+
+Integration type: Lambda function
+
+Lambda function: Lambda dummy
+
+Method: get
+
+State: Dev
+
+![Endpoint_type](Configuration_Management_images\Endpoint_type.png)
+
+Api won't be used until you deploy it. You will get a invoke url from the stage
 
 #### API gateway integration
 
@@ -1068,4 +1086,4 @@ https://aws.amazon.com/blogs/compute/introducing-amazon-api-gateway-private-endp
 * Mock
 * VPC link
 
-![](Configuration_Management_images\API_Gateway_Integration.png)
+![API_Gateway_Integration](Configuration_Management_images\API_Gateway_Integration.png)
