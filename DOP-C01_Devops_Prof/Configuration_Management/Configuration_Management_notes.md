@@ -1054,7 +1054,7 @@ Cloudwatch event can check the event execution, so we can create event rule in E
 
 * Private - API Gateway in VPC, so the services in the VPC can use  to connect to Lambda or other endpoint in  VPC.
 
-  ![](C:\Users\xldu\local-repository\AWS\DOP-C01_Devops_Prof\Configuration_Management\Configuration_Management_images\private-endpoint.png)
+  ![](Configuration_Management_images\private-endpoint.png)
 
 **Reference:**
 
@@ -1064,6 +1064,8 @@ https://aws.amazon.com/blogs/compute/introducing-amazon-api-gateway-private-endp
 
 * Lambda function
 * HTTP: Endpoint in EC2 or any public accessible HTTP endpoint
-* AWS serveic
+* AWS serveice
 * Mock
 * VPC link
+
+![](Configuration_Management_images\API_Gateway_Integration.png)
