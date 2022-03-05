@@ -1100,5 +1100,13 @@ Once you make some changes in the API gateway, you need to deploy API again, but
 
 ![API_Gateway_Integration](Configuration_Management_images\API_Gateway_Integration.png)
 
+### Deployments and Canary testing
 
+#### Resources
+
+We need to **go to Resource to make any changes, then deploy it to make the changes effect**.
+
+We have Dev stage under Resource /, **Invoke URL:** https://46hgusxjvj.execute-api.us-east-1.amazonaws.com/Dev.
+
+For example, we can make some changes, then deploy it to existing stage Dev. Then we can make some other changes and deploy it to new stage.
 
