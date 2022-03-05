@@ -1110,3 +1110,30 @@ We have Dev stage under Resource /, **Invoke URL:** https://46hgusxjvj.execute-a
 
 For example, we can make some changes, then deploy it to existing stage Dev. Then we can make some other changes and deploy it to new stage.
 
+#### Deployment process
+
+Background: We want to change Dev stage to point Lambda function Lambda-Lily DEV alias, and create Prod stage to point to Lambda function Lambda-Lily Prod alias.
+
+**Process  - make changes and deploy to the exiting Dev stage:**
+
+Step 1: Go to Resource tab on the left, select / resource, then click get
+
+![Deployment_step1](Configuration_Management_images\Deployment_step1.png)
+
+Step 2: In GET - Method Execution window, click **Integration Request**
+
+![Deployment_step2](Configuration_Management_images\Deployment_step2.png)
+
+Step 3: Edit Lambda function and change it to lambda-dummy:DEV. Don't forget to tick it, to get the execution role created. 
+
+![Deployment_step3](Configuration_Management_images\Deployment_step3.png)
+
+Step 4: Click Method Execution back to Method Execution window and do a test
+
+Step 5: Test is succeed, return statuscode 200. 
+
+![Deployment_step5](Configuration_Management_images\Deployment_step5.png)
+
+Step 6: Click action, deploy API, to existing Dev stage
+
+![Deployment_step6](Configuration_Management_images\Deployment_step6.png)
