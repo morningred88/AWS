@@ -1076,7 +1076,19 @@ State: Dev
 
 ![Endpoint_type](Configuration_Management_images\Endpoint_type.png)
 
-Api won't be used until you deploy it. You will get a invoke url from the stage
+#### API - First deployment
+
+Api won't be used until you deploy it. 
+
+AWS Console >Click resource tab on the left >Click Action drop down> Select deploy API> Create a new stage> Deploy.  You will get a invoke url from the stage.
+
+The stage I created called Dev.
+
+**Invoke URL:** https://46hgusxjvj.execute-api.us-east-1.amazonaws.com/Dev
+
+You can see the stage name is the last part of DNS name
+
+Once you make some changes in the API gateway, you need to deploy API again, but choose the stage instead of creating a new stage. 
 
 #### API gateway integration
 
@@ -1087,3 +1099,6 @@ Api won't be used until you deploy it. You will get a invoke url from the stage
 * VPC link
 
 ![API_Gateway_Integration](Configuration_Management_images\API_Gateway_Integration.png)
+
+
+
