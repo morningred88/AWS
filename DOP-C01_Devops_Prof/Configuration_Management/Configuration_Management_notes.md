@@ -1137,3 +1137,23 @@ Step 5: Test is succeed, return statuscode 200.
 Step 6: Click action, deploy API, to existing Dev stage
 
 ![Deployment_step6](Configuration_Management_images\Deployment_step6.png)
+
+**Process  - make changes and deploy to a new Dev stage:**
+
+The same process for creating a new stage Prod, the adjustment made:
+
+Step 3: Edit Lambda function and change it to lambda-dummy:Prod
+
+![Deployment_step3_new_stage](Configuration_Management_images\Deployment_step3_new_stage.png)
+
+
+
+![Deployment_step4_new_stage](Configuration_Management_images\Deployment_step4_new_stage.png)
+
+Step 6: Deploy Api to new stage Prod
+
+![Deployment_step6_new_stage](Configuration_Management_images\Deployment_step6_new_stage.png)
+
+Go to Stage tab, you can see now both Dev and Prod stage are available
+
+![Api_Gateway_stage](Configuration_Management_images\Api_Gateway_stage.png)
