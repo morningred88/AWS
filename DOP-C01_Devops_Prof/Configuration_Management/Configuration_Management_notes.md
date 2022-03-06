@@ -1168,3 +1168,15 @@ Canary is equivalent to blue/green deployment. Application new veriosn is deploy
 
 - In Lambda, create weighted versions in a alias.
 - In API gateway, create cananary in a stage.
+
+#### Canary process in API Gateway
+
+Step 1: Go to Prod stage > Canary> change Canary to 50%
+
+![Canary_setting](Configuration_Management_images\Canary_setting.png)
+
+Step 2: Go to resources, make sure the Integration request point to DEV alias(for Dev stage), then Deploy API to the Canary
+
+![Deploy_to_canary](Configuration_Management_images\Deploy_to_canary.png)
+
+Step3: If everything is ok in production, then go to Prod stage canary setting to Promote Canary. So only the new version in Prod stage. 
