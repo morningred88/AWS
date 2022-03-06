@@ -1157,3 +1157,7 @@ Step 6: Deploy Api to new stage Prod
 Go to Stage tab, you can see now both Dev and Prod stage are available
 
 ![Api_Gateway_stage](Configuration_Management_images\Api_Gateway_stage.png)
+
+#### Canary testing
+
+Canary is equivalent to blue/green deployment. Application new veriosn is deployed in 2 steps, first a small percent of new version, such as 90% version 1, 10% version 2. If version2 passes the test, then change version 2 to 100%.
