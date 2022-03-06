@@ -1161,3 +1161,10 @@ Go to Stage tab, you can see now both Dev and Prod stage are available
 #### Canary testing
 
 Canary is equivalent to blue/green deployment. Application new veriosn is deployed in 2 steps, first a small percent of new version, such as 90% version 1, 10% version 2. If version2 passes the test, then change version 2 to 100%.
+
+#### Canary testing options
+
+2 options to create canary deployment:
+
+- In Lambda, create weighted versions in a alias.
+- In API gateway, create cananary in a stage.
