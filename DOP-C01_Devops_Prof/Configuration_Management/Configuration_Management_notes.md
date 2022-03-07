@@ -1189,3 +1189,17 @@ Step3: If everything is ok in production, then go to Prod stage canary setting t
   - Edge-optimized APIs, 120, cannot be increased 
 * Usage plan: can define pretty advanced throttling for stage and method, can associated with API key
 * Lambda Function: concurrent 1,000
+
+### API Gateway - Fronting Step Function
+
+We can creating a Step Functions API using API Gateway
+
+Integration type: AWS service, Api Gateway can invoke any AWS services
+
+Method - Post, because we need to pass request body to Step Function. request body contains Step Function input, execution name and ARN.
+
+Response: Step Function ARN and starting time stamp. Because Step function may running very long up to 1 year, so Api Gateway will not wait for the execution. 
+
+**Reference:**
+
+https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-api-gateway.html
