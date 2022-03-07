@@ -1180,3 +1180,12 @@ Step 2: Go to resources, make sure the Integration request point to DEV alias(fo
 ![Deploy_to_canary](Configuration_Management_images\Deploy_to_canary.png)
 
 Step3: If everything is ok in production, then go to Prod stage canary setting to Promote Canary. So only the new version in Prod stage. 
+
+### API Gateway throttles
+
+* API Gateway:
+  - Throttle quota per account, per Region is 10,000 requests per second (RPS) with an additional burst, can be increased 
+  - Regional APIs, 600, cannot be increased 
+  - Edge-optimized APIs, 120, cannot be increased 
+* Usage plan: can define pretty advanced throttling for stage and method, can associated with API key
+* Lambda Function: concurrent 1,000
