@@ -1203,3 +1203,16 @@ Response: Step Function ARN and starting time stamp. Because Step function may r
 **Reference:**
 
 https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-api-gateway.html
+
+## ECS
+
+### 
+
+We create a ECS cluster. You can create a empty ECS cluster, but we will create a ECS cluster with EC2 instances:
+
+* 1 instance
+* Default vpc
+* 1 vCPU, 1 GB RAM 
+
+
+
