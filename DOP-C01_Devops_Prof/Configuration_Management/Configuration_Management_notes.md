@@ -1223,3 +1223,9 @@ EC2 ami for ECS is ECS optimized, already has Docker installed
 ECS agent register the EC2 instance into ECS cluster. ECS agent is also a Docker container, you can get the image from Docker Hub. It runs /etc/ecs/ecs.config file in EC2 instance to register it to the specified ECS. The ECS cluster name is defined in ecs.config file. 
 
 When we create a cluster, it comes with ASG. Even you only have one instance, the instance will be in ASG. 
+
+### ECS Task definition
+
+#### Definition
+
+Json file tells ECS how to run the container.
