@@ -1206,7 +1206,7 @@ https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-api-gateway.html
 
 ## ECS
 
-### 
+### ECS clusters
 
 We create a ECS cluster. You can create a empty ECS cluster, but we will create a ECS cluster with EC2 instances:
 
@@ -1214,5 +1214,7 @@ We create a ECS cluster. You can create a empty ECS cluster, but we will create 
 * Default vpc
 * 1 vCPU, 1 GB RAM 
 
+#### ECS cluster instance AMI
 
+EC2 ami for ECS is ECS optimized, already has Docker installed
 
