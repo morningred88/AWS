@@ -1245,3 +1245,9 @@ We will create a Task definition my-httpd to run HTTP container:
   * container image is from Docker Hub. 
 
   * Portmapping: Host port - 8080, container port - 80
+
+### ECS Service
+
+#### Definition
+
+Define how many tasks should run and how they should run across the fleet of instances, can be linked to ELB. 
