@@ -1251,3 +1251,19 @@ We will create a Task definition my-httpd to run HTTP container:
 #### Definition
 
 Define how many tasks should run and how they should run across the fleet of instances, can be linked to ELB. 
+
+#### Create ECS Service httpd-service
+
+* Task definition: my-httpd, revision 1
+* Service type: replica
+* Number of tasks: 1
+* Service role: Add new role
+* Minimum healthy percent: 0, means you can take down all current tasks
+* Maximum healthy percent: 200, means you can create all new tasks
+* Deployment type
+  * Rolling
+  * Blue/green deployment powered by CodeDeploy
+* Task placement: AZ balanced spread
+* Network
+  * Load balancer type: none
+  * Setup Auto scaling: none
