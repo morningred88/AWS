@@ -1267,3 +1267,11 @@ Define how many tasks should run and how they should run across the fleet of ins
 * Network
   * Load balancer type: none
   * Setup Auto scaling: none
+
+#### Update ECS Service to run 2 tasks
+
+Service tab > select httpd-service> Update > Number of tasks: 2 > Update
+
+But when we go to the Tasks tab, still only 1 task running. Go to Event tab you can see the error message, unable to place a task, because no container instance met the requirement, the container instance xxxx already using a port required by your task. 
+
+Solution: We need to go to ASG for ECS cluster to add another instance. 
