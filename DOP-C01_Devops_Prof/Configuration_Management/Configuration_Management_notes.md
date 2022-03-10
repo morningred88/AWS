@@ -1229,3 +1229,19 @@ When we create a cluster, it comes with ASG. Even you only have one instance, th
 #### Definition
 
 Json file tells ECS how to run the container.
+
+#### Create Task definition
+
+Has different versions. 
+
+We will create a Task definition my-httpd to run HTTP container: 
+
+* Create task role
+* Compatibility: EC2
+* 300 mb RAM, 250 cpu
+
+* Container definition: httpd, tat 2.4, the 
+
+  * container image is from Docker Hub. 
+
+  * Portmapping: Host port - 8080, container port - 80
