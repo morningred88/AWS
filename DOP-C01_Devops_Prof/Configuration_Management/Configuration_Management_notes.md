@@ -1308,3 +1308,9 @@ Step 4: AWS does not allow to update service to add ELB. So we will create a new
   * Path pattern: /, to accept all traffic
   * Evaluation order: 1
   * health check path: /
+
+#### Deleting ECS Service httpd-service
+
+We need first remove all the tasks from the service, then you can delete. 
+
+* Service tab > select httpd-service> Update > Number of tasks: 0> Now you can delete the service. 
