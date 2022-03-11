@@ -1281,3 +1281,30 @@ Solution: We need to go to ASG for ECS cluster to add another instance.
 We want to run the task in multiples times in one instance, so in different instances.
 
 We can leveage the ALB dynamic host port forwarding feature. 
+
+#### Updating dynamic host mapping procedure
+
+Step1: Update Task Definition to create new revision
+
+Task Definition tab > select my-httpd:1> Create new revision> Only one change is made: Change Container definition portmapping,  leave host port empty, save > Now my-httpd:2 is created
+
+Step 2: Create a new ALB my-ecs-cluster-alb. Add security group, it is going to listen on port 80 from anywhere.  We don't need to define Target Groups.
+
+Step 3: Update Security group of ECS instances.
+
+Update Security group to allow  all traffic of ALB to talk to any port of ECS instances. Source is ALB security group ID.
+
+Step 4: AWS does not allow to update service to add ELB. So we will create a new service, httpd-alb, using my-httpd:2 and add ALB.
+
+* Task definition: my-httpd:2
+* Service type: replica
+* Number of tasks: 4
+* Load balancer: my-ecs-cluster-alb
+
+* Container to load balance
+  * Production listening port : 80:HTTP
+  * Target group: create new
+  * Target group protocol: HTTP
+  * Path pattern: /, to accept all traffic
+  * Evaluation order: 1
+  * health check path: /
