@@ -1275,3 +1275,9 @@ Service tab > select httpd-service> Update > Number of tasks: 2 > Update
 But when we go to the Tasks tab, still only 1 task running. Go to Event tab you can see the error message, unable to place a task, because no container instance met the requirement, the container instance xxxx already using a port required by your task. 
 
 Solution: We need to go to ASG for ECS cluster to add another instance. 
+
+### ECS Service with Load Balancer
+
+We want to run the task in multiples times in one instance, so in different instances.
+
+We can leveage the ALB dynamic host port forwarding feature. 
