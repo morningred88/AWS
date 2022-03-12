@@ -1314,3 +1314,10 @@ Step 4: AWS does not allow to update service to add ELB. So we will create a new
 We need first remove all the tasks from the service, then you can delete. 
 
 * Service tab > select httpd-service> Update > Number of tasks: 0> Now you can delete the service. 
+
+### ECR
+
+#### IAM policy for ECR
+
+ECR is accessible through IAM. So if a task does not run, it might be the reason that EC2 instance does not have enough permission to pull the image from ECR. 
+
