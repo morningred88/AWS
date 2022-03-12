@@ -1321,3 +1321,10 @@ We need first remove all the tasks from the service, then you can delete.
 
 ECR is accessible through IAM. So if a task does not run, it might be the reason that EC2 instance does not have enough permission to pull the image from ECR. 
 
+#### How to pull/push from/to ECR
+
+```
+$(aws ecr get-login --no-include-email --region us-east-1)
+docker push image-name:tag
+docker pull image-name:tag
+```
