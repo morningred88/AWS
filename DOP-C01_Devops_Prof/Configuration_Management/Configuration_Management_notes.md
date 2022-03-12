@@ -1328,3 +1328,7 @@ $(aws ecr get-login --no-include-email --region us-east-1)
 docker push image-name:tag
 docker pull image-name:tag
 ```
+
+### Fargate
+
+No container instance required. AWS will manage EC2 container instance. 
