@@ -1332,3 +1332,9 @@ docker pull image-name:tag
 ### Fargate
 
 No container instance required. AWS will manage EC2 container instance. 
+
+### Multi container Beanstalk
+
+Multi container means multiple container run on one instance. All containers are defined in one Task Definition. 
+
+We can deploy multiple container using EB, while underlying using ECS. 
