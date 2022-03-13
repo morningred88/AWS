@@ -1401,3 +1401,19 @@ This role will be created when you create a cluster. Role name is **ecsInstanceR
     ]
 }
 ```
+
+#### Task excution role
+
+Role name is **ecsTaskExecutionRole**. Task role is defined in Task Definition, which is the role for containers running within EC2 instances. It provide docker container the ability to do thing in AWS, such as access to S3 bucket
+
+### ECS - Auto Scaling
+
+#### Auto scaling for ECS services (task level)
+
+Similar to ASG, but it will change the **task** number:
+
+* Minimum number of tasks
+
+* Maximum number of tasks
+
+* Desired number of tasks
