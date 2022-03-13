@@ -1338,3 +1338,18 @@ No container instance required. AWS will manage EC2 container instance.
 Multi container means multiple container run on one instance. All containers are defined in one Task Definition. 
 
 We can deploy multiple container using EB, while underlying using ECS. 
+
+#### Sample application- Multi container Beanstalk 
+
+We requested 2 container instances when we create a new EB environment for the sample application.
+
+Here are what EB created:
+
+* ECS cluster, 2 container instances
+* EB does **not** create Services in ECS
+* ALB
+* Task Definition: 2 contains are included in the task definition
+  * php-app 
+  * ngnix-proxy, portmapping 80:80
+
+2 tasks are running. Since we have totally 2 instances, so total 4 containers are running. 
