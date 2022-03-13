@@ -1361,3 +1361,43 @@ Here are what EB created:
   * Task role
 
 * For Fargate, only have Task role, because it is serverless and we don't manage EC2 instances. 
+
+#### Container instance role
+
+This role will be created when you create a cluster. Role name is **ecsInstanceRole**, policy are AWS manager policy AmazonEC2ContainerServiceforEC2Role, permission includes: 
+
+* Download images from ECR
+
+* Register/deregister instance from cluster
+* Create CloudWatch logs
+
+**Json file of AmazonEC2ContainerServiceforEC2Role policy**
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeTags",
+                "ecs:CreateCluster",
+                "ecs:DeregisterContainerInstance",
+                "ecs:DiscoverPollEndpoint",
+                "ecs:Poll",
+                "ecs:RegisterContainerInstance",
+                "ecs:StartTelemetrySession",
+                "ecs:UpdateContainerInstancesState",
+                "ecs:Submit*",
+                "ecr:GetAuthorizationToken",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
