@@ -1353,3 +1353,11 @@ Here are what EB created:
   * ngnix-proxy, portmapping 80:80
 
 2 tasks are running. Since we have totally 2 instances, so total 4 containers are running. 
+
+### ECS - IAM roles
+
+* For classic ECS with EC2 instance, we have 2 roles:
+  * Instance role
+  * Task role
+
+* For Fargate, only have Task role, because it is serverless and we don't manage EC2 instances. 
