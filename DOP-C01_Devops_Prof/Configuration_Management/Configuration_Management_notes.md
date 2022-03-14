@@ -1417,3 +1417,13 @@ Similar to ASG, but it will change the **task** number:
 * Maximum number of tasks
 
 * Desired number of tasks
+
+#### Auto scaling policy for ECS services 
+
+CPU and RAM is tracked in CloudWatch at the ECS service level.
+
+ECS service auto scaling policy is similar with the one in ASG, including 3 policies:
+
+* Target tracking, target a specific average CloudWatch metric
+* Step scaling, scale based on CloudWatch alarms, need to create alarms.
+* Scheduled Scaling: based on predictable changes 
