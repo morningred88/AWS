@@ -1435,3 +1435,14 @@ Fargate is simplest, just need to add auto scaling for ECS service
 EB multi container: is also good. When new EC2 instance is added, it automatically add new containers in the Task definition.
 
 ECS classic: The most complicated one. We must manage 2 auto scaling activities, EC2 instance and ECS service. It can happen that EC2 instance only use 30% of CPU, but the capacity is full, no more container can be deployed. So we can use Capacity Provider to do the scaling for EC2 instance.  
+
+### ECS - CloudWatch
+
+#### CloudWatch logs for ECS
+
+##### Logging for the application running in docker container
+
+In Container of Task Definition, you can configure the logging:
+Log driver: awslogs, log will be send to CloudWatch logs. We can configure Log group, region and log stream prefix. Or you can check auto-configure CloudWatch logs, then it will auto fill in the log group,  etc. This will make the contain send the application logs directly to CloudWatch. 
+
+We need to make sure that Task role ecsTaskExecutionRole has the permission to write logs to CloudWatch. 
