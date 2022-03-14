@@ -1427,3 +1427,11 @@ ECS service auto scaling policy is similar with the one in ASG, including 3 poli
 * Target tracking, target a specific average CloudWatch metric
 * Step scaling, scale based on CloudWatch alarms, need to create alarms.
 * Scheduled Scaling: based on predictable changes 
+
+#### Auto scaling difference of ECS classic, Fargate and EB multi container
+
+Fargate is simplest, just need to add auto scaling for ECS service
+
+EB multi container: is also good. When new EC2 instance is added, it automatically add new containers in the Task definition.
+
+ECS classic: The most complicated one. We must manage 2 auto scaling activities, EC2 instance and ECS service. It can happen that EC2 instance only use 30% of CPU, but the capacity is full, no more container can be deployed. So we can use Capacity Provider to do the scaling for EC2 instance.  
