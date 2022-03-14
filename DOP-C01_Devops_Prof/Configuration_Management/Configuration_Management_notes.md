@@ -1446,3 +1446,19 @@ In Container of Task Definition, you can configure the logging:
 Log driver: awslogs, log will be send to CloudWatch logs. We can configure Log group, region and log stream prefix. Or you can check auto-configure CloudWatch logs, then it will auto fill in the log group,  etc. This will make the contain send the application logs directly to CloudWatch. 
 
 We need to make sure that Task role ecsTaskExecutionRole has the permission to write logs to CloudWatch. 
+
+##### Logging for container instance
+
+We need add CloudWatch agent to send the log  files from OS of the EC2 instance onto CloudWatch logs.
+
+#### CloudWatch metrics
+
+CPU and RAM is tracked in CloudWatch at the ECS service level. We can use it to set CloudWatch alarms, such as for ECS service step scaling. 
+
+#### CloudWatch Container Insights
+
+This will send per container metric into CloudWatch. It is a paid service. It is really helpful if you want to debug the single container. 
+
+#### CloudWatch event for ECS
+
+ECS can both be event target and event source. 
