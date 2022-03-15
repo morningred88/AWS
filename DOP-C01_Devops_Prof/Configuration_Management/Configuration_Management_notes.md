@@ -1479,3 +1479,13 @@ https://docs.aws.amazon.com/opsworks/latest/userguide/gettingstarted-cookbooks.h
 #### Definition
 
 It represents a set of instances that you want to manage collectively, typically because they have a common purpose such as serving PHP applications. In addition to serving as a container, a stack handles tasks that apply to the group of instances as a whole, such as managing applications and cookbooks.
+
+#### Create a stack
+
+We can choose **custom chef cookbooks** to provision our application. They could sit in
+
+* S3
+* Git
+* HTTP archive
+
+Stack has many layers. Each layer has instances. 
