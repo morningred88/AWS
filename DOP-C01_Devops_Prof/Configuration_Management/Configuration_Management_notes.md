@@ -1462,3 +1462,7 @@ This will send per container metric into CloudWatch. It is a paid service. It is
 #### CloudWatch event for ECS
 
 ECS can both be event target and event source. 
+
+## OpsWorks
+
+With OpsWorks, we are going to the infrastructure, configuration and applications within one service. This is what people use Chef on their premises and they want to migrate to cloud and start to use Chef on the Cloud as well. 
