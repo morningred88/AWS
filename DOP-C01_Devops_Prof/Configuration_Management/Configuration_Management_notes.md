@@ -1466,3 +1466,10 @@ ECS can both be event target and event source.
 ## OpsWorks
 
 With OpsWorks, we are going to the infrastructure, configuration and applications within one service. This is what people use Chef on their premises and they want to migrate to cloud and start to use Chef on the Cloud as well. 
+
+### Chef cookbook and recipe
+
+ A *cookbook* is a package file that contains configuration information, including instructions called *recipes*. A *recipe* is a set of one or more instructions, written with Ruby language syntax, that specifies the resources to use and the order in which those resources are applied. A *resource*, as used in Chef, is a statement of configuration policy.
+
+Reference:
+https://docs.aws.amazon.com/opsworks/latest/userguide/gettingstarted-cookbooks.html
