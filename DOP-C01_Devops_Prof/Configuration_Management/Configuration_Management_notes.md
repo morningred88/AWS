@@ -1473,3 +1473,9 @@ With OpsWorks, we are going to the infrastructure, configuration and application
 
 Reference:
 https://docs.aws.amazon.com/opsworks/latest/userguide/gettingstarted-cookbooks.html
+
+### Stack
+
+#### Definition
+
+It represents a set of instances that you want to manage collectively, typically because they have a common purpose such as serving PHP applications. In addition to serving as a container, a stack handles tasks that apply to the group of instances as a whole, such as managing applications and cookbooks.
