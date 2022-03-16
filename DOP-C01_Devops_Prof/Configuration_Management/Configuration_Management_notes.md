@@ -1505,3 +1505,13 @@ As you work with AWS OpsWorks Stacks layers, keep the following in mind:
 Reference:
 
 https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers.htm
+
+### Instances in OpsWork stack
+
+Instances has 3 kinds:
+
+* 24/7
+* Time
+* Load
+
+They will come up and down based on some rules we define. 
