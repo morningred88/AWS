@@ -1515,3 +1515,9 @@ Instances has 3 kinds:
 * Load
 
 They will come up and down based on some rules we define. 
+
+### Application source in OpsWork stack
+
+* Git
+
+* HTTP
