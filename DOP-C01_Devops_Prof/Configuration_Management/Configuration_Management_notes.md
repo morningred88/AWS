@@ -1489,3 +1489,19 @@ We can choose **custom chef cookbooks** to provision our application. They could
 * HTTP archive
 
 Stack has many layers. Each layer has instances. 
+
+## Layers in OpsWork stack
+
+Every stack contains one or more layers, each of which represents a stack component, such as a load balancer or a set of application servers.
+
+As you work with AWS OpsWorks Stacks layers, keep the following in mind:
+
+- Each layer in a stack must have at least one instance and can optionally have multiple instances.
+
+- Each instance in a stack must be a member of at least one layer, except for [registered instances](https://docs.aws.amazon.com/opsworks/latest/userguide/registered-instances.html).
+
+  You cannot configure an instance directly, except for some basic settings such as the SSH key and hostname. You must create and configure an appropriate layer, and add the instance to the layer.
+
+Reference:
+
+https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers.htm
