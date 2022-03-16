@@ -1521,3 +1521,33 @@ They will come up and down based on some rules we define.
 * Git
 
 * HTTP
+
+### AWS OpsWorks Stacks Lifecycle Events
+
+Each layer has a set of five lifecycle events, each of which has an associated set of recipes that are specific to the layer. When an event occurs on a layer's instance, AWS OpsWorks Stacks automatically runs the appropriate set of recipes. To provide a custom response to these events.
+
+**Setup**
+
+This event occurs after a started instance has finished booting.
+
+**Configure**
+
+This event occurs on all of the stack's instances when one of the following occurs:
+
+- An instance enters or leaves the online state.
+- You [associate an Elastic IP address](https://docs.aws.amazon.com/opsworks/latest/userguide/resources-attach.html#resources-attach-eip) with an instance or [disassociate one from an instance](https://docs.aws.amazon.com/opsworks/latest/userguide/resources-detach.html#resources-detach-eip).
+- You [attach an Elastic Load Balancing load balancer](https://docs.aws.amazon.com/opsworks/latest/userguide/layers-elb.html) to a layer, or detach one from a layer.
+
+**Deploy**
+
+This event occurs when you run a **Deploy** command, typically to deploy an application to a set of application server instances.
+
+**Note**: Setup includes Deploy; it runs the Deploy recipes after setup is complete.
+
+**Undeploy**
+
+This event occurs when you delete an app or run an Undeploy command to remove an app from a set of application server instances.
+
+**Shutdown**
+
+This event occurs after you direct AWS OpsWorks Stacks to shut an instance down but before the associated Amazon EC2 instance is actually terminated. AWS OpsWorks Stacks runs recipes to perform cleanup tasks such as shutting down services.
