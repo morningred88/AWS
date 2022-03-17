@@ -1551,3 +1551,14 @@ This event occurs when you delete an app or run an Undeploy command to remove an
 **Shutdown**
 
 This event occurs after you direct AWS OpsWorks Stacks to shut an instance down but before the associated Amazon EC2 instance is actually terminated. AWS OpsWorks Stacks runs recipes to perform cleanup tasks such as shutting down services.
+
+### Autohealing
+
+Every instance has an AWS OpsWorks Stacks agent that communicates regularly with the service. AWS OpsWorks Stacks uses that communication to monitor instance health. If an agent does not communicate with the service for more than approximately five minutes, AWS OpsWorks Stacks considers the instance to have failed.
+
+If a layer has auto healing enabled—the default setting—AWS OpsWorks Stacks automatically replaces the layer's failed instances as follows:
+
+**Amazon EBS-backed instance**
+
+1. Stops the Amazon EC2 instance, and verifies that it has stopped.
+2. Starts the EC2 instance.
