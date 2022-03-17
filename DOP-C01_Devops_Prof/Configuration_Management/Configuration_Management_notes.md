@@ -1562,3 +1562,12 @@ If a layer has auto healing enabled—the default setting—AWS OpsWorks Stacks 
 
 1. Stops the Amazon EC2 instance, and verifies that it has stopped.
 2. Starts the EC2 instance.
+
+### Delete a stack
+
+In a following order
+
+* Stop all instances
+* Delete all instances
+* Delete all layer
+* Delete stack
