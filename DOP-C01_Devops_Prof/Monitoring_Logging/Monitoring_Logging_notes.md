@@ -22,3 +22,12 @@
 
 * A bucket policy are added automatically when we create a new trial, so make sure CloudTrail can write to S3 bucket, but resource is the bucket key, not the whole bucket
 
+### CloudTrail log files
+
+CloudTrail log file is json file, it includes:
+
+* Who made the request: userIdentity
+* When and to where: eventTime, eventSource
+* API call: eventName
+* What is the request: requestParameters
+* What is the response: responseElements
