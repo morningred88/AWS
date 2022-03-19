@@ -81,3 +81,13 @@ You can enable log file integrity validation by using the AWS Management Console
 ### How it works
 
 When you enable log file integrity validation, CloudTrail creates a hash for every log file that it delivers. Every hour, CloudTrail also creates and delivers a file that references the log files for the last hour and contains a hash of each.
+
+### Validate the integrity using AWS CLI
+
+To validate the integrity of CloudTrail log files, you can use the AWS CLI or create your own solution.
+
+Reference:
+
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-enabling.html
+
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-intro.html?icmpid=docs_console_unmapped
