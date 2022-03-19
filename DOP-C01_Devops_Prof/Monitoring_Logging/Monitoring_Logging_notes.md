@@ -91,3 +91,26 @@ Reference:
 https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-enabling.html
 
 https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-intro.html?icmpid=docs_console_unmapped
+
+## CloudTrail - cross account logging
+
+### Receiving CloudTrail log files from multiple accounts
+
+Very simple, just need 2 steps:
+
+* In s3 bucket, add the resource to the bucket policy, just need to change the account name
+
+  ```
+  "Resource": [
+          "arn:aws:s3:::myBucketName/optionalLogFilePrefix/AWSLogs/111111111111/*",
+          "arn:aws:s3:::myBucketName/optionalLogFilePrefix/AWSLogs/222222222222/*"
+        ]
+  ```
+
+* The create trial in all other account: Use the same bucket name from first account
+
+**Reference:**
+
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html
+
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-set-bucket-policy-for-multiple-accounts.html
