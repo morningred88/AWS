@@ -114,3 +114,46 @@ Very simple, just need 2 steps:
 https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html
 
 https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-set-bucket-policy-for-multiple-accounts.html
+
+### Sharing CloudTrail log files between AWS accounts
+
+To share log files between multiple AWS accounts, you must perform the following general steps. These steps are explained in detail later in this section.
+
+- Create an IAM role for each account that you want to share log files with.
+
+- For each of these IAM roles, create an access policy that grants read-only access to the account you want to share the log files with.
+
+- Have an IAM user in each account programmatically assume the appropriate role and retrieve the log files.
+
+  1. Sign in to the AWS Management Console and open the IAM console.
+
+  2. Choose the user whose permissions you want to modify.
+
+  3. Choose the **Permissions** tab.
+
+  4. Choose **Custom Policy**.
+
+  5. Choose **Use the policy editor to customize your own set of permissions**.
+
+  6. Type a name for the policy.
+
+  7. Copy the following policy into the space provided for the policy document.
+
+     ```
+     {
+       "Version": "2012-10-17",
+       "Statement": [
+         {
+           "Effect": "Allow",
+           "Action": ["sts:AssumeRole"],
+           "Resource": "arn:aws:iam::account-A-id:role/Test"
+         }
+       ]
+     }
+     ```
+
+**Reference:**
+
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-sharing-logs.html
+
+https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-sharing-logs-assume-role.html#cloudtrail-sharing-logs-assume-role-create-policy
