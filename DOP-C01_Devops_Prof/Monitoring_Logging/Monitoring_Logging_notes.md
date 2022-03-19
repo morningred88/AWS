@@ -157,3 +157,11 @@ To share log files between multiple AWS accounts, you must perform the following
 https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-sharing-logs.html
 
 https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-sharing-logs-assume-role.html#cloudtrail-sharing-logs-assume-role-create-policy
+
+# Kinesis
+
+## Kinesis Firehose
+
+**What is Streaming ETL?**
+
+Streaming ETL is the processing and movement of real-time data from one place to another. ETL is short for the database functions extract, transform, and load. Extract refers to collecting data from some source. Transform refers to any processes performed on that data. Load refers to sending the processed data to a destination, such as a warehouse, a datalake, or an analytical tool.
