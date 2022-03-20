@@ -192,3 +192,18 @@ But we cannot get RAM and process information
 * Average read latency
 * Average write latency
 * Burst balance: For gp2 type of volume 
+
+But we cannot get how much is the space left in EBS
+
+### ASG metrics
+
+* Minimum group size
+* Maximum group size
+* Desired capacity
+* In service instance (count)
+* Pending instance (count)
+* Standby instance (count)
+* Terminating instance (count)
+* Total instance (count)
+
+Group metrics is the same as for the EC2 instance in ASG, but aggregated. It needs to be enabled. 
