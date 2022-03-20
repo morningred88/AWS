@@ -180,3 +180,15 @@ Kinesis Data Firehose is a streaming ETL solution. It is the easiest way to load
 * CPU Credit usage and CPU Credit balance only for T2/T3 instances
 
 But we cannot get RAM and process information
+
+## EBS metrics
+
+* Read bandwidth, Write bandwidth
+* Read throughput, write throughput
+* Average Queue Length: How much operation has been queued for write into EBS volume, large queue is bad. 
+* Time Spent Idle: What percent of time that the disks do nothing
+* Average read size
+* Average write size: Shows the IO big or small
+* Average read latency
+* Average write latency
+* Burst balance: For gp2 type of volume 
