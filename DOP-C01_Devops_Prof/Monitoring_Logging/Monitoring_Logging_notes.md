@@ -165,3 +165,7 @@ https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-sharing-lo
 **What is Streaming ETL?**
 
 Streaming ETL is the processing and movement of real-time data from one place to another. ETL is short for the database functions extract, transform, and load. Extract refers to collecting data from some source. Transform refers to any processes performed on that data. Load refers to sending the processed data to a destination, such as a warehouse, a datalake, or an analytical tool.
+
+**What is Amazon Kinesis Data Firehose?**
+
+Kinesis Data Firehose is a streaming ETL solution. It is the easiest way to load streaming data into data stores and analytics tools. It can capture, transform, and load streaming data into Amazon S3, Amazon Redshift, Amazon OpenSearch Service, and Splunk
