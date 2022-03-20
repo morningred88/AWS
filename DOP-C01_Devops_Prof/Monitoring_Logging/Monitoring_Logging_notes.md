@@ -169,3 +169,14 @@ Streaming ETL is the processing and movement of real-time data from one place to
 **What is Amazon Kinesis Data Firehose?**
 
 Kinesis Data Firehose is a streaming ETL solution. It is the easiest way to load streaming data into data stores and analytics tools. It can capture, transform, and load streaming data into Amazon S3, Amazon Redshift, Amazon OpenSearch Service, and Splunk
+
+# CloudWatch
+
+## Metrics need to know
+
+### EC2 metrics
+
+* Disk reads, disk read operations, disk write, disk write operations are only available for instance store EC2. If you have EBS EC2, you only get the disk information directly from EBS service. 
+* CPU Credit usage and CPU Credit balance only for T2/T3 instances
+
+But we cannot get RAM and process information
