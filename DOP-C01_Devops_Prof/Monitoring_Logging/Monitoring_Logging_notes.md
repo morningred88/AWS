@@ -170,6 +170,10 @@ Streaming ETL is the processing and movement of real-time data from one place to
 
 Kinesis Data Firehose is a streaming ETL solution. It is the easiest way to load streaming data into data stores and analytics tools. It can capture, transform, and load streaming data into Amazon S3, Amazon Redshift, Amazon OpenSearch Service, and Splunk
 
+Reference:
+
+https://aws.amazon.com/kinesis/data-firehose/faqs/
+
 # CloudWatch
 
 ## Metrics need to know
@@ -207,3 +211,20 @@ But we cannot get how much is the space left in EBS
 * Total instance (count)
 
 Group metrics is the same as for the EC2 instance in ASG, but aggregated. It needs to be enabled. 
+
+### Load balancers metrics
+
+* Target response time
+* Request (count)
+* HTTP 5xx (count): 5xx errors
+* HTTP 4xx (count): 4xx errors
+* ELB 4xx (count): 4xx errors
+* ELB 5xx (count): 5xx errors
+* Client TLS Negotiation error: SSL error
+* Target TLS Negotiation error: SSL error
+* Target connection error
+* Sum rejected connections
+* **Active connect count**
+* **New connect count**
+* Processed bytes
+* Consumed Load Balancer capacity units: This is how AWS bill you
