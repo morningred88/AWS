@@ -228,3 +228,23 @@ Group metrics is the same as for the EC2 instance in ASG, but aggregated. It nee
 * **New connect count**
 * Processed bytes
 * Consumed Load Balancer capacity units: This is how AWS bill you
+
+### RDS metrics
+
+* CPU Utilization
+* Database connection
+* Bin Log Disk usage: How much disk has been used
+* Freeable Memory
+* Free storage space
+* Read IOPS
+* Read latercy
+* Read Throughput
+* Swap usage
+
+Swap is hard disk space used as RAM. It is (relatively speaking) **very** slow, but stops computers from crashing when they are trying to deal with more data then their RAM can handle.
+
+To stop processes from using swap — install more RAM.
+
+**Reference:**
+
+https://serverfault.com/questions/48486/what-is-swap-memory
