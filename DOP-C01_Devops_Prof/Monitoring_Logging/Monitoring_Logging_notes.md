@@ -257,3 +257,8 @@ https://serverfault.com/questions/48486/what-is-swap-memory
 * Up to 10 dimensions in one custom metric
 * We use AWS CLI to push these metrics
 
+### put-metric-data Api
+
+* Create custom metrics and custom name spaces
+* Push single data point
+* Publishing statistic set, such as sum, minimum, maxmum
