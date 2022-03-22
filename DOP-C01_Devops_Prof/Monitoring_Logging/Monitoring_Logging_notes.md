@@ -248,3 +248,12 @@ To stop processes from using swap — install more RAM.
 **Reference:**
 
 https://serverfault.com/questions/48486/what-is-swap-memory
+
+## Custom metric
+
+* Standard resolution: one minute granularity
+* High resolution: one second granularity
+
+* Up to 10 dimensions in one custom metric
+* We use AWS CLI to push these metrics
+
