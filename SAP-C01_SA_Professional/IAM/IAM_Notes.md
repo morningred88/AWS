@@ -8,7 +8,13 @@
 
 * Instance profiles are usually recommended over configuring a static access key as they are considered more secure and easier to maintain.
 
+### Instance Profiles Working principle
 
+EC2 shares the credentials with the application running on EC2 through the [metadata service](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html). 
+
+The instance profile credentials are exposed on `http://169.254.169.254/latest/meta-data/iam/security-credentials/`. When you `curl` this URL on an EC2 instance, you will get the name of the instance profile attached to the instance. When you `curl` the same URL with the instance profile name at the end, you get the temporary credentials as JSON. The metadata service will return access key id, secret access key, a token, and the expiration date of the temporary credentials.
+
+If you are going to use these credentials manually, remember that the token is required. Normal user access keys don’t have a token, but temporary credentials require it.
 
 ## Access Advisor vs Access Analyzer
 
