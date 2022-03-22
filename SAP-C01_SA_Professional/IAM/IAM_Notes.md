@@ -1,4 +1,14 @@
-## Identity and Federation
+## IAM
+
+## Instance profile (EC2 instance role)
+
+* Use an instance profile to pass an IAM role to an EC2 instance.  
+
+* **You can attach only one role to ec2 instance**.
+
+* Instance profiles are usually recommended over configuring a static access key as they are considered more secure and easier to maintain.
+
+
 
 ## Access Advisor vs Access Analyzer
 
