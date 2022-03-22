@@ -262,3 +262,14 @@ https://serverfault.com/questions/48486/what-is-swap-memory
 * Create custom metrics and custom name spaces
 * Push single data point
 * Publishing statistic set, such as sum, minimum, maxmum
+
+## Export of CloudWatch metrics
+
+We can export CloudWatch metrics to other AWS service, such as s3, using Api call `get-metric-statistics`.
+
+If it is just one Time use, we can just use AWS cli
+
+If we want to export regularly, then we need to automate it by creating a cron job and invoke Lambda function. Lambda function will have 2 api calls:
+
+* `get-metric-statistics` to get metric data
+* Put the data into s3
