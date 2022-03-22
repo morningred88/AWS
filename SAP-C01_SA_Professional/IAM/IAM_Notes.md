@@ -16,6 +16,16 @@ The instance profile credentials are exposed on `http://169.254.169.254/latest/m
 
 If you are going to use these credentials manually, remember that the token is required. Normal user access keys don’t have a token, but temporary credentials require it.
 
+### Managing instance profiles (console)
+
+If you use the AWS Management Console to create a role for Amazon EC2, the console automatically creates an instance profile and gives it the same name as the role. When you then use the Amazon EC2 console to launch an instance with an IAM role, you can select a role to associate with the instance. In the console, the list that's displayed is actually a list of instance profile names. The console does not create an instance profile for a role that is not associated with Amazon EC2.
+
+Reference:
+
+https://kichik.com/2020/09/08/how-does-ec2-instance-profile-work/#:~:text=The%20instance%20profile%20credentials%20are,profile%20attached%20to%20the%20instance.
+
+https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html
+
 ## Access Advisor vs Access Analyzer
 
 **Access Advisor**: in under an user or a role, shows permission granted and when last accessed.
