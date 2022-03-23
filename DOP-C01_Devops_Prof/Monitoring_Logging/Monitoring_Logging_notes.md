@@ -273,3 +273,9 @@ If we want to export regularly, then we need to automate it by creating a cron j
 
 * `get-metric-statistics` to get metric data
 * Put the data into s3
+
+## CloudWatch alarms
+
+* We can create CloudWatch alarms based on the CloudWatch metrics
+* Any metric can be used to create alarm, including custom metric
+* We cannot create a rule for CloudWatch alarm in CloudWatch Event
