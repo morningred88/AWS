@@ -279,3 +279,18 @@ If we want to export regularly, then we need to automate it by creating a cron j
 * We can create CloudWatch alarms based on the CloudWatch metrics
 * Any metric can be used to create alarm, including custom metric
 * We cannot create a rule for CloudWatch alarm in CloudWatch Event
+
+### Create a CloudWatch alarm
+
+* One alarm can only use **one** metric
+
+* Alarm condition can be based on **statistic** or **anomaly detection**
+* Alarm notification:
+  * SNS topic
+  * Auto scaling action 
+    - ASG group
+    - ECS
+  * EC2 action: only for EC2 metrics
+    * Terminate instance
+    * Stop instance
+    * Reboot instance
