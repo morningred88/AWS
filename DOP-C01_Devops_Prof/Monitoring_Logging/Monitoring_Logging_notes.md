@@ -280,7 +280,7 @@ If we want to export regularly, then we need to automate it by creating a cron j
 * Any metric can be used to create alarm, including custom metric
 * We cannot create a rule for CloudWatch alarm in CloudWatch Event
 
-### Create a CloudWatch alarm
+### Creating a CloudWatch alarm
 
 * One alarm can only use **one** metric
 
@@ -294,3 +294,9 @@ If we want to export regularly, then we need to automate it by creating a cron j
     * Terminate instance
     * Stop instance
     * Reboot instance
+
+## Unified CloudWatch agent 
+
+* It is called unified agent, because it can push both metrics and logs to CloudWatch metrics and CloudWatch logs. 
+* After the agent is installed and configured in EC2 instance, we saved the configuration file into SSM parameter store. 
+* The we all the instances run the userdata can fetch the parameter to install CloudWatch agent.
