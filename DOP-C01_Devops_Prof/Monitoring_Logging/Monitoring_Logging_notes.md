@@ -300,3 +300,8 @@ If we want to export regularly, then we need to automate it by creating a cron j
 * It is called unified agent, because it can push both metrics and logs to CloudWatch metrics and CloudWatch logs. 
 * After the agent is installed and configured in EC2 instance, we saved the configuration file into SSM parameter store. 
 * The we all the instances run the userdata can fetch the parameter to install CloudWatch agent.
+
+## Metric filter 
+
+* You can create a custom metric based on the pattern in logs, such as finding 404 error.
+* Metric filter is on the log group level
