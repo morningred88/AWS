@@ -317,3 +317,23 @@ EventBridge> Cronejob> Invoke Lambda function to call the api above.
 Drawback: may have delay depending the crone job interval
 
 We also use CloudWatch log subscription to get the log delivery to S3 a bit quickly, but also more expensive.
+
+## CloudWatch log subscription
+
+* a **real-time feed** of log events from CloudWatch Logs
+
+* You can set a **subscription filter** to filter out the log 
+
+* The logs can be delivered to other services such as:
+
+  * an Amazon Kinesis stream, **real time** processing
+  * an Amazon Kinesis Data Firehose stream, **near real time**, Firehose need to wait buffer to be filled, depending on the Firehose setting we made. 
+  * or AWS Lambda for custom processing, **real time** processing
+
+  We also see Open Search in the console, it is actually use underlying Lamba function to deliver the logs to Open Search
+
+## All kind of logs
+
+* Application logs
+* Operating System logs
+* Access logs
