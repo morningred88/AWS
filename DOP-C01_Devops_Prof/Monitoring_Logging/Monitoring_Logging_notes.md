@@ -305,3 +305,15 @@ If we want to export regularly, then we need to automate it by creating a cron j
 
 * You can create a custom metric based on the pattern in logs, such as finding 404 error.
 * Metric filter is on the log group level
+
+## Exporting CloudWatch logs to S3
+
+AWS console> select a log group> Action> Export data to S3 >
+
+If you want to automate the process:
+
+EventBridge> Cronejob> Invoke Lambda function to call the api above.
+
+Drawback: may have delay depending the crone job interval
+
+We also use CloudWatch log subscription to get the log delivery to S3 a bit quickly, but also more expensive.
