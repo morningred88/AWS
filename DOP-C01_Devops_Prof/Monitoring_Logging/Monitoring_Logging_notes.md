@@ -374,3 +374,10 @@ A event rule can have multiple targets.
 * Does not include all S3 event, for the rest you need to use CloudWatch event:
   * Bucket level API call via CloudTrail
   * Object level API call via CloudTrail: must have trail created in CloudTrail
+
+## CloudWatch Dashboard
+
+* You will get billed for each dashboard created
+* You can add widget in different region
+* The widgets can be correlated, like Power BI dashboard
+* AWS provides automatic dashboard for 17 services currently
