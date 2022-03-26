@@ -112,3 +112,9 @@ You can use CloudHSM as SSL accelerator to offload SSL to CloudHSM.
 ## S3 Security
 
 For SSE-C, you are mandatory to use HTTPS, because you sending  the encryption key over the internet. We don't want someone to do man-in-the-middle-attack to retrieve your encryption key. 
+
+## Network security, DDos, Shield & WAF
+
+### Host firewall
+
+This is firewall to EC2 instance. It is software based, and highly customizable. There is no AWS specific software for doing host firewall. It is up to you to find something you like, and have this extra level protection on your EC2 instances. 
