@@ -102,3 +102,10 @@ Once the connection is established, symmetric key algorithm (shared key) is used
 https://www.youtube.com/watch?v=33VYnE7Bzpk&t=308s
 
 https://www.tutorialsteacher.com/https/how-ssl-works
+
+## CloudHSM
+
+SSL acceleration refers to **off-loading** processor-intensive SSL encryption and decryption from a server to a device configured to accelerate the SSL encryption/decryption routine.
+
+You can use CloudHSM as SSL accelerator to offload SSL to CloudHSM.
+
