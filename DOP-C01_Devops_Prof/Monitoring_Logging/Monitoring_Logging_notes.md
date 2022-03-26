@@ -362,3 +362,15 @@ An access log is a list of all requests for individual files -- such as [Hyperte
 Note:
 
 A event rule can have multiple targets.
+
+## S3 event notification
+
+* Unrelated to CloudWatch event
+* All object level operation
+* Targets:
+  * SNS
+  * SQS
+  * Lambda function
+* Does not include all S3 event, for the rest you need to use CloudWatch event:
+  * Bucket level API call via CloudTrail
+  * Object level API call via CloudTrail: must have trail created in CloudTrail
