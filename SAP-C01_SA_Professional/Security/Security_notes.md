@@ -109,3 +109,6 @@ SSL acceleration refers to **off-loading** processor-intensive SSL encryption an
 
 You can use CloudHSM as SSL accelerator to offload SSL to CloudHSM.
 
+## S3 Security
+
+For SSE-C, you are mandatory to use HTTPS, because you sending  the encryption key over the internet. We don't want someone to do man-in-the-middle-attack to retrieve your encryption key. 
