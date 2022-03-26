@@ -351,3 +351,14 @@ An access log is a list of all requests for individual files -- such as [Hyperte
 * ELB
 * Route 53
 * Web server, such as HTTPD access logs
+
+## Creating event rule with CloudTrail API 
+
+* Events from API actions that start with the keywords List, Get, or Describe are not processed by EventBridge. 
+* We can create a event rule based on the API call.
+* **Detail-type** -  **AWS API Call via CloudTrail** as the value for . 
+* Data events (for example, for Amazon S3 object level events, DynamoDB, and AWS Lambda) must have trails configured to receive those events
+
+Note:
+
+A event rule can have multiple targets.
