@@ -337,3 +337,9 @@ We also use CloudWatch log subscription to get the log delivery to S3 a bit quic
 * Application logs
 * Operating System logs
 * Access logs
+
+### Access logs
+
+#### What is an access log?
+
+An access log is a list of all requests for individual files -- such as [Hypertext Markup Language](https://www.theserverside.com/definition/HTML-Hypertext-Markup-Language) files, their embedded graphic images and other associated files that get transmitted -- that people or [bots](https://www.techtarget.com/whatis/definition/bot-robot) have made from a website.
