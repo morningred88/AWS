@@ -118,3 +118,14 @@ For SSE-C, you are mandatory to use HTTPS, because you sending  the encryption k
 ### Host firewall
 
 This is firewall to EC2 instance. It is software based, and highly customizable. There is no AWS specific software for doing host firewall. It is up to you to find something you like, and have this extra level protection on your EC2 instances. 
+
+### WAF
+
+* Define Web ACL
+
+* WAF can only be in
+  * ALB
+  * CloudFront
+  * API Gateway
+
+WAF is more against application level protections. But it can still help you filter out some request based on rules to survive from DDoS attack. 
