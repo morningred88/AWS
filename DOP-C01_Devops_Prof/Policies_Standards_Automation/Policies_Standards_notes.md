@@ -16,3 +16,13 @@ Currently it has 5 role to choose, but you can create your own IAM role
 
 ![EC2_instance_profile2](Policies_standards_images\EC2_instance_profile2.png)
 
+## SSM - EC2 setup
+
+I launched an instance, select
+
+* Platform: Amazon Linux instance
+* InstanceProfile: EC2RoleForSSM
+
+Then the instance appears on SSM Fleet manager.
+
+Note: AWS managed instance start with "i"
