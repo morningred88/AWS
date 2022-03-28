@@ -44,3 +44,12 @@ Note: On-premise instance start with letter "mi"
 *  Tag based
 *  CloudFormation stack based: We can create one resource group for all resources from one CloudFormation stack. 
 
+## SSM- Patch manager
+
+Step 1: Create **patch baseline**. Patch baseline is created based on the Operating System
+
+Step 2: Create maintenance window/
+
+Step 3: In the created maintenance Window, register target for maintenance window.
+
+Step 4: In the created maintenance Window, register task - run command, **AWS-RunPatchBaseline**. This command will run all the patch baseball suitable for the target of the maintenance Window
