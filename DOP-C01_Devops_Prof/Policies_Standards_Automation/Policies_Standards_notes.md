@@ -53,3 +53,9 @@ Step 2: Create maintenance window/
 Step 3: In the created maintenance Window, register target for maintenance window.
 
 Step 4: In the created maintenance Window, register task - run command, **AWS-RunPatchBaseline**. This command will run all the patch baseball suitable for the target of the maintenance Window
+
+### SSM - Inventory
+
+Inventory is used to list all the staff running on the target instances tracked by SSM Agent. But more importantly, you are able to see what is available for each instances.
+
+You can set up inventory filtered by resource groups, tags or inventory types.
