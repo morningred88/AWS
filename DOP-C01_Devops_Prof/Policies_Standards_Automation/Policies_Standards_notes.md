@@ -36,3 +36,11 @@ Step 2: Hybrid activation in SSM
 Step 3: Start SSM agent,  instance appears on SSM Fleet manager
 
 Note: On-premise instance start with letter "mi"
+
+## SSM - Resource group
+
+2 types:
+
+*  Tag based
+*  CloudFormation stack based: We can create one resource group for all resources from one CloudFormation stack. 
+
