@@ -26,3 +26,13 @@ I launched an instance, select
 Then the instance appears on SSM Fleet manager.
 
 Note: AWS managed instance start with "i"
+
+## SSM - on premise setup
+
+Step 1: Download and install SSM agent
+
+Step 2: Hybrid activation in SSM
+
+Step 3: Start SSM agent,  instance appears on SSM Fleet manager
+
+Note: On-premise instance start with letter "mi"
