@@ -85,3 +85,9 @@ The article below shows much complicated automation process and more AWS resourc
 Building a Secure, Approved AMI Factory Process Using Amazon EC2 Systems Manager (SSM), AWS Marketplace, and AWS Service catalog
 
 chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=https%3A%2F%2Fd1.awsstatic.com%2Fwhitepapers%2Faws-building-ami-factory-process-using-ec2-ssm-marketplace-and-service-catalog.pdf&clen=434558&chunk=true
+
+## SSM- Session manager
+
+When you start a session to a EC2 instance from session manager, you SSH to the instance. All the session is recorded,   you can come back to check the session history to know, who and when did what changes. 
+
+You can also do session manager to on-premise instances.
