@@ -59,3 +59,29 @@ Step 4: In the created maintenance Window, register task - run command, **AWS-Ru
 Inventory is used to list all the staff running on the target instances tracked by SSM Agent. But more importantly, you are able to see what is available for each instances.
 
 You can set up inventory filtered by resource groups, tags or inventory types.
+
+### SSM - Automations
+
+Labs: create a fully patched golden AMI, assess the AMI afterwards. 
+
+Step 1: In SSM automation
+
+We select automation document **AWS-UpdateLinuxAmi**, add all the parameters, such as resource ami ID, roles. In around 5 minutes, the process is completed, ami-ID of fully patched EC2 instance was created and show as output. 
+
+Step 2: Create a CloudWatch event rule
+
+* Service name: SSM
+* Event type: Automation
+* Specific detail type: EC2 automation execution status changed
+* Status: Success
+* Target: Inspector assessment template, to assess the created AMI
+
+From above, you can see **Automation is fully integrated with CloudWatch events**. After automation is done, you can create a CloudWatch event to choose a target to run the test. 
+
+The article below shows much complicated automation process and more AWS resources involved. 
+
+**Reference:**
+
+Building a Secure, Approved AMI Factory Process Using Amazon EC2 Systems Manager (SSM), AWS Marketplace, and AWS Service catalog
+
+chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=https%3A%2F%2Fd1.awsstatic.com%2Fwhitepapers%2Faws-building-ami-factory-process-using-ec2-ssm-marketplace-and-service-catalog.pdf&clen=434558&chunk=true
