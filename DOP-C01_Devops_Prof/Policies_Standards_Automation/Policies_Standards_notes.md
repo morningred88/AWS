@@ -99,3 +99,10 @@ You can also do session manager to on-premise instances.
 * Ensure instance has proper AWS configuration
 
 * Config help us to audit, track the compliance state of the resources over the time. We can build automation to react and remediate on the compliance issues. 
+
+### Dashboard
+
+* Get all resources included
+* How many rules we have
+* How many resources compliant or noncompliant
+* List of noncompliant rule, you can click to the resources to check the details and remediate the resource.
