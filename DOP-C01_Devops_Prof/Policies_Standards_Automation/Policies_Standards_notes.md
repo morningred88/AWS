@@ -91,3 +91,11 @@ chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=https%3A%
 When you start a session to a EC2 instance from session manager, you SSH to the instance. All the session is recorded,   you can come back to check the session history to know, who and when did what changes. 
 
 You can also do session manager to on-premise instances.
+
+# Config
+
+## Overview
+
+* Ensure instance has proper AWS configuration
+
+* Config help us to audit, track the compliance state of the resources over the time. We can build automation to react and remediate on the compliance issues. 
