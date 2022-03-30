@@ -123,4 +123,12 @@ In each time point of the timeline, you can track:
 
 Additionally, all the data is available in S3 bucket, we can use Athena to track it. 
 
-You can export configuration items as Json document
+You can export configuration items as Json document.
+
+### Rules
+
+Rules is most important part of Config. Config check if the resources is compliant with the rules. 
+
+Each time when you add it a rule, it costs $1 per month.
+
+You can use and edit AWS managed rule or create your own rule.
