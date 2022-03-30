@@ -132,3 +132,13 @@ Rules is most important part of Config. Config check if the resources is complia
 Each time when you add it a rule, it costs $1 per month.
 
 You can use and edit AWS managed rule or create your own rule.
+
+## Config automation
+
+### CloudWatch Event
+
+CloudWatch rule can be set to automatically react when the rule not compliant.
+
+### Config rules
+
+You can set remediation directly in config rules. This allow you to use SSM automation to execution remediation action. 
