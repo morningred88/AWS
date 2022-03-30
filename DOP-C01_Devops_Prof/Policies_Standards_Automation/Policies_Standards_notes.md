@@ -142,3 +142,7 @@ CloudWatch rule can be set to automatically react when the rule not compliant.
 ### Config rules
 
 You can set remediation directly in config rules. This allow you to use SSM automation to execution remediation action. 
+
+### Summary of automation
+
+Both CloudWatch Event and Config rules are possible to achieve remediation. But CloudWatch event have more target possiblities. 
