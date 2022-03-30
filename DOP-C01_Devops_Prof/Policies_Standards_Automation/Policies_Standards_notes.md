@@ -106,3 +106,21 @@ You can also do session manager to on-premise instances.
 * How many rules we have
 * How many resources compliant or noncompliant
 * List of noncompliant rule, you can click to the resources to check the details and remediate the resource.
+
+### Resources in Config:
+
+For each resource in the config, show the compliance state for the Timeline:
+
+* Configuration timeline
+* Compliance timeline
+
+In each time point of the timeline, you can track:
+
+* Configuration details
+* Change
+* Relationship: With other AWS resources
+* CloudTrail: If we want to know who changes what
+
+Additionally, all the data is available in S3 bucket, we can use Athena to track it. 
+
+You can export configuration items as Json document
