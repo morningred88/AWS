@@ -147,6 +147,10 @@ You can use and edit AWS managed rule or create your own rule.
 
 ## Config automation
 
+### SNS
+
+If you need your operational insight sent to slack channel about what is going on in Config, you can use SNS topic.  You can set SNS in Settings. It is not on rule level, you can not set in on rule level.
+
 ### CloudWatch Event
 
 CloudWatch rule can be set to automatically react when the rule not compliant.
