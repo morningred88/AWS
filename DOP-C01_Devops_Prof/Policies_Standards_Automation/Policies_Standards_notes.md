@@ -149,7 +149,7 @@ You can use and edit AWS managed rule or create your own rule.
 
 ### SNS
 
-If you need your operational insight sent to slack channel about what is going on in Config, you can use SNS topic.  You can set SNS in Settings. It is not on rule level, you can not set in on rule level.
+If you need your operational insight sent to slack channel about what is going on in Config, you can use SNS topic.  You can set SNS in Settings. It is not on rule level, you can not set it on rule level.
 
 ### CloudWatch Event
 
@@ -178,3 +178,20 @@ Use case:  see github Trust Advisor tools
 Reference: 
 
 https://github.com/aws/Trusted-Advisor-Tools
+
+## Config - Multi account
+
+To collect config data from multi account and multi region
+
+Step 1: Create an aggregator in main account
+
+* Add individual AWS accounts or AWS Organization
+* Add regions - add all regions you want to collect the config data. 
+
+Step 2: From individual account
+
+* Enable Config
+
+* Add authorization from individual account, specify
+  * Aggregator account number
+  * Aggregator region: Only
