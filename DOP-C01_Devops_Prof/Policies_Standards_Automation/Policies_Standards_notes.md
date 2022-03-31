@@ -146,3 +146,19 @@ You can set remediation directly in config rules. This allow you to use SSM auto
 ### Summary of automation
 
 Both CloudWatch Event and Config rules are possible to achieve remediation. But CloudWatch event have more target possiblities. 
+
+## Automation with CloudWatch event
+
+We can use CloudWatch event for Trusted Advisor to trigger the automation.
+
+Use case:  see github Trust Advisor tools
+
+[Stop Amazon EC2 instances with low utilization](https://github.com/aws/Trusted-Advisor-Tools/blob/master/LowUtilizationEC2Instances)
+
+[Create snapshots for EBS volumes with no recent backup](https://github.com/aws/Trusted-Advisor-Tools/blob/master/AmazonEBSSnapshots)
+
+[Delete exposed IAM Keys and monitor usage](https://github.com/aws/Trusted-Advisor-Tools/blob/master/ExposedAccessKeys) This one can also be triggered using Health
+
+Reference: 
+
+https://github.com/aws/Trusted-Advisor-Tools
