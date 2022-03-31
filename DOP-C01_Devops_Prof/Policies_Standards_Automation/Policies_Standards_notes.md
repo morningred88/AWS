@@ -133,6 +133,18 @@ Each time when you add it a rule, it costs $1 per month.
 
 You can use and edit AWS managed rule or create your own rule.
 
+#### Creating a custom rule to evaluate resources
+
+* Need a Lambda function
+* Trigger: you can choose either one or both
+  * Configuration changes
+  * Periodic
+* Scope of changes:
+  * Resources
+  * Tags
+  * All changes
+* Rule parameter: optional
+
 ## Config automation
 
 ### CloudWatch Event
