@@ -207,3 +207,10 @@ Step 2: From individual account
 
 * Network assessment: outside of OS, Inspector agent not required
 * Host assessment: Within OS, Inspector agent required
+
+### Assessment template
+
+Inspector will run to check the instance or networking according to the assessment template.
+
+* SNS notification is included in the template. It is only automation you get for Inspector. But SNS can trigger a Lambda function, to leveage SSM to perform automated remediation.
+* You can create your custom template
