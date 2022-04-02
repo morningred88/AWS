@@ -195,3 +195,10 @@ Step 2: From individual account
 * Add authorization from individual account, specify
   * Aggregator account number
   * Aggregator region: Only
+
+# Inspector
+
+* Security Vulnerabilities scan for EC2 instances
+* Inspector does not launch EC2 instance for you
+* You cannot create CloudWatch event rule for Insepector. But Inspector can be a target of a event rule, see details in SSM automation. 
+* EC2 instance needs to have SSM agent installed and SSM role to make sure that Inspector can install Inspector agent by its own. 
