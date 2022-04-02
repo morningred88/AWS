@@ -214,3 +214,14 @@ Inspector will run to check the instance or networking according to the assessme
 
 * SNS notification is included in the template. It is only automation you get for Inspector. But SNS can trigger a Lambda function, to leveage SSM to perform automated remediation.
 * You can create your custom template
+
+# Trusted Advisor
+
+Tursted advisor is global service.
+
+You need to go to us-east-1 to find the CloudWatch event for it. 
+
+## 2 Tiers service
+
+* Free tier
+* Business subscription 
