@@ -202,3 +202,8 @@ Step 2: From individual account
 * Inspector does not launch EC2 instance for you
 * You cannot create CloudWatch event rule for Insepector. But Inspector can be a target of a event rule, see details in SSM automation. 
 * EC2 instance needs to have SSM agent installed and SSM role to make sure that Inspector can install Inspector agent by its own. 
+
+### Assessment set up
+
+* Network assessment: outside of OS, Inspector agent not required
+* Host assessment: Within OS, Inspector agent required
