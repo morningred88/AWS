@@ -225,3 +225,13 @@ You need to go to us-east-1 to find the CloudWatch event for it.
 
 * Free tier
 * Business subscription 
+
+## Advertising categories 
+
+Trusted advisor have recommendation to your account in 5 categories:
+
+* Cost optimization
+* Security
+* Fault tolerance
+* Performance
+* Service limit
