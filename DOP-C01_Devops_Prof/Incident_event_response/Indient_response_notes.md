@@ -22,3 +22,6 @@ Advanced way to launch configuration. From template, we can launch:
 * You can define source template, if you want to create template from the existing template as parent. It can create hierarchy. 
 * We have both instance tags and template tags
 
+### Creating ASG with launch template
+
+Fleet composition: You can choose `Combine purchase options and instance types`, which means you can choose a mix of on-demand instances and spot instances and multiple instance types. 
