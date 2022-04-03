@@ -235,3 +235,21 @@ Trusted advisor have recommendation to your account in 5 categories:
 * Fault tolerance
 * Performance
 * Service limit
+
+## Trusted Advisor - Automation
+
+
+### Automation with CloudWatch alarm for tracking the service limit
+
+The CloudWatch metrics is only visible for Business subscription.
+
+### Automating refreshes
+
+You can do the api call every 5 minutes
+
+2 Api calls
+
+* refresh-trusted-advisor-check
+* describe-trusted-advisor-check-result
+
+You can create a Lambda function to run the Apis every hour.
