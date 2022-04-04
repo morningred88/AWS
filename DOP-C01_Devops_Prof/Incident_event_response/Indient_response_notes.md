@@ -25,3 +25,13 @@ Advanced way to launch configuration. From template, we can launch:
 ### Creating ASG with launch template
 
 Fleet composition: You can choose `Combine purchase options and instance types`, which means you can choose a mix of on-demand instances and spot instances and multiple instance types. 
+
+## ASG Scaling policies
+
+### Important parameters
+
+#### Default cooldown
+
+The number of second after a scaling activity complete before another can begin. 
+
+Default: 300 s
