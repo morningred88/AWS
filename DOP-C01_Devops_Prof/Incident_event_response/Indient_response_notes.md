@@ -47,3 +47,23 @@ If you set this number bigger than cooldown, it will happen that more instances 
 #### Disable scale-in
 
 No termination instances, only create instances
+
+### Policies
+
+#### Target tracking
+
+AWS create CloudWatch alarms based on the metrics we selected and value we entered.
+
+**Metrics to track:**
+
+* Average network in
+* Average network out
+* Average CPU utilization
+
+#### Simple scaling policy
+
+We can based on any alarm we created in advanced add or remove instances. 
+
+#### Step scaling
+
+More steps of simple scaling
