@@ -35,3 +35,11 @@ Fleet composition: You can choose `Combine purchase options and instance types`,
 The number of second after a scaling activity complete before another can begin. 
 
 Default: 300 s
+
+#### Instance warm up 
+
+How long needs to wait for the value comes to CloudWatch metrics. For example, we want to track Average CPU utilization for a target tracking scaling. When the new instance launched, the CPU utilization for this instance is 0. 
+
+Default: 60 s
+
+If you set this number bigger than cooldown, it will happen that more instances will be launched. 
