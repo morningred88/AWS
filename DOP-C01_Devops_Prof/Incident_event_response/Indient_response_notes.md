@@ -43,3 +43,7 @@ How long needs to wait for the value comes to CloudWatch metrics. For example, w
 Default: 60 s
 
 If you set this number bigger than cooldown, it will happen that more instances will be launched. 
+
+#### Disable scale-in
+
+No termination instances, only create instances
