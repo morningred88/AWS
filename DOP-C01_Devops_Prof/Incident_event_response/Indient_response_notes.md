@@ -87,3 +87,19 @@ Step 3: Edit target group demo-target-group
 * Change attribute **Slow start duration** to 60 s. That means from 0 to 60 s, load balancer will gradually send traffic to the instances. So the instance can warm up the cache.  After 60 s, load balancer will send full traffic to it. 
 
   ![ASG_Attributes](Incident_response_images\ASG_Attributes.png)
+
+## ASG - HTTPS on ALB
+
+### Requesting a SSL Certification
+
+Step 1: Go to Route 53, create a domain name: muhutech.com
+
+Step 2: Go to ACM, request a certificate 
+
+* Add a domain name in ACM: app.muhutech.com
+* Select verification method: DNS validation
+* ACM created a CName record for Route 53 to validate
+
+Step 3: Add CName record to Route 53, in order to verify that we do have the right to use the domain name
+
+Step 4:  After verified by Route 53, ACM issued the certificate. 
