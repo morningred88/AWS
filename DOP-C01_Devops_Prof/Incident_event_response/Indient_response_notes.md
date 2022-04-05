@@ -67,3 +67,23 @@ We can based on any alarm we created in advanced add or remove instances.
 #### Step scaling
 
 More steps of simple scaling
+
+## ASG - ALB integration
+
+Step 1: Create ALB, set:
+
+* Instance
+* New target group: demo-target-group
+* Health check
+
+Step 2: Update launch template
+
+* Add **Target group**: demo-target-group
+* Change Health Check Type: From **EC2** to **ELB**
+* Add Health check grace period: 60 s
+
+Step 3: Edit target group demo-target-group
+
+* Change attribute **Slow start duration** to 60 s. That means from 0 to 60 s, load balancer will gradually send traffic to the instances. So the instance can warm up the cache.  After 60 s, load balancer will send full traffic to it. 
+
+  ![ASG_Attributes](Incident_response_images\ASG_Attributes.png)
