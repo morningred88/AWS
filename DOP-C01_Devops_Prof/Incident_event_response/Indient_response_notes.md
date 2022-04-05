@@ -103,3 +103,17 @@ Step 2: Go to ACM, request a certificate
 Step 3: Add CName record to Route 53, in order to verify that we do have the right to use the domain name
 
 Step 4:  After verified by Route 53, ACM issued the certificate. 
+
+### Adding HTTPS to ALB
+
+#### Adding listener
+
+AWS console > ELB> To our ALB>**Listener** setting>**Add Listener** button>Protocol - HTTPS, port - 443, SSL certificate from above, Default action - Forward to demo-target-group>save
+
+#### Updating security group
+
+Add port 443 for HTTPS protocol from anywhere
+
+#### How to force to use HTTPS instead of HTTP
+
+AWS console > ELB> To our ALB>**Listener** setting> select Listen HTTP:80> Change Default action: remove forward to demo-target-group, add redirect to HTTPS, 443>save
