@@ -121,3 +121,27 @@ AWS console > ELB> To our ALB>**Listener** setting> select Listen HTTP:80> Chang
 ## ASG- Suspending process
 
 suspend and then resume one or more of the processes for your Auto Scaling group. It is good for troubleshooting. For example, all the instances in ASG becomes unhealthy, we can suspend `ReplaceUnhealthy`, so we can troubleshoot what is the reason. 
+
+### Suspend and resume processes (console)
+
+You can suspend and resume individual processes or all processes.
+
+**To suspend and resume processes**  
+
+1. Open the Amazon EC2 Auto Scaling console at https://console.aws.amazon.com/ec2autoscaling/.
+
+2. Select the check box next to the Auto Scaling group.
+
+   A split pane opens up in the bottom part of the **Auto Scaling groups** page, showing information about the group that's selected.
+
+3. On the **Details** tab, choose **Advanced configurations**, **Edit**.
+
+4. For **Suspended processes**, choose the process to suspend.
+
+   To resume a suspended process, remove it from **Suspended processes**.
+
+5. Choose **Update**.
+
+Reference:
+
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html#as-suspend-resume
