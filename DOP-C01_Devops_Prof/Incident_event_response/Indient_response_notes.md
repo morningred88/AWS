@@ -159,3 +159,7 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processe
   * It does not affect the instances currently in ELB Target group. 
 
   * The new added instances will not be added to target group, but in ASG. When you remove the suspending, the instance will not be added automatically. You need manually register the instances to Target group. 
+
+### Instance setting in ASG
+
+![ASG_Instance_Setting](Incident_response_images\ASG_Instance_Setting.png)
