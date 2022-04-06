@@ -145,3 +145,17 @@ You can suspend and resume individual processes or all processes.
 Reference:
 
 https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html#as-suspend-resume
+
+### Processes to suspend
+
+![Suspend_processes](Incident_response_images\Suspend_processes.png)
+
+* Launch: suspend to terminate instances
+
+* Terminate: suspend to terminate instances 
+
+* Add to Load balancer: 
+
+  * It does not affect the instances currently in ELB Target group. 
+
+  * The new added instances will not be added to target group, but in ASG. When you remove the suspending, the instance will not be added automatically. You need manually register the instances to Target group. 
