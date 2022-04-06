@@ -117,3 +117,7 @@ Add port 443 for HTTPS protocol from anywhere
 #### How to force to use HTTPS instead of HTTP
 
 AWS console > ELB> To our ALB>**Listener** setting> select Listen HTTP:80> Change Default action: remove forward to demo-target-group, add redirect to HTTPS, 443>save
+
+## ASG- Suspending process
+
+suspend and then resume one or more of the processes for your Auto Scaling group. It is good for troubleshooting. For example, all the instances in ASG becomes unhealthy, we can suspend `ReplaceUnhealthy`, so we can troubleshoot what is the reason. 
