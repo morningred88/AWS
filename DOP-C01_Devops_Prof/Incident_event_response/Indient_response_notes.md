@@ -163,3 +163,14 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processe
 ### Instance setting in ASG
 
 ![ASG_Instance_Setting](Incident_response_images\ASG_Instance_Setting.png)
+
+#### Detach instance
+
+If you detach this instance, the detachment **cannot be undone**. Proceeding with this action will:
+
+- Remove this instance from the Auto Scaling group 
+- Replace this instance with a new running instance within the Auto Scaling group 
+
+Add a new instance to the Auto Scaling group to balance the load - Did not check this one
+
+Result: Instance is not more in ASG, desired capacity of ASG changed from 2 to 1. But I can see the instance in EC2 console. 
