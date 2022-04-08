@@ -200,3 +200,19 @@ This setting is good for trouble shooting, then we can put it back to service.
 Reference:
 
 https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-termination-policies.html#default-termination-policy
+
+## ASG - Integration with SQS
+
+### Senario 1: Scaling base on SQS backlog 
+
+We can use ASG to process the messages from SQS queue. ASG needs to scale in response to activity in an Amazon SQS queue. Amazon SQS metric like `ApproximateNumberOfMessagesVisible`can not be a metric for ASG scaling, because the number of instance keep changing. 
+
+We need to create a custom CloudWatch metric **Backlog per instance**, **acceptable backlog per instance** as target for the metric.
+
+Reference:
+
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-using-sqs-queue.html
+
+### Senario 2: Scale in protection for EC2 instance in ASG
+
+If EC2 instance needs to process long run task, SQS queue can send the EC2 instance a script to enable scale-in protection as long as the task is not done, and remove scale-in protection when the task is completed. 
