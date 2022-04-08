@@ -187,3 +187,16 @@ Add a new instance to the Auto Scaling group to balance the load - Did not check
 Result: Instance is still in ASG, desired capacity of ASG changed from 2 to 1. But when I set the instance in service, desired capacity of ASG changed back from 1 to 2. 
 
 This setting is good for trouble shooting, then we can put it back to service. 
+
+## Termination policy
+
+### Default termination policy
+
+* It first determines which **Availability Zones** have the most instances, and it finds at least one instance that is not protected from scale in. 
+* Within the selected Availability Zone, the following default termination policy behavior applies: the instances eligible for termination use the **oldest launch template or launch configuration**. 
+* After applying the preceding criteria, if there are multiple unprotected instances to terminate, determine which instances are **closest to the next billing hour**. 
+* If there are multiple unprotected instances closest to the next billing hour, terminate one of these instances at **random**.
+
+Reference:
+
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-termination-policies.html#default-termination-policy
