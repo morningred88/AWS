@@ -174,3 +174,16 @@ If you detach this instance, the detachment **cannot be undone**. Proceeding wit
 Add a new instance to the Auto Scaling group to balance the load - Did not check this one
 
 Result: Instance is not more in ASG, desired capacity of ASG changed from 2 to 1. But I can see the instance in EC2 console. 
+
+#### Set to Standby
+
+Proceeding with this action will:
+
+* Remove this instance from the Elastic Load Balancers associated with Auto Scaling group 
+* Increases the load on other instances in Auto Scaling group 
+
+Add a new instance to the Auto Scaling group to balance the load - Did not check this one
+
+Result: Instance is still in ASG, desired capacity of ASG changed from 2 to 1. But when I set the instance in service, desired capacity of ASG changed back from 1 to 2. 
+
+This setting is good for trouble shooting, then we can put it back to service. 
