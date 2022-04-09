@@ -222,3 +222,11 @@ If EC2 instance needs to process long run task, SQS queue can send the EC2 insta
 CloudWatch event, has duplicated event as for SNS, and much more. CloudWatch event's target is much more than SNS. So AWS recomment use CloudEvent than SNS. 
 
 ASG does not integrate with CloudWatch Log. You can install CloudWatch Agent in EC2 instance of ASG to get logs delivered to CloudWatch Log.
+
+## ASG - CloudFormation creation policy
+
+To make sure ASG creation is successful, we need each EC2 instances in AG to send a signal.  
+
+Creation policy: in ASG resource, define how many signal should receive and time out
+
+cfn-signal: In launch configuration resource, send out the signal
