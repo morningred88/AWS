@@ -230,3 +230,9 @@ To make sure ASG creation is successful, we need each EC2 instances in AG to sen
 Creation policy: in ASG resource, define how many signal should receive and time out
 
 cfn-signal: In launch configuration resource, send out the signal
+
+## ASG - CloudFormation Update policy
+
+Update policy: in ASG resource, define the update attribute
+
+launch configuration:  A change has been made to it. 
