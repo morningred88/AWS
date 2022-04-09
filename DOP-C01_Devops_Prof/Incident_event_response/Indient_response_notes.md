@@ -236,3 +236,25 @@ cfn-signal: In launch configuration resource, send out the signal
 Update policy: in ASG resource, define the update attribute
 
 launch configuration:  A change has been made to it. 
+
+### Update policy attribute
+
+- For `AWS::AutoScaling::AutoScalingGroup` resources, CloudFormation invokes one of three update policies depending on the type of change you make or whether a scheduled operation is associated with the Auto Scaling group.
+
+  - The `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies apply *only* when you complete one or more of the following:
+
+    - Change the Auto Scaling group's `AWS::AutoScaling::LaunchConfiguration`.
+    - Change the Auto Scaling group's `VPCZoneIdentifier` property.
+    - Change the Auto Scaling group's `LaunchTemplate` property.
+    - Update an Auto Scaling group that contains instances that don't match the current `LaunchConfiguration`.
+
+    If both the `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies are specified, setting the `WillReplace` property to `true` gives `AutoScalingReplacingUpdate` precedence.
+
+     `AutoScalingReplacingUpdate` : create new ASG group, same as blue/green in CodeDeploy, Immutable in EB.
+
+     `AutoScalingReplacingUpdate` : Change part of instance, such as 1 or 2 at a time
+
+  - The `AutoScalingScheduledAction` policy applies when you update a stack that includes an Auto Scaling group with an associated scheduled action.
+
+Reference:
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html
