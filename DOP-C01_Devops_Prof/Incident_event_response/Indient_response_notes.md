@@ -270,3 +270,16 @@ Step 2: Create CodeDeploy application, deployment group, deployment
 In deployment group, choose target as ASG, so when the new EC2 instance added to ASG, CodeDeploy will automatically deploy the application to the instance. 
 
 Blue/green deployment type for ASG: Use launch configuration to create a new ASG group and new instances, and we need load balancer for this type of deployment. After verifying the new ASG group is working, ELB will reroute the traffic from the old ASG to the new ASG. 
+
+## ASG- CodeDeploy integration troubleshooting
+
+Problem: When new Amazon EC2 instances are launched as part of an Amazon EC2 Auto Scaling group, CodeDeploy can deploy your revisions to the new instances automatically.
+
+2 solutions:
+
+* Redeploy CodeDeploy 
+* Set Suspend processes to Launch, so no instance can be launched during CodeDeploy deployment. 
+
+Reference:
+
+https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-auto-scaling.html
