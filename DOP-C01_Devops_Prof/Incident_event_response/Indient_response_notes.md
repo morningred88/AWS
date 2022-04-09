@@ -216,3 +216,9 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-using-sqs-queue.html
 ### Senario 2: Scale in protection for EC2 instance in ASG
 
 If EC2 instance needs to process long run task, SQS queue can send the EC2 instance a script to enable scale-in protection as long as the task is not done, and remove scale-in protection when the task is completed. 
+
+### Integration with CloudWatch
+
+CloudWatch event, has duplicated event as for SNS, and much more. CloudWatch event's target is much more than SNS. So AWS recomment use CloudEvent than SNS. 
+
+ASG does not integrate with CloudWatch Log. You can install CloudWatch Agent in EC2 instance of ASG to get logs delivered to CloudWatch Log.
