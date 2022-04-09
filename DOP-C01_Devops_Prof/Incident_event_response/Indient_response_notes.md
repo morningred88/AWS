@@ -296,3 +296,11 @@ https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-auto-sc
 LSI: Local secondary index, the same principle key. It can only be created at table creation time. 
 
 GSi: Global secondary index. 
+
+## Global table
+
+Global table: Allow replications DynomoDB table for multiple regions.
+
+Table can be updated in both regions.
+
+Table must be empty, and DynamoDB stream is enabled. 
