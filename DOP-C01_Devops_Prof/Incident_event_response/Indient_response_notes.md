@@ -258,3 +258,15 @@ launch configuration:  A change has been made to it.
 
 Reference:
 https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html
+
+## ASG - CodeDeploy integration
+
+We want to use CodeDeploy to deploy the application to ASG
+
+Step 1: Create a CloudFormation template for ASG, install CodeDeploy agent in EC2 instances in ASG, Agent file in in S3
+
+Step 2: Create CodeDeploy application, deployment group, deployment
+
+In deployment group, choose target as ASG, so when the new EC2 instance added to ASG, CodeDeploy will automatically deploy the application to the instance. 
+
+Blue/green deployment type for ASG: Use launch configuration to create a new ASG group and new instances, and we need load balancer for this type of deployment. After verifying the new ASG group is working, ELB will reroute the traffic from the old ASG to the new ASG. 
