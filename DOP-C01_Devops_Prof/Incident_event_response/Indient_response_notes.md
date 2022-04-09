@@ -283,3 +283,16 @@ Problem: When new Amazon EC2 instances are launched as part of an Amazon EC2 Aut
 Reference:
 
 https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-auto-scaling.html
+
+# DynamoDB
+## Overview
+
+### Primary key
+
+### Calculate WCU, and RCU
+
+## LSI & GSI
+
+LSI: Local secondary index, the same principle key. It can only be created at table creation time. 
+
+GSi: Global secondary index. 
