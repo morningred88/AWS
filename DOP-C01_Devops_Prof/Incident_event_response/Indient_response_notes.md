@@ -332,3 +332,8 @@ Solution: We can connect 1 Lambda function to DynamoDB stream, and write the str
 Reference:
 
 https://stackoverflow.com/questions/34136861/aws-s3-bucket-logs-vs-aws-cloudtrail
+
+# CloudFormation stack set
+
+* **Maximum concurrent action**: Set how CloudFormation deployed. If you set the value as 1, that means you want to deploy CloudFormation only one region or one account at a time. When it is done, then deploy to another region or account.
+* Failure tolerance: Do you allow the CloudFormation failed in any region or any account? If you set the value as 1, that means you allow CloudFormation deployment failed in one region or one account.  
