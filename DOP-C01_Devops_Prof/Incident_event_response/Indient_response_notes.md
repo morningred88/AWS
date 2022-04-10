@@ -348,3 +348,23 @@ https://stackoverflow.com/questions/34136861/aws-s3-bucket-logs-vs-aws-cloudtrai
 **Step 2**. Set up artifact stores for AWS CodePipeline. AWS CodePipeline uses Amazon S3 buckets as an artifact store. These S3 buckets are regional and versioned. All of the artifacts are copied to the same region in which the pipeline action is configured to execute. -- To all 3 regions
 
 **Step 3**. Using AWS CloudFormation, we will provision a new Amazon S3 bucket for the Source action and then provision a new pipeline in AWS CodePipeline.  -- To primary region, but the app has been depolyed from the primary region to all 3 regions. 
+
+# AWS Organization
+
+Whitelist: allow
+
+Blacklist: deny
+
+# Multi account - Service integration
+
+## Centralized logging
+
+**Cross-account log data sharing using Kinesis Data Firehose**
+
+The log group and the destination must be in the same AWS Region. However, the AWS resource that the destination points to can be located in a different Region.
+
+Reference:
+
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CrossAccountSubscriptions-Firehose.html
+
+https://aws.amazon.com/blogs/architecture/stream-amazon-cloudwatch-logs-to-a-centralized-account-for-audit-and-analysis/
