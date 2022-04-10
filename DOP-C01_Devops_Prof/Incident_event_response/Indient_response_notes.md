@@ -313,6 +313,10 @@ Limitation: No more than 2 most should be read from the same streams shard at th
 
 Solution: We can connect 1 Lambda function to DynamoDB stream, and write the stream to SNS. Then we can have many Lambda functions connect to SNS. 
 
+## TTL
+
+To expire item after certain amount of time
+
 # S3
 
 ## 3 kinds of logs for S3
