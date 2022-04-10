@@ -337,3 +337,14 @@ https://stackoverflow.com/questions/34136861/aws-s3-bucket-logs-vs-aws-cloudtrai
 
 * **Maximum concurrent action**: Set how CloudFormation deployed. If you set the value as 1, that means you want to deploy CloudFormation only one region or one account at a time. When it is done, then deploy to another region or account.
 * Failure tolerance: Do you allow the CloudFormation failed in any region or any account? If you set the value as 1, that means you allow CloudFormation deployment failed in one region or one account.  
+
+# CodePipeline - Multi-Region Deployments
+
+**Step 1**. As part of this process of setting up resources, you install the AWS CodeDeploy agent on the instances:  - to all 3 regions. 
+
+- Create Amazon EC2 instances and install the AWS CodeDeploy agent.
+- Create an application in AWS CodeDeploy.
+
+**Step 2**. Set up artifact stores for AWS CodePipeline. AWS CodePipeline uses Amazon S3 buckets as an artifact store. These S3 buckets are regional and versioned. All of the artifacts are copied to the same region in which the pipeline action is configured to execute. -- To all 3 regions
+
+**Step 3**. Using AWS CloudFormation, we will provision a new Amazon S3 bucket for the Source action and then provision a new pipeline in AWS CodePipeline.  -- To primary region, but the app has been depolyed from the primary region to all 3 regions. 
