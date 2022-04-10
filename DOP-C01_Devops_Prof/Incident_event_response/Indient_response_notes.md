@@ -304,3 +304,31 @@ Global table: Allow replications DynomoDB table for multiple regions.
 Table can be updated in both regions.
 
 Table must be empty, and DynamoDB stream is enabled. 
+
+## DynamoDB Stream
+
+The underlying of DynamoDB stream is Kinesis stream.
+
+Limitation: No more than 2 most should be read from the same streams shard at the same time. That means, we cannot connect 3 Lambda function to DynamoDB. We will get throttling. 
+
+Solution: We can connect 1 Lambda function to DynamoDB stream, and write the stream to SNS. Then we can have many Lambda functions connect to SNS. 
+
+# S3
+
+## 3 kinds of logs for S3
+
+1. **CloudTrail**: Which logs almost all API calls at Bucket level 
+2. **CloudTrail Data Events**: Which logs almost all API calls at Object level 
+3. **S3 server access logs**: Which logs almost all ([best effort server logs delivery](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html#LogDeliveryBestEffort)) access calls to S3 objects. 
+
+2 and 3 seem similar functionalities but they have some differences which may prompt users to use one or the other or both:
+
+- Both works at different levels of granularity. e.g. CloudTrail data events can be set for all the S3 buckets for the AWS account or just for some folder in S3 bucket. Whereas, S3 server access logs would be set at individual bucket level
+- The S3 server access logs seem to give more comprehensive information about the logs like BucketOwner, HTTPStatus, ErrorCode,
+
+* CloudTrail does not deliver logs for requests that fail authentication (in which the provided credentials are not valid). However, it does include logs for requests in which authorization fails (AccessDenied) and requests that are made by anonymous users.
+* If a request is made by a different AWS Account, you will see the CloudTrail log in your account only. The logs for the same request will however be delivered in the server access logs of your account.
+
+Reference:
+
+https://stackoverflow.com/questions/34136861/aws-s3-bucket-logs-vs-aws-cloudtrail
