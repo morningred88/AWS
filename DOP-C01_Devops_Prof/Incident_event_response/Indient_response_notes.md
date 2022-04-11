@@ -148,7 +148,7 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processe
 
 ### Processes to suspend
 
-![Suspend_processes](Incident_response_images\Suspend_processes.png)
+![Suspend_processes](Incident_response_images/Suspend_processes.png)
 
 * Launch: suspend to terminate instances
 
@@ -315,7 +315,9 @@ Solution: We can connect 1 Lambda function to DynamoDB stream, and write the str
 
 ## TTL
 
-To expire item after certain amount of time
+To expire item after certain amount of time .
+
+
 
 # S3
 
