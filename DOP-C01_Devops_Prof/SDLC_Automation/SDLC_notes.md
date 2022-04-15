@@ -103,6 +103,45 @@ After building the project, you can see if the build is success or failed in Bui
 
 https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
 
+### Buildspec.yml for CodeBuild to push image to ECR
+
+CodeBuild builds a Docker image as output and then pushes the Docker image to an Amazon Elastic Container Registry (Amazon ECR) image repository.
+
+buildspec.yml
+
+```
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...          
+      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
+      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG      
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+```
+
+**Summary:**
+
+pre_build: CodeBuild needs permission to access ECR (service role)
+
+build: Build docker image
+
+post_build: Push docker image to ECR
+
+Reference:
+
+https://docs.aws.amazon.com/codebuild/latest/userguide/sample-docker.html
+
 ### Environment variables and parameter store
 
 **How to add environment variables?**
