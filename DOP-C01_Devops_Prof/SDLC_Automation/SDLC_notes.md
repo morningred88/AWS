@@ -85,6 +85,24 @@ We have to create single CodeBuild project for each branch, or git tag, or commi
 
 After building the project, you can see if the build is success or failed in Build history, also the duration. Such as my build is 51 seconds, that is how much we have billed for the build. The docker container is gone after the build, then we will not pay it any more. 
 
+### Buildspec.yml deep dive
+
+* Env: Environment variables and parameters from parameter store
+
+* Phases: 4 phases
+  * install: such as runtime like python, java
+  * pre-build
+  * build
+  * post_build 
+
+* **Note:** 
+
+  In each phases, there is **finally** block, in case if something goes wrong, CodeBuild can still run somecleanup  commands. 
+
+* Artifact:
+
+https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
+
 ### Environment variables and parameter store
 
 **How to add environment variables?**
@@ -204,7 +222,7 @@ It is selected when you create a deployment group. You can override a deployment
 
 You can integrate CodeDeploy through CloudWatch event with many other services, such as SMS, SNS, Lambda, Kinesis stream, etc.
 
-You can send messages using SNS topic through Triggers directly  in CodeDeply.
+You can send messages using SNS topic through Triggers directly  **in CodeDeply**.
 
 ### On-premises instance setup
 
