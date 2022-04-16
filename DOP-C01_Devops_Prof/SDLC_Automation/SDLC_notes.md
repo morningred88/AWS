@@ -679,6 +679,12 @@ The main advantage is reuse. For example, we need to create a CodePipeline for e
 
 * Using cloudFormation template and change the source to different branch. 
 
+## CodeStar
+
+CodeStar uses template to create a CodeStar project. So you can choose the runtime and template to build a CodeStart project. Then from here, you can add your own code to finish your own project.
+
+If you want to change some configurations, you need to go to **template.yml** to modify the file. 
+
 ## Jenkins
 
 Working in the way of master and workers. Master and slave can be in a server. But when more jobs, such as code build, request to Jenkins, then it is better to have more workers in other instances. 
