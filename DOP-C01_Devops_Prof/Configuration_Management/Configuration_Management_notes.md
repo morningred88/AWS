@@ -245,7 +245,7 @@ Some stack templates might include resources that can affect permissions in your
 
 ### cfn-hup
 
-We can use cfn-hup to update EC2 metadata.
+We can use cfn-hup daemon to listen for changes to the EC2 instance metadata.
 
 If EC2 metadata change, cfn-hup ensure all the changes will be applied to EC2. 
 
