@@ -32,7 +32,7 @@ cfn-signal are also is run in UserData
 
 ### CloudFormation rollbacks
 
-When you create a stack in the console, you can set **Stack creation option** as enabled or disabled in the **Advanced options**. The default setting is enabled. But if we need to debug the stack creation failure, then we need to change the setting as disabled. 
+When you create a stack in the console, you can set **Stack creation option** as enabled or disabled in the **Advanced options**. The default setting is **Rollback on failure** enabled. But if we need to debug the stack creation failure, then we need to change the setting as disabled. 
 
 ### CloudFormation - nested stack
 
@@ -65,6 +65,23 @@ After you reviewed the change sets, you can choose
 #### Change sets in a stack update
 
 When you update a stack and before you finish the update process, you can view the change sets. 
+
+### Parameters from SSM
+
+SSM parameter name is defined in default.
+
+```
+Parameters:
+  InstanceType:
+    Type: 'AWS::SSM::Parameter::Value<String>'
+    Default: /EC2/InstanceType
+
+  ImageId: 
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: /EC2/AMI_ID
+```
+
+
 
 ### CloudFormation - Deploying Lambda functions
 
