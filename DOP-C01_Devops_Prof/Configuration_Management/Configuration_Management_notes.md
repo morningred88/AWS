@@ -81,7 +81,32 @@ Parameters:
     Default: /EC2/AMI_ID
 ```
 
+### DependsOn
 
+EC2 instance should not be created until MyDB is created.
+
+```
+Resources:
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !FindInMap [AWSRegionArch2AMI, !Ref 'AWS::Region', HVM64]
+    DependsOn: MyDB
+
+  MyDB:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      AllocatedStorage: '5'
+      DBInstanceClass: db.t2.micro
+      Engine: MySQL
+      EngineVersion: "5.7.22"
+      MasterUsername: MyName
+      MasterUserPassword: MyPassword
+    # Readme - note: Added a DeletionPolicy (not shown in the video)
+    # This ensures that the RDS DBInstance does not create a snapshot when it's deleted
+    # Otherwise, you would be billed for the snapshot :)
+    DeletionPolicy: Delete
+```
 
 ### CloudFormation - Deploying Lambda functions
 
