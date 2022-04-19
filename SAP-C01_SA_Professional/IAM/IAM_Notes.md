@@ -129,7 +129,9 @@ BoundaryPolicy
 
 ![Add_permission_boundary_step1](IAM_images/Add_permission_boundary_step1.png)
 
-* Add created BoundaryPolicy as a condition, note that value is the ARN of BoundaryPolicy.
+* Add created BoundaryPolicy as a condition, note that 
+  * Condition key: iam-PermissionBoundary
+  * Value is the ARN of BoundaryPolicy
 
 ![Add_permission_boundary_step2](IAM_images/Add_permission_boundary_step2.png)
 
