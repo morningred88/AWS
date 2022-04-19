@@ -190,6 +190,71 @@ IAM Permissions Boundary - Full Configuration
 
 https://www.youtube.com/watch?v=gLQwzsqpSFA
 
+## STS
+
+### Cross account access with STS
+
+#### Step 1: Create a role in the Production Account
+
+You create the role in the **Production** account and specify the **Development** account as a trusted entity. You also limit the role permissions to only read and write access to the `productionapp` bucket. Anyone granted permission to use the role can read and write to the `productionapp` bucket.
+
+Notes: 
+
+* Create **read-write-app-bucket** policy 
+
+  ```
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": "s3:ListAllMyBuckets",
+        "Resource": "*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "s3:ListBucket",
+          "s3:GetBucketLocation"
+         ],
+        "Resource": "arn:aws:s3:::productionapp"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "s3:GetObject",
+          "s3:PutObject",
+          "s3:DeleteObject"
+        ],
+        "Resource": "arn:aws:s3:::productionapp/*"
+      }
+    ]
+  }
+  ```
+
+* Create  **UpdateApp**  role
+
+  * AWS AMI console > Roles > Create a role>Choose the **An AWS account** role type
+  * For **Account ID**, type the **Development** account ID.
+
+* d
+
+#### Step 2: Grant access to the role in **Development** account
+
+Add inline policy for  User groups **Developers** to allow them to switch to the **UpdateApp** role in **Production** account.
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": {
+    "Effect": "Allow",
+    "Action": "sts:AssumeRole",
+    "Resource": "arn:aws:iam::PRODUCTION-ACCOUNT-ID:role/UpdateApp"
+  }
+```
+
+
+
 ## Identity federation
 
 ### SAML 2.0 Federation – AWS API Access
