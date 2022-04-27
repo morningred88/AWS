@@ -86,7 +86,7 @@ Step 3: Edit target group demo-target-group
 
 * Change attribute **Slow start duration** to 60 s. That means from 0 to 60 s, load balancer will gradually send traffic to the instances. So the instance can warm up the cache.  After 60 s, load balancer will send full traffic to it. 
 
-  ![ASG_Attributes](Incident_response_images\ASG_Attributes.png)
+  ![ASG_Attributes](Incident_response_images/ASG_Attributes.png)
 
 ## ASG - HTTPS on ALB
 
@@ -162,7 +162,7 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processe
 
 ### Instance setting in ASG
 
-![ASG_Instance_Setting](Incident_response_images\ASG_Instance_Setting.png)
+![ASG_Instance_Setting](Incident_response_images/ASG_Instance_Setting.png)
 
 #### Detach instance
 
