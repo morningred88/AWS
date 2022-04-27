@@ -791,7 +791,7 @@ If you have several applications, configure each application with a **lifecycle 
 
 AWS EB console> Application, select the application you specified > Application version > Setting button, then you can see the lifecycle setting 
 
-![](Configuration_Management_images\Application_verion_life_cycle_setting.png)
+![](Configuration_Management_images/Application_verion_life_cycle_setting.png)
 
 On the settings page, you can do the following.
 
@@ -1082,7 +1082,7 @@ If one step is success, it will turns green.
 
 Cloudwatch event can check the event execution, so we can create event rule in Eventbridge. If any step  failed, we can invoke either SNS topic or  a Lambda function to send a message to our Slack channel. 
 
-![Stepfunction_rule](Configuration_Management_images\Stepfunction_rule.png)
+![Stepfunction_rule](Configuration_Management_images/Stepfunction_rule.png)
 
 ## API Gateway
 
@@ -1096,7 +1096,7 @@ Cloudwatch event can check the event execution, so we can create event rule in E
 
 * Private - API Gateway in VPC, so the services in the VPC can use  to connect to Lambda or other endpoint in  VPC.
 
-  ![private-endpoint](Configuration_Management_images\private-endpoint.png)
+  ![private-endpoint](Configuration_Management_images/private-endpoint.png)
 
 **Reference:**
 
@@ -1116,7 +1116,7 @@ Method: get
 
 State: Dev
 
-![Endpoint_type](Configuration_Management_images\Endpoint_type.png)
+![Endpoint_type](Configuration_Management_images/Endpoint_type.png)
 
 #### API - First deployment
 
@@ -1140,7 +1140,7 @@ Once you make some changes in the API gateway, you need to deploy API again, but
 * Mock
 * VPC link
 
-![API_Gateway_Integration](Configuration_Management_images\API_Gateway_Integration.png)
+![API_Gateway_Integration](Configuration_Management_images/API_Gateway_Integration.png)
 
 ### Deployments and Canary testing
 
@@ -1160,25 +1160,25 @@ Background: We want to change Dev stage to point Lambda function Lambda-Lily DEV
 
 Step 1: Go to Resource tab on the left, select / resource, then click get
 
-![Deployment_step1](Configuration_Management_images\Deployment_step1.png)
+![Deployment_step1](Configuration_Management_images/Deployment_step1.png)
 
 Step 2: In GET - Method Execution window, click **Integration Request**
 
-![Deployment_step2](Configuration_Management_images\Deployment_step2.png)
+![Deployment_step2](Configuration_Management_images/Deployment_step2.png)
 
 Step 3: Edit Lambda function and change it to lambda-dummy:DEV. Don't forget to tick it, to get the execution role created. 
 
-![Deployment_step3](Configuration_Management_images\Deployment_step3.png)
+![Deployment_step3](Configuration_Management_images/Deployment_step3.png)
 
 Step 4: Click Method Execution back to Method Execution window and do a test
 
 Step 5: Test is succeed, return statuscode 200. 
 
-![Deployment_step5](Configuration_Management_images\Deployment_step5.png)
+![Deployment_step5](Configuration_Management_images/Deployment_step5.png)
 
 Step 6: Click action, deploy API, to existing Dev stage
 
-![Deployment_step6](Configuration_Management_images\Deployment_step6.png)
+![Deployment_step6](Configuration_Management_images/Deployment_step6.png)
 
 **Process  - make changes and deploy to a new Dev stage:**
 
@@ -1186,19 +1186,19 @@ The same process for creating a new stage Prod, the adjustment made:
 
 Step 3: Edit Lambda function and change it to lambda-dummy:Prod
 
-![Deployment_step3_new_stage](Configuration_Management_images\Deployment_step3_new_stage.png)
+![Deployment_step3_new_stage](Configuration_Management_images/Deployment_step3_new_stage.png)
 
 
 
-![Deployment_step4_new_stage](Configuration_Management_images\Deployment_step4_new_stage.png)
+![Deployment_step4_new_stage](Configuration_Management_images/Deployment_step4_new_stage.png)
 
 Step 6: Deploy Api to new stage Prod
 
-![Deployment_step6_new_stage](Configuration_Management_images\Deployment_step6_new_stage.png)
+![Deployment_step6_new_stage](Configuration_Management_images/Deployment_step6_new_stage.png)
 
 Go to Stage tab, you can see now both Dev and Prod stage are available
 
-![Api_Gateway_stage](Configuration_Management_images\Api_Gateway_stage.png)
+![Api_Gateway_stage](Configuration_Management_images/Api_Gateway_stage.png)
 
 #### Canary testing
 
@@ -1215,11 +1215,11 @@ Canary is equivalent to blue/green deployment. Application new veriosn is deploy
 
 Step 1: Go to Prod stage > Canary> change Canary to 50%
 
-![Canary_setting](Configuration_Management_images\Canary_setting.png)
+![Canary_setting](Configuration_Management_images/Canary_setting.png)
 
 Step 2: Go to resources, make sure the Integration request point to DEV alias(for Dev stage), then Deploy API to the Canary
 
-![Deploy_to_canary](Configuration_Management_images\Deploy_to_canary.png)
+![Deploy_to_canary](Configuration_Management_images/Deploy_to_canary.png)
 
 Step3: If everything is ok in production, then go to Prod stage canary setting to Promote Canary. So only the new version in Prod stage. 
 
